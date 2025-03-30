@@ -1,0 +1,1 @@
+#pragma once#include <LString.h>OSErr		FSpTrashFile(FSSpecPtr theFile, Boolean doDelete);Boolean		AbortInQueue();void		BlockFill(void *s, char filler, long size);inline void	LStr2CStr(LStr255 &iStr, void *oStr) { LString::CopyPStr(iStr, (StringPtr)oStr); PtoCstr((StringPtr)oStr); };

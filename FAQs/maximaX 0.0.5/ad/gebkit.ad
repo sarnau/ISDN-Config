@@ -1,0 +1,69 @@
+!######################################################################
+!                     Gebuehrenliste Ausgehend
+!######################################################################
+
+*gebOlist_dlg.xmtChildren:	unmanaged XmtLayout gebOlist;
+*gebOlist_dlg.title:		Ausgehende Gespräche
+*gebOlist.autoUnmanage:		False
+*gebOlist.dialogStyle:		dialog_primary_application_modal
+
+*gebOlist.xmtChildren:	\
+		XmScrolledList	gebOtext; \
+		XmPushButton save,spread,print,clear,getgeb,okay,help;
+
+*gebOlist.clear.labelString:	Lõschen
+*gebOlist.spread.labelString:	CVS sichern
+*gebOlist.save.labelString:		Text sichern
+*gebOlist.print.labelString:	Drucken
+*gebOlist.getgeb.labelString: Auslesen
+*gebOlist.okay.labelString:	OK
+*gebOlist.help.labelString:	Hilfe
+
+*gebOlist.getgeb.activateCallback:	doKitGetOut();
+*gebOlist.save.activateCallback:	saveOutCalls();
+*gebOlist.spread.activateCallback:	saveCvsOutCalls();
+*gebOlist.print.activateCallback:	printOutCalls();
+*gebOlist.clear.activateCallback:	doKitDelOut();
+*gebOlist.okay.activateCallback:	XmtDialogOkayCallback();
+*gebOlist.cancel.activateCallback:	XmtDialogCancelCallback();
+
+*gebOlist.layout: \
+	Etched Bottom Col { \
+		Caption tll "Satz Tl Datum Uhrz.     DM Dauer                 Nummer Name" \
+				 10in Wide 7in High gebOtext\
+	}\
+	Fixed Equal Row { getgeb spread save print clear okay help }
+
+!######################################################################
+!                     Gebuehrenliste Eingehend
+!######################################################################
+
+*gebIlist_dlg.xmtChildren:	unmanaged XmtLayout gebIlist;
+*gebIlist_dlg.title:		Eingehende Gespräche
+*gebIlist.autoUnmanage:		False
+*gebIlist.dialogStyle:		dialog_primary_application_modal
+
+*gebIlist.xmtChildren:	\
+		XmScrolledList	gebItext; \
+		XmPushButton save,print,getgeb,okay,help;
+
+*gebIlist.clear.labelString:	Lõschen
+*gebIlist.save.labelString:		Text sichern
+*gebIlist.print.labelString:	Drucken
+*gebIlist.getgeb.labelString: Auslesen
+*gebIlist.okay.labelString:	OK
+*gebIlist.help.labelString:	Hilfe
+
+*gebIlist.getgeb.activateCallback:	doKitGetIn();
+*gebIlist.save.activateCallback:	saveInCalls();
+*gebIlist.print.activateCallback:	printInCalls();
+*gebIlist.clear.activateCallback:	doKitDelIn();
+*gebIlist.okay.activateCallback:	XmtDialogOkayCallback();
+*gebIlist.cancel.activateCallback:	XmtDialogCancelCallback();
+
+*gebIlist.layout: \
+	Etched Bottom Col { \
+		Caption tll "Satz Tl Datum Uhrz.              Nummer Name" 10in Wide 7in High gebItext\
+	}\
+	Fixed Equal Row { getgeb save print okay help }
+

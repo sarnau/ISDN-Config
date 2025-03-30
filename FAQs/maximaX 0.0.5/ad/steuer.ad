@@ -1,0 +1,105 @@
+
+!                     Steuerkontakte
+!######################################################################
+
+*steuer_dlg.xmtChildren:	unmanaged XmtLayout steuer;
+*steuer_dlg.title:			Steuerkontakte
+*steuer.autoUnmanage:		False
+*steuer.dialogStyle:		dialog_primary_application_modal
+
+*steuer.xmtChildren:	\
+		XmtChooser akt1; \
+		XmtChooser akt2; \
+		XmtChooser auto; \
+		XmtInputField utou=utou,rnr1=rnr1,rnr2=rnr2,rnr3=rnr3, \
+					  start,end,ask1,ask2; \
+		XmPushButton okay,cancel,help;
+
+*steuer.ask1.verifyCallback: Check_0_999();
+*steuer.ask1.errorCallback:  \
+	XmtDisplayWarning(msg1, Der Wert muﬂ zwischen 0 und 999 liegen!);
+*steuer.ask1.matchAll:	False
+*steuer.ask1.pattern:	ddd
+
+*steuer.ask2.verifyCallback: Check_0_999();
+*steuer.ask2.errorCallback:  \
+	XmtDisplayWarning(msg1, Der Wert muﬂ zwischen 0 und 999 liegen!);
+*steuer.ask2.matchAll:	False
+*steuer.ask2.pattern:	ddd
+
+*steuer.start.verifyCallback: Check_0_2359();
+*steuer.start.errorCallback:  \
+	XmtDisplayWarning(msg1, Der Wert muﬂ zwischen 0000 und 2359 liegen!);
+*steuer.start.matchAll:	True
+*steuer.start.pattern:	dddd
+
+*steuer.end.verifyCallback: Check_0_2359();
+*steuer.end.errorCallback:  \
+	XmtDisplayWarning(msg1, Der Wert muﬂ zwischen 0000 und 2359 liegen!);
+*steuer.end.matchAll:	True
+*steuer.end.pattern:	dddd
+
+*steuer.rnr1.matchAll:	False
+*steuer.rnr1.pattern:	dddddddddddddddddddddddd
+
+*steuer.rnr2.matchAll:	False
+*steuer.rnr2.pattern:	dddddddddddddddddddddddd
+
+*steuer.rnr3.matchAll:	False
+*steuer.rnr3.pattern:	dddddddddddddddddddddddd
+
+*steuer.utou.matchAll:	False
+*steuer.utou.pattern:	cccccccccccccccccccccccccccccccc
+
+*steuer.auto.chooserType: XmtChooserCheckBox
+*steuer.auto.strings: "Automatische Anwahl"
+*steuer.auto.orientation: horizontal
+
+*steuer.akt1.chooserType: XmtChooserRadioBox
+*steuer.akt1.strings: "Schlieﬂen", "’ffnen","Nicht schalten"
+!*steuer.akt1.orientation: horizontal
+
+*steuer.akt2.chooserType: XmtChooserRadioBox
+*steuer.akt2.strings: "Schlieﬂen", "’ffnen","Nicht schalten"
+!*steuer.akt2.orientation: horizontal
+
+
+*steuer.okay.labelString:	OK
+*steuer.cancel.labelString:	Abbrechen
+*steuer.help.labelString:	Hilfe
+
+*steuer.auto.valueChangedCallback:
+*steuer.akt1.valueChangedCallback:
+*steuer.akt2.valueChangedCallback:
+*steuer.okay.activateCallback:		XmtDialogOkayCallback();
+*steuer.cancel.activateCallback:	XmtDialogCancelCallback();
+
+*steuer.layout: \
+	Row { \
+		Col { \
+			Caption "Zeichengabe: " utou \
+			= \
+			Caption " Rufnummer1: " rnr1 \
+			Caption " Rufnummer2: " rnr2 \
+			Caption " Rufnummer3: " rnr3 \
+			Centered auto \
+			Margin 5 Caption tl "Sensor aktiv" Etched Through 6 2 Row { \
+				<> \
+				Caption "von: " 30 mm Wide start \
+				<> \
+				Caption "bis: " 30 mm Wide end \
+				<> \
+			} \
+		} \
+	} \
+	Margin 5 Row { \
+		Caption tl "Aktor 1" Etched Through 6 2 Col { \
+			Caption " Schaltzeit: " 20 mm Wide ask1 \
+			akt1 \
+		} \
+		Caption tl "Aktor 2" Etched Through 6 2 Col { \
+			Caption " Schaltzeit: " 20 mm Wide ask2 \
+			akt2 \
+		} \
+	}\
+	Fixed Equal Row { okay cancel help }

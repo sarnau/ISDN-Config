@@ -1,0 +1,122 @@
+!######################################################################
+!                       Haupt-Fenster
+!######################################################################
+
+?.xmtChildren:	XmtLayout main;
+
+?.title:			Euracom 18x/Maxima ISx Konfigurator
+
+!*NavigationType: XmNONE
+*XmtInputField*NavigationType: XmEXCLUSIVE_TAB_GROUP
+!*XmPushButton.armCallback:
+!*XmPushButton.disarmCallback:
+*XmtInputField.focusCallback:		dotextfocus();
+*XmtInputField.losingFocusCallback:	dotxtunfoc();
+*XmtInputField.cursorPositionVisible:	False
+
+*main.xmtChildren:	\
+		XmPushButton	quit,kurz,grund,incalls,outcalls, \
+						global,bsteuer,endgeraet,gebuehr, \
+						appnum,einricht,avas,user,laden,  \
+						amtrecht,sichern,lesen,schreiben,help;\
+		XmtChooser		aqsel, absel; \
+		XmtMsgLine		theline;
+
+*main.XmtChooser.chooserType: XmtChooserRadioBox
+*main.aqsel.strings: "Quante","Ackermann"
+*main.absel.strings: "Anlage A","Anlage B"
+
+*main.XmPushButton.sensitive:		False
+*main.kurz.sensitive:			True
+*main.laden.sensitive:			True
+*main.lesen.sensitive:			True
+*main.quit.sensitive:			True
+*main.help.sensitive:			True
+*main.absel.sensitive:			False
+*main.outcalls.sensitive:		True
+*main.incalls.sensitive:		True
+
+*main.quit.labelString:			Beenden
+*main.incalls.labelString:		Gespräche eingehend
+*main.outcalls.labelString:		Gespräche ausgehend
+*main.appnum.labelString:		Interne Rufnummern
+*main.einricht.labelString:		Berechtigungen
+*main.amtrecht.labelString:		Amtsberechtigungen
+*main.endgeraet.labelString:	Endgeräte
+*main.avas.labelString:			RWS/AVA/TFE
+*main.user.labelString:			Teilnehmerdaten
+*main.grund.labelString:		Grundeinstellungen
+*main.kurz.labelString:			Kurzwahlen / Nahbereichs- und Sperrnummern
+*main.gebuehr.labelString:		Gebühren
+*main.bsteuer.labelString:		Steuerkontakte
+*main.global.labelString:		Globale Einstellungen
+*main.help.labelString:			Hilfe
+*main.laden.labelString:		Laden
+*main.sichern.labelString:		Sichern
+*main.lesen.labelString:		Auslesen
+*main.schreiben.labelString:	Programmieren
+
+*main.incalls.activateCallback:	 doInKit();
+*main.outcalls.activateCallback: doOutKit();
+*main.global.activateCallback:	doglob();
+*main.appnum.activateCallback:	dornz();
+*main.amtrecht.activateCallback:	doamtperm();
+*main.endgeraet.activateCallback:	dotlntyp();
+*main.einricht.activateCallback:	dotlnperm();
+*main.avas.activateCallback:	docalldist();
+*main.gebuehr.activateCallback:	dogebdat();
+*main.bsteuer.activateCallback:	dosteuerk();
+*main.user.activateCallback:	douserfkt();
+*main.sichern.activateCallback:	saveCFGFileAs();
+*main.laden.activateCallback:	loadCFGFile();
+*main.lesen.activateCallback:	readConfig();
+*main.schreiben.activateCallback:	writeConfig();
+*main.grund.activateCallback:	showConf();
+*main.kurz.activateCallback:	dokwz();
+*main.quit.activateCallback:	quitting();
+
+*XmtMsgLine.shadowThickness: 0
+*XmtMsgLine.highlightThickness: 0
+
+
+*main.layout: \
+	Etched Equal Row  { kurz }\
+	Etched Equal Row  { outcalls incalls }\
+	Etched Equal Row { \
+		Equal Col { \
+			grund \
+			appnum \
+			amtrecht \
+			avas \
+			bsteuer \
+		} \
+		Equal Col { \
+			global \
+			einricht \
+			endgeraet \
+			gebuehr \
+			user \
+		} \
+	} \
+	Etched Row  { \
+		Caption tl "Dateikennung:" Etched Right aqsel \
+		Caption tl "Anlagen-Auswahl:" absel \
+	}\
+	Fixed Equal Row { \
+		Col { laden sichern }\
+		Etched Left Col { lesen schreiben } \
+		Etched Left Col { help quit } \
+	}\
+	Margin 0 Etched Top 0 2 theline
+
+*cfgsave_dlg.title:		Konfiguration sichern
+*cfgsave_dlg.directory:	/usr/local/maximaX/etc
+*cfgsave_dlg.pattern:	*.cfg
+*cfgsave_dlg.message:	Datei sichern als:
+*cfgsave_dlg.helpText:	Ich weiss auch nicht was Du willst!
+
+*cfgload_dlg.title:		Konfiguration laden
+*cfgload_dlg.directory:	/usr/local/maximaX/etc
+*cfgload_dlg.pattern:	*.cfg
+*cfgload_dlg.message:	Dateiauswahl:
+*cfgload_dlg.helpText:	Ich weiss auch nicht was Du willst!

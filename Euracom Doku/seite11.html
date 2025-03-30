@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE>Euracom - </TITLE>
+<!-- Changed by: 0000-Admin(0000),  6-Aug-1996 -->
+<!-- Changed by: Uwe Putlitz, 20-Sep-1996 -->
+</HEAD>
+<BODY bgcolor="#ffffff" link="#00bb55" BACKGROUND="/bilder/hinter.gif">
+<IMG align=right SRC="/bilder/ackeroben.gif">
+<PRE>
+
+
+
+
+</PRE>
+<CENTER><TABLE><TR><TD>
+<H2>5.10. Deklaration der Struktur der Teilnehmerdaten</H2>
+
+<PRE>
+typedef struct TlnDataStruct
+{
+  unsigned char         PortNr; 			/* Zugeh&ouml;riger Port     */
+  unsigned long         Geb;
+  unsigned char         IntRufNr;       		/* bin&auml;r codierte Internrufnummer       */
+  unsigned short        SchaltStatus;   		/* Status der Schalt-LMs        */
+  unsigned short        WeckZeit;       		/* Weckzeit in Minuten  */
+  unsigned short        Rechte; 			/* Berechtigungen des Teilnehmers       */
+  unsigned short        Abteilung;      		/* Abrechnungstechnische Einheit        */
+  unsigned short        Gruppe; 			/* R&auml;umliche Einheit    */
+  unsigned short        KW_Tab; 			/* Default: -1 f&uuml;r nicht belegt */
+  unsigned short        CFB_Id[ RUF_NR_LEN + 1];        /* Default: -1 f&uuml;r nicht belegt */
+  unsigned short        CFNR_Id[ RUF_NR_LEN + 1];       /* Default: -1 f&uuml;r nicht belegt */
+  unsigned char         CFNR_Zeit;      		/* Default: 0 Sek f&uuml;r CFNR =&gt; CFU       */
+  TYPE_TLN_TYP      Typ;       				 /* Teilnehmerklasse und Dienste */
+} TlnDataType;
+</PRE>
+<A HREF="/schnittstelle/schnittindex.html">Zur&uuml;ck zum Index</A>
+</TD></TR></TABLE></CENTER>
+<CENTER><TABLE width=500>
+<TR><TD align=left><A HREF="/schnittstelle/seite10.html"><IMG border=0 SRC="/bilder/links.gif"></TD>
+<TD align=center><A HREF="/welcome.html"><IMG border=0 SRC="/bilder/euracom.gif"></TD>
+<TD align=right><A HREF="/schnittstelle/seite12.html"><IMG border=0 SRC="/bilder/rechts.gif"></TD></TR>
+</TABLE></CENTER>

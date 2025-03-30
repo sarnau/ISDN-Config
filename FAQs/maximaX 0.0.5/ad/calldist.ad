@@ -1,0 +1,74 @@
+!######################################################################
+!                     Rufverteilung
+!######################################################################
+
+*calldist_dlg.xmtChildren:	unmanaged XmtLayout calldist;
+*calldist_dlg.title:		Rufverteilung
+*calldist.autoUnmanage:		False
+*calldist.dialogStyle:		dialog_primary_application_modal
+
+*calldist.xmtChildren:	\
+		XmtChooser todo; \
+		XmtChooser grp0; \
+		XmtChooser grp1; \
+		XmtChooser grp2; \
+		XmPushButton okay,cancel,help;
+
+*calldist.todo.chooserType: XmtChooserRadioBox
+*calldist.todo.strings: "Anrufvariante 1","Anrufvariante 2","Türeinheit 1", \
+	"Türeinheit 2", "Rufweiterschaltung", "Zweitwecker 1", "Zweitwecker 2"
+
+*calldist.grp0.chooserType: CheckBox
+*calldist.grp0.strings: \
+		"AB 1", \
+		"AB 2", \
+		"AB 3", \
+		"AB 4", \
+		"AB 5", \
+		"AB 6", \
+		"AB 7", \
+		"AB 8", \
+		"TFE 1", \
+		"TFE 2"
+*calldist.grp1.chooserType: CheckBox
+*calldist.grp1.strings: \
+		"S0 0", \
+		"S0 1", \
+		"S0 2", \
+		"S0 3", \
+		"S0 4", \
+		"S0 5", \
+		"S0 6", \
+		"S0 7", \
+		"S0 8", \
+		"S0 9",
+*calldist.grp2.chooserType: CheckBox
+*calldist.grp2.strings: \
+		"S1 0", \
+		"S1 1", \
+		"S1 2", \
+		"S1 3", \
+		"S1 4", \
+		"S1 5", \
+		"S1 6", \
+		"S1 7", \
+		"S1 8", \
+		"S1 9"
+
+*calldist.okay.labelString:	OK
+*calldist.cancel.labelString:	Abbrechen
+*calldist.help.labelString:	Hilfe
+
+*calldist.todo.valueChangedCallback:	doCallDist();
+*calldist.okay.activateCallback:		XmtDialogOkayCallback();
+*calldist.cancel.activateCallback:	XmtDialogCancelCallback();
+
+*calldist.layout: \
+	Row { \
+		Caption tl "Funktions-Auswahl"  Etched Through 6 2 Col { todo }\
+		Caption tl "Apparate-Auswahl"   Etched Through 6 2 Col { \
+			Row { grp0 grp1 grp2 }\
+		}\
+	} \
+	Fixed Equal Row { okay cancel help }
+

@@ -1,0 +1,822 @@
+@---------------------------------------------------------------
+@Datei
+Sie k”nnen Konfigurationsdateien erstellen,
+”ffnen und sichern, die verschiedenen Daten der
+EURACOM auslesen und programmieren, sowie ver-
+schiedene Textdateien ausdrucken. Ebenso k”nnen Sie
+von hier aus das Programm verlassen.
+Dateiendungen sind frei w„hlbar.
+Folgende Dateiendungen sind Defaulteinstellungen :
+Konfigurationsdateien  *.cfg
+Gebhrenerfassung      *.geb
+Kurzwahltabellen       *.kwz
+Fehlerprotokolle       *.err
+
+@Neu
+™ffnet eine neue Konfiguration  mit den Grund-
+einstellungen des Auslieferungszustandes ohne Titel.
+Folgende Konfiguration ist im Auslieferungszustand eingestellt 
+und l„át sich jederzeit wiederherstellen:
+
+S0-Anschluá:                 Anlagenanschluá
+Endger„tetypen:              11, ..., 16 Telefon
+                             17 Anrufbeantworter
+                             18 Telefaxger„t
+Externberechtigung:          fr alle Endger„te unbegrenzt
+Rufverteilung 1:             11, ..., 16, 20, 30
+Rufverteilung 2:             11,
+Rufweiterschaltung:          11, ..., 16, 20, 30
+RWS-Zeit:                    20 s
+Anrufschutz:                 fr alle Endger„te ausgeschaltet
+Rufnummernbermittlung:      eingeschaltet
+Music-on-Hold:               interne Melodie
+Rufverteilung TFE 1:         11, ..., 16, 20, 30
+Rufverteilung TFE 2:         11
+Codenummer :                 999999
+Automatische Wahl:           nicht aktiv
+Rufumleitung:                nicht aktiv
+TFE-Rufumleitung:            nicht aktiv
+Gebhrenausdruck 
+        - Drucker:           fr alle Teilnehmer aus
+Rufnummernanzeige:           aus
+Grundeinheit:                0,12 DM
+Verrechnungseinheit:         0,12 DM
+Landeskennung:               49 - Deutschland
+Ortskennung:                 3379 - Selchow
+Masterberechtigung:          11,...16, 21,...29, 31..39
+Amtsholung:                  fr alle Teilnehmer aus
+Gebhreninfo:                fr alle Teilnehmer aus
+Aufschaltschutzberechtigung: fr alle Teilnehmer aus
+Aufschaltberechtigung:       fr alle Teilnehmer aus
+Alarmkonfiguration           nicht aktiv
+ - Startzeit
+ - Endzeit
+ - Steuerkontakte            nicht schalten
+Alarmrufnummer               keine
+Weckzeit                     nicht aktiv
+Drucker - Schnittstelle      V24 2
+
+@™ffnen
+™ffnet eine bereits vorhandene Konfigurationsdatei.
+Defaulteinstellung :
+Konfigurationsdateien  *.cfg
+Stellen Sie sicher, daá sich die zugeh”rige Kurzwahl-
+tabelle *.kwz, welche beim Auslesen der Daten miterstellt
+wird, auch im entsprechenden Directory befindet !
+
+@Sichern
+Speichert die aktive Konfiguration. Die Version auf Ihrem Bild-
+schirm ersetzt die auf der Diskette/Festplatte gespeicherte. Bei
+der erstmaligen Sicherung der Datei kann ein Name gew„hlt
+werden. ( *.cfg )
+
+@Sichern als
+Speichert die aktive Konfiguration unter einem von Ihnen ausw„hl-
+baren Namen auf die Festplatte oder Diskette.
+
+@EURACOM 180/1/2 auslesen/programmieren
+Die Konfigurationsdaten oder das Kurzwahlverzeichnis der
+EURACOM 180/1/2 werden in den PC gelesen.
+Das Kurzwahlverzeichnis sind nur Telefonnummern, die in der 
+EURACOM 180/1/2 verwaltet werden.
+Die aktuellen Teilnehmerdatens„tze k”nnen Sie erst nach dem Aus-
+lesen der Konfigurationsdaten in den PC lesen.
+
+Die vorbereiteten Konfigurationsdaten bzw. das vorbereitete 
+Kurzwahlverzeichnis werden vom PC in die EURACOM 180/1/2 
+geschrieben.
+
+Die fr den Ausdruck des Kurzwahlverzeichnises zur 
+šbersichtlichkeit eingegebenen Namen werden nur im PC verwaltet
+und in der Konfigurationsdatei gesichert. Die EURACOM 180/1/2
+wird nicht mit diesen Namen programmiert
+
+Die vorbereiteten Teilnehmerdatens„tze werden vom PC in die 
+EURACOM 180/1/2 geschrieben.
+
+@Drucken
+Druckt 
+- den Inhalt des Kurzwahlspeichers
+- die Bedienungsanleitung des Konfigurationsprogrammes
+- die aktive Konfiguration (Einstellungen) aus.
+
+@Beenden
+Beendet das Konfigurationsprogramm der EURACOM 180/1/2. 
+
+
+@---------------------------------------------------------------
+
+@Konfiguration
+Hier werden die Grundeinstellungen fr den Betrieb der
+EURACOM 180/1/2, Rufnummernzuordnungen und die Berechtigungen
+sowie Rufverteilungen vorgenommen.
+
+@Anlagenbetriebsart
+Es wird die Funktionsart, ob Einzel-, vernetzte oder Unteranlage
+sowie der Ausbaugrad der EURACOM 180/1/2 gew„hlt.
+
+@ISDN Anschluáart
+Die EURACOM 180/1/2 k”nnen Sie an einem Anlagenanschluá oder an
+einem Mehrger„teanschluá betreiben.
+An einem Anlagenanschluá erreicht ein Externteilnehmer die
+EURACOM 180/1/2 unter der Anlagenrufnummer. Durch Variation der
+letzten Ziffer (der Durchwahl) kann er gezielt einen Teilnehmer
+der EURACOM 180/1/2 anrufen. W„hlen Sie bei einem Anlagenan-
+schluá den Punkt eigene Rufnummer zur Eingabe der Anlagenrumpf-
+nummer.
+
+Fr einen Mehrger„teanschluá stellt die Telekom Mehrfachruf-
+nummern (MSN) zur Verfgung. Der EURACOM 180/1/2 k”nnen Sie 
+bis zu 10 MSN's eingeben.
+
+@Eigene Rufnummer
+An einem Anlagenanschluá erreicht ein Externteilnehmer die
+EURACOM 180/1/2 unter der Anlagenrufnummer. Durch Variation der
+letzten Ziffer (der Durchwahl) kann er gezielt einen Teilnehmer
+der EURACOM 180/1/2 anrufen. Geben Sie die Anlagenrumpfnummer
+max. 10stellig ohne Vorwahl und ohne Durchwahl ein.
+
+@MSN Eingabe
+Fr einen Mehrger„teanschluá stellt die Telekom bis zu 10 Mehr-
+fachrufnummern (MSN) zur Verfgung. Geben Sie die Mehrfachruf-
+nummern (MSN 0 bis 9) max. 8stellig - ohne Vorwahl - ein. 
+
+@Rufnummernzuordnung
+Den angeschlossenen Endger„ten k”nnen Sie hiermit zweistellige
+Durchwahlnummern (10-97,bedingt 98 und 99)zuordnen.
+Sie ben”tigen diese Nummern fr den internen Verkehr, die 
+Durchwahl bei einem Anlagenanschluá und fr die Rufverteilung
+bei einem Mehrger„teanschluá.
+Der erste Eintrag am ISDN-Anschluá ist der Sammelruf, damit k”n-
+nen Sie alle Teilnehmer an diesem ISDN-Anschluá gleichzeitig 
+rufen.
+- LM (Leistungsmerkmale) ber Rufnummern 98 und 99
+  Bei einigen ISDN-Telefonen kann es sein,daá die Zeichen "#" 
+  und "*" nicht gesendet werden.
+  Werkseitig sind die Rufnummern 98 und 99 als Ersatz fr die
+  "#" bzw."#*" Funktion am ISDN-Telefon. M”chten Sie die 98 und 
+  99 als interne Rufnummern verwenden, schalten Sie
+  LM ber Rufnummern auf "aus".
+  Anstelle des Zeichens "#" wird beim Programmieren mit dem Telefon
+  im Wahlzustand die 98 eingegeben.
+  Anstelle der Zeichenfolge "#*" wird im Zustand Wahlvorbereitung 
+  (aufgelegter H”rer) die 99 und die nachfolgende Telefonprozedur
+  eingegeben und durch Abheben des H”rers ausgefhrt.
+
+@MSN Zuordnung
+Durch Zuordnung der Endger„te legen Sie fest, welche Endger„te
+der EURACOM 180/1/2, unter welcher MSN von einem Externteil-
+nehmer erreicht werden k”nnen.
+
+@Endger„te
+A C H T U N G ! 
+ Bei Arbeit mit der Maus erfolgt die Auswahl eines Teilnehmers
+ mit DOPPELKLICK !
+ Beachten Sie bitte, daá die nderung einer Auswahl 
+ fr jeden Teilnehmer einzeln mit < EINTRAGEN >
+ und die Gesamt„nderungen     mit < OK >
+ abzuschlieáen sind!
+
+
+Fr jedes einzelne Endger„t an analogen Ports legen Sie den
+Ger„tetyp fest.
+
+- Telefon:           Normales Telefon
+- Anrufbeantworter:  Sie k”nnen ein Gespr„ch von diesem 
+                     Endger„t bernehmen. Anklopfen ist nicht 
+                     m”glich.
+- Telefax:           Telefaxger„t angeschlossen. Anklopfen 
+                     ist nicht m”glich. Der entsprechende Dienst
+                     wird ausgewertet.
+- Modem:             Modem angeschlossen. Anklopfen ist nicht
+                     m”glich.
+- Multifunktional:   Multifunktionales Ger„t wie Telefon mit Fax
+                     oder Telefon mit Anrufbeantworter
+                     angeschlossen. 
+
+Information zur Vermeidung von Falschwahl:
+W„hlen Sie an einem Endger„t mit dem Mehrfrequenzwahlverfahren
+(MFV) vor der ersten Benutzung eine Ziffer. Damit erkennt die
+EURACOM 180/1/2 das Wahlverfahren.
+Bei jedem Wechsel des Wahlverfahrens, mssen Sie vor der ersten
+Benutzung eine Ziffer gr”áer 2 w„hlen.
+Betreiben Sie zwei Endger„te an einem Anschluá (z.B. mit einer
+AWADo), mssen beide Endger„te auf das gleiche Wahlverfahren 
+eingestellt sein.
+
+@Berechtigungen
+A C H T U N G ! 
+ Bei Arbeit mit der Maus erfolgt die Auswahl eines Teilnehmers
+ mit DOPPELKLICK !
+ Beachten Sie bitte, daá die nderung einer Auswahl 
+ fr jeden Teilnehmer einzeln mit < EINTRAGEN >
+ und die Gesamt„nderungen     mit < OK >
+ abzuschlieáen sind!
+
+Fr jedes einzelne Endger„t am analogen Port legen Sie fest:
+
+- die Externberechtigung 
+  - Keine:               nur intern telefonieren
+  - Halbamtsberechtigt:  Gespr„che annehmen und Rufnummern der
+                         zentralen Kurzwahl w„hlen.
+  - Ortsberechtigt:      Rufnummern des Ortsnetzes w„hlbar
+  - Nahberechtigt:       zus„tzlich zu den Rufnummern des Orts-
+                         netzes die programmierten Nahbereichs-
+                         nummern w„hlen.
+  - Inlandsberechtigt:   alle Rufnummern w„hlen, die nicht mit
+                         00 beginnen.
+  - Vollamtsberechtigt:  alle Rufnummern w„hlen.
+ 
+- Aufschaltberechtigung:
+   Endger„t kann sich auf eine bestehende Verbindung aufschalten.
+
+- Aufschaltschutzberechtigung:
+   berechtigt den Aufschaltschutz zu schalten.
+
+- Masterberechtigung:
+   berechtigt zum Einrichten von Leistungsmerkmalen fr alle 
+   Teilnehmer und zur Konfiguration der Anlage.
+
+@Rufverteilung
+A C H T U N G ! 
+ Bei Arbeit mit der Maus erfolgt die Auswahl eines Teilnehmers
+ mit DOPPELKLICK !
+ Beachten Sie bitte, daá die nderung einer Auswahl 
+ fr jeden Teilnehmer einzeln mit < EINTRAGEN >
+ und die Gesamt„nderungen     mit < OK >
+ abzuschlieáen sind!
+
+In den verschiedenen Rufverteilungen legen Sie die Verteilung von
+eingehenden Anrufen fest.
+
+- Rufverteilungen Tag-/Nachtschaltung
+   In der EURACOM 180/1/2 existieren zwei Rufverteilungen,
+   die jeder Internteilnehmer umschalten kann. 
+    Rufverteilung 1 = AVA 1 = Tagschaltung 
+    und
+    Rufverteilung 2 = AVA 2 = Nachtschaltung 
+
+   Externanrufe werden ber die aktuelle Rufverteilung 
+   unter der Voraussetzung signalisiert:
+   
+   - daá die EURACOM 180/1/2 an einem Anlagenanschluá betrieben
+     und mit der Durchwahl 0 gerufen wird oder eine nicht 
+     existierende Rufnummer gew„hlt wurde.
+   - daá die EURACOM 180/1/2 an einem Mehrger„teanschluá betrieben 
+     und kein Teilnehmer einer eingetragenen Mehrfachrufnummer
+     zugeordnet wurde.
+
+   In die Rufverteilungen k”nnen Sie alle Teilnehmer
+   die mit einer Rufnummern angemeldet sind eintragen.
+
+- Trfreisprecheinrichtung (TFE)
+   In den beiden Rufverteilungen fr die Trklingeln (TFE 1 und
+   TFE 2) k”nnen Sie festlegen, bei welchen Endger„ten ein
+   Trruf signalisiert werden soll. 
+
+- Rufweiterschaltung (RWS)
+   Zus„tzlich zu den Rufverteilungen 1 und 2 (Tag-/Nachtschaltung)
+   gibt es die Rufweiterschaltung (RWS).
+   Die in der Rufweiterschaltung eingetragenen Teilnehmer werden 
+   nach der von Ihnen eingegebenen Zeit (RWS-Zeit) gerufen.
+
+   Die Rufweiterschaltzeit (RWS-Zeit) ist die Zeit vom Beginn des
+   Externrufes bis zur Aktivierung der Rufweiterschaltung. Sie 
+   k”nnen die RWS-Zeit zwischen 0 (Rufweiterschaltung sofort) und 
+   120 Sekunden festlegen.
+   
+
+@Kurzwahl
+Sie k”nnen in der EURACOM 180/1/2 bis zu 200 zentrale Kurzwahl-
+ziele speichern. Die Rufnummern drfen max. 16stellig sein. Zu-
+s„tzlich k”nnen Sie fr den Ausdruck der Wahlspeicher zu jedem
+Kurzwahlziel einen Namen bestehend aus max. 38 Zeichen eingeben.
+Die Kurzwahlziele k”nnen an allen Endger„ten gew„hlt werden, die 
+mindestens die Halbamtsberechtigung haben.
+
+@Kurzwahl Eingabe
+Dieses Men dient zur Eingabe einer Kurzwahl. Sie k”nnen eine
+bis zu 16stellige Rufnummer, sowie zur besseren Erkennung des
+Kurzwahlzieles, diesem einen bis zu 38 Zeichen langen Namen zu-
+ordnen. 
+Achtung! Der eingegebene Name steht nicht in der EURACOM 180/1/2
+zur Verfgung, sondern dient nur zur besseren Unterscheidung bei
+der Eingabe der Kurzwahlziele. Er wird aber beim Speichern
+der Konfigurationsdaten mit in die Datei eingetragen und beim
+Ausdruck der Kurzwahlziele mit ausgedruckt.
+
+@Nahbereichsnummern
+Fr Endger„te mit der Externberechtigung "Nahberechtigt" k”nnen
+Sie bis zu 20 Rufnummern im Nahbereich festlegen, die zus„tzlich
+zu den Rufnummern des Ortsnetzes gew„hlt werden k”nnen. 
+Geben Sie die max. 5stelligen Nahbereichsnummern ein. 
+
+@Sperrnummern
+Mit Eingabe der Sperrnummern werden die zugeh”rigen Rufnummern-
+kreise gesperrt. Rufnummern, die mit diesen Ziffern beginnen,
+kann kein Teilnehmer w„hlen.
+
+@Wartemusik
+Sie k”nnen eine Melodie ausw„hlen, die ein Teilnehmer h”rt, 
+w„hrend die Verbindung von der EURACOM 180/1/2 gehalten wird. 
+
+Folgende Melodien stehen zur Auswahl:
+
+Intern:     Intern eingespielte Melodie
+Extern:     Extern eingespielte Melodie
+
+Das Leistungsmerkmal "Wartemusik" k”nnen Sie auch ausschalten.
+
+@Automatische Wahl
+Wenn Sie an einem Telefon der EURACOM 180/1/2 das Leistungsmerk-
+mal "Automatische Wahl" eingeschaltet haben, und jemand an die-
+sem Telefon den H”rer abnimmt und keine Ziffer w„hlt, z.B. im
+Notfall, w„hlt die EURACOM 180/1/2 nach 10 Sekunden automatisch
+die gespeicherte Rufnummer. 
+Sie legen die max. 24stellige Rufnummer fest. Ist die Rufnummer 
+eine Externrufnummer, mssen Sie an 1. Stelle eine "0" eingeben.
+
+@Raumberwachung
+Die EURACOM 180/1/2 erm”glicht eine akustische Raumberwachung
+per Telefon.
+Fr die Raumberwachung mssen Sie eine bis zu 6-stellige Code-
+nummer festlegen. Diese Codenummer muá bei der Raumberwachung
+nachdem Sonderw„hlton im MFV-Modus am Telefon oder ber einen 
+MFV-Handsender eingegeben werden.
+
+@Amtsspezifikation
+Fr die EURACOM 180/1/2 ist die entsprechende Landeskennziffer 
+einzutragen z.B 49 fr Deutschland.
+
+Fr die EURACOM 180/1/2 ist die entsprechende Ortskennziffer ohne
+die fhrende Null ( Vorwahl ) einzutragen.
+
+Es kann eine automatische Amtsholung eingestellt werden.
+Alle berechtigten Internteilnehmer h”ren nach Abheben des 
+H”rers den Amtsfreiton. Ein Internteilnehmer ist mit "*" 
+und der entsprechenden Rufnummer erreichbar.
+
+Bei eingestellter Rufweitergabe kann ein Internteilnehmer 
+einen externen Teilnehmer mit einem anderen externen Teilnehmer
+verbinden. Die Gebhren der jeweiligen Verbindung entstehen 
+demjenigen, der sie aufgebaut hat. 
+@---------------------------------------------------------------
+
+@Zusatzfunktionen
+Unter den Zusatzfunktionen lassen sich die Alarmbehandlung, die
+Zeichengabe von Ihrer Anlage zu einem anderen ISDN-Nutzer
+und die Gebhrenauswertung einstellen.
+
+@Steuerkontakte
+Mit Steuerkontakte programmieren legen Sie die Bearbeitung von
+Alarmmeldungen fest. Der Alarmsensorkontakt kann durch den 
+PC-Konfigurator auf eine st„ndige Aktivierungszeit 
+(z.B. von 19.00 bis 06.00 Uhr) programmiert werden.
+Fr den Fall eines Alarms legen sie fest, ob und welche von 
+bis zu 3 Rufnummern gew„hlt werden, bis dort ein Teilnehmer 
+durch einen Signalton den Alarm gemeldet bekommt. 
+Weiterhin k”nnen Sie eine Teilnehmer-zu-Teilnehmer Zeichengabe
+speziell fr den Alarm festlegen.
+Die Alarmausgangskontakte k”nnen Sie als ™ffnungs- oder als
+Schlieákontakte programmieren um z.B. eine Sirene oder andere
+Alarmger„te zu aktivieren. Die Dauer legen sie mit der Aktivie-
+rungszeit fest.
+@Teilnehmer-zu-Teilnehmer Zeichengabe
+Mit der Teilnehmer zu Teilnehmer Zeichengabe legen Sie die eine
+Meldung fest, die im Display ihres Gespr„chspartners erscheint.
+Sie k”nnen dadurch z.B. Ihren Firmennamen oder anderes 
+bermitteln.
+
+@Gebhrenkonfig
+Mit einem an der EURACOM 180/1/2 angeschlossenen V24-Drucker
+k”nnen Sie Gebhrendatens„tze ausdrucken lassen.
+Diesen Ausdruck k”nnen Sie fr jeden Teilnehmer individuell
+aktivieren.
+
+Bei eingeschaltetem Gebhrenausdruck kann fr alle Teilnehmer
+inviduell die Ausdruckvariante gew„hlt werden:
+
+- Aus :     Ausdruck Tln.-Nr, Datum Uhrzeit, Anzahl der Ein-
+            heiten, Betrag des Gespr„ches.
+- Ein :     Ausdruck Tln.-Nr, Datum Uhrzeit, angerufene Ruf-
+            nummer, Anzahl der Einheiten, Betrag des Gespr„ches
+- Gekrzt:  Ausdruck Tln.-Nr, Datum Uhrzeit, gekrzte Rufnum-
+            mer des angerufenen Teilnehmers (die letzten drei
+            Stellen der Rufnummer werden nicht angezeigt),
+            Anzahl der Einheiten, Betrag des Gespr„ches
+
+Die Gebhren pro Einheit k”nnen Sie wie folgt einstellen:
+
+- Grund Faktor:   Betrag fr eine Einheit, der von der
+                  Telekom berechnet wird.
+- User Faktor:    Betrag fr eine Einheit, den Sie in
+                  Rechnung stellen wollen.
+
+Der von Ihnen gewnschte Betrag ist in Pfennigen (0 - 255)
+anzugeben.
+
+Weiterhin bietet Ihnen die EURACON 180/1/2 die M”glichkeit auch
+Informationen eingehender (nur von ISDN-Anrufen mit mitgeliefer-
+ter Absenderrufnummer) Anrufe auf dem V24-Drucker zu protokol-
+lieren. Dabei haben Sie die M”glichkeit zu w„hlen, ob Sie ankom-
+mende Anrufe, die zu keiner Verbindung fhrten oder ankommende
+Anrufe, die zu einer Verbindung fhrten oder beides auf dem V24-
+Drucker protokollieren.
+
+Ebenfalls k”nnen Sie die Gebhrendaten fr jeden Teilnehmer 
+individuell auf einem PC ( TSR-Programm ) ber die V24-Drucker-
+schnittstelle fr eine sp„tere Weiterverarbeitung/Auswertung
+speichern lassen.
+
+Sie k”nnen zus„tzlich fr jeden Teilnehmer inviduell konfigurie-
+ren, ob die Gebhreninformation (Analogsignal fr A/B-, Digitale
+Information fr S0-Teilnehmer) zu den jeweiligen Endger„ten wei-
+tergereicht werden soll.
+
+@Gebhrenauswertung
+A C H T U N G ! 
+ Bei Arbeit mit der Maus erfolgt die Auswahl eines Teilnehmers
+ mit DOPPELKLICK !
+ Beachten Sie bitte, daá die nderung einer Auswahl 
+ fr jeden Teilnehmer einzeln mit < EINTRAGEN >
+ und die Gesamt„nderungen     mit < OK >
+ abzuschlieáen sind!
+
+Sie k”nnen die Gebhren wie folgt auswerten. Wenn Sie das auf
+Ihrer Installationsdiskette mitgelieferte TSR-Programm EURACOM
+gestartet haben, wird entsprechend Ihrer Gebhrenkonfiguration 
+ein File "Euracom.log" erzeugt.
+Wenn Sie nun eine Gebhrendatei ( <name>.geb ) ”ffnen , k”nnen
+Sie sich einzelne Teilnehmer oder auch alle ansehen, und die fr
+einen Zeitraum angefallenen Gebhren dazu auswerten.
+™ffnen Sie eine bereits vorhandene Gebhrendatei ( <name>.geb )
+und ein neues Logfile wurde inzwischen erzeugt, werden die 
+aktuell ausgelesenen Daten aus dem LogFile aufaddiert !!!
+
+@Teilnehmerdaten
+šber das Men Teilnehmerdaten k”nnen Sie die inviduellen Einstel-
+lungen jedes einzelnen Endger„tes/Trsprecheinrichtung berprfen
+und neu konfigurieren.
+Die Daten der Endger„te gliedern sich in drei Gruppen:
+- Allgemeines
+   In diesem Men haben Sie die M”glichkeit die Weckzeit, die
+   Rufumleitungen zu berprfen/programmieren und die angelau-
+   fenen Gebhrenbetr„ge der einzelnen Teilnehmer zu lesen.
+   - Weckzeit ist die inviduelle Uhrzeit, zu dem der Apparat
+     dem Teilnehmer durch einen Weckanruf eine von ihm bestimmte
+     Ereigniszeit signalisieren soll.
+     Es k”nnen Zeitangaben zwischen 00:00 und 23:59 Uhr eingegeben
+     werden.
+   - Rufumleitungen sofort, bei besetzt oder nach Zeit sind zu 
+     jedem Internteilnehmer m”glich.
+- Einrichtberechtigungen
+   In diesem Men werden Ihnen die Schaltmerkmale und 
+   Berechtigungen der Teilnehmer angezeigt.
+   CLIR/CLIP - Unterdrcken der Rufnummernanzeige gehend extern
+   COLR/COLP - Unterdrcken der Rufnummernanzeige kommend extern
+- Ger„tetypen
+   Es wird fr jeden analogen Teilnehmer der Ger„tetyp angezeigt.
+
+@---------------------------------------------------------------
+
+@Optionen
+Hiermit werden die Optionen fr die verwendete PC - Schnittstelle,
+das Aussehen Ihres Bildschirmes, sowie das individuelle Paáwort 
+der Abfrage vor dem Start dieses Programmes eingegeben
+
+@COM-Port
+Mit der Option <COM-Port> k”nnen Sie die Datenbertragungs-
+schnittstelle fr die Verbindungsaufnahme zur EURACOM 180/1/2
+festlegen.
+Als Standardeinstellung wird der COM-Port 1 beim Starten des Pro-
+grammes angenommen. Wird vom Anwender die COM-Schnittstelle ver-
+„ndert, so wird dies resident im Programm gespeichert.
+Die Portadressen fr die COM-Schnittstellen werden nach dem
+durch MS-DOS festgelegten Standard vergeben.
+Die Verkettung von Interrupttreibern ist nicht vorgesehen! Es
+ist also nicht m”glich COM 1 und COM 3 oder COM 2 und COM 4
+gleichzeitig zu nutzen.
+
+Die Portadressen und Interruptrequestleitungen sind:
+
+ COM-Port COM-Adresse IRQ-Leitung
+ COM 1 3F8H IRQ 4
+ COM 2 2F8H IRQ 3
+ COM 3 3E8H IRQ 4
+ COM 4 2E8H IRQ 3
+
+Die šbertragungsrate wird vom Konfigurationsprogramm entsprechend
+den Erfordernissen automatisch eingestellt.
+
+@Farben
+Normalerweise konfiguriert sich das Programm selbst. Es erkennt, 
+welche Grafikkarte es untersttzen muá. 
+Sie k”nnen zu Ihrer individuellen Einstellung fr Ihren Bild-
+schirm folgende Darstellungsarten w„hlen:
+Monochrom, Color oder LCD.
+
+@Paáwort
+Im Grundzustand ist kein Paáwort eingetragen.
+Das Paáwort fr den Zugang zu diesem Konfigurationsprogramm 
+k”nnen Sie ver„ndern.
+altes Paáwort : < ENTER >
+Geben Sie das neue Paáwort ein (maximal 10stellig).< ENTER >
+Vergessen Sie das Paáwort, kann Ihnen nur der Service helfen. 
+Er kann Ihr Paáwort l”schen, ohne es zu kennen.
+
+@---------------------------------------------------------------
+
+@Programm Hilfe
+Allgemeines zum Konfigurationsprogramm
+
+Mit dem Konfigurationsprogramm k”nnen Sie die EURACOM 180/1/2
+einfach und bersichtlich programmieren. Alle Einstellungen,
+die Sie normalerweise mit einem Mastertelefon vornehmen máten,
+k”nnen Sie bequem am Bildschirm vornehmen und auf Ihrer Fest-
+platte oder einer Diskette sichern.
+Voraussetzung zur Programmierung ist eine Verbindung zwischen
+der EURACOM 180/1/2 und Ihrem PC.
+
+Bildschirmaufbau
+
+In der unteren Bildschirmzeile werden kurze Hilfstexte und m”g-
+liche Steuertasten angezeigt. 
+Die obere Bildschirmzeile (Menzeile) enth„lt die šberschriften 
+der Auswahlmens. 
+- Datei
+- Konfiguration
+- Zusatzfuntkionen
+- Service
+- Optionen
+- Hilfe
+
+
+Bedienung
+
+Durch Drcken der <F10>-Taste springt der Cursor in die Men-
+zeile.
+Mit den Tasten <Cursor links> oder <Cursor rechts> k”nnen Sie
+jetzt das gewnschte Auswahlmen w„hlen. Es wird farbig markiert.
+Drcken Sie die <Eingabe>-Taste, so werden Ihnen die Menpunkte
+des Auswahlmens angezeigt. Mit den Tasten <Cursor oben> oder
+<Cursor unten> k”nnen Sie den gewnschten Menpunkt ausw„hlen.
+Er ist dann farbig markiert.
+
+Eine weitere M”glichkeit den gewnschten Menpunkt aufzurufen
+besteht darin, die Taste <Alt> und die Taste des Auswahlzeichens
+des gewnschten Auswahlmens/Menpunkts zu drcken.
+Das Auswahlzeichen ist ein Buchstabe in dem Namen des Auswahl-
+mens/Menpunkts, der sich durch die Farbe oder Intensit„t von 
+den anderen Buchstaben unterscheidet.
+Beispiel: Beim Auswahlmen Konfiguration ist es der Buchstabe K 
+und beim Menpunkt ISDN-Anschluá der Buchstabe I.
+
+Sie k”nnen die Auswahlmens und Menpunkte auch ber die Maus 
+ansteuern und mit der Maustaste ausw„hlen. Vor dem Programmstart 
+mssen Sie dazu den Maustreiber laden.
+Durch Bewegen der Maus ver„ndern Sie die Position des Maus-
+Cursors. Ist dieser in der Menzeile und drcken Sie eine Maus-
+taste, ”ffnet sich ein Auswahlmen, aus dem Sie Menpunkte mit
+dem Maus-Cursor und der Maustaste ausw„hlen k”nnen.
+A C H T U N G ! 
+ Bei Arbeit mit der Maus erfolgt die Auswahl eines Teilnehmers
+ mit DOPPELKLICK !
+ Beachten Sie bitte, daá die nderung einer Auswahl 
+ fr jeden Teilnehmer einzeln mit < EINTRAGEN >
+ und die Gesamt„nderungen     mit < OK >
+ abzuschlieáen sind!
+
+Eingabe
+
+Der blinkende Cursor markiert die Eingabestelle. Gegebenenfalls 
+k”nnen Sie den blinkenden Cursor mit den Cursortasten in die ge-
+wnschte Eingabeposition bringen. Mit der Taste <Tab> k”nnen Sie 
+die Eingabeposition ebenfalls ver„ndern.
+Mit den Zifferntasten geben Sie Rufnummern und Zeiten ein. Namen 
+schreiben Sie mit den Buchstabentasten.
+Eintr„ge „ndern Sie durch šberschreiben oder l”schen Sie mit 
+<Backspace> oder <Delete>.
+
+
+Hilfe
+
+Zu jedem Menpunkt existiert eine Hilfe, die Sie immer mit <F1> 
+aufrufen k”nnen.
+
+@Hilfe-Register
+
+Unter diesem Menpunkt erscheinen die šberschriften aller m”g-
+lichen Hilfen bezogen auf die Menpunkte.
+Sie k”nnen mit den Cursor-Tasten oder der Maus eine bestimmte 
+šberschrift ausw„hlen und mit der <Eingabe>-Taste oder Doppel-
+klick sich den Hilfetext anzeigen lassen. 
+
+@Info
+Ihnen wird die Version des Konfigurationsprogramms angezeigt.
+
+@---------------------------------------------------------------
+
+@Service
+Die unter dem Menpunkt >Service< zu Verfgung stehenden Punkte
+dienen nicht zur Einrichtung der EURACOM 180/1/2. Sie stellen eine
+Reihe von Funktionen zur Verfgung, mit deren Hilfe eine Fehler-
+analyse und durch einen Servicetechniker vor Ort ein Hardwaretest
+durchgefhrt werden kann.
+
+@Protokoll
+Zur Analyse von Fehlern in der EURACOM 180/1/2 existiert ein 
+Fehlerspeicher. In diesem Speicher werden alle von der Software 
+erkannten unerwarteten Ereignisse eingetragen.
+
+šber den Menpunkt Protokoll kann der Fehlerspeicher der EURACOM
+180/1/2 ausgelesen werden. Die gelesenen Daten werden in einem
+File, das frei zu benennen ist, abgelegt und dienen zur evtl.
+Fehleranalyse.
+
+@EPROM Version
+Zeigt die aktuelle EPROM-Version EURACOM 180/1/2 an.
+
+@EPROM
+Ermittelt die Checksumme des EPROM's der EURACOM 180/1/2 und zeigt
+diese an.
+
+@EEPROM
+Veranlaát die Prfung der Checksummen des EEPROM's der
+EURACOM 180/1/2 und zeigt als Ergebnis an, ob die Checksummen
+konsistent sind oder nicht.
+
+@Ruft”ne
+In diesem Menpunkt k”nnen Ruft”ne aktiviert werden, die am 
+a/b - Port 2 signalisiert werden.
+Nach Beendigung des Testes wird dieser Teilnehmer in Ruhe ver-
+setzt.
+
+Die Beschreibung entspricht folgendem Muster:
+
+ +-----+       +
+ İ Ton İ Pause İ
+-+     +-------+
+
+Zeiten ohne zus„tzliche Angaben beziehen sich auf Millisekunden.
+
+Beschreibung der einzelnen Rufsequenzen:
+
+Amtsruf
+ 
+ +-----------+                              +úúú
+ İ   1Sek    İ            4Sek              İ
+-+           +------------------------------+
+
+Internruf
+ 
+ +-----------+                              +úúú
+ İ   0,5Sek  İ         2Sek                 İ
+-+           +------------------------------+
+
+Coderuf 1
+
+ +---------+     +---+                  +úúú
+ İ  1000   İ 300 İ200İ   4 Sekunden     İ
+-+         +-----+   +------------------+
+
+Coderuf 2
+
+ +---------+     +---+     +---+                  +úúú
+ İ  1000   İ 300 İ200İ 300 İ200İ    4 Sekunden    İ
+-+         +-----+   +-----+   +------------------+
+
+Coderuf 3
+
+ +------+     +---+     +---+     +---+                 +úúú
+ İ1000  İ 300 İ200İ 300 İ200İ 300 İ200İ   4 Sekunden    İ
+-+      +-----+   +-----+   +-----+   +-----------------+
+
+Coderuf 4
+
++-----+     +---+     +---+     +---+     +---+          +úúú
+İ 1000İ 300 İ200İ 300 İ200İ 300 İ200İ 300 İ200İ  4 Sek.  İ
++     +-----+   +-----+   +-----+   +-----+   +----------+
+
+Dr„ngelruf 4
+
++-----+      +-----+      +-----+      +-----+      +úúú
+İ 400 İ 1000 İ 400 İ 1000 İ 400 İ 1000 İ 400 İ 1000 İ
++     +------+     +------+     +------+     +------+
+
+Hinweisruf
+
++-----+úúú
+İ 200 İ
++     +
+
+Alarmruf
+
++----------+      +----------+      +----------+      +úú
+İ   4000   İ 1000 İ   4000   İ 1000 İ   4000   İ 1000 İ
++          +------+          +------+          +------+
+
+@H”rt”ne
+In diesem Menpunkt k”nnen H”rt”ne aktiviert werden,die dem
+Teilnehmer am a/b-Port 2 signalisiert werden.
+Nach Beendigung des Testes wird dieser Teilnehmer in den Urzu-
+stand versetzt.
+
+Die Beschreibung entspricht dem nachfolgenden Muster, wobei
+Zeiten ohne zus„tzliche Angaben sich auf Millisekunden beziehen.
+
+ +-----+       +
+ İ Ton İ Pause İ
+-+     +-------+
+
+Beschreibung der einzelnen Tonsequenzen:
+
+Internw„hlton
+ 
+ +-----+         +-----+         +-----+              +úúú
+ İ 150 İ   500   İ 150 İ   500   İ 150 İ  2 Sekunden  İ
+-+     +---------+     +---------+     +--------------+
+
+Freiton
+
+ +--------+                  +úúú
+ İ  500   İ        2000      İ
+-+        +------------------+
+
+Besetztton
+ 
+ +-----+         +úúú
+ İ  3  İ   10    İ 
+-+     +---------+ 
+
+Positiver Quittungston 
+
+ +--------+        +úúú
+ İ  1000  İ  1000  İ
++         +--------+
+
+Negativer Quittungston 1
+
+ +--------+        +--------+        +--------+        +úúú
+ İ  200   İ  200   İ  200   İ  200   İ  200   İ  200   İ
++         +--------+        +--------+        +--------+
+
+Anklopfton
+
+ +---+      +---+      +---+                             +úúú
+ İ 50İ 400  İ 50İ 400  İ 50İ           10 Sekunden       İ
+ +   +------+   +------+   +-----------------------------+
+
+Aufmerkton
+
+ +---+      +---+      +---+                            +úúú
+ İ 50İ 400  İ 50İ 400  İ 50İ       10 Sekunden          İ
+-+   +------+   +------+   +----------------------------+
+
+Sonderw„hlton
+ 
+ +-----+         +-----+         +-----+              +úúú
+ İ 150 İ   500   İ 150 İ   500   İ 150 İ  2 Sekunden  İ
+-+     +---------+     +---------+     +--------------+
+
+@S0-Anschluá
+In diesem Menpunkt k”nnen Testfunktionen am S0-Anschluá akti-
+viert werden. Dabei darf die EURACOM 180/1/2 nicht mit dem Amt
+verbunden sein.
+
+Testfunktion Single Pulses
+Die EURACOM 180/1/2 sendet einzelne, alternierende Pulse im 4 kHz
+Rhytmus am S0-Anschluá.
+
+Testfunktion Continuous Pulses
+Die EURACOM 180/1/2 sendet ein Dauersignal 96 kHz am S0-Anschluá.
+Diese Testfunktion kann verwendet werden bei der Systemd„m-
+pfungsmessung in einer Punkt-zu-Punkt Verbindung, bei einer
+Unsymmetried„mpfungsmessung nach CCITT oder bei einer Gleich-
+taktd„mpfungsmessung.
+
+Testfunktion Test Loop
+Hierbei handelt es sich um eine externe B-Kanal Schleife am S0-
+Anschluá. Dabei werden die empfangenen B-Kan„le in der EURACOM
+180/1/2 am S0-Anschluá gespiegelt.
+
+@Paáwort l”schen
+šber den Menpunkt Paáwort l”schen, kann das Kundenpaáwort vom
+Servicetechniker gel”scht werden.
+
+@Servicefreigabe
+Eingabe des Freigabekennwortes um einem Kunden die Anwahl der 
+Fernwartung zu erm”glichen. Das Kennwort bleibt bis zur Eingabe
+eines neuen Kennwortes bzw. bis zum Beenden der Fernwartung
+aktiviert.
+
+@Wartung beenden
+Beenden der Fernwartung und Ausl”sen der Verbindung zur Anlage des
+Kunden. Das Freigabekennwort wird gesperrt.
+
+@Fehlerprotokoll aus File lesen
+Sie k”nnen ein Fehlerprotokollfile ”ffnen.
+Zur Analyse von Fehlern in der EURACOM 180/1/2 existiert ein 
+Fehlerspeicher. In diesem Speicher werden alle von der Software 
+erkannten unerwarteten Ereignisse eingetragen.
+
+

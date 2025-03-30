@@ -1,0 +1,73 @@
+!######################################################################
+!                       Sperr
+!######################################################################
+
+*loccharge_dlg.xmtChildren:	unmanaged XmtLayout loccharge;
+*loccharge_dlg.title:		Interner Gebührenwert
+*loccharge.autoUnmanage:		False
+*loccharge.dialogStyle:		dialog_primary_application_modal
+
+*loccharge.xmtChildren:	\
+		XmtInputField lcf0,lcf1,lcf2,lcf3,lcf4, \
+					  lcf5,lcf6,lcf7,lcf8,lcf9, \
+				      lcf10,lcf11,lcf12,lcf13, \
+					  lcf14,lcf15,lcf16,lcf17, \
+					  lcf18,lcf19, \
+				      lcf20,lcf21,lcf22,lcf23, \
+					  lcf24,lcf25,lcf26,lcf27, \
+					  lcf28,lcf29; \
+		XmPushButton okay,cancel,help;
+
+*loccharge.XmtInputField.verifyCallback: Check_0_255();
+*loccharge.XmtInputField.errorCallback:  \
+	XmtDisplayWarning(msg1, Der Wert muß zwischen 0 und 255 liegen!);
+*loccharge.XmtInputField.matchAll:	False
+*loccharge.XmtInputField.pattern:	ddd
+
+*loccharge.okay.labelString:	OK
+*loccharge.cancel.labelString:	Abbrechen
+*loccharge.help.labelString:	Hilfe
+
+*loccharge.okay.activateCallback:		XmtDialogOkayCallback();
+*loccharge.cancel.activateCallback:	XmtDialogCancelCallback();
+
+*loccharge.layout: \
+	Caption tl "Interner Gebührensatz in Pfennig" Etched Through 6 2 Row { \
+		Col { \
+		Caption "AB  #1: " 19 mm Wide lcf0 \
+		Caption "AB  #2: " 19 mm Wide lcf1 \
+		Caption "AB  #3: " 19 mm Wide lcf2 \
+		Caption "AB  #4: " 19 mm Wide lcf3 \
+		Caption "AB  #5: " 19 mm Wide lcf4 \
+		Caption "AB  #6: " 19 mm Wide lcf5 \
+		Caption "AB  #7: " 19 mm Wide lcf6 \
+		Caption "AB  #8: " 19 mm Wide lcf7 \
+		Caption "TFE #1: " 19 mm Wide lcf8 \
+		Caption "TFE #2: " 19 mm Wide lcf9 \
+		} \
+		Col { \
+		Caption "S0 #0: " 19 mm Wide lcf10 \
+		Caption "S0 #1: " 19 mm Wide lcf11 \
+		Caption "S0 #2: " 19 mm Wide lcf12 \
+		Caption "S0 #3: " 19 mm Wide lcf13 \
+		Caption "S0 #4: " 19 mm Wide lcf14 \
+		Caption "S0 #5: " 19 mm Wide lcf15 \
+		Caption "S0 #6: " 19 mm Wide lcf16 \
+		Caption "S0 #7: " 19 mm Wide lcf17 \
+		Caption "S0 #8: " 19 mm Wide lcf18 \
+		Caption "S0 #9: " 19 mm Wide lcf19 \
+		} \
+		Col { \
+		Caption "S1 #0: " 19 mm Wide lcf20 \
+		Caption "S1 #1: " 19 mm Wide lcf21 \
+		Caption "S1 #2: " 19 mm Wide lcf22 \
+		Caption "S1 #3: " 19 mm Wide lcf23 \
+		Caption "S1 #4: " 19 mm Wide lcf24 \
+		Caption "S1 #5: " 19 mm Wide lcf25 \
+		Caption "S1 #6: " 19 mm Wide lcf26 \
+		Caption "S1 #7: " 19 mm Wide lcf27 \
+		Caption "S1 #8: " 19 mm Wide lcf28 \
+		Caption "S1 #9: " 19 mm Wide lcf29 \
+		} \
+	} \
+	Fixed Equal Row { okay cancel help }

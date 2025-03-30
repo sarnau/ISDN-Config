@@ -1,0 +1,327 @@
+                       "ISTEC 1008 INTERN"
+
+Von Hergen Lehmann mit kleinen Erweiterungen von Ullrich von Bassewitz
+Updated for 1008 V1.93 - P. Barnard (Emmerich)
+Updated for 1008 V2.00 - J. Wagner (Emmerich)
+Bugfixes               - M. Fritze (Sigma-Soft)
+
+**********************************************************************
+*                      Schnittstellenprotokoll                       *
+**********************************************************************
+
+Schnittstellenparameter:  9600 Baud, 8N1
+
+Die Übertragung geschieht grundsätzlich in Segmenten zu je 4Byte:
+
+  +-----------+-----------+-----------+-----------+
+  | x000 00xx | xxxx xxxx | xxxx xxxx | xxxx xxxx |
+  +-----------+-----------+-----------+-----------+
+    |       |      \-------------------------/
+  Endemarke |       Datenbytes, ungenutzte Bytes
+        Anzahl der    sind 00 oder FF
+        Datenbytes
+
+Jeweils eine Anzahl Segmente mit dem Startbyte 0x03 und drei Daten-
+bytes sowie ein abschließendes Segment mit dem Startbyte 0x81-0x83
+und entsprechend ein bis drei weiteren Datenbytes bilden zusammen
+eine Nachricht. Das erste Byte einer solchen Nachricht bestimmt
+ihre Funktion, der Rest sind Parameter.
+
+Prüfsummen oder ähnliches gibt es nicht.
+
+Beispiele:
+    03 DD 07 01 83 00 01 00
+         = Opcode 0xDD, Parameter "07 01 00 01 00"
+
+    82 18 01 00
+         = Opcode 0x18, Parameter "01"
+
+**********************************************************************
+*                  Nachrichten vom PC an die ISTEC                   *
+**********************************************************************
+
+Opcode  Parameter          Funktion
+~~~~~~  ~~~~~~~~~~~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 0x02   2 Byte Version     Bereitschaft prüfen
+        der PC-SW          Ab FW-Version 2.0 werden von der ISTEC zusätzlich
+                           die Parameter pc_version_h und pc_version_l erwartet.
+                           Um die Features der Version 2.0 im vollen Umfang
+                           nutzen zu können, muß der Wert von pc_version_h = 2
+                           sein. Der Parameter pc_version_l wurde für spätere
+                           Versionen vorgehalten und ist in der FW-Version 2.0
+                           redundant.
+
+ 0x05   16 Byte Gebüh-     Schreiben Gebührenzähler
+        rendaten           Für jedes der 8 möglichen Endgeräte sind
+                           zwei Bytes reserviert.
+
+ 0x06   --                 Abfrage Gebührenzähler
+
+ 0x07   1 Byte Endgeräte-  Schreiben Endgerätekonfiguration
+        nummer, gefolgt    Endgerätenummer: 0x00=Nebenstelle 21,
+        von 25 Byte Kon-   0x01=Nebenstelle 22, usw. bis 0x3F
+        figurationsdaten
+
+ 0x08   --                 Abfrage Endgerätekonfiguration
+                           Nach dem Empfangen dieser Anweisung sendet
+                           die ISTEC hintereinanderweg 8 Antwortnach-
+                           richten des Typs 0x16 (siehe unten), ent-
+                           sprechend den 8 möglichen Endgeräten.
+
+ 0x09   116 Byte Konfi-    Schreiben Grundkonfiguration
+        gurationsdaten     (wird nicht quittiert!)
+
+ 0x0a   --                 Abfrage Grundkonfiguration
+
+ 0x0c   --                 Abschluß Konfiguration (Daten in Permanent-
+                           speicher übernehmen!?)
+                           Anmerkung (Wagner, Emmerich):
+                           Mit diesem Kommando wird der EEPROM-
+                           Timerjob gestartet, um die Konfigurationsdaten
+                           im EEPROM zu sichern.
+
+ 0xdd   5 Byte Parameter,  Diagnoseanweisung
+        siehe unten
+
+**********************************************************************
+*               Nachrichten von der ISTEC an den PC                  *
+**********************************************************************
+
+Opcode  Parameter          Funktion
+~~~~~~  ~~~~~~~~~~~~~~~    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 0x11   --                 Positive Quittung für die Kommandos 0x0c
+                           und 0x05
+
+ 0x12   --                 Antwort auf 0x02, Bereitschaft prüfen
+
+ 0x13   1 Byte Fehler-     Wird von der ISTEC im Fehlerfall zurück-
+        code               geliefert, 0x01 = type failure, 0x03 =
+                           invalid data (laut Emmerich Doku). Es tritt
+                           außerdem noch der undokumentierte Typ
+                           0x02 auf.
+                           Anmerkung (Wagner, Emmerich):
+                           Tatsächlich sind für t=17.10.96
+                           folgende Fehlertypen implementiert:
+                           FEHLER_PROTOKOLL 0x00
+                           FEHLER_ISTEC_TYP 0x01
+                           FEHLER_TRANSPORT 0x02
+
+ 0x15   16 Byte Gebüh-     Antwort auf 0x06, Abfrage Gebühren
+        rendaten           Für jedes der 8 möglichen Endgeräte sind
+                           zwei Bytes reserviert.
+
+ 0x16   1 Byte Endgeräte-  Antwort auf 0x08, Konfiguration abfragen
+        nummer, gefolgt    Endgerätenummer: 0x00=Nebenstelle 21,
+        von 25 Byte Kon-   0x01=Nebenstelle 22, usw. bis 0x3F
+        figurationsdaten
+
+ 0x17   116 Byte Konfi-    Antwort auf 0x0a, Konfiguration abfragen
+        gurationsdaten
+
+ 0x18   Endgerätenummer    Quittung für 0x07, Schreiben Endgerätekonfig
+
+ 0xdd   5Byte Parameter,   Diagnosestatus
+        siehe unten
+
+**********************************************************************
+*                        Diagnosenachrichten                         *
+**********************************************************************
+
+Richtung  Parameterbytes  Funktion
+~~~~~~~~  ~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  -->     00 69 5A 96 A5  Diagnosemodus einschalten
+
+  -->     01 00 00 00 00  Diagnosemodus beenden
+
+ <-->     02 ss gg zz 00  Verbindungsmatrix
+                            ss=Spalte, gg=Endgerät, zz=0:aus,=1:ein
+
+ <-->     03 gg 00 zz 00  Ruf (gg=Endgerät, zz=0:aus,=1:ein)
+
+  <--     04 gg 00 zz 00  Schleifenzustand
+                            gg=Endgerät, zz=0:inaktiv ,=1:aktiv
+
+  <--     05 gg 00 zz 00  Impulswahl erkannt
+                            gg=Endgerät, zz=gewähle Ziffer
+                                            (0x10=R-Taste)
+
+  <--     06 kk 00 zz 00  Tonwahl erkannt
+                            kk=Kanal (0:IVb1,1:IVb2),
+                            zz=gewählte Ziffer
+
+ <-->     07 01 00 zz 00  LED Zustand (zz=0:aus, =1:ein)
+
+  -->     08 ll 00 zz 00  Gebühren (ll=Leitung, zz=0:aus,=1:ein)
+
+  -->     09 00 00 zz 00  TFE-Verstärker (zz=0:aus, 1:ein)
+  <--     09 FF FF zz 00
+
+  -->     0A 00 00 zz 00  Türöffner (zz=0:aus, =1:ein)
+  <--     0A FF FF zz 00
+
+  -->     0D 00 00 00 00  Schalter abfragen (zz=0:aus, =1:ein)
+  <--     0D 00 00 zz 00
+
+**********************************************************************
+*                  Datenstruktur Grundkonfiguration                  *
+**********************************************************************
+
+Offset  Bytes  Typ      Funktion
+~~~~~~  ~~~~~  ~~~~~    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   0      1    Flag     Anschlußart: 0=Mehrgeräte-,1=Anlagenanschluß
+   1      1    Binär    Anzahl der a/b-Schnittstellen
+   2      1    Flag     Protokoll: 0=1TR6, 1=E-DSS1
+   3      2    Binär    Software Versionsnummer
+   5      1    Binär    TFE-Zuordnung (0x15=21,0x16=22,...)
+
+   6      5    BCD      MSN 0
+  11      5    BCD      MSN 1
+  16      5    BCD      MSN 2
+  21      5    BCD      MSN 3
+  26      5    BCD      MSN 4
+  31      5    BCD      MSN 5
+  36      5    BCD      MSN 6
+  41      5    BCD      MSN 7
+  46      5    BCD      MSN 8
+  51      5    BCD      MSN 9
+
+  56      1    Flag     Music on Hold (00=aus,01=ein)
+  57      1    Binär    Anzahl der internen S0-Busse
+  58      1    Binär    Anzahl der externen S0-Busse
+
+  59      1    Binär    Abfragestelle1 (0x15=21,0x16=22,...)
+  60      1    Binär    Abfragestelle2 (0x15=21,0x16=22,...)
+  61      1    Binär    Anzahl der Ziffern in der 1.Rufnummer
+  62     10    ASCII    1.Rufnummer, mit 0x00 aufgefüllt
+  72      1    Binär    Anzahl der Ziffern in der 2.Rufnummer
+  73     10    ASCII    2.Rufnummer, mit 0x00 aufgefüllt
+
+  83     10    Bitmask  MSN Gruppenbildung: Für jede der 10 MSN's
+                        ein Byte, in dem die einzelnen Bits angeben,
+                        welche der 8 Nebenstellen klingeln sollen.
+                        Auch bei den größeren Anlagen bleibt es bei
+                        8Bit pro MSN; keine Ahnung, wie die weiteren
+                        Nebenstellen adressiert werden...
+                        Anmerkung (Wagner, Emmerich):
+                        Die größeren Anlagen werden ausschließlich
+                        im Anlagenanschluß betrieben. Dort geschieht
+                        die Zuordnung der TIn über DDI's.
+  93      1    Binary   Message on Hold port (0x15=21,0x16=22,...)
+  94      2    Binary   National code integer value (international
+                        dialling code) 0x0031=49=Germany
+  96      4    Bitmask  TFE location.
+                        byte 0 - KEY 0 - bits correspond to extensions
+                        byte 1 - KEY 1 -   ditto
+                        byte 2 - KEY 2 -   ditto
+                        byte 3 - KEY 3 -   ditto
+                        bit 0 - extension 21
+                        bit 1 - extension 22 
+                        ....
+                        bit 7 - extension 28
+                        This is used to indicate which extension to ring
+                        when the TFE is activated (multiple extensions
+                        are permitted by multiple bits)
+  100     1    Flag     Alarm Ton 0 = AUS, 1 = EIN
+                        Dieser Parameter hat in der vorliegenden
+                        Protokollvariante keine Bedeutung.
+                        In der SW-Struktur werden jedoch die
+                        gleichen Typendeklarationen für die serielle
+                        Sst, wie für die EEPROM-Routinen verwendet.
+                        Zur Zeit wird dieser Wert lediglich für
+                        die internen Routinen benötigt, ist aus
+                        Kompatibilitätsgründen jedoch auch im
+                        Sst.-protokoll enthalten.
+                        Angereizt wird die Alarmfunktion über ein
+                        neu definiertes Protokoll, auf das hier
+                        jedoch nicht genauer eingegangen wird
+                        (bei Emmerich anfragen).
+  101    10    Binär    Array von 10 Bytes. Jeder MSN kann einer
+                        der folgenden Rufe zugeordnet werden:
+                        normal_ruf        -> Wert 0 als default
+                        sonder_ruf_1      -> Wert 1
+                        sonder_ruf_2      -> Wert 2
+                        sonder_ruf_3      -> Wert 4
+                        kein_ruf          -> Wert 3
+  111     6    Binär    Reserved for future expansion   
+  116    --ENDE--
+
+BCD-Werte sind mit "F" aufgefüllt, wenn nicht die volle Stellenzahl
+benötigt wird. Die erste Ziffer steht jeweils im LSB.
+
+**********************************************************************
+*              Datenstruktur Endgerätekonfiguration                  *
+**********************************************************************
+
+Offset  Bytes  Typ      Funktion
+~~~~~~  ~~~~~  ~~~~~    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   0      1    Flag     Wahlbewertung: 00=keine,01=Inland,...
+   1      1    Flag     Dienst: 00=Telefonie,01=G3-FAX,...
+   2      1    Binär    Rufumleitung: 00=keine,01=extern,
+                        0x15=Nebenstelle 21,0x16=Nebenstelle 22,usw.
+   3      1    Flag     Gebührenimpuls: 00=nein,01=ja
+   4      2    BCD      PIN
+   6     10    BCD      Rufnummer für externe Rufumleitung
+  16      1    Flag     Terminal mode (Spontan amtsholung) 0x01=ON
+  17      1    Binär    Ein Bit pro Sprechstelle: 1 = Anklopfen erlaubt
+  21      1    Binär    ???
+  18      2    Binär    Ein Bit pro MSN: Anklopfen von MSN x erlaubt
+  20      1    Binär    Zusatzinfo über Ziffernlänge der ext.
+                        Rufumleitung.
+  22      1    Binär    Umleitungsziel bei Besetzt
+                        (0 = keine Umleitung, 1..8 = 21..28)
+  23      1    Binär    Umleitungsziel nach Anzahl Rufsequenzen
+                        (0 = keine Umleitung, 1..8 = 21..28)
+  24      1    Binär    Anzahl der Rufe bis Umleitung aktiv wird
+  25     --ENDE--
+
+BCD-Werte sind mit "F" aufgefüllt, wenn nicht die volle Stellenzahl
+benötigt wird. Die erste Ziffer steht jeweils im LSB.
+
+**********************************************************************
+* Aufbau der Konfigurationsdateien (*.IC) (vor Version 2.0!)         *
+**********************************************************************
+
+Offset  Bytes  Funktion
+~~~~~~  ~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   0     106   Daten der Grundkonfiguration
+ 106       1   0x00
+ 107      20   Konfiguration Endgerät 21
+ 127       1   0x01
+ 128      20   Konfiguration Endgerät 22
+ 148       1   0x02
+ 149      20   Konfiguration Endgerät 23
+  :        :
+  :        :   usw., insgesamt 64 Endgerätedatensätze
+  :        :
+        --ENDE--
+
+**********************************************************************
+*              Verarbeitungsgeschwindigkeit der ISTEC                *
+**********************************************************************
+
+Die ISTEC verarbeitet die an sie geschickten Nachrichten extrem
+langsam! Glücklicherweise enthielt die Version 1.7 des Konfigurations-
+programms von Emmerich einen Großteil der Turbo-Debugger Infos,
+so daß es ein leichtes war, die tatsächlich benötigten Wartezeiten
+durch einen Breakpoint auf der delay() Routine zu erfahren:
+
+ * Nach jedem einzelnen Block von 4 Bytes muß 40ms gewartet werden
+
+ * Nach einem kompletten Kommando nochmals zusätzlich 60ms, d.h.
+   nach dem letzten Block insgesamt 100ms.
+
+Ein Nichteinhalten dieser Zeiten führt zu einer Fehlermeldung von
+der ISTEC, üblicherweise 0x13 0x02.
+
+Note from Paul Barnard (Emmerich).  The serial information is buffered in
+the ISTEC and a byte is transfered to/from the serial UART every time the 
+task is run.  Currently the task time is 10ms.  This is inherent in the 
+software structure of the product.  The internal buffer size of the ISTEC
+is only 4 bytes (limited by RAM constraints).  Hence the need for the
+delay.  I've remembered to switch off the DEBUG now but if anyone wants
+to know anything about either the 1008 software or the configuration
+software my Compuserve E-Mail is 100673,2522
+
+**********************************************************************
+*                           THE END ....                             *
+**********************************************************************

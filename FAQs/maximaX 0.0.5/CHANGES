@@ -1,0 +1,23 @@
+0.0.5
+- Changed stop_conn() procedure to set the input focus correctly
+- Changed all routines which use a WorkingBox to provide the correct
+  parent widget
+- Added code for "Teilnehmerdaten"
+- Changed loadNshowFile() in kwzconf.c to read in KWZ from gebkit.c
+- Added code for "1000er Gebuehrenkit"
+- Started the "tool" dir for additional (console) tools
+- Changed a lot in the Makefile 
+- Inserted some code from Holm Tiffe for FreeBSD and fixed a bug
+  he has found in openSer()
+- Added resourcefile and changed application name to MaximaX
+- Changed README to make people install the new resourcefile
+- Added "install" target to Makefile
+- Removed "-x" flag from maximaX, because it's not really needed (device
+  is always last parameter)
+- Send a lot of thanks to Dirk ;-) und ein paar Fluche :)
+
+
+0.0.4 CHANGES logging started wit 0.0.5!
+0.0.3
+0.0.2
+0.0.1

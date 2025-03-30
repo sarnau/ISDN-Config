@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+<TITLE>Euracom - </TITLE>
+<!-- Changed by: 0000-Admin(0000),  1-Aug-1996 -->
+<!-- Changed by: Uwe Putlitz, 20-Sep-1996 -->
+</HEAD>
+<BODY bgcolor="#ffffff" link="#00bb55" BACKGROUND="/bilder/hinter.gif">
+<IMG align=right SRC="/bilder/ackeroben.gif">
+<PRE>
+
+
+
+
+</PRE>
+<CENTER><TABLE><TR><TD>
+<H2>5.9. Deklaration der Einrichtstruktur f&uuml;r die Geb&uuml;hrenauswertung</H2>
+
+<B>Konstanten f&uuml;r die Geb&uuml;hrenstruktur</B>
+<P>
+<PRE>
+#define FW_GEB_PRN_MASK 	(unsigned char)0xfc
+#define FW_GEB_PRN_DRUCKER      (unsigned char)0x02
+
+#define FW_GEB_PRN_DEST_MASK    (unsigned char)0xf3
+#define FW_GEB_PRN_DEST_AUS     (unsigned char)0x00
+#define FW_GEB_PRN_DEST_EIN     (unsigned char)0x04
+#define FW_GEB_PRN_DEST_GEK     (unsigned char)0x08
+
+#define FW_GEB_MSG_TO_TLN       (unsigned char)0x10
+
+#define FW_GEB_IMPULS_MASK      (unsigned char)0x1f
+#define FW_GEB_IMPULS_16K       (unsigned char)0x20
+#define FW_GEB_IMPULS_12K       (unsigned char)0x40
+#define FW_GEB_IMPULS_50HZ      (unsigned char)0x80
+
+#define FW_PC_COM1     		(unsigned char)0x01
+#define FW_PC_COM2      	(unsigned char)0x02
+#define FW_PRN_CALLS_FROM_AMT   (unsigned char)0x04
+#define FW_PRN_CONN_FROM_AMT    (unsigned char)0x08
+</PRE
+<P>
+Dabei werden die einzelnen Teilnehmer jeweils durch ein Bit in einem long gekennzeichnet.<BR>
+Die Bits 2<SUP>0</SUP> bis 2<SUP>7</SUP> stellen die Analogen Teilnehmer 1-7 dar<BR>
+Die Bits 2<SUP>8</SUP> und 2<SUP>9</SUP> stellen beiden optionalen TFE-Schnittstellen dar<BR>
+Die Bits 2<SUP>10</SUP> bis 2<SUP>19</SUP> stellen die internen S<SUB>0</SUB> Teilnehmer Port 2 dar<BR>
+Die Bits 2<SUP>20</SUP> bis 2<SUP>29</SUP> stellen die internen S<SUB>0</SUB> Teilnehmer Port 3 dar<BR>
+Die Bits 2<SUP>30</SUP> und 2<SUP>31</SUP> werden nicht genutzt
+<P>
+<PRE>
+typedef struct TlnGebKonf
+{
+  unsigned long Pc;
+  unsigned long Prn;
+  unsigned long PrnEin;
+  unsigned long PrnGek;
+  unsigned long GebToTln;
+  unsigned char Peak[ MAX_RUF_VAR_LEN + 1 ];
+  unsigned char GrundFaktor;
+  unsigned char UserFaktor[ MAX_RUF_VAR_LEN + 1 ];
+  unsigned char Flags;
+  unsigned char WaehrFaktor;
+  unsigned char GebImpuls;      /* GebInfo zum Teilnehmer       */
+  unsigned char GebInfo;
+  unsigned char PrnZeilenAnz;   /* Anzahl der zu Druckenden Zeilen      */
+} TlnGebKonfType;
+</PRE>
+<A HREF="/schnittstelle/schnittindex.html">Zur&uuml;ck zum Index</A>
+</TD></TR></TABLE></CENTER>
+<CENTER><TABLE width=500>
+<TR><TD align=left><A HREF="/schnittstelle/seite9.html"><IMG border=0 SRC="/bilder/links.gif"></TD>
+<TD align=center><A HREF="/welcome.html"><IMG border=0 SRC="/bilder/euracom.gif"></TD>
+<TD align=right><A HREF="/schnittstelle/seite11.html"><IMG border=0 SRC="/bilder/rechts.gif"></TD></TR>
+</TABLE></CENTER>

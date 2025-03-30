@@ -1,0 +1,114 @@
+!######################################################################
+!                     Gebuehrendaten
+!######################################################################
+
+*gebdat_dlg.xmtChildren:	unmanaged XmtLayout gebdat;
+*gebdat_dlg.title:			Gebührendaten
+*gebdat.autoUnmanage:		False
+*gebdat.dialogStyle:		dialog_primary_application_modal
+
+*gebdat.xmtChildren:	\
+		XmtChooser slct; \
+		XmtChooser geb0; \
+		XmtChooser geb1; \
+		XmtChooser geb2; \
+		XmtChooser com; \
+		XmtChooser calls; \
+		XmtChooser impuls; \
+		XmtInputField base,zlanz; \
+		XmPushButton summs,costs,okay,cancel,help;
+
+*gebdat.XmtInputField.verifyCallback: Check_0_255();
+*gebdat.XmtInputField.errorCallback:  \
+	XmtDisplayWarning(msg1, Der Wert muß zwischen 0 und 255 liegen!);
+*gebdat.XmtInputField.matchAll:	False
+*gebdat.XmtInputField.pattern:	ddd
+
+*gebdat.slct.chooserType: XmtChooserRadioBox
+*gebdat.slct.strings: "Zum PC","Zum Drucker","Nummernerfassung", \
+	"Gekürzte Nummern", "Gebührenübermittlung"
+
+*gebdat.calls.chooserType: XmtChooserCheckBox
+*gebdat.calls.strings: "Kommend ohne Verbindung","Kommend mit Verbindung"
+
+*gebdat.impuls.chooserType: XmtChooserRadioBox
+*gebdat.impuls.strings: "16kHz Frequenz","12kHz Frequenz","50Hz  Frequenz"
+
+*gebdat.com.chooserType: XmtChooserRadioBox
+*gebdat.com.strings: "Schnittstelle 1","Schnittstelle 2"
+
+*gebdat.geb0.chooserType: CheckBox
+*gebdat.geb0.strings: \
+		"AB 1", \
+		"AB 2", \
+		"AB 3", \
+		"AB 4", \
+		"AB 5", \
+		"AB 6", \
+		"AB 7", \
+		"AB 8", \
+		"TFE 1", \
+		"TFE 2"
+*gebdat.geb1.chooserType: CheckBox
+*gebdat.geb1.strings: \
+		"S0 0", \
+		"S0 1", \
+		"S0 2", \
+		"S0 3", \
+		"S0 4", \
+		"S0 5", \
+		"S0 6", \
+		"S0 7", \
+		"S0 8", \
+		"S0 9",
+*gebdat.geb2.chooserType: CheckBox
+*gebdat.geb2.strings: \
+		"S1 0", \
+		"S1 1", \
+		"S1 2", \
+		"S1 3", \
+		"S1 4", \
+		"S1 5", \
+		"S1 6", \
+		"S1 7", \
+		"S1 8", \
+		"S1 9"
+
+*gebdat.summs.labelString:	Gebührenstand
+*gebdat.costs.labelString:	Interne Verrechnung
+*gebdat.okay.labelString:	OK
+*gebdat.cancel.labelString:	Abbrechen
+*gebdat.help.labelString:	Hilfe
+
+*gebdat.slct.valueChangedCallback:	doGebDat();
+*gebdat.summs.activateCallback:	doGebStand();
+*gebdat.costs.activateCallback:	doGebLCF();
+*gebdat.okay.activateCallback:		XmtDialogOkayCallback();
+*gebdat.cancel.activateCallback:	XmtDialogCancelCallback();
+
+*gebdat.layout: \
+	Row { \
+		Caption tl "Funktions-Auswahl"  Etched Through 6 2 Col { slct }\
+		Caption tl "Apparate-Auswahl"   Etched Through 6 2 Col { \
+			Row { geb0 geb1 geb2 }\
+		}\
+	} \
+	MarginWidth 0 MarginHeight 6 HSep \
+	Caption tl "Generelle Einstellungen"  Etched Through 6 2 Row { Col { \
+		Row { \
+			Caption tl "Ausgabe über"  Etched Through 6 2 Col { com } \
+			Caption tl "Gespräche drucken"  Etched Through 6 2 Col { calls }\
+		} \
+		Row { \
+			Caption tl "Gebührenimpuls"  Etched Through 6 2 Col { impuls } \
+			Col { \
+				Caption tl "Sonstiges"  Etched Through 6 2 Col { \
+					Caption "Pf./Einheit:  " 15 mm Wide base \
+					Caption "Zeilen/Seite: " 15 mm Wide zlanz \
+				} \
+			} \
+		} \
+		Row { costs summs }\
+	} } \
+	Fixed Equal Row { okay cancel help }
+

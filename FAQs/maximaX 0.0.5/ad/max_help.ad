@@ -1,0 +1,284 @@
+######################################
+# Hauptfenster
+######################################
+*main.help.activateCallback: XmtDisplayInformation(msg1,\
+Kurzwahlen/Nah-/Sperrber.: Kurzwahlverzeichniss/Nah- und Sperrbereiche editieren\n\
+Gespräche ausgehend: Liste der ausgehenden Gespräche (Zusatzmodul nõtig)\n\
+Gespräche eingehend: Liste der eingegangenen Gespräche (Zusatzmodul nõtig)\n\
+Grundeinstellung: MSN Eingabe/Zuweisung und generelles Anlagen-Setup\n\
+Globales: Globale Anlagenparameter (Autom.Amtsholung/Landes-/Ortsvorwahl...)\n\
+Nebenstellen-Nr.: Vergabe der Nebenstellen-Nummern\n\
+Berechtigungen: Master-/Aufschalte-/Aufschaltschutzberechtigungen\n\
+Amtsberechtigungen: Vergabe der Amtsberechtigungen der Nebenstellen\n\
+Endgeräte: Endgerätetypen der Nebenstellen festlegen (Telefon/Fax/Modem...)\n\
+RWS/AVA/TFE: Zuordnung der Rufweiterleitung/Zweitwecker/Türfreisprechgeräte...\n\
+Gebührenausdruck: Gebührenübertragung und -erfassung an Drucker/Nebenstellen\n\
+Steuerkontakte: Konfiguration der Steuerkontakte\n\
+Teilnehmerdaten: Teilnehmerspezifische Einstellungen\n\
+Dateikennung: Auswahl der Dateikennung zwecks Kompatibilität zum Original-\n\
+              Programm beim Sichern einer Datei\n\
+Anlagen-Auswahl: z. Z. ohne Funktion (fuer vernetzte oder Unteranlagen)\n\
+Sichern: Konfigurationsdatei sichern\n\
+Laden: Konfigurationsdatei laden\n\
+Auslesen: Konfigurationsdaten aus der Anlage lesen\n\
+Programmieren: Konfigurationsdaten zur Anlage senden\n\
+Beenden: \"maximaX\" beenden\
+,Hilfe);
+
+######################################
+# Gebuerendaten
+######################################
+*gebdat.help.activateCallback: XmtDisplayInformation(msg1, \
+Nummernerfassung: Gebührenerfassung mit Telefonnummern drucken\n\
+Gek. Nummern: Die letzten 3 Ziffern durch X ersetzen (bedingt Nummernerf.)\n\
+Gebührenübermittlung: Gebührenimpuls nach Analog sonst ISDN-Info\n\
+Schnittstelle 1/2: Ausgabe-Schnittstelle der Gebührenerfassung\n\
+Gebührenimpuls: Normal fuer Deutschland 16kHerz\n\
+Pf./Einheit: Wieviel Pfennig kostet eine Einheit bei der T...\n\
+Zeilen/Seite: Nach wieviel Zeilen Geb.erfassung soll ein Seitenvorschub erfolgen\n\
+Interne Verrechnung: Abweichender Einheitenpreis fuer interne Verrechnung\n\
+Gebührenstand: Auslesen und Lõschen der Gebührenzähler\n\
+,Hilfe);
+
+######################################
+# Gebuerenzaehler
+######################################
+*gebzahl.help.activateCallback: XmtDisplayInformation(msg1, \
+Auslesen: Gebührenstand jeder Nebenstelle auslesen und anzeigen\n\
+Lõschen:  Gebührenstand jeder Nebenstelle auf 0.00 DM setzen\n\
+,Hilfe);
+
+######################################
+# Kurzwahl
+######################################
+*kwzlayout.help.activateCallback: \
+	XmtDisplayInformation(msg1, \
+Alle Kurzwahl-Nummern müssen ohne die Null zur Amtsholung angegeben werden.\n\
+Die Kurzwahl-Nummern beziehen sich immer auf Amtsanschlüsse.\n\n\
+Ändern: Ausgewählten Eintrag editieren\n\
+Lõschen: Ausgewählten Eintrag lõschen\n\
+Verschieben: Ausgewählten Eintrag eine andere Kurzwahl geben\n\
+Laden: Kurzwahlliste/Nah-/Sperrbereiche aus Datei laden\n\
+Sichern: Änderungen an der zuvor geõffneten Datei sichern\n\
+Sichern unter: Kurzwahlliste/Nah-/Sperrbereiche in neue/bestehende Datei sichern\n\
+Namen nachladen: Die aus der Anlage gelesenen Einträge mit Namen aus einer Datei\n\
+      verbinden. Dies überschreibt alle bisher eingegebenen Namen (also erst laden)!\n\
+Text sichern: Kurzwahlliste als Textdatei sichern (Aufbereiten in Textverarbeitung)\n\
+Drucken: Kurzwahlliste ausdrucken (auf Default-Drucker (lp))\n\
+Auslesen: Kurzwahlliste/Nah-/Sperrbereiche aus der Anlage lesen\n\
+Programmieren: Kurzwahlliste/Nah-/Sperrbereiche an die Anlage senden\n\
+Nahbereich: Editieren der Nahbereichsnummern\n\
+Sperrbereich: Editieren der Sperrbereichsnummern\n\
+OK: Verlassen der Kurzwahlliste/Nah-/Sperrbereiche\
+,Hilfe);
+
+######################################
+# Amtsberechtigung
+######################################
+*amtsperm.help.activateCallback: \
+	XmtDisplayInformation(msg1, \
+Hier koennen Sie jeder Nebenstelle eine der folgenden Berechtigungen zuweisen:\n\n\
+Nur Intern:   Nur interne Gespräche einleiten und annehmen\n\
+Kommend:      Interne Gespräche einleiten und eingehende Gespräche annehmen\n\
+Ort:          Orts-/Interngespräche einleiten und eingehende Gespräche annehmen\n\
+Nahbereich:   Gespräche im Nahbereich einleiten und eingehende Gespräche \n\
+              annehmen (Nahbereichsnummern müssen konfiguriert sein)\n\
+Inland:       Inlandsgespräche einleitenund eingehende Gespräche annehmen \n\
+Unbeschränkt: Jede Art Gespräch einleiten und annehmen\n\
+\n\
+Kurzwahlen sind von den Berechtigungen nicht betroffen - Ausnahme:\"Nur Intern\"\n\
+,Hilfe);
+
+######################################
+# Rufverteilung
+######################################
+*calldist.help.activateCallback: \
+	XmtDisplayInformation(msg1, \
+Zuordnungen der Nebenstellen zu folgenden Funktionen:\n\
+Anrufvariante 1:    Tagschaltung\n\
+Anrufvariante 2:    Nachtschaltung\n\
+Türeinheit 1/2:     Bedienung der Türõffner\n\
+Rufweiterschaltung: Bei nicht zugeordneter MSN klingeln diese Nebenstellen\n\
+Zweitwecker 1/2:    Zusätzliche (externe) Klingel über Relaissteuerung\
+,Hilfe);
+
+######################################
+# 
+######################################
+*globdat.help.activateCallback: \
+	XmtDisplayInformation(msg1, \
+Wartemusik: selbsterklärend...\n\
+Autom. Amt: Beim abnehmen des Hõrers automatisch eine Amtsleitung belegen\n\
+Akt. AVA:   Weiss ich leider auch noch nicht...\n\
+\n\
+Rufweiterleitung: Habe ich auch noch nicht probiert...\n\
+LM 98/99: Simulation der Tasten * und # durch 98 und 99 ermõglichen\n\
+Privat:   Das Führen von Privatgesprächen (#9) verbieten\n\
+Tag/Nacht: Anrufvariante 2 (Nachtschaltung) aktivieren\n\
+UserToUser: \n\
+Codenummer: \n\
+Landesvorw.: Landesvorwahl ohne führende Null (Deutschland: 49)\n\
+Ortsvorwahl: Ortsvorwahl ohne führende Null (also 6356 nicht 06356)\n\
+Autom. Wahl: \"Baby-Ruf\" - Nummer die beim Babyruf gewählt wird\n\
+RWS-Zeit: Nach wieviel Sekunden wird ein Anruf weitergeleitet\n\
+,Hilfe);
+
+
+######################################
+#  Interner Gebuehrensatz
+######################################
+*loccharge.help.activateCallback: \
+	XmtDisplayInformation(msg1, \
+Hier kann für jede Nebenstelle ein \n\
+abweichender Einheitenpreis angegeben\n\
+werden.\n\
+,Hilfe);
+
+
+######################################
+# 
+######################################
+*anltyp.help.activateCallback: \
+	XmtDisplayInformation(msg1, \
+Zur Zeit nicht fertig...\
+,Hilfe);
+
+
+######################################
+# 
+######################################
+*msns.help.activateCallback: \
+	XmtDisplayInformation(msg1, \
+Zur Zeit nicht fertig...\
+,Hilfe);
+
+
+######################################
+# 
+######################################
+*zuord.help.activateCallback: \
+	XmtDisplayInformation(msg1, \
+Zur Zeit nicht fertig...\
+,Hilfe);
+
+
+######################################
+# Nahbereich
+######################################
+*nahber.help.activateCallback: \
+	XmtDisplayInformation(msg1, \
+Angaben zu Vorwahlen die im Ortsgesprächsbereich liegen.\n\
+Diese werden von der Anlage für die Amtsberechtigungen verwendet.\n\
+Die Null für die Amtsholung darf nicht angegeben werden. \n\
+Die Null einer Vorwahl muß angegeben werden! Also 040 und nicht 0040.\
+,Hilfe);
+
+
+######################################
+# Sperrnummern
+######################################
+*sperrber.help.activateCallback: \
+	XmtDisplayInformation(msg1, \
+Angaben zu Vorwahlen die von keinem Apparat angewählt werden sollen.\n\
+Die Null für die Amtsholung darf nicht angegeben werden. \n\
+Die Null einer Vorwahl muß angegeben werden! Also 0190 und nicht 00190.\n\
+Die Angabe von 00190 würde ein Auslandsgespräch nach Amerika sperren!\
+,Hilfe);
+
+
+######################################
+# 
+######################################
+*rufzuord.help.activateCallback: \
+	XmtDisplayInformation(msg1, \
+Zur Zeit nicht fertig...\
+,Hilfe);
+
+
+######################################
+# 
+######################################
+*teltyp.help.activateCallback: \
+	XmtDisplayInformation(msg1, \
+Zur Zeit nicht fertig...\
+,Hilfe);
+
+
+######################################
+# 
+######################################
+*tlnperm.help.activateCallback: \
+	XmtDisplayInformation(msg1, \
+Zur Zeit nicht fertig...\
+,Hilfe);
+
+######################################
+# 
+######################################
+*tndat.help.activateCallback: \
+	XmtDisplayInformation(msg1, \
+Auslesen:      Die Teilnehmerdaten der Anlage werden ausgelesen.\n\
+Programmieren: Die Teilnehmerdaten werden an die Anlage übergeben.\n\
+Laden:         Zuvor gespeicherte Teilnehmerdaten nachladen.\n\
+               Es müssen zuerst die aktuellen Daten ausgelesen werden.\n\
+Sichern:       Die gelesenen Teilnehmerdaten als Datei sichern.\n\n\
+Teilnehmer:    Auswahl des zu editierenden Teilnehmersatzes\n\n\
+Weckzeit:      Zeit des Weckrufes Stunden und Minuten (hhmm)\n\n\
+Rufumleitung\n\
+  Besetzt:     Nebenstelle an die bei Besetzt weitergeleitet wird.\n\
+  Ständig:     Nebenstelle an die ständig weitergeleitet wird\n\
+  n. Zeit:     Nebenstelle an die nach x Sekunden weitergeleitet wird\n\
+  Rufzeit:     Anzahl der Sekunden fuer Rufumleitung n. Zeit\n\
+Es ist nicht mõglich eine ständige und eine Umleitung nach Zeit zugleich anzugeben.\n\n\
+Funktionen\n\
+  Anklopfschutz:   Es wird kein Anklopfsignal in ein Gespräch eingeblendet.\n\
+  Aufschaltschutz: Sicherung gegen Zuschalten einer anderen Nebenstelle\n\
+  Anrufschutz:     Ruhe vor dem Telefon (es klingelt nicht)\n\
+  Hotline:         10 Sekunden nach Abheben wird autom. eine Nummer gewählt.\n\
+  Raumüberwachung: (Kann nur an der Nebenstelle aktiviert werden)\n\
+  Rufnr.-Unterdrückung gehend:  Der Angerufene sieht nicht wer anruft.\n\
+  Rufnr.-Unterdrückung kommend: Der Anrufende sieht nicht welche Nummer er erreicht hat\n\
+  Zweitwecker 1/2: Relais schalten wenn Nebenstelle klingelt\n\
+  Weckruf aktiv:   Beim nächsten Erreichen der Weckzeit klingeln\
+,Hilfe);
+
+######################################
+# 
+######################################
+*gebOlist.help.activateCallback: \
+	XmtDisplayInformation(msg1, \
+ACHTUNG:\n\
+Fuer diese Funktion ist eine ROM-Version 1.1x und eine Speichererweiterung nõtig.\n\n\
+Auslesen:     Die Daten der letzten 1000 Gespräche werden gelesen und angezeigt.\n\
+CVS sichern:  Die angezeigten Daten werden als Kalkulationsdatei gesichert.\n\
+Text sichern: Die angezeigten Daten werden als Textdatei gesichert.\n\
+Drucken:      Die angezeigten Daten werden ausgedruckt\n\
+Lõschen:      Der Gebührenspeicher der Anlage wird gelõscht.\n\
+,Hilfe);
+
+######################################
+# 
+######################################
+*gebIlist.help.activateCallback: \
+	XmtDisplayInformation(msg1, \
+ACHTUNG:\n\
+Fuer diese Funktion ist eine ROM-Version 1.1x und eine Speichererweiterung nõtig.\n\n\
+Auslesen:     Die Daten der letzten 75 Anrufe werden gelesen und angezeigt.\n\
+Text sichern: Die angezeigten Daten werden als Textdatei gesichert.\n\
+Drucken:      Die angezeigten Daten werden ausgedruckt\n\
+,Hilfe);
+
+
+
+######################################
+# Sonstiges
+######################################
+*merge_dlg.helpText: \
+Lädt Die Namenseinträge aus einer Datei.\n\
+Vorsicht! Vorhandene Einträge werden überschrieben!
+
+*save_dlg.helpText: Zur Zeit nicht fertig...
+*load_dlg.helpText: Zur Zeit nicht fertig...
+*cfgload_dlg.helpText: Zur Zeit nicht fertig...
+*cfgsave_dlg.helpText: Zur Zeit nicht fertig...
+*wrongFile.helpText: Zur Zeit nicht fertig...

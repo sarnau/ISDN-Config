@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<TITLE>Euracom - </TITLE>
+<!-- Changed by: 0000-Admin(0000),  1-Aug-1996 -->
+<!-- Changed by: Uwe Putlitz, 20-Sep-1996 -->
+</HEAD>
+<BODY bgcolor="#ffffff" link="#00bb55" BACKGROUND="/bilder/hinter.gif">
+<IMG align=right SRC="/bilder/ackeroben.gif">
+<PRE>
+
+
+
+
+</PRE>
+<CENTER><TABLE><TR><TD>
+<H2>5.3. Deklaration der Einrichtstruktur f&uuml;r die Teilnehmerberechtigungen</H2>
+
+Dabei werden die einzelnen Teilnehmer jeweils durch ein Bit in einem long gekennzeichnet.<BR>
+Die Bits 2<SUP>0</SUP> bis 2<SUP>7</SUP> stellen die Analogen Teilnehmer 1-7 dar<BR>
+Die Bits 2<SUP>8</SUP> und 2<SUP>9</SUP> stellen beiden optionalen TFE-Schnittstellen dar<BR>
+Die Bits 2<SUP>10</SUP> bis 2<SUP>19</SUP> stellen die internen S<SUB>0</SUB> Teilnehmer Port 2 dar<BR>
+Die Bits 2<SUP>20</SUP> bis 2<SUP>29</SUP> stellen die internen S<SUB>0</SUB> Teilnehmer Port 3 dar<BR>
+Die Bits 2<SUP>30</SUP> und 2<SUP>31</SUP> werden nicht genutzt
+<P>
+<PRE>
+typedef struct TlnBerechtigung
+{
+  unsigned long Masterber;
+  unsigned long Aufschaltsch;
+  unsigned long Aufschalt;
+  unsigned char Berechtigung[ MAX_RUF_VAR_LEN ];
+  unsigned char Geraetetyp  [ ANZ_AB_PORT - ANZ_TFE_PORT ];
+
+}TlnBerechtigungType;
+
+</PRE>
+<A HREF="/schnittstelle/schnittindex.html">Zur&uuml;ck zum Index</A>
+</TD></TR></TABLE></CENTER>
+<CENTER><TABLE width=500>
+<TR><TD align=left><A HREF="/schnittstelle/seite6.html"><IMG border=0 SRC="/bilder/links.gif"></TD>
+<TD align=center><A HREF="/welcome.html"><IMG border=0 SRC="/bilder/euracom.gif"></TD>
+<TD align=right><A HREF="/schnittstelle/seite8.html"><IMG border=0 SRC="/bilder/rechts.gif"></TD></TR>
+</TABLE></CENTER>

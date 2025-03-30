@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<TITLE>Euracom - </TITLE>
+<!-- Changed by: 0000-Admin(0000),  6-Aug-1996 -->
+<!-- Changed by: Uwe Putlitz, 20-Sep-1996 -->
+</HEAD>
+<BODY bgcolor="#ffffff" link="#00bb55" BACKGROUND="/bilder/hinter.gif">
+<IMG align=right SRC="/bilder/ackeroben.gif">
+<PRE>
+
+
+
+
+</PRE>
+<CENTER><TABLE><TR><TD><A NAME="konst">
+<H2>4. Konstanten</H2>
+
+<B>Konstanten f&uuml;r die Konfigurationsdaten</B>
+
+<PRE>
+#define MSN_MAX_ANZ     10      Maximale Anzahl von MSN´s pro S0-Port
+#define MSN_MAX_LEN     8       Maximale Anzahl von Ziffern pro MSN
+
+#define RUF_NR_LEN      24      Maximale L&auml;nge einer Rufnummer
+#define KURZ_NAME_LEN   38
+#define USER_TO_USER_LEN        32      Maximale L&auml;nge einer User to User Nachricht
+#define HAUPT_ANL_RNR_LEN       8       Maximale L&auml;nge der Hauptanlagenrufnummer
+#define MAX_RUF_VAR_LEN 30      Maximale Listenl&auml;nge
+#define NAH_BER_NR_LEN  5
+
+#define KURZWAHL_MAX_BLOCK_ANZ  8       Anzahl der Kurzwahleintr&auml;ge in einem Buffer
+</PRE>
+<P><A NAME="strukt">
+<H2>5. Strukturen</H2>
+
+F&uuml;r die Kommunikation und der Daten&uuml;bertragung zwischen der Euracom und dem PC-Konfigurator werden eine Reihe von Strukturen ben&ouml;tigt. Diese dienen dem Protokoll-, Message- und Daten-Message-Handling.<P> 
+<A NAME="v24">
+<H3>5.1. V24-&Uuml;bertragungsrahmen</H3>
+
+Im&nbsp;&Uuml;bertragungsrahmen werden Messages &uuml;ber die V24-Schnittstelle gesendet bzw. Empfangen.
+
+<P><A NAME="511">
+<FONT SIZE=+1>5.1.1. Konstanten f&uuml;r die Kommunikation zwischen dem PC-Konfigurator und der Euracom</FONT><P>
+<PRE>
+#define K_CMD_OFFSET_MASK       (unsigned char)0xE0
+
+#define K_READ_CMD_OFFSET       (unsigned char)0x00
+#define K_WRITE_CMD_OFFSET      (unsigned char)0x20
+#define K_SERVICE_CMD_OFFSET    (unsigned char)0x40
+#define K_STATUS_CMD_OFFSET     (unsigned char)0x60
+
+#define K_A_ANL_OFFSET  (unsigned char)0x00
+#define K_B_ANL_OFFSET  (unsigned char)0x10
+</PRE>
+<A HREF="/schnittstelle/schnittindex.html">Zur&uuml;ck zum Index</A>
+</TD></TR></TABLE></CENTER>
+<CENTER><TABLE width=500>
+<TR><TD align=left><A HREF="/schnittstelle/seite3.html"><IMG border=0 SRC="/bilder/links.gif"></TD>
+<TD align=center><A HREF="/welcome.html"><IMG border=0 SRC="/bilder/euracom.gif"></TD>
+<TD align=right><A HREF="/schnittstelle/seite5.html"><IMG border=0 SRC="/bilder/rechts.gif"></TD></TR>
+</TABLE></CENTER>

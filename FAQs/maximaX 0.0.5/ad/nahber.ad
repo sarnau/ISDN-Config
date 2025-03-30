@@ -1,0 +1,55 @@
+!######################################################################
+!                       Nahbereich
+!######################################################################
+
+*nahber_dlg.xmtChildren:	unmanaged XmtLayout nahber;
+*nahber_dlg.title:			Nahbereichsnummern
+*nahber.autoUnmanage:		False
+*nahber.dialogStyle:		dialog_primary_application_modal
+
+*nahber.xmtChildren:	\
+		XmtInputField num0=num0,num1=num1,num2=num2,num3=num3,num4=num4, \
+					  num5=num5,num6=num6,num7=num7,num8=num8,num9=num9, \
+				      num10=num10,num11=num11,num12=num12,num13=num13, \
+					  num14=num14,num15=num15,num16=num16,num17=num17, \
+					  num18=num18,num19=num19; \
+		XmPushButton okay,cancel,help;
+
+*nahber.XmtInputField.matchAll:	False
+*nahber.XmtInputField.pattern:	ddddd
+
+*nahber.okay.labelString:	OK
+*nahber.cancel.labelString:	Abbrechen
+*nahber.help.labelString:	Hilfe
+
+*nahber.okay.activateCallback:		XmtDialogOkayCallback();
+*nahber.cancel.activateCallback:	XmtDialogCancelCallback();
+
+*nahber.layout: \
+	Etched Row { \
+		Col { \
+		Caption "NAH  1: " num0 \
+		Caption "NAH  2: " num1 \
+		Caption "NAH  3: " num2 \
+		Caption "NAH  4: " num3 \
+		Caption "NAH  5: " num4 \
+		Caption "NAH  6: " num5 \
+		Caption "NAH  7: " num6 \
+		Caption "NAH  8: " num7 \
+		Caption "NAH  9: " num8 \
+		Caption "NAH 10: " num9 \
+		} \
+		Col { \
+		Caption "NAH 11: " num10 \
+		Caption "NAH 12: " num11 \
+		Caption "NAH 13: " num12 \
+		Caption "NAH 14: " num13 \
+		Caption "NAH 15: " num14 \
+		Caption "NAH 16: " num15 \
+		Caption "NAH 17: " num16 \
+		Caption "NAH 18: " num17 \
+		Caption "NAH 19: " num18 \
+		Caption "NAH 20: " num19 \
+		} \
+	} \
+	Fixed Equal Row { okay cancel help }

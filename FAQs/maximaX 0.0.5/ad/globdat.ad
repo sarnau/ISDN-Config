@@ -1,0 +1,67 @@
+!######################################################################
+!                       Nahbereich
+!######################################################################
+
+*globdat_dlg.xmtChildren:	unmanaged XmtLayout globdat;
+*globdat_dlg.title:			Globale Anlagendaten
+*globdat.autoUnmanage:		False
+*globdat.dialogStyle:		dialog_primary_application_modal
+
+*globdat.xmtChildren:	\
+		XmtInputField uus=uus,code=code,lkz=lkz,okz=okz,hot=hot,rwst; \
+		XmtChooser moh,amtamt,ava,autamt; \
+		XmPushButton okay,cancel,help;
+
+*globdat.moh.chooserType: XmtChooserOption
+*globdat.moh.strings: "Aus","Intern","Extern"
+
+*globdat.amtamt.chooserType: XmtChooserCheckBox
+*globdat.amtamt.strings: "Rufweiterleitung Amt/Amt", \
+		"LM 98/99 (*/#)","Privat (ab ROM 1.1x)","Tag/Nacht"
+
+*globdat.ava.chooserType: XmtChooserOption
+*globdat.ava.strings: "Aus","Ein"
+
+*globdat.autamt.chooserType: XmtChooserOption
+*globdat.autamt.strings: "Aus","Ein"
+
+*globdat.XmtInputField.matchAll:	False
+*globdat.lkz.verifyCallback: CheckLeadZero();
+*globdat.okz.verifyCallback: CheckLeadZero();
+*globdat.lkz.errorCallback:  \
+	XmtDisplayWarning(msg1, Bitte keine führende Null eingeben!);
+*globdat.okz.errorCallback:  \
+	XmtDisplayWarning(msg1, Bitte keine führende Null eingeben!);
+
+*globdat.uus.pattern:	cccccccccccccccccccccccccccccccc
+*globdat.code.pattern:	dddddd
+*globdat.lkz.pattern:	dd
+*globdat.okz.pattern:	ddddd
+*globdat.hot.pattern:	dddddddddddddddddddddddd
+*globdat.rwst.pattern:	dd
+
+*globdat.okay.labelString:	OK
+*globdat.cancel.labelString:	Abbrechen
+*globdat.help.labelString:	Hilfe
+
+*globdat.okay.activateCallback:		XmtDialogOkayCallback();
+*globdat.cancel.activateCallback:	XmtDialogCancelCallback();
+
+*globdat.layout: \
+	Etched Row {	\
+			Etched Right Col { \
+				Caption " Wartemusik:"  moh \
+				Caption " Autom. Amt:"  autamt \
+				Caption "    Akt.AVA:"  ava \
+			} \
+			Col{ amtamt } \
+	} \
+	Etched Col { \
+			Caption " UserToUser: " uus \
+			Caption " CodeNummer: " code \
+			Caption "Landesvorw.: " lkz \
+			Caption "Ortsvorwahl: " okz \
+			Caption "Autom. Wahl: " hot \
+			Caption "   RWS-Zeit: " rwst \
+	}\
+	Fixed Equal Row { okay cancel help }

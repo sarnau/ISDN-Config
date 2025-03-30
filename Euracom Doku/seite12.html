@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+<TITLE>Euracom - </TITLE>
+<!-- Changed by: 0000-Admin(0000),  6-Aug-1996 -->
+<!-- Changed by: Uwe Putlitz, 20-Sep-1996 -->
+</HEAD>
+<BODY bgcolor="#ffffff" link="#00bb55" BACKGROUND="/bilder/hinter.gif">
+<IMG align=right SRC="/bilder/ackeroben.gif">
+<PRE>
+
+
+
+
+</PRE>
+<CENTER><TABLE><TR><TD><A NAME="511">
+<H2>5.11. Deklaration der Fehlerspeicherauswertungsstruktur</H2>
+
+<PRE>
+#define SOS_ERROR_BUF_LEN    0x40
+
+typedef struct SosFktErrorStruct
+{
+  unsigned short Info;  	/* Funktionskennung     */
+  unsigned short LinNum;        /* Zeilennummer         */
+  unsigned short ErrorC;        /* Fehlercode   */
+  unsigned char Task;   /* Nummer des Prozesses */
+} SosFktErrorType;
+
+typedef struct ErrorStruct
+{
+  unsigned short ErrorCnt;
+  struct SosFktErrorStruct Err[ SOS_ERROR_BUF_LEN ];
+}ErrorType;
+
+Struktur des &Uuml;bertragungsrahmens
+
+typedef struct RdErrorStruct
+{
+  unsigned short ErrorCnt;      /* Anzahl der Eintr&auml;ge in der Euracom   */
+  struct SosFktErrorStruct Err[ 0x10 ]; /* maximal 10 Eintr&auml;ge  */
+}RdErrorType;
+</PRE>
+<A NAME="6>
+<H1>6. Deklaration der PC-Konfigurator internen Strukturen</H1>
+<A NAME="61">
+<H2>6.1. Deklaration der Struktur der Kurzwahlziele</H2>
+
+<P>
+In der Kurzwahl Struktur werden alle Kurzwahlziele sowie die dazugeh&ouml;rigen Namenseintr&auml;ge gespeichert.
+In die Euracom werden aber nur die Kurzwahlziele &uuml;bertragen.
+<P>
+<PRE>
+#define ANZ_KW_NR  200
+
+typedef struct KzWork
+{
+  struct KurzwZiele RNr[ ANZ_KW_NR ];
+  struct KzNamen    Name[ ANZ_KW_NR ];
+} KzWorkType;
+<A NAME="62">
+<H2>6.2. Deklaration der Gesamt-Einrichtstruktur</H2>
+<PRE>
+typedef struct EinrichtKonfig
+{
+  struct IsdnKonf       S0[ 2 ];        	/* S0-Konfigurationstabelle     */
+  struct RufNrZuord     RufNr[ 2 ];     	/* 30 Eintr&auml;ge a 3 Byte */
+  struct TlnBerechtigung        TlnBer[ 2 ];    /* Ger&auml;tetyp u. Berechtigung    */
+  struct TlnRufvert     TlnRufVert[ 2 ];
+  struct TlnGebKonf     TlnGebKonf[ 2 ];
+  struct SteuerKontakt  StKon[ 2 ];
+  struct GlobAnlDaten   AnlDat;
+  byte  HauptUnteranlage;
+} EinrichtKonfigType;
+</PRE>
+<A HREF="/schnittstelle/schnittindex.html">Zur&uuml;ck zum Index</A>
+</TD></TR></TABLE></CENTER>
+<CENTER><TABLE width=500>
+<TR><TD align=left><A HREF="/schnittstelle/seite11.html"><IMG border=0 SRC="/bilder/links.gif"></TD>
+<TD align=center><A HREF="/welcome.html"><IMG border=0 SRC="/bilder/euracom.gif"></TD>
+<TD align=right></TD></TR>
+</TABLE></CENTER>

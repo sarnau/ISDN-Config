@@ -1,0 +1,850 @@
+ÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛÛ
+ÜÜÜChristophÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+ÜÜÜÜÜÜÜÜÜÜÜÜÛ ÜÜÜÜÜÛÛ ßÛÛÛß ŞÛ ßÛÛÛß ŞÛ ÜÜÜÜÜÛÛ ÜÜÜÜßÛÛ ŞÛÛßÜÜÜÜÜÛÛ ŞÛÛÛÛ ŞÛÜÜÜ
+ÛÛÛÛÛÛÛÛÛÛÛÛÛ ŞÛÛÛÛÛÛ Ş Ş Ş ŞÛ Ş Ş Ş ŞÛ ŞÛÛÛÛÛÛ ŞÛÛÛ ŞÛ ŞÛÛ ŞÛÛÛÛÛÛ ŞÛÛÛÛ ŞÛÛÛÛ
+ÜÜÜÜÜÜÜÜÜÜÜÜÛ ÜÜÜÜÛÛÛ ŞÛÜÛÛ ŞÛ ŞÛÜÛÛ ŞÛ ÜÜÜÜÛÛÛ ÜÜÜ ÜÛÛ ŞÛÛ ŞÛÛÛÛÛÛ ÜÜÜÜÜ ŞÛÜÜÜ
+ÜÜÜÜÜÜÜÜÜÜÜÜÛ ŞÛÛÛÛÛÛ ŞÛÛÛÛ ŞÛ ŞÛÛÛÛ ŞÛ ŞÛÛÛÛÛÛ ŞÛÛİŞÛÛ ŞÛÛ ŞÛÛÛÛÛÛ ŞÛÛÛÛ ŞÛÜÜÜ
+ÜÜÜÜÜÜÜÜÜÜÜÜÛÜÜÜÜÜÜÛÛÜÛÛÛÛÛÜÛÛÜÛÛÛÛÛÜÛÛÜÜÜÜÜÜÛÛÜÛÛÛÛÜÛÛÜÛÛÛÛÜÜÜÜÜÛÛÜÛÛÛÛÛÜÛÛÜÜÜ
+ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜGmbH & Co KG
+                                                              Telekommunikation
+    Line 1:  14.400 Baud  V.42bis    069/95431322             Elektronik
+    Line 2:  64.000 Baud  ISDN X.75  069/95431361             Akkumulatoren
+
+                            Event: 04:00 - 05:00 Uhr
+                  W„hrend dieser Zeit ist kein Login m”glich.
+
+Die Fa.Emmerich GmbH&Co KG bernimmt keinerlei Gew„hrleistung auf Lauff„higkeit
+           und Virenfreiheit der in der Mailbox angebotenen Software.
+
+ Neue User tragen sich bitte mit Vor- und Nachnamen ein. Sie haben 30 min Zeit,
+   sich in der Box umzusehen. User, die 90 Tage nicht angerufen haben, werden
+                            automatisch gel”scht...
+
+
+
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³°°°±±±²²²        Area 100 - Firmware ISTEC Telefonanlagen          ²²²±±±°°°³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+SPA18BIN.ARJ   61993 10-09-95 [33] Emmerich ISTEC 1008 Firmwareversion V1.92,
+                                   09.10.95. Binaerformat mit spontaner
+                                   Amtsholung. Neu: Kombidienste Lesen Sie
+                                   auch die Erkl„rungen in der Datei
+                                   TAERKL.ZIP. 
+SPA18HEX.ARJ  102249 10-09-95 [82] Emmerich ISTEC 1008 Firmwareversion V1.92,
+                                   09.10.95 Hex-Format mit spontaner
+                                   Amtsholung. Neu: Kombidienste Lesen Sie
+                                   auch die Erkl„rungen in der Datei
+                                   TAERKL.ZIP. 
+T112ABIN.ZIP   93938 10-23-95 [85] Emmerich ISTEC 1016 - 2424 Firmwareversion
+                                   V1.12 16.10.95, Binaerformat. 
+T112AHEX.ZIP  162141 10-23-95 [54] Emmerich ISTEC 1016 - 2424 Firmwareversion
+                                   V1.12 16.10.95, Hex-Format. 
+TKA18BIN.ARJ   61991 10-09-95 [51] Emmerich ISTEC 1008 Firmwareversion V1.92
+                                   09.10.95, Binaerformat. Neu: Kombidienste
+                                   Lesen Sie auch die Erkl„rungen in der Datei
+                                   TAERKL.ZIP. 
+TKA18HEX.ARJ  102273 10-09-95 [01] Emmerich ISTEC 1008 Firmwareversion
+                                   1.92,09.10.95, Hex-Format. Neu:
+                                   Kombidienste Lesen Sie auch die Erkl„rungen
+                                   in der Datei TAERKL.ZIP. 
+
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³°°°±±±²²²        Area 101 - Software ISTEC Telefonanlagen          ²²²±±±°°°³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+CE-ISTEC.ARJ  511259 02-12-96 [38] --------------------------------------- |   
+                                   !!!!!! Neueste Version !!!!!!    | |       
+                                                                | | ISTEC 1008
+                                   PC-Konfigsoftware 1.8 und| |    Firmware
+                                   Version 1.93 im Bundle  | |                
+                                                       | | Firm- und Software
+                                   bitte nur in     | | Kombination benutzen.
+                                   Untersttzt   | | mehrere europ„ische
+                                   Sprachen  (aus- | | w„hlbar).              
+                                               | |                            
+                                           | | Copyright                      
+                                       | |   Christoph Emmerich GmbH & Co. KG 
+                                   | --------------------------------------- 
+CGA.BGI         6332 11-17-94 [48] Borland Graphics Interface; Wenn Ihr PC
+                                   (Notebook) mit einer Herkules
+                                   Grafikaufl”sung arbeitet, kann es zu einer
+                                   Fehlermeldung kommen. Kopieren Sie in
+                                   diesem Fall den CGA.BGI Treiber in das
+                                   Verzeichnis in dem Sie die ISTEC Software
+                                   installiert haben.
+ISTEC16E.ARJ  101855 01-11-96 [25] Configuration software for the ISTEC 1008
+                                   !!!!!! Newest English Version 8/95  !!!!!!
+                                   Copyright Christoph Emmerich GmbH & Co. KG
+ISTEC17D.ARJ  102428 01-11-96 [45] Istec 1008 Konfigurations-Software 1.7
+                                   !!!!!! Neueste Version 9/95 !!!!!!
+                                   Copyright Christoph Emmerich GmbH & Co. KG 
+SUSI.ARJ      123430 01-31-96 [47] neue Betaversion des Konfigurationsprogramms
+                                   SUSI der Fa. Schneider
+SUSI.CFG         122 11-13-95 [61] Konfigurationsdatei fuer ISTEC-Anlagen der
+                                   Firma Schneider. Gibt den Zugang zur
+                                   Administrationsebene der Schneider-Anlagen
+                                   ueber das Passwort "AdminMan" frei.
+                                   Ersetzen Sie Ihr bestehendes SUSI.CFG File
+                                   durch diese Datei.
+
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³°°°±±±²²²        Area 102 - Shareware ISTEC Konfiguration          ²²²±±±°°°³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+AISTC113.LHA   45477 11-15-95 [27] AMIstec 1.13 ISTEC-Konfigurationssoftware
+                                   fuer UNIX
+AISTEC12.LHA   51891 12-11-95 [17] Amiga-Software zur Istec-Konfiguartion
+ES100BSD.ZIP  268657 10-15-95 [60] ESTIC V1.0 Beta, 16/10/95; Enhanced
+                                   Supervisor Tool fuer ISTEC 1008
+                                   Konfiguration; (c) 1995 Ullrich von
+                                   Bassewitz; 80x86 FreeBSD Version
+ES100DOS.ZIP  360845 10-15-95 [24] ESTIC V1.0 Beta, 16/10/95; Enhanved
+                                   Supervisor Tool fuer ISTEC Konfiguration;
+                                   (c) 1995 Ullrich von Bassewitz; DOS-Version
+ES100LIN.ZIP  299831 10-15-95 [25] Estic V1.0 Beta, 16/10/95; Enhanced
+                                   Supervisor Tool fuer ISTEC Konfiguration;
+                                   (c) 1995 Ullrich von Bassewitz;
+                                   Linux-Version
+ES100OS2.ZIP  274554 10-15-95 [59] ESTIC V1.0 Beta, 16/10/95 Enhanced
+                                   Supervisor Tool fuer ISTEC Konfiguration;
+                                   (c) 1995 Ullrich von Bassewitz,
+                                   OS/2-Version
+ES100SRC.ZIP  471505 10-15-95 [37] ESTEIC V1.0 Beta, 16/10/95; Enhanced
+                                   Supervisor Tool fuer ISTEC Konfiguration;
+                                   (c) Ullrich von Bassewitz; Source-Codes
+ES101BSD.ZIP  273768 11-11-95 [09] ESTIC V1.01, 10/11/95; Enhanced Supervisor
+                                   Tool fuer ISTEC 1008 Konfiguration; (c)
+                                   1995 Ullrich von Bassewitz; 80x86 FreeBSD
+                                   Version 
+ES101DOS.ZIP  367755 11-11-95 [81] ESTIC V1.01, 10/11/95; Enhanced Supervisor
+                                   Tool fuer ISTEC 1008 Konfiguration; (c)
+                                   1995 Ullrich von Bassewitz; DOS Version 
+ES101LIN.ZIP  304983 11-11-95 [13] ESTIC V1.01, 10/11/95; Enhanced Supervisor
+                                   Tool fuer ISTEC 1008 Konfiguration; (c)
+                                   1995 Ullrich von Bassewitz; Linux Version 
+ES101OS2.ZIP  280701 11-11-95 [45] ESTIC V1.01, 10/11/95; Enhanced Supervisor
+                                   Tool fuer ISTEC 1008 Konfiguration; (c)
+                                   1995 Ullrich von Bassewitz; OS/2 Version 
+ES101SRC.ZIP  502115 11-11-95 [30] ESTIC V1.01, 10/11/95; Enhanced Supervisor
+                                   Tool fuer ISTEC 1008 Konfiguration; (c)
+                                   1995 Ullrich von Bassewitz; Source Code 
+ES110ABS.ZIP  279884 12-13-95 [10] ESTIC V1.10, 07.12.95; Enhanced Supervisor
+                                   Tool fuer ISTEC 1008 Konfiguration; (c)
+                                   1995 Ullrich von Bassewitz; 80x86 FreeBSD
+                                   Version 
+ES110ALI.ZIP  316538 12-13-95 [20] ESTIC V1.10, 07.12.95; Enhanced Supervisor
+                                   Tool fuer ISTEC 1008 Konfiguration; (c)
+                                   1995 Ullrich von Bassewitz; Linux Version 
+ES110DOS.ZIP  381901 12-13-95 [92] ESTIC V1.10, 07.12.95; Enhanced Supervisor
+                                   Tool fuer ISTEC 1008 Konfiguration; (c)
+                                   1995 Ullrich von Bassewitz; DOS Version 
+ES110OS2.ZIP  292885 12-13-95 [36] ESTIC V1.10, 07.12.95; Enhanced Supervisor
+                                   Tool fuer ISTEC 1008 Konfiguration; (c)
+                                   1995 Ullrich von Bassewitz; OS/2 Version 
+ES110SRC.ZIP  520565 12-13-95 [38] ESTIC V1.10, 07.12.95; Enhanced Supervisor
+                                   Tool fuer ISTEC 1008 Konfiguration; (c)
+                                   1995 Ullrich von Bassewitz; Source Codes 
+ISTEC110.ZIP  642576 11-03-95 [57] PMIstec V1.1 - OS/2
+                                   PM-Konfigurationsprogramm fuer ISTEC
+                                   1003/1008 mit zusaetzlichen Features. *
+                                   Unterstuetzt Firmware 1.92 TKA.   Firmware
+                                   1.92 SPA in Vorbereitung *
+                                   Gebuehrenerfassung und -protokollierung *
+                                   Anzeige und Protokollierung externer
+                                   Gespraeche mit gewaehlter Rufnummer,  
+                                   Dauer und verbrauchten Einheiten. *
+                                   Konfiguration ohne Anlage erstellbar,
+                                   speicherbar und spaeter nachladbar * uvm.
+                                   Dieses Programm ist Shareware, Bei Fragen
+                                   wenden Sie sich bitte an den Autor (Norbert
+                                   Richter)
+ISTEC113.ZIP  928618 12-18-95 [77] PMIstec V1.13 - OS/2
+                                   PM-Konfigurationsprogramm fuer ISTEC
+                                   1003/1008 mit zusaetzlichen Features. *
+                                   Unterstuetzt Firmware 1.92 TKA.   Firmware
+                                   1.92 SPA in Vorbereitung *
+                                   Gebuehrenerfassung und -protokollierung *
+                                   Anzeige und Protokollierung externer
+                                   Gespraeche mit gewaehlter   Rufnummer,  
+                                   Dauer und verbrauchten Einheiten. *
+                                   Konfiguration ohne Anlage erstellbar,
+                                   speicherbar und spaeter   nachladbar * uvm.
+                                   Dieses Programm ist Shareware, Bei Fragen
+                                   wenden Sie sich bitte an den Autor (Norbert
+                                   Richter) 
+ISTECG03.ZIP   15385 05-17-95 [41] Gebhrenprotokollierung und Gebuehrenanzeige
+                                   fuer die ISDN-Telefonanlage Emmerich ISTEC
+                                   1008 fuer DOS. Shareware. Dieses Programm
+                                   wird von der Fa. Emmerich nicht supportet.
+                                   Bitte wenden Sie sich bei Fragen an den
+                                   Autor.
+ISTEC_ST.TOS   62842 01-06-96 [17] ISTEC Konfigurationsprogramm fr
+                                   TOS-Rechner. Neueste Version vom
+                                   06.01.1996. Kein Support durch die Firma
+                                   Christoph Emmerich GmbH & Co. KG. Bei
+                                   Fragen wenden Sie sich an den Autor Andreas
+                                   Wilcek!
+PMEIN001.ZIP   31858 09-02-95 [25] PM-Einzel V 0.01 fuer OS/2.
+                                   Einzelgespraechsnachweise je nach
+                                   Nebenstelle in ein Logfile schreiben.
+TIC_090.ZIP    50741 11-08-95 [19] Konfigurationsprogramm fr die
+                                   ISDN-Telefonanlage ISTEC 1008 der Firma
+                                   EMMERICH fr TOS-Rechner Version 0.90. Kein
+                                   Support durch die Firma Emmerich!
+TIC_093.ZIP    60562 01-19-96 [08] TIC - TOS ISTEC Conf ====================
+                                   Konfigurationsprogramm fr die
+                                   ISDN-Telefonanlage ISTEC 1008 der Firma
+                                   EMMERICH fr TOS-Rechner. Version 0.93 Kein
+                                   Support durch die Firma Christoph  Emmerich
+                                   GmbH Autor: Andreas Alich,
+                                   Ernst-Reuter-Strae 20, 97080 Wrzburg 
+WINISTEC.ZIP   63315 10-04-95 [97] Winistec 0.99 Konfigurationsprogramm fuer
+                                   ISTEC 1008; Windows 3.1
+WISTEC19.ARJ  182272 11-08-95 [05] Windows Konfigurationsprogramm fr die ISTEC
+                                   Anlagen der Firma Emmerich. V 1.9,
+                                   (copyright A.Hoepfner 1995). Kein Support
+                                   durch die Firma Emmerich!
+
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³°°°±±±²²²           Area 103 - Shareware ISDN Programme            ²²²±±±°°°³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+ANSWEPAC.EXE  166467 01-22-95 [52] Anrufbeantworter-Demo fuer Dos und OS/2 mit
+                                   ISDN-CAPI-Aufsatz incl. Sourcefiles von
+                                   Diehl. Kein Support durch die Fa. Emmerich
+CFT217.ARJ    138574 04-08-95 [14] CFOSTALK - Ein ISDN-Anrufbeantworter, der
+                                   auf dem CFOS-Treiber aufsetzt. Kann als
+                                   Standalone-L”sung, aber auch als Rearend
+                                   fr Mailer/Mailboxen benutzt werden. Die
+                                   Bedienung erfolgt ber eine SAA-„hnliche
+                                   Oberfl„che mit kontextsensitiver Hilfe.
+                                   WAV/VOC-Export, WAV-Import, Paging,
+                                   verschiedene Ansagen pro MSN/EAZ etc. pp.
+                                   Dieses Programm ist Shareware. Kein Support
+                                   durch die Fa. Emmerich. 
+CFT218.ARJ    137920 08-17-95 [86] CFOSTALK - Ein ISDN-Anrufbeantworter, der
+                                   auf dem CFOS-Treiber aufsetzt. Kann als
+                                   Standalone-L”sung, aber auch als Rearend
+                                   fr Mailer/Mailboxen benutzt werden. Die
+                                   Bedienung erfolgt ber eine SAA-„hnliche
+                                   Oberfl„che mit kontextsensitiver Hilfe.
+                                   WAV/VOC-Export, WAV-Import, Paging,
+                                   verschiedene Ansagen pro MSN/EAZ etc. pp.
+                                   Dieses Programm ist Shareware. Kein Support
+                                   durch die Fa. Emmerich. 
+DSNOOP16.ZIP   28183 12-21-95 [76] DSNOOP (fr ISDN D-Kanal "Schnffler") h”rt
+                                   den ISDN D-Kanal ab. Wenn vom
+                                   Telekom-Vermittler ein Telefonie
+                                   Verbindungswunsch signalisiert wird, f„ngt
+                                   DSNOOP diese Nachricht ab und zeigt die
+                                   Verbindungsinformation auf dem Bildschirm. 
+ISDN-NFO.ARJ 1021842 07-26-95 [13] Telekom Produktinformation zu ISDN
+                                   (Freeware) Dieses Programm ist Shareware.
+                                   Kein Support durch die Fa. Emmerich. 
+ISDNINFO.ARJ 1085314 11-05-94 [13] Info- und Berechnungsprogramm fuer ISDN
+                                   Dieses Programm ist Shareware. Kein Support
+                                   durch die Fa. Emmerich. 
+ISDNPM11.ARJ   79199 08-10-95 [44] PM-Programm fuer TCP/IP Zugang ueber
+                                   CAPI.DLL ( Teles , Diehl , NCP ..).
+                                   Unterstuetzt die Protokolle X.75,SLIP ueber
+                                   X.75, T70 und SUN-PPP . Dieses Programm ist
+                                   Shareware. Kein Support durch die Fa.
+                                   Emmerich. 
+ISDNPP.ZIP     97629 04-06-95 [34] ISDN++ - Eine unabhaenigige
+                                   C++-Klassenbibliothek. Dieses Programm ist
+                                   Shareware. Kein Support durch die Fa.
+                                   Emmerich. 
+ISDNSHOW.ARJ  760539 04-07-93 [13] Lustige Werbe-Demo fuer ISDN Dieses Programm
+                                   ist Shareware. Kein Support durch die Fa.
+                                   Emmerich. 
+ISDNUT05.ARJ   58389 08-10-95 [24] Zeigt die Telefonnummer von Anrufern auf dem
+                                   ISDN S0-Bus an; fuer all diejenigen, die
+                                   kein ISDN-Telefon haben! OS/2 Version
+                                   Dieses Programm ist Shareware. Kein Support
+                                   durch die Fa. Emmerich. 
+OPALIS.ARJ   1365631 12-07-94 [03] OPALIS V1.2 Demoversion des ISDN - BTX
+                                   Decoder fuer Windows und OS/2 Dieses
+                                   Programm ist Shareware. Kein Support durch
+                                   die Fa. Emmerich. 
+TARGO.ZIP    1362691 10-26-94 [15] Demoversion von TARGO ISDN Software. Dieses
+                                   Programm ist Shareware. Kein Support durch
+                                   die Fa. Emmerich. 
+TTRANS21.ARJ   61983 10-14-94 [26] TurboTrans v2.1 / ISDN-Filetransfer mit
+                                   Anpassung an inkompatible ISDN-Karten.
+                                   Dieses Programm ist Shareware. Kein Support
+                                   durch die Fa. Emmerich. 
+TWIST.ZIP     164248 04-06-95 [69] ISDN Datentransferprogramm fuer Windows.
+                                   Dieses Programm ist Shareware. Kein Support
+                                   durch die Fa. Emmerich. 
+
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³°°°±±±²²²            Area 104 - Shareware ISDN Treiber             ²²²±±±°°°³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+AVMB1OS2.ZIP  603605 10-15-94 [08] AVM B1 ISDNCOM OS/2 Treiber. Dieses Programm
+                                   ist Shareware. Kein Support durch die Fa.
+                                   Emmerich.
+CF2B0459.ZIP  122539 09-01-95 [16] CFOS/2 0.42 ISDN CAPI Fossil Geraetetreiber
+                                   fuer OS/2 
+CF2B0671.ZIP  178073 12-29-95 [07] .---------- cFos/2 0.42 Beta 671 ----------.
+                                   | CAPI character device driver for highest
+                                   | |    cps-rates. Allows applications to   
+                                    | |   communicate via ISDN using any CAPI.
+                                     | |    Supports multiple COM ports simul-
+                                      | |  taneously, controlled by a powerful
+                                   AT  | |    command set. Supports fast
+                                   dynamic    | |      channel bundling,
+                                   V.42bis data      | | compression, BTX and
+                                   analogue ISDN calls | |   with some ISDN
+                                   boards. Many options !  |
+                                   `------------------------------------------'
+                                    
+CFOS.ARJ      392903 07-27-95 [26] cFos 1.05 'cFos' ist ein FOSSIL Treiber  / 
+                                   BIOS  INT  14h  Emulator,  der mittels 
+                                   eines  Modememulator  mit  AT  Command  Set
+                                    und  unter Zuhilfenahme eines CAPI
+                                   Treibers, nach  Version  1.1,  Profil  A
+                                   eine grosse Anzahl an  existierender 
+                                   Software  auch  fuer  ISDN nutzbar macht. 
+CFW_080.ZIP   185540 12-28-95 [15] .------------- cFos/Win 0.80 --------------.
+                                   |   ISDN CAPI Windows 3.x und Windows 95  
+                                   | |          MultiPort COMM Driver.        
+                                    | |  Allows applications to communicate
+                                   via  | |  ISDN using CAPI.DLL. Supports
+                                   multiple  | | COM ports simultaneously,
+                                   controlled by  | | a powerful AT command
+                                   set.  Now accepts  | | registration
+                                   key-file. thus you can use  | |    channel
+                                   bundling and V.42bis data     | |      
+                                   compression. Many options !        |
+                                   `------------------------------------------'
+                                    
+FORISDN3.ARJ   18168 06-02-94 [15] Treiber fuer FrontDoor und ISDN, beachtet
+                                   Nodelistflags! Dieses Programm ist
+                                   Shareware. Kein Support durch die Fa.
+                                   Emmerich. 
+ICOMCONF.ZIP   39167 01-22-95 [33] ISDNCOM/2 erweiterte Konfiguration fuer
+                                   Programme, die nur mit einem COM-Port
+                                   arbeiten. Dieses Programm ist Shareware.
+                                   Kein Support durch die Fa. Emmerich. 
+ISDCDBGC.LZH   50203 01-31-95 [03] Debug-Client fuer ISDNCOM/2. Das Programm
+                                   loggt den debug-output fuer isdncom ohne,
+                                   dass erst ein Terminal-Programm aufgesetzt
+                                   werden muss. Das Programm kann detached
+                                   werden. Dieses Programm ist Shareware. Kein
+                                   Support durch die Fa. Emmerich. 
+ISDI221.ZIP    40654 08-17-95 [16] ISDI V2.2 is a (realmode) NDIS-MAC driver
+                                   for IP-Routing or remote Ethernet bridging
+                                   over ISDN. ISDI communicates with the ISDN
+                                   card using the ISDN API 1.1 specification
+                                   (a standard defined by German ISDN card
+                                   manufacturers and the German Telekom).
+                                   Because of this, ISDI is completely
+                                   hardware independent and has successfully
+                                   been tested with many active or passive
+                                   ISDN cards. Dieses Programm ist Shareware.
+                                   Kein Support durch die Fa. Emmerich.
+ISPA311.ARJ    38194 08-17-95 [16] packet driver fuer TCP/IP ueber ISDN Dieses
+                                   Programm ist Shareware. Kein Support durch
+                                   die Fa. Emmerich.
+OS2_C295.ZIP  762791 03-01-95 [06] CAPI Treiber fuer Teles und Creatix
+                                   ISDN-Karten Version 2.95. Dieses Programm
+                                   ist Shareware. Kein Support durch die Fa.
+                                   Emmerich. 
+PAPI020.ARJ    41026 08-17-95 [14] packet driver fuer ISDN common API. Dieses
+                                   Programm ist Shareware. Kein Support durch
+                                   die Fa. Emmerich.
+PCTCP109.ARJ   13583 10-09-95 [22] PC/TCP-Treiber Rev. 1.09 FTP Software Inc.
+                                   Dieses Programm ist Shareware, kein Support
+                                   durch die Fa. Emmerich
+STOMP303.ZIP  181329 07-31-95 [04] Stomper Version 3.03 Modem-/ISDN-Sharing
+                                   unter DOS und Windows im Netzwerk. Dieses
+                                   Programm ist Shareware. Kein Support durch
+                                   die Fa. Emmerich. 
+STOMP304.ZIP  181167 08-17-95 [32] Stomper V 3.04 Modem-/ISDN-Sharing unter Dos
+                                   und Windows im Netzwerk. Dieses Programm
+                                   ist Shareware. Kein Support durch die Fa.
+                                   Emmerich. 
+VXDCAPI.ZIP   286793 06-25-95 [72] Windows 95 / WfW CAPI ISDN Treiber fuer
+                                   Teles-Karten. Dieses Programm ist
+                                   Shareware. Kein Support durch die Fa.
+                                   Emmerich. 
+
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³°°°±±±²²²         Area 105 - Shareware Datenuebertragung           ²²²±±±°°°³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+300TER.ARJ   1426361 08-30-95 [34] -=<Terminate 3>=- Das beste
+                                   Terminalprogramm, erkennt und konfiguriert
+                                   automatisch Modems, ISDN-tauglich
+ATALKW95.RAR  785480 09-14-95 [02] ATALK - das Super-Terminal nun auch fuer
+                                   Windows 95 (Beta) 
+CGEN113.ARJ    39160 10-11-95 [17] Terminate V3.0 Cost Generator
+CGEN114.ARJ    52463 12-08-95 [12] Costfilegenerator f. Terminate
+FIPS080B.ZIP  689043 12-03-95 [05] F.I.P.S. Windows 95 / Windows NT = official 
+                                   Beta-Release V0.80 =
+                                   -------------------------------- | Der
+                                   ultimative Point-Mailer  | |   fuer Win95
+                                   oder Win/NT     |
+                                   -------------------------------- |
+                                   Komplettes Point-Paket mit   | |
+                                   EMSI-Mailer, 32Bit Tosser    | | und
+                                   farbigem Mailreader.     | | Ausfhrliche,
+                                   deutsche       | | Online-Hilfe, einfaches 
+                                       | | Setup. Optimierter 32Bit     | |
+                                   C++ Code, komplett multi-    | | threaded !
+                                   Kompletter Node-  | | listen/NodeDiff und
+                                   File-    | | listen Support !             |
+                                   | >> Viele Bugfixes und neue<< | | >>
+                                   Optionen !!!           << | |>Shareware
+                                   with free Upgrades<|
+                                   --------------------------------
+FIX300.EXE      3712 10-11-95 [21] Terminate V3.0 Bugfix. Behebt Fehler mit dem
+                                   Telephonbuch
+T-FIX-3.ZIP     7343 12-08-95 [22] Fix f. Terminate (ersezt fix300.exe)
+T-GE-300.ZIP  180955 10-11-95 [31] Terminate V3.0 Deutsche Dokumentation
+TW-1.EXE     1403277 12-08-95 [01] ---------------------------------------------
+                                    |||||||||  Telix for Windows v1.10 
+                                   |||||||||
+                                   --------------------------------------------
+                                   - The most popular shareware comm program
+                                   ever continues its reign with a Microsoft
+                                   Windows version, complete with a FAST RIP
+                                   terminal, reliable Zmodem transfers, and
+                                   its powerful scripting languages, Telix
+                                   will fit the bill for power users and
+                                   non-modem users alike. Time-limited
+                                   version; $99.00 reg.; Disk [1/2] 
+TW-2.EXE     1439981 12-08-95 [01] ---------------------------------------------
+                                    |||||||||  Telix for Windows v1.10 
+                                   |||||||||
+                                   --------------------------------------------
+                                   - Telix for Windows includes support for
+                                   over 450 models of modems; cost calculation
+                                   and phone bill estimation; VT-220, WYSE-75,
+                                   and full ANSI X3.64 terminal emulation in
+                                   fully resizable windows; color scrollback;
+                                   script recorder; built-in editor, Modem
+                                   Sniffer (tm) INT-14/FOSSIL support and
+                                   more!  Disk [2/2] 
+
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³°°°±±±²²²             Area 106 - Shareware sonstiges               ²²²±±±°°°³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+ABOOT200.ARJ   18277 08-15-95 [07] AutoBoot bootet das System neu, wenn
+                                   bestimmte Voraussetzungen erfllt sind wie
+                                   z.B. Fossil-Treiber oder
+                                   Tastaturinaktivit„t. Dieses Programm ist
+                                   Shareware. Kein Support durch die Fa.
+                                   Emmerich. 
+AVON211.ZIP    89540 08-17-95 [47] AVON 2.11 erm”glicht das Suchen von
+                                   Vorwahlnummern durch Ortsangaben und
+                                   Umgekehrt.
+BNEWS28.ZIP   106770 02-12-94 [03] BoxNews v2.8 - News-Generator fr ANSI,
+                                   ASCII & Avatar. Fenstersortierung nach
+                                   Datum m”glich. Fenster an bestimmten Tagen
+                                   nicht generieren oder ganz und gar l”schen!
+                                   Fernsteuerung bei RA 1.11, RA 2.00, SBBS
+                                   1.17 und Ezycom 1.02 ber Message m”glich!
+                                   Dieses Programm ist Shareware. Kein Support
+                                   durch die Fa. Emmerich. 
+BW22_DOS.ZIP  479284 09-03-95 [05] Blue Wave Offline Mail Reader/DOS v2.20. A
+                                   Blue Wave and QWK-compatible offline mail
+                                   reader which offers the utmost ease of use
+                                   and configurability. 
+COOKI-X.ARJ    27071 05-10-93 [01] Schluásprche fr Mailboxen. (Englisch)
+                                   Dieses Programm ist Shareware. Kein Support
+                                   durch die Fa. Emmerich. 
+DS201.LZH      23622 11-18-93 [00] **DoorStat**  Version 2.01. Create door
+                                   usage graph for almost any bbs. ANSI/ASCII
+                                   user configurable usage bulletins. Graph
+                                   door usage by number or percentage. Dieses
+                                   Programm ist Shareware. Kein Support durch
+                                   die Fa. Emmerich. 
+FAM4RA.ARJ     50799 10-16-94 [02] FileAreaManager fr Remote Access, Version
+                                   0.99.0827, (c) 1994 by D. Leibing. FAM4RA
+                                   kann in der Filebase von Remote Access 2.xx
+                                   Areas und Areagruppen verschieben,
+                                   loeschen, einfuegen und sortieren, sowie
+                                   global die Areasettings Flags, Attribute,
+                                   Security, Groups, usw veraendern. u.a. neu:
+                                   Bis zu 10.000 Areas, mindestens 2 MB XMS
+                                   Speicher wird benoetigt, u.v.a.m.
+                                   Zusaetzlich koennen verschiedene Dateien
+                                   exportiert werden, wie Magic Dateien und
+                                   Request Dateien fuer Frontdoor. Dieses
+                                   Programm ist Shareware. Kein Support durch
+                                   die Fa. Emmerich. 
+FSSG140.ARJ   107696 01-18-94 [01] (v1.40) The Fantasy Software Statistics
+                                   Generator Door for Remote Access 2.0x.
+                                   Supports also InterMail, D'Bridge,
+                                   FrontDoor and Portal Of Power. This program
+                                   has many statistics that other statistics
+                                   generators do not have! You will like it!
+                                   This version adds some new features and
+                                   fixes some bugs! Copyright 1993/94 Fantasy
+                                   Software Group Dieses Programm ist
+                                   Shareware. Kein Support durch die Fa.
+                                   Emmerich. 
+OLX.ARJ       148674 12-01-92 [01] OLX Offline Xpress 2.1. Offline Mailreader
+                                   fuer das QWK Format.
+PDZM121.ZIP    91549 10-11-95 [08] PDZ-modem V1.21, XYZ-Modem Protokol fuer
+                                   Datenuebertragung.
+PSP20.EXE     438866 06-27-95 [07] Paint Shop 2.0, Windows-Shareware-Grafik
+                                   Programm zum Betrachten der Bilder aus der
+                                   Mailbox. Kopieren Sie PSP20.EXE in ein
+                                   Verzeichnis auf Ihrer Festplatte  und geben
+                                   Sie an der Eingabeaufforderung
+                                   <Pfad>\PSP20.EXE ein. Die Datei  entpackt
+                                   sich selbst. Sie k”nnen das Programm
+                                   PSP.EXE anschlieáend unter  Windows
+                                   starten.
+PSP30.ZIP    1407828 11-09-95 [07] Paint Shop Pro 3.0, Windows-Shareware-Grafik
+                                   Programm zum Betrachten der Bilder aus der
+                                   Mailbox. Beschreibung des Autors: Paint
+                                   Shop Pro is the only Photo Retouching,
+                                   Painting, Image Format Conversion, and
+                                   Screen Capturing program you will need. 
+PSPRO.LZH    1935699 01-15-96 [03] Paint Shop Pro v3.11 <ASP> The complete
+                                   windows graphics program for image
+                                   creation, viewing, and manipulation.
+                                   Features include painting with 8 brushes,
+                                   photo retouching, image enhancement and
+                                   editing, color enhancement, image browser,
+                                   batch conversion, and scanner support.
+                                   Included are 20 standard filters and 12
+                                   deformations. Supports plug-in filters.
+                                   Over 34 file formats supported. Winner SIA
+                                   & ZiffNet awards. From JASC, Inc. 
+PSTRA130.ZIP   92859 12-21-93 [00] Zeigt die User-Einstellungen an. (Englisch)
+                                   Dieses Programm ist Shareware. Kein Support
+                                   durch die Fa. Emmerich. 
+Q&A4RA-8.ZIP   90022 04-03-95 [01] Fragen und Antworten zu RemoteAccess 2.x
+                                   Dieses Programm ist Shareware. Kein Support
+                                   durch die Fa. Emmerich. 
+RAFI41.ZIP     39943 05-14-93 [02] Erstellt Datei- und Maillisten ihrer
+                                   Mailbox. (Deutsch) Dieses Programm ist
+                                   Shareware. Kein Support durch die Fa.
+                                   Emmerich. 
+RAINFO12.LZH  148876 06-01-93 [01] Erstellt Benutzer-Infos und Statistiken.
+                                   Teilweise sehr informativ fr den SysOp.
+                                   (Mens Englisch; Ausgaben Deutsch) Dieses
+                                   Programm ist Shareware. Kein Support durch
+                                   die Fa. Emmerich. 
+RAT202B6.ZIP  220037 03-03-95 [07] ==RATEKO 2.02á6 Bugfix-Version!== RaTeKo
+                                   v2.02á6, Telefonkostendoor f. RA.
+                                   Ermoeglicht allen Usern *online* ihre
+                                   Telefonkosten zu berechnen. Monatliche
+                                   Gesamtuebersicht der Telefonkosten als
+                                   lokale Mail, Netmail oder Fileattach.
+                                   Feiertage werden beruecksichtigt. User kann
+                                   online Abrechnungstag und Nodenr. fuer
+                                   Netmails eingeben. Komfortables
+                                   Konfigurationsprogramm. Liest jetzt auch
+                                   FRONTDOOR-Logfiles zur Kostenberechnung von
+                                   Kosten fuer In- und Outboundcalls ! RATEKO
+                                   ist flexibel und voll multiline- faehig. Es
+                                   gibt keine Alternative ! Viele neue
+                                   Features ! Shareware. ===(C) Stefan Kellner
+                                   1994===
+                                   ========================================
+                                   Dieses Programm ist Shareware. Kein Support
+                                   durch die Fa. Emmerich. 
+RATE140.EXE    15709 02-22-94 [01] Zeigt restliche Download-Limits als Grafik
+                                   Dieses Programm ist Shareware. Kein Support
+                                   durch die Fa. Emmerich. 
+SCALL20.ZIP    29896 04-21-95 [49] SCALL V2.0, Verbesserte Version! Kann jetzt
+                                   individuell angepasst werden! Arbeitet
+                                   jetzt mit 90% aller Modems zusammen!
+                                   Grafische Oberfl„che neu programmiert!
+                                   Fehlerabfangroutinen eingebaut! Ein *Muss*
+                                   fr jeden SCALL User! Versendet SCALLs an
+                                   angegebene Nummern oder aktiviert eigenen
+                                   SCALL in einer neuen Rufzone! Alles
+                                   automatisch per Modem und PC! Flexibel
+                                   durch Config-Datei!        DEUTSCHE
+                                   SHAREWARE!     (c) Frank B”ttcher 1995 
+UNIQWK.ZIP    606910 09-08-95 [05] UniQWK ist ein OfflineReader fuer das
+                                   QWK-Format unter Windows
+WR131.ZIP     776811 09-11-95 [00] Wave Rider version 1.31, Windows based QWK
+                                   and BlueWave mail packet reader. Now allows
+                                   extracting and adding attachments for
+                                   Wildcat and TBBS. Reduced pricing, see
+                                   whatsnew.131 for details. Support BBS:
+                                   206-271-9861 
+
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³°°°±±±²²²       Area 107 - Information ISTEC-Telefonanlagen        ²²²±±±°°°³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+BEZUG.ZIP       4826 02-15-96 [01] Bezugsquellenverzeichnis fr ISTEC-Anlagen.
+                                   Die H„ndler haften fr Ihre Angaben!
+                                   Copyright Christoph Emmerich GmbH & Co. KG
+ERROR.ARJ        763 12-18-95 [72] Fehlerhafte Konfigurationen in der Istec
+                                   1003 und 1008. Corrupted data on ISTEC 1003
+                                   an 1003. Copyright Christoph Emmerich GmbH
+                                   & Co. KG
+EXTMUSIK.TXT    1369 01-17-96 [01] Informationen zu einer geplanten Hardware
+                                   Erweiterung fr ISTEC 1003 und 1008 zur
+                                   externen Musikeinspeisung. Rckmeldungen
+                                   erbeten. Autoren: Thomas Grasel und Ralf
+                                   Eiáner
+ISTECFAQ.ZIP   12798 11-14-95 [63] Istec Frequently Asked Questions (FAQ),
+                                   erstellt von Andreas Rehberg, FIDO
+                                   2:2426/2160
+ISTECKAB.GIF   13477 08-25-95 [63] Anschluákabel ISTEC 1008 mit PC Schaltplan.
+                                   Circuit Plan for the ISTEC 1008-PC Cable.
+PROTOCOL.ARJ    3833 12-08-95 [56] PC-ISTEC Schnittstellen Protokolldefinition.
+                                   Von Hergen Lehmann mit kleinen
+                                   Erweiterungen von Ullrich von Bassewitz
+                                   Updated for 1008 V1.93 - P. Barnard
+                                   (Emmerich)
+SERCOM.ARJ    222156 09-12-95 [78] Spezifikation der seriellen Schnittstelle
+                                   zwischen der ISTEC 1008 und dem PC
+SIN1MSWW.TXT    1878 08-17-95 [09] Liste der von der ISTEC 1008 untersttzten
+                                   Dienstekennungen am 1TR6
+                                   Mehrger„teanschluá. ASCII-Format
+SIN1MSWW.ZIP    3286 07-19-95 [77] Liste der von der ISTEC 1008 untersttzten
+                                   Dienstekennungen am 1TR6
+                                   Mehrger„teanschluá. MS-Winword 6.0 Format
+SIN1WP6X.ZIP    3549 07-19-95 [31] Liste der von der ISTEC 1008 untersttzten
+                                   Dienstekennungen am 1TR6
+                                   Mehrger„teanschluá. WP 6.x Format 
+SIN2MSWW.TXT    1878 08-17-95 [61] Liste der von der ISTEC 1008 untersttzten
+                                   Dienstekennungen am Anlagenanschluá. 
+                                   ASCII-Format 
+SIN2MSWW.ZIP    3236 07-19-95 [40] Liste der von der ISTEC 1008 untersttzten
+                                   Dienstekennungen am 1TR6 Anlagenanschluá.
+                                   MS-Winword 6.0 Format
+SIN2WP6X.ZIP    3547 07-19-95 [23] Liste der von der ISTEC 1008 untersttzten
+                                   Dienstekennungen am 1TR6 Anlagenanschluá.
+                                   WP 6.x Format
+SIN3MSWW.TXT    3299 08-17-95 [66] Liste der von der ISTEC 1008 untersttzten
+                                   Dienstekennungen am DSS1
+                                   Mehrger„teanschluá. MS-Winword 6.0 Format 
+SIN3MSWW.ZIP    4436 07-19-95 [23] Liste der von der ISTEC 1008 untersttzten
+                                   Dienstekennungen am DSS1
+                                   Mehrger„teanschluá. MS-Winword 6.0 Format 
+SIN3WP6X.ZIP    4501 07-19-95 [82] Liste der von der ISTEC 1008 untersttzten
+                                   Dienstekennungen am DSS1
+                                   Mehrger„teanschluá. WP 6.x Format 
+TAERKL.ZIP      1185 10-27-95 [67] Erlaeuterungen zur TA-Variante der ISTEC
+                                   1008 (Kombidienst und spontane Amtsholung).
+USV.TXT         1626 01-17-96 [18] Informationen zu einer geplanten Hardware
+                                   Erweiterung fr die ISTEC Familie
+                                   (Unterbrechungsfreie Stromversorgung,
+                                   Notstromversorgung).Rckmeldungen  erbeten.
+                                   Autoren: Thomas Grasel und Ralf Eiáner 
+
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³°°°±±±²²²               Area 108 - Information ISDN                ²²²±±±°°°³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+CAPIDOC.ZIP    60012 07-07-95 [44] COMMON-ISDN-API 1.1 - CAPI Beschreibung als
+                                   OS/2-Online Dokument (INF) mit Hinweisen
+                                   fuer OS/2-Programmierer. Version 0.99
+EURISDN1.ARJ    5836 08-10-95 [71] EURO-ISDN / Beschreibung Teil 1 
+EURISDN2.ARJ    5380 08-10-95 [59] EURO-ISDN / Beschreibung Teil 2 
+EUROISDN.ARJ   13356 04-01-94 [30] Informationen, Erklaerungen zu Euro-ISDN 
+FAQ-ISDN.ARJ   19565 08-10-95 [47] Haeufig gestellte Fragen und Antworten zu
+                                   ISDN FAQ zu ISDN 
+IET_01_B.GIF   10082 08-28-95 [74] Beschreibung, wie nach der
+                                   Abschlusseinrichtung eine Nachinstallation
+                                   zum Anschluss weiterer Telefonapparate oder
+                                   Zusatzgeraete an einem analogen Anschluss
+                                   vorgenomen werden kann. 
+IET_02_B.GIF   12812 08-28-95 [86] Beschreibung der Installation am digitalen
+                                   Waehlanschluss. Am ISDN-Basisanschluss
+                                   koennen eine oder mehrere Endeinrichtungen
+                                   angeschlossen werden wie z.B.
+                                   Digitaltelefon, Telefax, Teletex, PC,
+                                   Terminaladapter, Telefonanlage.
+IET_03_B.GIB   20467 08-28-95 [65] Beschreibung der Klemmen verschiedener
+                                   Telefondosen: TAE (Telekommunikations
+                                   Anschluss Einheit) AE (Auf Putz) und UP
+                                   (Unter Putz).
+IET_06_B.GIF    8375 08-28-95 [54] Beschreibung fuer die Anschaltung von
+                                   verschiedenen TAE-Dosen. Durch das
+                                   Einstecken der TAE-Stecker in die F-Buchse
+                                   einer TAE werden die nachfolgenden
+                                   Anschalteinrichtungen abgeschaltet.
+IET_07_B.GIF   10844 08-28-95 [46] Darstellung einer Steckdosenanlage fuer zwei
+                                   Waehlanschluesse. Durch das Einstecken in
+                                   die F-Buchse einer TAE werden die
+                                   nachfolgenden Anschalteeinrichtungen
+                                   abgeschaltet.
+IET_09_B.GIF    8719 08-28-95 [46] Darstellung einer Installation mit UAE fuer
+                                   einen Waehlanschluss. Anschaltung einer UAE
+                                   8 an 1. TAE. Durch das Stecken eines
+                                   TAE-Steckers in die F-Buchse der TAE wird
+                                   die nachfolgende Anschalteeinrichtung
+                                   abgeschaltet.
+IET_10_B.GIF   16586 08-28-95 [33] Darstellung einer Installation mit UAE fr
+                                   zwei Waehlanschluesse an zwei 1.TAE. Durch
+                                   das Stecken eines TAE-Steckers in die
+                                   F-Buchse der 1.TAE wird die nachfolgende
+                                   Anschalteeinrichtung abgeschaltet.
+IET_11_B.GIF    9884 08-28-95 [36] Darstellung einer Endeinrichtung fuer einen
+                                   Waehlanschluss und 2 Endgeraete mit einer
+                                   AWADo (Automatische Wechselschalter
+                                   Anschlussdose).
+IET_12_B.GIF   10990 08-28-95 [34] Darstellung einer Endeinrichtung fuer einen
+                                   Waehlanschluss und max 4 Endgeraete mit
+                                   einem AMS (Automatischer Mehrfach Schalter)
+IET_13_B.GIF    6045 08-28-95 [40] Darstellung des Anschlusses einer ZR
+                                   (Zusaetzlichen Rufeinrichtung) wie z.B.
+                                   Tonrufzweitgeraete (TZG) oder
+                                   Starkstromanschalterelais (SAR).
+IET_15_B.GIF   24815 08-28-95 [70] Darstellung eines Installationsplans fuer
+                                   den ISDN-Basisanschluss mit UAE, wobei 5
+                                   Endgeraete verwendet werden.
+IET_17_B.GIF   24186 08-28-95 [67] Darstellung eines Installationsplans fuer
+                                   den ISDN-Basisanschluss mit IAE unter
+                                   Verwendung von 5 Endgeraeten.
+IET_20_B.GIF   10400 08-28-95 [49] Darstellung verschiedener
+                                   Uebertragungsmoeglichkeiten am
+                                   Basisanschluss mit einer
+                                   Telekommunikaionsanlage.
+IET_25_B.GIF   21603 08-28-95 [35] Schaltung der 1.TAE mit integriertem
+                                   passivem Pruefabschluss auf der
+                                   Leiterplatte. 
+IET_30_B.GIF   21135 08-28-95 [49] Beschreibung der Verschaltungen von TAE mit
+                                   Kodierung FF, TAE mit Kodierung NFN und TAE
+                                   mit Kodierung NF/F. 
+ISDNAPI.ARJ    24733 04-01-94 [66] COMMON-ISDN-API: Spezifikation fuer ISDN-API
+ISDNF&A.ARJ     6675 11-23-95 [40] Die am haeufigsten gestellten Fragen zu ISDN
+                                   und den Emmerich Telekommunikationsanlagen.
+ISDNINFO.ARJ 1140560 01-18-96 [04] Produktinfo-Software Wie Wirtschaftlich ist
+                                   ISDN? Stand Dezember 95. Bercksichtigt die
+                                   neue Gebhrenstruktur ab 01.01.1996
+                                   (Freeware)
+ISDN_IP.ZIP    37034 08-10-95 [90] Haeufig gestellte Fragen zu TCP/IP bei ISDN
+                                   FAQ zu TCP/IP frequently asked questions
+                                   TCP/IP with ISDN
+SEMINAR.ARJ   288954 02-12-96 [05] ---------------------------------------
+                                   |Seminarangebot der Firma Emmerich fr|
+                                   |das erste Halbjahr 1996              |
+                                   |Seminare fr folgende Bereiche:      | |
+                                   -ISDN-Basiswissen und Produktseminar| |
+                                   -ISDN-Basiswissen                   | |
+                                   -Vertriebs-/und Marketingstrategien | |
+                                   -Produktseminar                     |
+                                   ---------------------------------------
+
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³°°°±±±²²²            Area 109 - Information sonstiges              ²²²±±±°°°³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+HDDLST.ARJ    262794 08-11-95 [34] Liste der Festplattenparameter fuer
+                                   Festplatten
+ISDNFA.ARJ     48300 08-16-94 [51] Was kostet ISDN; Fragen und Antworten zu
+                                   ISDN
+ISDN_IP.ZIP    37034 08-10-95 [06] TCP/IP over ISDN. Frequently Asked Questions
+                                   ********************************************
+                                    This document describes methods which can
+                                   be used to run TCP/IP over ISDN Networks.
+                                   Most of the software described herein has
+                                   been tested only on German 1tr6 or the
+                                   Euro-ISDN systems. (Deutscher Hilfetext) 
+NGEBDT.ARJ     27484 09-25-95 [07] Die "neuen" Gebuehren der Deutschen Telekom
+                                   ab 1996. Winword-Dokument
+VERA.TXT      138298 08-17-95 [26] Verzeichnis vieler EDV-Relevanter Akronyme
+
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³°°°±±±²²²             Area 200 - Emmerich Information              ²²²±±±°°°³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+CEBBSMOD.TXT    1133 07-01-95 [19] Hinweise fr den Modembetrieb an der
+                                   Emmerich-BBS
+
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³°°°±±±²²²           Area 201 - Emmerich Ansprechpartner            ²²²±±±°°°³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+MBR.TIF       857009 07-06-95 [17] Name:        Michael Brandmller Funktion:  
+                                    Leitung Technische Entwicklung u.
+                                   Konzeption Abteilung:   TE Durchwahl:  
+                                   -306
+
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³°°°±±±²²²               Area 225 - Shareware-Packer                ²²²±±±°°°³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+ARJ.EXE       116260 06-04-93 [56] ARJ Version 2.41 - Komprimierungs- und
+                                   Archivierungsprogramm                   
+                                   Copyright (c) 1990 - 1993 Robert K Jung.   
+                                                   All rights reserved
+LHA.EXE        34283 07-20-91 [20] LHA Version 2.13 - Komprimierungsprogramm.
+                                   Copyright (c) Haruyasu Yoshizaki, 1988 -
+                                   1991. Wird zum entpacken von *.LHA Dateien
+                                   ben”tigt.
+PKUNZIP.EXE    29378 02-01-93 [23] PKUNZIP - De-Komprimierungsprogramm         
+                                    (PKWARE)
+RAR152D.EXE   148041 11-02-94 [12] RAR Archiever v1.52 mit NortonCommander
+                                   -„hnlicher Oberfl„che 
+SITEX10.EXE   355024 02-02-96 [02] StuffIt Expander is a free application from
+                                   Aladdin Systems that expands seven most
+                                   popular compressed and encoded formats:
+                                   StuffIt (.sit), Zip (.zip),  Arj (.arj),
+                                   Arc (.arc), gzip (.gz, .z), uuencode (.uu,
+                                   .uue), and BinHex  (.hqx). It also supports
+                                   StuffIt, Zip, and Arj self-extracting
+                                   archives (.exe, .sea), and Macintosh files
+                                   in MacBinary (.bin) format. 
+WINZIP56.EXE  294736 01-24-95 [14] Komprimierungs- und Archivierungsprogramm
+                                   fr Windows 3.x; Untersttzt DRAG & DROP
+                                   (Selbstentpackendes Archiv) Version 5.6
+WZNT56.EXE    306589 06-21-95 [20] Komprimierungs- und Archivierungsprogramm
+                                   fr Windows 95 und Windows NT; Untersttzt
+                                   DRAG & DROP und lange Dateinamen
+                                   (Selbstentpackendes Archiv) Version  5.6
+
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³°°°±±±²²²            Area 226 - Emmerich BBS-Fileliste             ²²²±±±°°°³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+CE-BOX.ARJ     13830 02-13-96 [97] Gesamte Fileliste der Emmerich BBS, mit ARJ
+                                   gepackt
+CE-BOX.LST     58308 02-13-96 [49] Gesamte Fileliste der Emmerich BBS,
+                                   ungepackt
+CE-BOX.NEW     15579 02-13-96 [27] Neue Files der Emmerich-BBS aus den letzten
+                                   30 Tagen, ungepackt
+NCE-BOX.ARJ     4197 02-13-96 [21] Neue Files der letzten 30 Tage in der
+                                   Emmerich-BBS
+
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³°°°±±±²²²               Area 227 - Haendlerantraege                ²²²±±±°°°³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+ANTRAGDE.DOC   22528 11-24-95 [16] Haendlerantrag fuer die Emmerich BBS,
+                                   Winword-Format 
+ANTRAGDE.RTF   20537 11-24-95 [00] Haendlerantrag fuer die Emmerich BBS,
+                                   Rich-Text-Format (RTF) 
+ANTRAGDE.TXT    6251 11-24-95 [09] Haendlerantrag fuer die Emmerich BBS,
+                                   ASCII-Format 
+ANTRAGDE.WPT   61080 11-24-95 [00] Haendlerantrag fuer die Emmerich BBS,
+                                   Word-Perfect 5.x Format
+
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³°°°±±±²²²               Listed 165 files,    35518k                ²²²±±±°°°³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+

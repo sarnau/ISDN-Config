@@ -1,0 +1,91 @@
+!######################################################################
+!                       Sperr
+!######################################################################
+
+*rufzuord_dlg.xmtChildren:	unmanaged XmtLayout rufzuord;
+*rufzuord_dlg.title:		Rufnummernzuordnung
+*rufzuord.autoUnmanage:		False
+*rufzuord.dialogStyle:		dialog_primary_application_modal
+
+*rufzuord.xmtChildren:	\
+		XmtInputField num0=num0,num1=num1,num2=num2,num3=num3,num4=num4, \
+					  num5=num5,num6=num6,num7=num7,num8=num8,num9=num9, \
+				      num10=num10,num11=num11,num12=num12,num13=num13, \
+					  num14=num14,num15=num15,num16=num16,num17=num17, \
+					  num18=num18,num19=num19, \
+				      num20=num20,num21=num21,num22=num22,num23=num23, \
+					  num24=num24,num25=num25,num26=num26,num27=num27, \
+					  num28=num28,num29=num29, \
+					  hptnum; \
+		XmtChooser   hpttyp; \
+		XmPushButton okay,cancel,help;
+
+*rufzuord.hpttyp.chooserType: XmtChooserOption
+*rufzuord.hpttyp.strings: "Einzelanlage","Direkt","Über Amt","Vernetzt Master",\
+							"Vernetzt Slave"
+
+*rufzuord.XmtInputField.verifyCallback:	Check_11_97();
+*rufzuord.XmtInputField.errorCallback:  \
+	XmtDisplayWarning(msg1, Die Nummern müssen zwischen 11 und 97 liegen\n\
+und dürfen nicht doppelt vergeben werden!);
+*rufzuord.XmtInputField.matchAll:	True
+*rufzuord.XmtInputField.pattern:	dd
+*rufzuord.hptnum.verifyCallback:
+*rufzuord.hptnum.errorCallback:  
+*rufzuord.hptnum.matchAll:	False
+*rufzuord.hptnum.pattern:	dddddddd
+
+*rufzuord.okay.labelString:	OK
+*rufzuord.cancel.labelString:	Abbrechen
+*rufzuord.help.labelString:	Hilfe
+
+*rufzuord.hpttyp.valueChangedCallback:     setHptMode();
+*rufzuord.okay.activateCallback:		XmtDialogOkayCallback();
+*rufzuord.cancel.activateCallback:	XmtDialogCancelCallback();
+
+*rufzuord.layout: \
+	Caption tl "Hauptanlage" Etched Through 6 2 Row { \
+		Col { \
+		Caption "Anschluß:" hpttyp \
+		Caption "Nummer:" 50 mm Wide hptnum \
+		}\
+	} \
+	Caption tl "Nebenstellen-Nummern" Etched Through 6 2 Row { \
+		Col { \
+		Caption "AB  #1: " 15 mm Wide num0 \
+		Caption "AB  #2: " 15 mm Wide num1 \
+		Caption "AB  #3: " 15 mm Wide num2 \
+		Caption "AB  #4: " 15 mm Wide num3 \
+		Caption "AB  #5: " 15 mm Wide num4 \
+		Caption "AB  #6: " 15 mm Wide num5 \
+		Caption "AB  #7: " 15 mm Wide num6 \
+		Caption "AB  #8: " 15 mm Wide num7 \
+		Caption "TFE #1: " 15 mm Wide num8 \
+		Caption "TFE #2: " 15 mm Wide num9 \
+		} \
+		Col { \
+		Caption "S0 #0: " 15 mm Wide num10 \
+		Caption "S0 #1: " 15 mm Wide num11 \
+		Caption "S0 #2: " 15 mm Wide num12 \
+		Caption "S0 #3: " 15 mm Wide num13 \
+		Caption "S0 #4: " 15 mm Wide num14 \
+		Caption "S0 #5: " 15 mm Wide num15 \
+		Caption "S0 #6: " 15 mm Wide num16 \
+		Caption "S0 #7: " 15 mm Wide num17 \
+		Caption "S0 #8: " 15 mm Wide num18 \
+		Caption "S0 #9: " 15 mm Wide num19 \
+		} \
+		Col { \
+		Caption "S1 #0: " 15 mm Wide num20 \
+		Caption "S1 #1: " 15 mm Wide num21 \
+		Caption "S1 #2: " 15 mm Wide num22 \
+		Caption "S1 #3: " 15 mm Wide num23 \
+		Caption "S1 #4: " 15 mm Wide num24 \
+		Caption "S1 #5: " 15 mm Wide num25 \
+		Caption "S1 #6: " 15 mm Wide num26 \
+		Caption "S1 #7: " 15 mm Wide num27 \
+		Caption "S1 #8: " 15 mm Wide num28 \
+		Caption "S1 #9: " 15 mm Wide num29 \
+		} \
+	} \
+	Fixed Equal Row { okay cancel help }

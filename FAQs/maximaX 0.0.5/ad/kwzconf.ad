@@ -1,0 +1,155 @@
+!######################################################################
+!                       Eintrag editieren
+!######################################################################
+
+*kwz_dlg.xmtChildren:  unmanaged XmtLayout kwzlayout;
+*kwz_dlg.title:	Ackermann/Quante Kurzwahlliste
+*kwzlayout.autoUnmanage: False
+*kwzlayout.dialogStyle: dialog_primary_application_modal
+
+*kwzlayout.xmtChildren:	\
+	XmScrolledList ziele; \
+	XmPushButton delcfg, editcfg, progcfg, print, getcfg, movecfg, \
+				 nahber_b,sperrber_b,loadall, save, saveas, savetxt,\
+				 mergenames,help,quit;
+
+*kwzlayout.delcfg.labelString:		Löschen
+*kwzlayout.editcfg.labelString:		Ändern
+*kwzlayout.movecfg.labelString:		Verschieben
+*kwzlayout.loadall.labelString:		Laden...
+*kwzlayout.save.labelString:		Sichern
+*kwzlayout.saveas.labelString:		Sichern unter...
+*kwzlayout.savetxt.labelString:		Text sichern
+*kwzlayout.print.labelString:		Drucken
+*kwzlayout.progcfg.labelString:		Programmieren
+*kwzlayout.getcfg.labelString:		Auslesen
+*kwzlayout.sperrber_b.labelString:	Sperrbereich
+*kwzlayout.nahber_b.labelString:	Nahbereich
+*kwzlayout.mergenames.labelString:	Namen nachladen...
+*kwzlayout.help.labelString:		Hilfe
+*kwzlayout.quit.labelString:		OK
+
+*kwzlayout.delcfg.activateCallback:		get4delete();
+*kwzlayout.editcfg.activateCallback:	get4edit();
+*kwzlayout.loadall.activateCallback:	loadFile();
+*kwzlayout.save.activateCallback:		saveFile();
+*kwzlayout.saveas.activateCallback:		saveFileas();
+*kwzlayout.savetxt.activateCallback:	saveText();
+*kwzlayout.print.activateCallback:		printText();
+*kwzlayout.movecfg.activateCallback:	get4move();
+*kwzlayout.progcfg.activateCallback:	writeISkwz();
+*kwzlayout.getcfg.activateCallback:		readISkwz();
+*kwzlayout.sperrber_b.activateCallback:	showSperrBer();
+*kwzlayout.nahber_b.activateCallback:	showNahBer();
+*kwzlayout.mergenames.activateCallback:	mergeFile();
+*kwzlayout.quit.activateCallback:		closekwz(); XmtDialogOkayCallback();
+
+*kwzlayout.ziele.selectionPolicy: BROWSE_SELECT
+*kwzlayout.ziele.defaultActionCallback: 	editselct();
+
+*kwzlayout.layout: \
+			Row { \
+				Etched Right Col { 8.6in Wide Caption tll "KURZ Name                                   Telefonnummer" ziele \
+				} \
+				Col { \
+					Equal Row { editcfg }\
+					Equal Row { delcfg }\
+					Etched Bottom Equal Row { movecfg }\
+					Equal Row { loadall }\
+					Equal Row { save }\
+					Equal Row { saveas }\
+					Etched Bottom Equal Row { mergenames }\
+					Equal Row { savetxt }\
+					Etched Bottom Equal Row { print }\
+					Equal Row { getcfg }\
+					Etched Bottom Equal Row { progcfg }\
+					Equal Row { nahber_b }\
+					Etched Bottom Equal Row { sperrber_b }\
+					Etched Bottom Equal Row { help }\
+					Equal Row { quit }\
+				} \
+			}
+
+!######################################################################
+!                       Eintrag editieren
+!######################################################################
+
+*editentry_dlg.xmtChildren:  unmanaged XmtLayout editentry;
+*editentry_dlg.title:    Eintag ändern
+*editentry.autoUnmanage: False
+*editentry.dialogStyle: dialog_primary_application_modal
+
+*editentry.xmtChildren: XmtInputField name = name, number = number ;\
+                        XmPushButton okay, cancel;
+
+*editentry.okay.labelString: OK
+*editentry.cancel.labelString: Abbrechen
+
+*editentry.okay.activateCallback:		XmtDialogOkayCallback();
+*editentry.cancel.activateCallback:	XmtDialogCancelCallback();
+
+*editentry.name.matchAll:	False
+*editentry.number.matchAll:	False
+*editentry.name.pattern:	acccccccccccccccccccccccccccccccccccc
+*editentry.number.pattern:	dddddddddddddddddddddddd
+
+*editentry.layout: \
+            Row { 5 in Wide Caption tl "Name:" name }\
+            Row { 5 in Wide Caption tl "Nummer:" number }\
+            Etched Top Equal Row { okay cancel }
+
+
+!######################################################################
+!                       Eintrag verschieben
+!######################################################################
+
+*moveentry_dlg.xmtChildren:  unmanaged XmtLayout moveentry;
+*moveentry_dlg.title:    Eintag verschieben
+*moveentry.autoUnmanage: False
+*moveentry.dialogStyle: dialog_primary_application_modal
+
+*moveentry.xmtChildren: XmtInputField number = number ;\
+                        XmPushButton okay, cancel;
+
+*moveentry.okay.labelString: OK
+*moveentry.cancel.labelString: Abbrechen
+
+*moveentry.okay.activateCallback:		XmtDialogOkayCallback();
+*moveentry.cancel.activateCallback:	XmtDialogCancelCallback();
+
+*moveentry.number.matchAll:	False
+*moveentry.number.pattern:	ddd
+
+*moveentry.layout: \
+            Row { 2 in Wide Caption tl "Neue Nummer:" number }\
+            Etched Top Equal Row { okay cancel }
+
+!######################################################################
+!                       Sonstiges
+!######################################################################
+
+*wrongFile.message:		Die Datei\n\"%s\"\nist kein Kurzwahlverzeichnis!
+*wrongFile.title:		Datei-Fehler
+
+*merge_dlg.title:		Namen nachladen
+*merge_dlg.directory:	/usr/local/maximaX/etc
+*merge_dlg.pattern:		*.kwz
+*merge_dlg.message:		Dateiauswahl:
+
+*save_dlg.title:		Kurzwahlliste sichern
+*save_dlg.directory:	/usr/local/maximaX/etc
+*save_dlg.pattern:		*.kwz
+*save_dlg.message:		Datei sichern als:
+
+*load_dlg.title:		Kurzwahlliste laden
+*load_dlg.directory:	/usr/local/maximaX/etc
+*load_dlg.pattern:		*.kwz
+*load_dlg.message:		Dateiauswahl:
+
+*mover.title:			Eintag verschieben
+*mover.yesLabel:		OK
+*mover.cancelLabel:		Abbrechen
+
+*readwbox.dialogTitle:	Kurzwahlverzeichnis lesen
+*readwbox.message:		Lese Kurzwahlverzeichnis...
+*readwbox.scaleLabel:	Datensatz:

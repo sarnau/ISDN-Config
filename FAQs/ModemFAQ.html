@@ -1,0 +1,1180 @@
+<HTML>
+<!-- $Id: modemfaq.html,v 1.1 1996/02/28 11:20:30 hug Exp $ -->
+<HEAD>
+<TITLE>ModemFAQ</TITLE>
+</HEAD>
+<BODY>
+<PRE>
+Archive-name: faqmodem
+Last-modified: 17 Dec 1995
+Frequency: monthly</PRE>
+<HR>
+<H1>Die Modem-FAQ</H1>
+<HR>
+Da immer wieder Fragen zum Thema "Ich haenge an einer Nebenstellenanlage.
+Wie kann ich waehlen?" auftauchen, hier die Antworten auf die
+haeufigsten.
+<P>
+Diese FAQ wird monatlich am 9. in de.comm.modem gepostet.
+<P>
+Ergaenzungen und Korrekturen sind willkommen
+(an hifi@scorpio.in-berlin.de schicken).<br>
+Es fehlt noch:
+<UL>
+<LI> alles, was mit Modems an Atari/Amiga usw. zu tun hat
+<LI> alles, was PPP oder SLIP betrifft. Gehoert aber eigentlich
+  hier auch nicht rein.
+<LI> diverse Fragen und Antworten. Wer hat noch welche?
+</UL>
+<P>
+<I>Hinweis: Die FAQ besteht nur aus einer einzigen Datei, alle Links zeigen
+nur auf Stellen innehalb dieser Datei. Wer die Seite speichert, hat
+automatisch alles beisammen.</I>
+<HR>
+
+<H2>Inhalt:</H2>
+<OL>
+<LI><A HREF=#warn>Warnung!</A>
+<LI><A HREF=#geschichte>Was tut ein Modem/Geschichte</A>
+<LI><A HREF=#progmod>Unterschied zwischen Programm und Modem</A>
+<LI><A HREF=#wahl>Wahlbefehle und Parameter</A>
+<LI><A HREF=#config>Konfiguration/Speichern</A>
+<LI><A href=#kabel>Kabel und Stecker</A>
+<LI><A HREF=#normen>Normen</A>
+<LI><A HREF=#mnp>Fehlerkorrektur und Kompression</A>
+<LI><A HREF=#tips>Sonderfaelle/Tips und Tricks</A>
+<LI><A HREF=#fax>Fax</A>
+<LI><A HREF=#fragen>Fragen und Antworten</A>
+</OL>
+<HR>
+<H2>Dank geht an folgende Leute:</H2>
+<DL>
+<DT>naddy@mips.pfalz.de (Christian Weisgerber)
+<DD>fuer anregende Diskussionen und genaue Werte,
+<DT>turbo@pericont.in-berlin.de (Michael Gaehme)
+<DD>fuer Infos ueber PEP
+<DT>H.ZACHARIAS@A-LINK-H.zer.sub.de (Harald Zacharias),
+zoc@zocki.toppoint.de (Rainer Zocholl)
+<DD>fuer Richtigstellungen und Tips
+<DT>und:
+<DD>diversen Unbekannten, die im Netz Erfahrungen preisgegeben haben und
+geben, und<br>
+meiner Z-Netz-Zeit, in der ich von 300-Baud-Kopplern bis zum T2500
+alle moeglichen Modems kennengelernt habe.<br>
+</DL>
+<I>Special Thanks to Donald.</I>
+<P>
+(c): Ich habe nichts dagegen, dass der Inhalt gepostet, ausgedruckt,
+gemailt oder sonstwie verteilt wird, solange das kostenlos passiert.
+Aenderungen bitte nicht selber vornehmen, sonst entstehen verschiedene
+Versionen mit unterschiedlichem Inhalt (und Wahrheitsgrad).
+Aenderungen also an mich mailen!
+
+<ADDRESS>
+hifi@scorpio.in-berlin.de (Gernot Zander)
+</ADDRESS>
+<p>
+<HR>
+<H3><A NAME=warn>1. Warnung!</A></H3>
+
+Veraenderungen an Leitungen und Dosen der Telekom unterliegen
+wechselnden Einschraenkungen. So ist derzeit das Parallelschalten
+von mehr als einem Endgeraet unzulaessig, nur die normgerechte
+Beschaltung der TAE-Dosen stellt sicher, dass zwar alle Geraete klingeln,
+aber immer nur eins abgehoben mit der Vermittlungsstelle verbunden
+sein kann. Was erlaubt ist und was nicht, ist den jeweils geltenden
+Gesetzen/Verordnungen/AGB's zu entnehmen. Das ist von Bastler
+selbst zu beachten!
+<P>
+Die Spannungen auf Telefonleitungen koennen <B>lebensgefaehrlich</B>
+sein, besonders, wenn gerade ein Rufsignal kommt.
+<P>
+Die Verwendung von Bezeichnungen in diesem Text bedeutet nicht,
+dass diese frei von Copyrights oder registrierte Warenzeichen
+sind.
+<P>
+Natuerlich kann fuer die Richtigkeit <I>keine Garantie</I> uebernommen
+werden. Manch Hersteller kocht sein eigenes Sueppchen und belegt
+Kabel und Befehle nach seinen eigenen Vorstellungen. Nachmessen
+und In-das-Handbuch-sehen empfohlen!
+<P>
+<HR>
+<H3><A NAME=geschichte>2. Was tut ein Modem/Geschichte</A></H3>
+<p>
+Besessen von der Idee, Daten zu uebertragen, waren die Menschen
+schon immer. Ob es mit Rauchzeichen oder Buschtrommeln angefangen
+hat, kann ich nicht genau sagen. Bestimmte Regeln gab es da
+aber auch schon (Codierung!).
+<P>
+Irgendwann haben Graham Bell, Philipp Reiss und Elisha Gray (mit
+unterschiedlichem patentrechtlichen Erfolg) dann die ach so beliebte
+Quasselstrippe erfunden. Wie es nicht anders sein kann, hat natuerlich
+auch Edison seine Finger mit im Spiel.
+<P>
+Das analoge Telefonsystem uebertraegt zunaechst einmal Sprache
+von a nach b und umgekehrt. Das System ist so angelegt, dass grosse
+Entfernungen ueberbrueckt werden koennen. HiFi war nie das Ziel.
+Irgendwann kamen dann Computerfreaks auf die Idee, ihre Rechner
+ueber die inzwischen ueberall verbreitete Telefontechnik miteinander
+zu verbinden. Prinzipiell ist das zwar der falsche Weg, Telefonie
+war dafuer nicht entwickelt worden, aber sie war nunmal ueberall
+vorhanden und die Kabel sind vergleichsweise billig. Mit den
+erheblichen Problemen hat man jedoch noch heute zu kaempfen.
+<P>
+Problem: Die Binaerdaten aus dem Rechner muessen so umgewandelt
+werden, dass sie sich auf einer analogen Leitung mit sehr knapper
+Bandbreite und teilweise erheblichen Stoerungen/Schwankungen/Toleranzen
+uebertragen lassen. Moeglichst in beide Richtungen gleichzeitig
+und moeglichst schnell natuerlich. Auf der anderen Seite
+muessen die "Geraeusche" dann wieder in Binaerdaten zurueckgewandelt
+werden, moeglichst fehlerfrei.
+<P>
+Was tun? Man nehme zwei Toene, die im Bereich der vom Telefon
+uebertragenen Frequenz liegen, und sende bei einer 1 den hohen,
+und bei einer 0 den tieferen Ton. Fuer die Rueckrichtung mache
+man das gleiche mit zwei anderen Toenen. Am anderen Ende
+setze man eine Schaltung ein, die die beiden Toene erkennt
+und zum Rechner wieder eine 0 oder 1 ausspuckt.
+<P>
+Die Toene kann man mit zwei Gummimuscheln akkustisch in einen
+Telefonhoerer koppeln (Akkustikkoppler) oder mit einem speziellen
+Geraet, das das Kunstwort "Modem" erhalten hat, direkt
+in die Leitung senden. Modem kommt uebrigens von
+MODulator/DEModulator. Man ist sich bis heute nicht einig, ob
+es nun "der Modem" oder "das Modem" heisst. Ich sage "das Modem"
+und verkneife mir jeden weiteren Kommentar.<br>
+Ein Urgetier der Modemgeschichte ist die amerikanische Firma
+"Hayes", die bzgl. der 1200er/2400er Modems Vorreiter war.
+Noch heute wird zur Modemsteuerung ein Befehlssystem benutzt,
+das darauf zurueckgeht ("Hayes-Befehlssatz").
+<P>
+Mit dem eben beschriebenen Verfahren hat man zwei Normen entwickelt
+(Bell 103 und V.21), nennt das Verfahren "Frequency Shift Keying"
+und erreicht 300 Baud. Anfangs nur in jeweils einer Richtung
+(halbduplex), spaeter auch vollduplex. Dieses Verfahren wird noch
+heute genutzt, naemlich in der Vereinbarungsphase zweier Faxgeraete.
+<P>
+Um schneller zu werden, hat man kompliziertere Modulationsarten
+entwickelt, die statt der Frequenz die Phase umschalten und
+schliesslich in einem Modulationsschritt (Baud) gleich mehrere
+Bits verpacken, seitdem ist Baud <> Bps (Bits pro Sekunde). Nur
+bei 300 kann man noch von "Baud" sprechen. Ab den 1200er Modems
+ist Bps die korrekte Bezeichnung, es sei denn, man meint die
+Anzahl der Modulationsschritte je Sekunde, aber die ist eigentlich
+uninteressant (meistens 600 bis 2400 Baud bei heute ueblichen
+Modems).<br>
+Bei Dateien nimmt man auch cps (char, also Zeichen pro s.) als Einheit.
+<p>
+Kurz:<br>
+Ein Modem setzt binaere Daten aus dem Computer in akkustische
+Signale um und passt diese den Gegebenheiten einer Telefonleitung
+an. Das gleiche tut es in umgekehrter Richung fuer die
+empfangenen Daten.<br>
+Massgeblich fuer die Geschwindigkeit ist die Einheit bps.
+<P>
+
+
+<HR>
+<H3><A NAME=prgmod>3. Unterschied zwischen Programm und Modem</A></H3>
+
+Es ist fuer den Anfaenger nicht leicht auseinanderzuhalten:
+<P>
+Einmal hat man ein Programm, das einem die Daten der Gegenstelle
+anzeigt und eigene Tastenanschlaege zur Gegenstelle
+schickt, das Terminalprogramm, das selbst ueber
+Konfigurationsmoeglichkeiten verfuegt.<br>
+Andererseits hat ein Modem keine eigene Tastatur (sieht man von
+einigen rudimentaeren DIP-Schaltern mal ab), und muss so ebenfalls
+durch das Terminalprogramm "hindurch" konfiguriert werden.<br>
+Und drittens muessen sich Terminalprogramm und Modem dann auch noch
+ueber die eine oder andere Einstellung einig sein.
+<P>
+Der Anfaenger muss <I>allerschnellstens</I> lernen, wann er das Modem,
+und wann sein Programm "bearbeitet". Sonst hat er verloren!
+<P>
+Grundprinzip:<br>
+Das Modem hat zwei Betriebsarten. Es kann "online" sein, es besteht
+also eine Verbindung zur Gegenstelle, dann werden alle
+Daten dorthin geschickt und Antworten an den eigenen Rechner
+weitergegeben. Oder es ist im "Befehlsmodus". Dann nimmt es
+Daten als Befehle fuer sich selber an und antwortet auch darauf.
+Die Befehle beginnen ueblicherweise mit "AT" und irgendwelchen
+Buchstaben/Ziffern-Kombinationen. Das Modem antwortet hoffentlich
+mit "OK" oder auch mit "ERROR", oder es gibt die gewuenschten
+Infos zurueck. Beispiele sind "ATZ" oder
+"ATDP" oder "AT&amp;V". Ich schalte im folgenden jeweils
+Leerzeichen dazwischen, diese dienen nur der Uebersichtlichkeit,
+sie koennen beim Eintippen auch weggelassen werden.
+<P>
+Die meisten Terminalprogramme koennen nun freundlicherweise
+solche Modemkommandos speichern und "automatisch" an
+das Modem senden, damit sich der Tastaturquaeler nicht die
+ganzen AT-Kommandos merken muss. Nur muss auch das einstellbar
+sein, und daher die Verwirrung: Das Eintragen von AT-Befehlen
+in irgendwelchen Menues und Masken des Terminalprogramms
+aendert noch nichts an den Einstellungen des Modems!
+Die gespeicherten AT-Befehle werden erst zu gegebener Zeit
+(vielleicht auch gar nicht) vom Terminal an das Modem geschickt
+(und erst <I>dann</I> spielen sie eine Rolle).
+<P>
+Ausserdem hat natuerlich auch ein Terminalprogramm Optionen.
+Die beeinflussen aber nicht das Modem sondern hoechstens
+die Zusammenarbeit der beiden. Beispiele hierfuer sind der
+COM-Port, die Geschwindigkeit, Down- und Uploadverzeichnisse
+usw.
+<P>
+Dem Anfaenger sei empfohlen, statt in diversen bunten Menues
+herumzuklicken, sich zunaechst mit dem (meist schwarzen) leeren
+Terminal-Bildschirm zu begnuegen und von Hand einige AT-Kommandos
+einzutippen.
+Dabei beobachte man die LED's am Modem und schaue sich
+die Antworten des Modems an.<br>
+Man kann - wenn man mag - fast ausschliesslich so arbeiten. Das
+ist bei auftretenden Fehlern empfehlenswert, da man so genau
+weiss, welche Befehle an das Modem gegangen sind. Bei einigen
+Terminalprogrammen ist naemlich nicht ersichtlich, was sie wann
+am Modem herumkonfigurieren.<br>
+Wenn man das Zusammenspiel verstanden hat, kann man dann immer
+wiederkehrende Sequenzen an geeigneter Stelle im Terminal
+speichern.
+<P>
+<HR>
+
+<H3><A NAME=wahl>
+4. Wahlbefehle und Parameter</A></H3>
+
+Mittels AT-Befehlen kann das Modem auf bestimmte Parameter
+eingestellt und dann zum Waehlen veranlasst werden.<br>
+Einige Parameter muessen zwischen Modem und Terminalprogramm
+abgestimmt sein, in erster Linie die Geschwindigkeit auf
+der seriellen Schnittstelle und der Handshake.<br>
+Die Geschwindigkeit der Schnittstelle stimmt heutzutage uebrigens
+nicht mit der tatsaechlichen Geschwindigkeit auf der Telefonleitung
+ueberein, sie liegt vielmehr deutlich hoeher. Warum
+das so ist, siehe bei <A HREF=#mnpspeed>Fehlerkorrektur und
+Kompression</A>.
+<P>
+Fuer die ersten Wahlversuche beschraenke man sich auf das
+Noetigste:<br>
+Waehle die Schnittstellengeschwindigkeit etwa doppelt so hoch
+wie die des Modems (bei einem 28800er also 57600 Baud,
+notfalls auch 38400).<br>
+Stelle beim Rechner den Handshake auf "RTS/CTS" oder "Hardware",
+je nachdem, wie das im Termianalprogramm heisst.<br>
+Auch das Modem auf RTS/CTS einstellen. Befehl hierzu aus der
+Anleitung suchen, oft ist das "AT \Q3" oder "AT &K3". Diesen
+Befehl sende man natuerlich an das Modem.<br>
+Am normalen Telefon ergruende man, ob mit Ton- oder Pulswahl
+gearbeitet werden muss. Hierzu schaltet man das Telefon auf
+Tonwahl und tippt ein paar Ziffern. Bleibt der Amtston
+unveraendert stehen, muss man sich mit Pulswahl begnuegen.
+Dann kann man den ersten Versuch starten.<br>
+Bei Pulswahl: "AT DP <nummer>", bei Tonwahl "AT DT <nummer>".
+Als Nummer setze man eine beliebige Mailbox aus der Umgebung ein.
+Listen stehen gelegentlich in den Modemanleitungen.
+<P>
+Vor den eigentlichen Wahlbefehl (aber nach dem "AT" natuerlich)
+kann/muss man noch weitere Einstellungen setzen.<br>
+Antwortet das Modem auf den ersten Versuch mit "NO DIALTONE", so
+sitzt man vermutlich an einer Nebenstellenanlage, die keinen
+normalen Waehlton abgibt. Mit "AT X3 D...." kommt man dann weiter.
+Die Zeichen fuer die Amtsholung und das Warten auf den Amtston
+aber kommen nach dem "DP" bzw. "DT"!
+<P>
+Beispiele:<br>
+<DL>
+<DT>normales Amt:
+<DD>AT DT 12345 oder<br>
+AT DP 12345
+
+<DT>Nebenstellenanlage, die Amtsleitung wird mit 0 geholt:
+<DD>AT X3 DT 0 W 12345 oder<br>
+AT X3 DP 0 W 12345<br>
+("X3" - Waehltonerkennung aus, "DT" Wahlbefehl, "0" zur Amtsholung,
+"W" um auf den Amtston zu warten, "12345" die eigentliche Mailboxnummer)
+
+<DT>Nebenstellenanlage, die Amtsleitung wird mit Flash geholt:
+<DD>AT X3 DT ! W 12345 oder<br>
+AT X3 DP ! W 12345<br>
+("X3" - Waehltonerkennung aus, "DT" Wahlbefehl, "!" zur Amtsholung,
+"W" um auf den Amtston zu warten, "12345" die eigentliche Mailboxnummer)
+</DL>
+Weitere Zeichen nach dem "DP" bzw. "DT":<br>
+"," - Pause<br>
+"@" - Warten auf Stille<br>
+"!" - Flash<br>
+">" - Erdtaste<br>
+"R" - verkehrtes Waehlen (Waehlen im Antwortmodus)<br>
+";" - nach dem Waehlen im Befehlsmodus bleiben<br>
+"W" - Auf Waehlton warten<br>
+"^" - Calling-Ton ein/ausschalten<br>
+<P>
+Nicht alle diese Zeichen gehen bei allen Modems. Anleitung lesen!
+Natuerlich kann man statt "W" auch ein "," nehmen, nur wird dann
+halt nicht kontrolliert, ob tatsaechlich ein Amtston kommt, oder
+vielleicht gerade alle Amtsleitungen besetzt sind.<br>
+Einige Nebenstellenanlagen benoetigen auch gar keine Pause, weil
+sie die Nummer zwischenspeichern.<br>
+Weitergehende Einstellungen des Modems folgen in den naechsten
+Abschnitten.
+<P>
+<HR>
+
+
+<H3><A NAME=config>
+5. Konfiguration/Speichern</A></H3>
+
+Die meisten Modems bieten eine Fuelle von Einstellmoeglich-
+keiten. Diese unterscheiden sich von Modell zu Modell z.T.
+erheblich. Fuer Details sei also auf die Anleitung verwiesen.
+<P>
+Zum Glueck muss man nun nicht jedesmal alle Einstellungen mit
+AT-Befehlen an das Modem senden.
+<P>
+Heutige Modems haben die Faehigkeit, diese Einstellungen zu
+speichern, auch, wenn sie ausgeschaltet werden.<br>
+Meistens gibt es sogar mehrere Einstellungsprofile, die je nach
+Bedarf aktiviert werden koennen. Auch das aktuelle Profil bleibt
+meistens beim Ausschalten erhalten.
+<P>
+Die eingestellten Profile kann man sich (im Terminalprogramm)
+mit "AT &amp;V" anzeigen lassen. Dabei wird aber meistens nicht
+alles angezeigt. Ob es noch andere Befehle zur Ausgabe der
+Profile gibt ("AT \S" oder "AT %R" zum Bleistift) entnehme
+man der Anleitung.
+<P>
+Ueblicherweise geht das so:<br>
+Man bastelt sich sein gewuenschtes Profil zusammen und speichert
+es dann mit "AT &amp;Wx" in eins der Profile ab. "x" ist hierbei
+eine Ziffer, meist 0 oder 1, weglassen bedeutet 0.<br>
+Mit "AT Zx" kann man dann eines der Profile wieder aktivieren.<br>
+Es gibt auch eine Einstellung, die automatisch bei bestimmten
+Situationen ein "AT Z" ausfuehrt (siehe "AT &amp;D3" in der
+Anleitung).
+<P>
+Man braucht dann nicht bei jeder Sitzung alles neu eingeben,
+man nehme als Init-String ein simpls "AT Z" bzw. "AT Z1",
+und aendere bestenfalls noch die eine oder andere Kleinigkeit,
+moeglichst gleich im Wahlstring, z.B. das Ausschalten der
+Kompression bei einem Poll vom Pointprogramm.
+<P>
+Dann gibt es noch einen "Notausgang". Dieser setzt bei Bedarf
+(sprich: total verstelltem Modem) alle Einstellungen auf die
+Fabrik-Vorgaben. Das geht meistens mit "AT &amp;F". Es gibt auch
+Modems, die eine nachgestellte Ziffer erlauben, die dann ein
+bestimmtes Vorgabe-Profil setzt. Oft ist das Vorgabe-Profil
+aber alles andere als optimal, es stellt naemlich das Modem
+voellig "dumm", schaltet z.B. den Handshake aus, Kompression
+und Fehlerpruefung ebenso usw. Was Voreinstellung ist, kann
+man im Handbuch sehen, es steht entweder explizit da oder
+die voreingestellte Option ist fettgedruckt. Oder man
+laesst sie sich nach einem "AT &amp;F" ausgeben (siehe oben).
+<P>
+Dummerweise scheinen einige Programmierer der Meinung zu sein,
+das der Anwender nicht in der Lage ist, sein Modem zu konfigurieren,
+und senden als erstes frech ein "AT &amp;F" an das Modem,
+wohl um zu sichern, halbwegs normale Voraussetzungen anzutreffen.
+Das loescht aber alle muehsam vorgenommenen Anpassungen
+(z.B. f. Nebenstellenanlagen, Ton/Pulswahl usw.), die DU als
+Besitzer sicher nicht grundlos vorgenommen hast.<br>
+Die meisten neuren Modems loeschen dabei nur das aktive
+Profil, mit ATZ hat man also alle Einstellungen wieder,
+aber insbesondere aeltere Modems loeschen <I>alles</I>.<br>
+Noch schlimmer sind Programme, die erst ein AT&amp;F und dann
+ein AT&amp;W machen, damit werden dann die eigenen Einstellungen
+in jedem Fall ueberschrieben. (WiSo-BTX)<br>
+Diverse Modems ertragen es ausseden nicht, wenn nach dem
+AT&amp;F in der gleichen Zeile noch andere Kommandos kommen
+(das int. 14k4er von Escom z.B.). Diese funktionieren dann
+nicht mit solchen Programmen, weil sie ERROR antworten.
+FaxWorks von OS/2 macht das so, und der String ist auch
+noch fest eincompiliert, um also besagtes Modem zum laufen
+zu kriegen muss man in den Binaries patchen.<br>
+Ob man solche Programme dann verwendet, und mit irgendwelchen
+Tricks seine Einstellungen zurueckholt, bleibt
+jedem selbst ueberlassen. Einfacher ist es da, ordentlich
+konfigurierbare Soft zu benutzen.
+<P>
+Hat man eine vernuenftige Einstellung beisammen, sollte man sich
+diese notieren, um sie nach einem "GAU" schnell wieder parat zu
+haben. Es genuegt dabei, die Sachen aufzuschreiben, die sich
+von den Vorgaben bei "AT &amp;F" unterscheiden.
+<P>
+Zum Schluss noch die wichtigsten Einstellungen und Beispiele,
+die fuer viele Modems zutreffen duerften:<br>
+Handshake:<br>
+RTS/CTS (Hardware) oder XOn/XOff (Software), AT &amp;Kx bzw. AT \Qx<br>
+Auswertung von Besetzt und Amtston:<br>
+AT X0 (alles aus) bis AT X4 (fast alles ein). Anleitung!<br>
+Verbindungszustand melden:<br>
+AT &amp;C1<br>
+DTR auswerten:<br>
+AT &amp;D0 (ignorieren) bis AT &amp;D3 (auflegen und Reset ausfuehren)<br>
+Fehlerpruefung:<br>
+AT \N0 (aus) bis AT\N3 oder \N6 (Automatik) oder:<br>
+AT &amp;Q0 (die \N-Befehle nehmen) bis AT &amp;Q5 (V.42bis ein)
+ANLEITUNG!<br>
+AT Mx (wann der Lautsprecher ein oder aus ist)<br>
+AT Lx (Lautstaerke)<br>
+AT E1 (Befehlsecho an)<br>
+AT Q0 (Antworten an)<br>
+AT V1 (antworten als Text)<br>
+<P>
+<HR>
+
+
+<H3><A NAME=kabel>
+6. Kabel und Stecker</A></H3>
+
+Das Kabel vom Modem zum Rechner liegt meistens dabei oder kann
+(fuer MAC oder Atari) beim Haendler fertig gekauft werden. Da
+gibt es nichts zu veraendern.
+<P>
+Bei einem postzugelassenen Modem und dem mitgelieferten Kabel
+gibt's bei ordnungsgemaess installierter TAE-Dose eigentlich auch
+keine Probleme. Wenn man einen Gebuehrenzaehler hat, sollte der
+in der linken F-Buchse stecken, das Modem in der rechten, und
+das Telefon in der Mitte. Hat man einen Anrufbeantworter, so
+gehoert das Modem in die linke, der Knecht in die rechte und
+das Telefon in die Mitte.<br>
+Wer noch keine TAE hat, bekommt sie fuer 65 DM, oder wenn
+er einen T-Online-Zugang beantragt, sogar kostenlos. Derzeit
+wird auch eine beschaedigte Dose noch kostenlos ersetzt (und
+in Verbindung damit auch in eine TAE umgewandelt). Wer also
+versehentlich mal den Staubsauger dagegen fahren laesst...
+<P>
+Probleme gibt's aber bei Verteilern oder Verlaengerungen.
+Es kommt dann vor, dass bei eingestecktem Modem das Telefon
+ganz "tot" ist, oder das Modem keinen Waehlton bekommt.
+<P>
+Hierzu ein Stueckchen Schaltungslogik aus der 
+<A HREF="kabelfaq.html">Kabel-FAQ</A>:<br>
+<pre>
+TAE-Dose/Stecker (Blick auf die DOSE):
+                      .---.        .---.      
+                      |   |        |   |     
+                    W  | |  E    W  | |  E  
+                      <   >        |   |    
+     Amt............b  | |  b2...b  | |  frei
+                      |   |        |   |    
+        ............a  | |  a2...a  | |  frei
+                      |___|        <___>    
+
+                        N            F     
+</pre>
+Die Logik beim TAE-System ist folgende:<br>
+Ein Telefon darf eine Datenuebertragung nicht unterbrechen koennen.<br>
+Daher sind die N-Dosen bevorrechtigt. Steckt kein Geraet in der N-Dose,
+so verbinden die gegenueberliegenden Kontakte die Amtsleitung weiter
+(sie beruehren sich einfach, natuerlich nicht W und E), so dass a/b
+korrekt am Telefon ankommt.<br>
+Steckt ein Geraet drin und drueckt die Kontakte auseinander, so muss es
+selbst die Verbindung wiederherstellen, indem es - ueblicherweise per
+6poligem Kabel - per Relais a und a2 sowie b und b2 verbindet, wenn es
+nicht aktiv ist. Postzugelassene Modems und Faxe tun das auch.
+(Natuerlich nur, wenn der Westernstecker auch im Modem ist.
+Wer aus Angst vor Spionage den Stecker aus dem Modem zieht, darf
+sich also nicht wundern, wenn er nicht telefonieren kann. Allerdings
+ist er damit auch vor Spionage ziemlich sicher:-)))
+<P>
+Erwischt man jedoch ein laengeres Modemkabel, bei dem a2 und b2
+nicht beschaltet sind, geht das halt nicht mehr, und das Telefon
+ist solange tot, bis man den TAE-Stecker vom Modem wieder zieht.
+Derlei ungeeignete Kabel kann man aber leicht daran erkennen,
+dass auf der rechten Seite des Steckers (vom Ruecken aus gesehen)
+die beiden unteren Kontakte fehlen. Ausserdem muss der Westernstecker,
+der in das Modem soll, 6 Kontakte haben und nicht nur die 4 inneren.
+Und letztlich ist ein 6poliges Kabel etwas breiter als ein 4poliges.
+<P>
+Bei Verlaengerungen gibt's auch die Variante, dass zwar nur
+4poliges Kabel benutzt wird, dieses aber auf a/b/a2/b2 geschaltet
+ist. Solch ein Kabel waere geeignet.
+<P>
+Zur Not gehen auch Kabel, die zwar einen 4poligen Westernstecker,
+aber einen 6poligen TAE-Stecker haben. Diese haben dann im
+TAE-Stecker Bruecken von a nach a2 und b nach b2, die dann allerdings
+dauerhaft a/b an's Telefon weiterreichen. Das ist eigentlich
+unzulaessig und ausserdem koennen dann unachtsame Familienangehoerige
+durch Abheben des Hoerers die Datenverbindung bis hin zum Auflegen
+stoeren.
+<P>
+Nichtzugelassene Modems haben ueblicherweise zwei Westernbuchsen,
+mit LINE und PHONE beschriftet. Um diese anzuschliessen, braucht
+man ein Y-Kabel, das auf einen TAE- zwei Westernstecker hat.
+Einer der beiden ist auf a/b geschaltet, der andere auf a2/b2.
+Auf diese Art stellt das Kabel dann korrekt die Verbindung
+zum Telefon her. Aber das ist natuerlich verboten.
+<P>
+Ein laengeres Modemkabel bei Schwierigkeiten kann man sich auch
+selber anfertigen (und weiss dann auch, wie es beschaltet ist...):
+<P>
+Bei ausgeschaltetem Modem mit einem Ohmmeter die Western-Buchse
+ausmessen. Sie hat 4 oder 6 Kontakte:<br>
+<pre>
+      ____|---|____
+     |             |
+     | | | | | | | |
+     | | | | | | | |
+     ---------------
+       1 2 3 4 5 6
+</pre>
+Pruefen, ob bei aufgelegtem Modem eine Verbindung (0 Ohm!) zwischen 3 und
+1, 2, 5 oder 6 besteht. Selbiges mit 4.
+<p>
+- Besteht eine Verbindung zu 1 oder 6, weiter bei a)<br>
+- wenn Verbindung zu 2 oder 5 weiter bei b).<br>
+<P>
+Kabel (4adriges flaches), Laenge beliebig.
+<P>
+An ein Ende ein Westernstecker quetschen (siehe oben a) oder b)!!!):
+<P>
+<DL>
+<DT>
+a) <DD>beim in-den-Stecker-schieben vor dem Quetschen das Kabel so
+   auseinanderziehen, dass die beiden aeusseren Draehte in 1/6 kommen
+   und nicht in 2/5, wie sie normalerweise wuerden. Stecker mit 6
+   Kontakten verwenden!!!!! (also 6p6)<br>
+   Kabel hinterher deutlich kennzeichen, darf nicht mehr fuer was anderes
+   benutzt werden!
+<DT>b) <DD>Stecker mit 4 Kontakten reicht, Kabel normal einschieben.
+</DL>
+dann zuquetschen.
+<P>
+Das andere Ende kriegt einen TAE-N-Stecker:<br>
+<pre>
+                   .---.
+                   |   |
+                 W  | |  E
+                   <   >
+                 b  | |  b2
+                   |   |
+                 a  | |  a2
+                   |___|
+
+                     N
+</pre>
+Die beiden inneren an a/b, die beiden aeusseren an a2/b2. Sicht ist
+von hinten auf den Stecker (Quetschseite).
+<P>
+<HR>
+
+<H3><A NAME=normen>
+7. Normen</A></H3>
+
+Normen fuer alles... Und keiner hat den Durchblick. Hoch leben
+die Abkuerzungen...<br>
+Neben den von der ITU herausgegebenen Empfehlungen gibt's noch
+Erweiterungen, die sich aber nur teilweise durchgesetzt haben.
+<P>
+Fangen wir mit den europaeischen ITU-Empfehlungen (+ Erweiterungen) an:
+<DL>
+<DT>V.17       <DD>Fax 14400/12000 Bps
+<DT>V.21       <DD>300 Baud (entspricht CCITT, die heisst jetzt nur ITU), und
+           Vereinbarungsphase fuer Fax
+<DT>V.22       <DD>1200 Bps (CCITT)
+<DT>V.22bis    <DD>2400 Bps (CCITT)
+<DT>V.23       <DD>1200/75 asymmetrisch fuer BTX
+<DT>V.24       <DD>Signalbeschreibung der Seriellen
+<DT>V.27ter    <DD>Fax 4800/2400 Bps
+<DT>V.28       <DD>elektrische Eigenschaften der Seriellen
+<DT>V.29       <DD>Fax 9600/7200/4800 Bps
+<DT>V.32       <DD>9600 Bps
+<DT>V.32bis    <DD>14400 Bps
+<DT>V.32terbo  <DD>19200 Bps (keine offizielle Empfehlung!)
+<DT>V.34       <DD>28800 Bps
+<DT>V.34+      <DD>33600 Bps (keine offizielle Empfehlung!)
+<DT>V.42       <DD>Fehlerprotokoll
+<DT>V.42bis    <DD>Kompression
+<DT>V.Fast     <DD>Alter Name von V.34 vor der Nummernvergabe
+<DT>V.FC       <DD>28800 Bps (keine offizielle Empfehlung!)
+</DL>
+amerikanische Bell-Normen:<br>
+<DL>
+<DT>Bell 103   <DD>300 Baud
+<DT>Bell 212A  <DD>1200 Bps
+</DL>
+Und:<br>
+<DL>
+<DT>RS 232 <DD>Norm fuer die serielle Schnittstelle
+<DT>MNPx   <DD>Fehlerprotokoll und Kompression der Fa. Microcom. Nicht
+zu V.42/V.42bis kompatibel, die meisten V.42bis-Modems koennen
+jedoch auch MNP4 oder 5.
+</DL>
+Ausserdem gibt's als Uebertragungsverfahren noch firmenspezifische
+von HST, Zyxel und Telebit (PEP). Eigentlich gehoeren auch
+V.32terbo, V.FC und V.34+ hierher als Rockwell/AT&T spezifische
+Verfahren, aber weil die auch mit V. anfangen...
+<P>
+<HR>
+
+<H3><A NAME=mnp>
+8. Fehlerkorrektur und Kompression</A></H3>
+
+<H4>Warum?</H4>
+Da Telefonleitungen nun mal kein HiFi garantieren, kommen
+Stoerungen in Form von Knacken oder Rauschen hinzu.
+<P>
+Um zuverlaessig Daten uebertragen zu koennen musste man sich
+also Verfahren einfallen lassen, die Daten beim Empfaenger auf
+Korrektheit zu pruefen und ggf. den Sender zur Wiederholung
+auffordern.
+<P>
+<H4>Wie: im Rechner</H4>
+Dies hat man zunaechst einmal mit Software erledigt:<br>
+Die Daten werden in Pakete eingeteilt und mit Pruefsummen
+versehen. Jedes Paket wird vom Empfaenger bestaetigt, oder eben
+neu angefordert. Ein solches Protokoll ist z.B. X-Modem.<br>
+Im Zuge der Entwicklung schnellerer Modems, die auf der Leitung
+im Halbduplexbetrieb arbeiteten, hat man das Bestaetigen abgeschafft
+und der Empfaenger meckert nur noch bei fehlerhaften Bloecken (Y-Modem).<br>
+Passt man die Blockgroesse auch noch der Fehlerzahl an, verkleinert
+also bei haeufigen Fehlern die Pakete, hat man Z-Modem. Z-Modem
+kann aber noch viel mehr (z.B. den Dateinamen und -groesse mit
+uebertragen, mehrere Files auf einmal usw.). Z-Modem hat sich daher
+weitgehend durchgesetzt.<br>
+Ebenfalls verbreitet ist Kermit sowie ein Compuserve-eigenes Protokoll,
+dto. fuer T-Online und nicht zu vergessen die Protokolle
+vom uucico. Bi-Modem erlaubt Datentransfer in beide Richtungen und
+dazu noch einen kleinen Chat, wer's braucht...
+<P>
+<H4>Wie: im Modem</H4>
+Irgendwann wollte man aber auch die Online-Verbindung von
+Stoerzeichen frei haben. Und hat den Modems eigene
+Fehlerkorrekturverfahren eingefluestert. Und kurze Zeit spaeter
+kam man noch auf die Idee, die Daten "fliegend" zu komprimieren,
+also vor der eigentlichen Uebertragung packt das Modem,
+und das empfangende Modem entpackt wieder, bevor es die Daten
+zum Rechner sendet.
+<P>
+Ueblich sind:
+<DL>
+<DT>MNP 4 <DD>Fehlerprotokoll
+<DT>MNP 5 <DD>Kompression dazu, setzt auf MNP 4 auf
+<DT>V.42 <DD>Fehlerprotokoll
+<DT>V.42bis <DD>Kompression, setzt auf V.42 auf
+</DL>
+V.42bis ist dabei in zweierlei Hinsicht besser:<br>
+a) komprimiert es besser und b) erkennt es alleine, ob die zu
+uebertragenen Daten bereits gepackt sind (z.B. Uebertragung einer
+ZIP-Datei). Weiter Komprimierversuche wuerden dann naemlich die
+Geschwindigkeit wieder etwas senken. V.42bis merkt das aber und
+stellt sich alleine auf "Durchgang", bis wieder komprimierbare
+Daten kommen.<br>
+Will man also gepackte Daten transportieren, sollte man MNP 5
+abstellen (auf MNP 4). Das geht meistens mit "AT %C0". V.42bis
+kann man jedoch staendig eingeschaltet lassen.<br>
+V.42 oder MNP 4 alleine bringen uebrigens auch schon einen
+kleinen Geschwindigkeitsvorteil, weil Start- und Stoppbit
+weggelassen werden.
+<P>
+<H4><A NAME=mnpspeed>Port- und Modemgeschwindigkeit</A></H4>
+Und jetzt sind wir auch bei dem ganz oben
+erwaehnten Geschwindigkeitsproblem:<br>
+Um Gewinne durch Kompression ausnutzen zu koennen, muessen die Daten
+vom Rechner schnell genug angeliefert/abgeholt werden. Da V.42bis
+unter guenstigen Umstaenden das 2-3fache an Datendurchsatz ermoeglicht,
+muss die Schnittstellengeschwindigkeit deutlich hoeher sein
+als die Bps-Rate der Modemverbindung. Theoretisch ist sogar das
+4fache moeglich (wenn man 100 kB Nullen sendet:-), und so kommt
+man bei 28800 Bps (Leitung) auf theoretische 115200 Bps von Rechner
+zu Rechner.<br>
+In der Praxis liegt die Kompression bei ungepackten Daten bei 2-3,
+und da es eine fehlerfreie 28800er Verbindung kaum gibt, einige
+Bloecke werden also immer wiederholt, sollten 57600 Baud auf
+der Schnittstelle ausreichen. Ausserdem: Wer uebertraegt schon
+ungepackte Daten?<br>
+Das hat noch einen weiteren Grund: Der Rechner muss naemlich
+auch in der Lage sein, mit der eingestellten Geschwindigkeit
+Daten zu <I>empfangen,</I> ohne dass Zeichen verlorengehen. PC's
+unter Windows haben da so ihre Probleme. 115200 Baud werden
+bei einem 486/66 auch mit FIFO-Karte (siehe Fragen und
+Antworten) nicht fehlerfrei gehen unter Windows.<br>
+Ausserdem unbedingt noetig:
+<P>
+<H4>Handshake</H4>
+zwischen Rechner und Modem!<br>
+Bei einer direkten 2400er Verbindung war noch alles klar:<br>
+Der Rechner sendet mit 2400, das Modem uebertraegt genau
+2400, und der Empfaenger empfaengt auch genau 2400 bps.<br>
+Durch Fehlerprotokoll und Kompression wird das aber anders.
+Der Rechner kann nicht wissen, ob die Uebertragung wegen
+der Wiederholung von Bleocken kurz stockt, ob sich die
+Daten gut oder schlecht packen lassen usw. Die Schnittstelle
+wird dazu ersteinmal auf eine ausreichend hohe
+Geschwindigkeit gestellt, und der Datenstrom wird vom
+Modem selbst geregelt.<br>
+Das Modem <I>muss</I> also den Rechner stoppen koennen! Dies
+kann ueber zwei Wege passieren:<br>
+<DL>
+<DT>a) Software-Handshake:
+   <DD>Das Modem sendet bei fast vollem Puffer ein XOff
+   (ASCII 19) an den Rechner, der daruafhin stoppt.
+   Ist der Puffer wieder halbwegs leer, wird der Rechner
+   mit XOn zum Weitersenden aufgefordert (ASCII 17).
+   Das Ganze geht auch umgekehrt, der empfangende Rechner
+   kann mit XOff den Sender stoppen (z.B. um kurz auf
+   Platte zu speichern) usw.
+<DT>b) Hardware-Handshake:
+   <DD>Mit zwei zusaetzlichen Leitungen (RTS/CTS) einigen
+   sich Modem und Rechner ueber Start und Stop.
+Vorteile von XOn/XOff: Es reichen notfalls 3 Leitungen.
+Nachteil: XOn und XOff duerfen in den uebertragenen Daten
+nicht enthalten sein (Z-Modem maskiert sie daher). Daher
+kommt Sofwarehandshake nur noch in Ausnahmefaellen zum Einsatz.
+Vorteil von RTS/CTS: Zuverlaessiger.
+Nachteil: mehr Kabel noetig, aber heutige Kabel haben die
+Leitungen sowieso...
+</DL>
+<P>
+<HR>
+
+
+<H3><A name=tips>
+9. Sonderfaelle/Tips und Tricks</A></H3>
+
+Sonderfaelle sind z.B. Standleitungsbetrieb oder auch automa-
+tischer Betrieb an einer Mailbox.<P>
+Dazu ungeordnet einige Tips:<br>
+<UL>
+<LI>Standleitungen erzeugen kein Klingelsignal. Die Postzulassung
+  (sog. "Wahlsperre") sperrt aber auch das Abheben, wenn vorher
+  kein Ruf gekommen ist. Abhilfe: Wahlsperre abschalten (wenn man
+  den Befehl dazu kennt) oder statt mit "ATA" mit "AT X0 DT 1R"
+  abheben lassen. Leider geht auch das nicht immer, denn einige
+  Rockwell-Teile ignorieren das R.<br>
+  Hat das Modem den Befehl AT &amp;L1, sollte das aber unnoetig sein,
+  denn dann muesste es auch so gehen.<br>
+  Mit Wahlsperre geht auch "ATD" nicht, man muss eine Ziffer
+  eingeben. Zwei zugelassene also auf einer Standleitung
+  betreiben:
+  <UL>
+  <LI>Modem 1: "AT X0 DT 1"
+  <LI>Modem 2: "AT X0 DT 1R"
+  </UL>
+<LI>Manche Modems senden als Flash den falschen, sogenannten
+  "Hook Flash", der nicht zur Amtsholung fuehrt. Ersatzweise
+  kann man dann eine Pulswahl-1 probieren: "AT X3 DP 1W T nummer"
+
+<LI>Manche Nebenstellenanlagen, die die Erdtaste haben wollen zur
+  Amtsholung, koennen auch mit "9" oder "8" ueberredet werden,
+  wenn das Modem keine Erdtastenfunktion hat. Es gibt auch Faelle,
+  wo man mit "0" ein "Orts"amt und mit "8" ein "Fern"amt bekommt...
+  Wo das nicht geht, bleibt einem nichts weiter uebrig, dem Modem
+  ein Telefon parallel zu schalten (unzulaessig), und von Hand
+  mit dem Telefon das Amt zu holen. Waehlen sollte man trotzdem
+  mit dem Modem, denn postzugelassene weigern sich bei dieser
+  Schaltung, ohne zu waehlen an die Leitung zu gehen, und
+  ausserdem - wer kann sich die ganzen Nummern merken? Zum
+  Parallelschalten eignet sich eine TAE NFF, bei der man die
+  Amtsleitung links oben _und_ recht unten anklemmt, oder man besorgt
+  sich bei den einschlaegigen Versendern (C*nrad usw.) einen
+  Verteiler, bei dem die TAE's einfach parallel geklemmt sind.
+
+<LI>Bei automatischem Betrieb ist es wichtig, dass die Init-Sequenz
+  nicht zu lange dauert, falls naemlich da ein Anrufer "zwischenhaut",
+  kann alles durcheinandergehen. Andererseits fummelt dann
+  auch kein anderes Programm an den Einstellungen herum. Sysop
+  sollte also vernuenftige Einstellungen speichern und mit
+  "AT &amp;D3" dafuer sorgen, dass beim Auflegen (DTR auf Low)
+  automatisch ein Reset erfolgt. Dann ist sogar "ATZ" noch
+  ueberfluessig.<br>
+  Fuer Mailboxbetrieb auch zu empfehlen:<br>
+  <UL>
+  <LI>automatisches Annehmen von V.42bis und MNP ("AT\N6" oder
+    "AT&amp;Q5"), Fallback mit ENTER erlauben ("AT%A13\C2").
+  <LI>Fluchtsequenz abstellen (sonst kann ein User das Modem quasi
+    totmachen), das geht mit "ATS2=255". Auflegen sollte durch
+    Low-Setzen von DTR erfolgen.
+  <LI>Sicherstellen, dass das Modem zuverlaessig auflegt, wenn sich
+    ein User nicht ausloggt, sondern seinerseits einfach auflegt.
+    Man kann S10 etwas erhoehen, um Verbindungsabbrueche zu verringern,
+    laeuft damit aber Gefahr, dass das Modem ein Besetztzeichen oder
+    sonstige Stoergeraeusche fuer einen Carrier haelt und nicht mehr
+    auflegt.
+  <LI>Inaktivitaets-Timer setzen, z.B. auf 6 Minuten, mit "AT\T6"
+  <LI>Moeglichst nicht mit ATS0=1 automatisch abheben lassen, sondern
+    nach RING mit ATA. Sonst hebt das Modem auch bei abgestuerztem
+    Rechner oder waehrend der Vorbereitung zu einem Poll oder so ab,
+    der anrufende User kriegt aber keine Verbindung zum Boxprogramm
+    und hat umsonst eine Einheit vergeigt.
+  <LI>Polls uebertragen normalerweise gepackte Daten. Es ist zu pruefen,
+    ob nicht vor dem Anwaehlen die Kompression ausgeschaltet werden
+    sollte (falls MNP 5 Verwendung findet, bei V.42bis ist das egal).
+  <LI>Mann kann sich zwei Profile machen, eins davon mit ATM0, also
+    Lautsprecher aus, um dieses dann Nachts zu aktivieren. Manche
+    Modems haben sogar einen Schalter an der Frontblende, wo man
+    das auswaehlen kann. Sonst legt AT&amp;Y0 fest, dass ATZ Profil 0,
+    und AT&amp;Y1 dass ATZ Profil 1 laden soll.
+  </UL>
+<LI>Hat man als Anrufer haeufiger Verbindungsabbrueche, sollte man
+   <UL>
+   <LI>pruefen, ob nicht ein Gebuehrenimpuls Ursache der Stoerung ist,
+   das Auflegen erfolgt dann z.B. immer nach 6/12 Minuten
+   <LI>versuchen, mit ATS10=60 das Modem etwas "geduldiger" zu machen.
+   Risiko dabei: Das Modem legt nicht mehr von alleine auf. Es kann
+   uebrigens sein, dass die Gegenstelle zuerst abhaengt. Dann nutzt
+   die Erhoehung von S10 natuerlich nichts.
+   <LI>sehr sorgsam alle Kontakte der Telefonleitung pruefen. Das
+   ist eine sehr haeufige, aber unentdeckte Fehlerquelle,
+   Verdraengungsmentalitaet: "Meine Kontakte sind sauber und
+   sitzen fest!"
+   </UL>
+Hoert man trotz sauberer Kontakte auch bei normalen Telefon-
+gespraechen Krachen und Knistern, kann man natuerlich ver-
+suchen, der T. auf die Fuesse zu treten. Aber das bringt
+selten was.
+Gegen schlechte Leitungen kann man nur ISDN bestellen.
+Dann aber braucht man diesen FAQ nicht mehr:-)
+
+<LI>Gegen den Gebuehrenimpuls kann man dreierlei machen:
+    <UL>
+    <LI>Filter kaufen/bauen
+    <LI>Zaehler mit Filter nehmen
+    <LI>Impuls abschalten lassen.
+    </UL>
+Nur c) funktioniert garantiert. Nicht alle Filter sind
+ausreichend, einige koennen auch die Uebertragung selber stoeren.
+Es gibt Modems mit eingebautem Filter. Aber auch hier weiss man nie
+so genau, ob das reicht.
+</UL>
+<P>
+<HR>
+
+<H3><A name=fax>
+10. Fax</A></H3>
+
+Bei Fax gibt's gelegentlich Verwirrung mit
+<H4>GRUPPE und KLASSE.</H4>
+<DL>
+<DT>Gruppe 3 (G3)
+<DD>bezeichnet die Art der Uebertragung der Bilddaten,
+ihre Aufloesung, die Kompression usw.
+<DT>CLASS x
+<DD>bezeichnet die Art der Befehle, die zum Faxen an das Modem
+gehen. Also den AT-Satz.
+</DL>
+<P>
+Derzeit ist Fax nach G3 ueblich. G4 waere dann noch ISDN-Fax.
+Was anderes "kommt nicht in die Tuete".
+<P>
+<H4>Befehlssatz</H4>
+<DL>
+<DT>SENDFAX <DD>uralt, bei einigen 2400er Modems, die mit 9600 Faxen konnten
+<DT>CLASS 1 <DD>Modem dumm, Rechner muss alles machen, zeitkritisch
+<DT>CLASS 2 <DD>KEIN Standard, aber verbreitet. Modem macht Vereinbarungen
+            selber
+<DT>CLASS 2.0 <DD>Standard, aber selten, aehnlich CLASS 2
+</DL>und ausserdem ZFax (Zyxel), CLASS 6, beim Zyxel.
+<P>
+Faxprogramme haben manchmal etwas "Eigenleben", sie veraendern gerne
+ziemlich viele Einstellungen am Modem (z.B. stellen sie auf XOn/XOff um).
+Wenn nach dem Versand eines Faxes die DFUe nicht mehr richtig will,
+sollte man mal nachsehen, was einem das Faxprogramm so alles in's Modem
+gebraten hat.
+<P>
+<H4>Automatische Fax/Modem/Voice-Erkennung</H4>
+Fast alle Faxe senden einen Kennton (CNG), wenn sie gewaehlt haben.
+Diesen kann eine Faxweiche nutzen: Sie hebt beim Ankommen eines
+Rufs ab (ab jetzt zahlt der Anrufer!) und "horcht". Kommen die
+Kenntoene, klingelt sie auf dem angeschlossenen Fax, kommen sie
+nicht, klingelt sie auf Telefon/Anrufbeantworter.
+<P>
+Eine Identifizierung ueber irgendwelche zwischen den Rufsignalen
+uebertragenen Zusatzinfos ist nur in Amerika moeglich, die Telekom
+hat sowas nicht.
+<P>
+Die automatische Fax-Erkennung anhand der Kenntoene funktioniert nicht
+ganz zuverlaessig, denn einige
+Faxe und besonders Faxmodems senden keine oder nur wenige Kenntoene.
+Oder die Kenntoene kommen zu leise an...
+<P>
+Die Erkennung eines Datenanrufs ist voellig unzuverlaessig. Zwar
+gibt's auch hierfuer einen Kennton, aber den sendet praktisch kein
+Modem. Ich hatte mal ein 2400er von Siemens, das hatte ihn, aber
+sonst...<br>
+Bei Creatix kann man mit "^" vor der Nummer im Wahlstring den Ton ein-
+bzw. ausschalten, wobei die Voreinstellung (an/aus) bei anderen Modems
+unterschiedlich ist. Die Modems, die ich kenne, koennen es gar nicht,
+somit ist ein anrufendes Modem nicht von einem Menschen zu unterscheiden.
+Aber wer vor hat, eine Box zu betreiben, sollte an eine zweite Leitung
+denken.
+<P>
+Es gibt auch noch eine sog. passive Faxweiche, die so funktioniert:
+Der Anruf geht normal an das Telefon. Manhebt ab, und wenn man die
+Kenntoene des Faxes hoert, legt man einfach innehalb einer bestimmten
+Zeit wieder auf. Die Weiche merkt das und legt den Ruf (mit neuer
+Rufspannung) auf das Fax. Das ist zwar zuverlaessig, jedoch klappt
+das nur, wenn man zuhause ist, und einen das Klingeln des Telefons
+nicht stoert. Mit einem Anrufbeantworter wird das aber nichts.
+<P>
+Besser geht aber meistens die automatische Unterscheidung zwischen
+Fax- und Datenanruf. Wenn die Software das unterstuetzt... Das Modem
+sollte erst die Daten- und dann die Faxcarrier senden (um auch den
+Faxgeraeten eine Chance zu lassen, die keine CNG-Toene senden).
+<P>
+Will die Gegenstelle unbeding einen CNG-Ton haben, und das Modem
+sendet keinen, kann man auch ein Telefon parallelschalten und
+zu gegebener Zeit in den Hoerer pfeifen (dabei die Luft nicht
+<I>in</I> die Muschel, sonst rauschts nur) und versuchen, die
+Gegenstelle zu ueberlisten.
+<P>
+Beim Erkennen eines Faxrufs (entweder am CNG-Ton oder an einer
+passenden Antwort auf die Fax-Sequenz) sendet das Modem statt
+CONNECT <ZAHL> entweder CONNECT FAX (Zyxel) oder +FCON. Daraufhin
+muss <I>sofort</I> das Faxprogramm angeworfen werden. Es sollte weniger
+als eine Sekunde vergehen, denn sonst kann es schiefgehen.
+<P>
+Als Software fuer DOS ist BGFAX zu empfehlen, fuer Linux gibt
+es MGetty+Sendfax und andere. Fuer Zyxels geht unter DOS auch ZFax.
+<P>
+Wer nicht automatische Erkennung braucht, kann natuerlich seine mit
+dem Modem mitgelieferte Soft nehmen.
+<P>
+<HR>
+
+<H3><A name=fragen>
+11. Fragen und Antworten</A></H3>
+<pre>
+Q1: Mein Modem waehlt nicht. Es antwortet immer NO DIALTONE.
+A1: Entweder haengst du an einer Nebenstellenanlage. Dann schalte
+    die Waehltonerkennung mit X3 im Wahlstring aus. Waehle mit
+    "AT X3 DP 0W nummer" bei Puls- oder "AT X3 DT 0W nummer" bei Tonwahl,
+    wenn bei dir das Amt mit der Null geholt wird. Ist die Amtsholung
+    auf Flash gelegt, nimm "AT X3 DT !W nummer" oder
+    "AT X3 DP 1W T nummer".
+    Sollte die Amtsholung mit der Erdtaste erfolgen, probiere
+    "AT X3 DP >W nummer". Aber das koennen nur wenige Modems.
+    Manchmal geht auch 8 oder 9 zur Amtsholung. Probieren!
+    Oder es stimmt was mit den Kabeln nicht. Siehe A16 und A17.
+
+Q2: Nach einiger Zeit bricht immer die Verbindung zusammen!
+A2: Vermutlich ist ein Gebuehrenimpuls die Ursache (Zeit messen,
+    6/12 Minuten?) oder sonstige Stoerungen. Filter kaufen, Impuls
+    abstellen lassen oder oben bei "Tips und Tricks" nachlesen.
+
+Q3: Mein Modem legt manchmal direkt nach dem Waehlen mit NO CARRIER
+    auf.
+A3: Haenge an die Nummer ein Komma an. Manchmal knackt es kurz nach
+    dem Waehlen noch in der Leitung und das Modem stoert sich daran.
+    Das Komma bewirkt eine kleine Verzoegerung. Bei Pulswahl koennen
+    auch mehrere Kommata noetig sein (probieren).
+
+Q4: Zu Mailboxen bekomme ich Verbindung. Nicht aber zu BTX/Datex-J/
+    T-Online.
+A4: Bei T-Online kann es sein, dass man Fehlerprotokoll und Kom-
+    pression ausschalten muss. "AT \N0..." bzw. "AT&Q0" hilft.
+
+Q5: Nach dem CONNECT bekomme ich immer "~?~?~?~? auf dem Bild-
+    schirm, aber keine Begruessung durch die Box.
+A5: Das sind die (anscheinend) vergeblichen Versuche des Box-
+    modems, eine Verbindung mit Fehlerkorrektur aufzubauen.
+    Pruefe nach, ob bei dir V.42bis eingeschaltet ist. Versuche
+    es nochmal. Versuche es mit einem Komma nach der Nummer.
+    Versuche, direkt nach dem CONNECT auf Return zu druecken.
+    Wenn du ein Modem mit RPI hast, nimm die mitgelieferte Software
+    oder kaufe ein richtiges Modem.
+
+Q6: Nach dem der Lautsprecher aus ist, bekomme ich nur Muellzeichen
+    auf den Schirm.
+A6: Entweder hast du eine Katastrophenleitung (gehe mit der Geschwin-
+    digkeit runter) oder die falsche Baudrate. Stelle das Modem
+    mit AT\J0 auf feste Baudrate und suche im Terminalprogramm nach
+    einer entsprechenden Einstellung.
+
+Q7: Bei der Uebertragung von Dateien geht am Anfang alles richtig,
+    dann aber bekomme ich immer wieder Fehlermeldungen, bis die
+    Uebertragung abbricht. Mit X-Modem geht es aber!
+A7: Der Handshake stimmt nicht. Stelle Modem _und_ Terminalprogramm
+    auf Hardwarehandshake.
+
+Q8: Unter Windows/OS/2 bekomme ich immer Fehler in der Dateiueber-
+    tragung. Unter DOS nicht oder nur selten.
+A8: Du solltest eine Schnittstellenkarte mit FIFO benutzen oder diesen
+    nachruesten. Eventuell reicht es, die Geschwindikeit auf 38400
+    oder 19200 herunterzusetzen. Siehe auch A25!
+
+Q9: Ich kann Befehle zum Modem senden, bekomme aber keine Antwort.
+A9: Sende ATE1Q0. Geht's dann immer noch nicht, steht vermutlich
+    der IRQ falsch oder es sind zwei Karten auf einen IRQ gejumpert.
+    Beliebt ist das, wenn das Modem COM3 und die Maus COM1 ist.
+    Nimm fuer COM3 den IRQ 5 und stelle auch das Terminalprogramm
+    entsprechend um.
+
+Q10: Kann ich nicht mehrere COM-Ports auf einem IRQ betreiben?
+     Die Anleitung zu meinem Fossil-Treiber sagt, dass das ginge!
+A10: Das ist nicht nur ein Soft-, sondern auch ein Hardwareproblem.
+     Der ISA-Bus ist dafuer nicht ausgelegt. Es geht nur mit speziellen
+     Multiportkarten oder mit praeparierten normalen. Dazu muss man
+     in die IRQ-Leitung je eine Diode einbauen (Katode Richtung Bus)
+     und auf der Bus-Seite einen Pull-Down-Widerstand von 1 kOhm nach
+     Masse einloeten (aber nur bei _einer_ Karte). Das Ganze ist
+     stark an der Grenze der Bus-Spezifikationen, geht aber bei mir.
+
+Q11: Wenn ich das Modem benutze, geht die Maus nicht mehr.
+A11: Du hast vermutlich... Siehe A9!
+
+Q12: Mein Modem waehlt immer nur dreimal, dann sagt es DELAY oder
+     aehnliches.
+A12: Das ist die Wahlsperre, die dem Modem durch die Postzulassung
+     aufgedrueckt wurde. Modem aus- und wieder einschalten! Oder
+     siehe A14!
+
+Q13: Mein Modem macht nach jedem Fehlversuch 30 s Pause.
+A13: siehe A12!
+
+Q14: Ich habe ein <urgszugelasener Modemtyp>. Wie kann ich die Wahlsperre
+     ausschalten?
+A14: Die Wahlsperrenbefehle geistern ab und zu durchs Netz. Man sollte
+     sie nicht zu oft posten, sonst bekommt der Hersteller des Modems
+     Aerger oder baut kuenftig keine derartigen Befehle mehr ein.
+
+Q15: Wenn ich das Modem in die TAE-Dose stecke, geht das Telefon
+     nicht mehr.
+A15: Du hast nicht das mitgelieferte Kabel benutzt sondern eine Ver-
+     laengerung, die ungeeignet ist. Oder du hast kein zugelassenes
+     Modem. Siehe:Abschnitt $5: Kabel und Stecker.
+
+Q16: Mein Modem scheint keine Verbindung zu haben. Es waehlt
+     nicht, sondern antwortet mit NO DIALTONE. Stelle ich mit
+     AT X3 die Erkennung aus, waehlt es zwar, aber ich hoere weder
+     Amtston noch Freizeichen.
+A16: Irgendwas stimmt mit der Verkabelung nicht. Entweder hast du
+     ein falsches Modemkabel (z.B. eins von einem Telefon mit Siemens-
+     belegung), oder du hast das Modem in der rechten N- oder gar in
+     der F-Buchse und in der linken N-Buchse ein Telefon stecken
+     oder aehnliches. Siehe Abschnitt $5: Kabel und Stecker.
+     Vielleicht sitzt du auch an einer Nebenstellenanlage vom Typ
+     Si*m*ns HighCom. Dann geht es gar nicht, es sei denn, ein Techni-
+     ker stellt deinen Anschluss auf a/b um.
+
+Q17: Mein Modem waehlt irgendwie, aber der Amtston geht nicht weg. Nach
+     einer Weile kommt NO CARRIER.
+A17: Du benutzt das falsche Wahlverfahren. Stelle auf AT DP um, probie-
+     re, geht das nicht, nimm AT DT.
+
+Q18: Wie ist die Nummer fuer BTX/Datex-J/T-Online in <Kleinkleckers-
+     dorf>?
+A18: Ueberall geht 01910, aber nur mit 2400. Schnelle Zugaenge gibt es
+     noch nicht ueberall. Versuche 19304, eventuell musst du die Vor-
+     wahl einer benachbarten Grosstadt mit angeben (und zahlst ent-
+     sprechend mehr an Telefongebuehr, ausser du hast das Glueck, dass
+     eine der anliegenden Nahzonen schon einen schnellen Zugang hat. Ein-
+     fach probieren!). Fuer ISDN ist die Nummer einheitlich 01910.
+
+Q19: Ich kann Mailboxen anwaehlen, aber BTX/Datex-J/T-Online ist immer
+     besetzt.
+A19: Gegenfrage: Kannst du Boxen in der Fernzone anwaehlen? Nein?
+     Dann laesst deinen Nebenstellenanlage keine 0 zu. Versuche, die
+     19304 zu nehmen oder die 01910 vom Analgentechniker freischalten
+     zu lassen.
+
+Q20: Nachdem ich BTX/Datex-J/T-Online/Compuserve/PPP gemacht habe oder
+     die Fax-Software an war, geht DFUe nicht mehr richtig.
+A20: Vermutlich hat das betreffende Programm das Modem heftig verstellt,
+     eventuell sogar mit "AT&F" den GAU ausgeloest. Suche den Zettel
+     mit den notierten Modemeinstellungen und gib diese wieder neu
+     ein, speichere dann mit "AT&W". Kommt das oefter vor, kannst
+     du versuchen, mit AT&W1 zu speichern. Vielleicht laesst das obige
+     Programm ja Profil 1 ungeschoren. Dann bekommst du deine Einstellungen
+     mit ATZ1 wieder.
+
+Q21: In der Werbung/Modemanleitung/???/von Freunden/Fachleuten habe
+     ich gehoert/gelesen, dass ich mein 28k8er Modem auf 115200 Bps
+     umstellen kann?
+A21: Ja, sowas macht sich in der Werbung gut. Wenn du deine Schnittstelle
+     ueberhaupt so schnell einstellen kannst, eine rausch- und knack-
+     freie sowie hinreichend laute Leitung zu einem passenden Partner
+     hast, und dann eine Datei von mind. 100k, die nur aus einfachem,
+     ungepacktem ASCII-Text besteht, sendest, kann das klappen. Real
+     aber ist das nicht.
+
+Q22: Welche max. Geschwindigkeit kann ich mit meinem Modem erreichen?
+A22: Wenn man von den theoretischen (s. A.21) mal absieht, wird mit
+     der Kompression V.42bis ein Packverhaeltnis von ca. 1:1,5 - 1:2
+     erreicht. Also sind mit einem 9600er Modem ca. 1900 cps, mit
+     einem 14k4er ca. 2800 und mit einem 28k8er gut 5000 cps zu er-
+     reichen (bei ungepackten Daten). Gepackte Daten (ZIP, ARJ, aber
+     auch GIF und JPG) lassen sich nicht weiter packen, also sind
+     beim 9600er max. 1000 cps, beim 14k4er max. 1600 cps und beim
+     28k8er max. 3200 cps zu erreichen. Voraussetzung jeweils eine
+     gute Leitung und die Schnittstelle des Rechners muss schnell
+     genug sein.
+
+Q23: Was ist der Unterschied zwischen Baud und Bps?
+A23: Baud (nach dem Franzosen Baudot) heisst Schritte je Sekunde
+     und bezeichnet die Strom/Spannungs/Phasenaenderungen. Diese
+     Anzahl ist bedingt durch die Telefontechnik begrenzt. Um eine
+     hoehere Geschwindigkeit zu erreichen, werden mit einer Phasen-
+     aenderung gleich mehrere Bits uebertragen. Deshalb muss man
+     Bps sagen, es sei denn, man meint tatsaechlich das Verfahren
+     bei der Modulation. Irgendjemand gab mal ein tolles Beispiel:
+     Stell dir vor, jemand will dir Geldscheine zuwerfen. Die
+     wirft er aber nicht einzeln, sondern in Buendeln. Bps ist also
+     Scheine pro Sekunde, Baud waere Buendel je Sekunde. Eigent-
+     lich interessiert nur die Summe der angekommender Scheine, egal,
+     wie sie gebuendelt waren. Also Bps.
+
+Q24: In meiner Anleitung steht was von vollduplex und halbduplex.
+     Was bedeutet das?
+A24: Bei den ersten Gehversuchen der DFUe gab es Probleme, in beide
+     Richtungen gleichzeitig zu senden. Beide Teilnehmer haben z.B
+     die gleichen Frequenzen benutzt. Um das Problem zu umgehen, hat
+     man je nach Bedarf die Richtung gewechselt, es konnte zu einer
+     Zeit also nur einer senden. Das nennt man halbduplex. Die heute
+     ueblichen Verfahren benutzen entweder verschieden Frequenzen oder
+     rechnen das eigene Signal heraus, so kann gleichzeitig in beide
+     Richtungen gesendet werden (vollduplex). Zum Veranschaulichen:
+     Halbduplex ist wie beim CB-Funk, wenn man sendet, kann man nicht
+     empfangen. Vollduplex ist das Telefon, es koennen beide gleich-
+     zeitig reden.
+     Zum Zweck der Kompatibilitaet koennen Modems aber halbduplex simu-
+     lieren, der Traeger wird dabei aber nicht mehr abgeschaltet.
+     Nur die Vereinbarungsphase beim Fax ist richtig halbduplex.
+
+Q25: In meinen Unterlagen steht, die Schnittstelle habe
+     einen 16550er Chip. Was ist das?
+Q25a:Ein Bekannter sagt, ich brauche einen COM-Port mit FIFO.
+     Ein anderer sagt, es geht ohne. Wer hat Recht?
+A25: Beide:-) Ein bisschen hinter die Kulissen geschaut: Der
+     COM-Port bei DOS arbeitet im Polling: die Software soll
+     jedes Byte selbst abfragen. Das ist aber unsinnig, besser
+     ist Interrupt-Betrieb: Die Software kann weiterarbeiten
+     (z.B. das Bild darstellen), und der Port meldet selbst ueber
+     das IRQ-Signal, dass ein Zeichen eingetroffen ist. Dadurch
+     wird eine Routine aufgerufen, die das Zeichen entgegennimmt
+     und zwischenspeichert.
+     Bei hohen Bps-Raten kann es nun passieren, dass das naechste
+     Zeichen eintrifft, bevor das erste abgeholt wurde. Das kann
+     passieren, wenn a) die IRQ-Routine schlecht (langsam) pro-
+     grammiert ist, b) der Rechner (besonders der Bustakt) generell
+     zu langsam oder c) durch Multitasker wie Windows, OS/2, Linux
+     usw. nicht in der Lage ist, auf das Signal rechtzeitig zu rea-
+     gieren.
+     Ein COM-Port mit FIFO kann das verhindern, denn der FIFO
+     ist weiter nichts als ein eigener kleiner Zwischenspeicher.
+     Bei einem IRQ koennen dann gleich mehrere Zeichen abgeholt
+     werden.
+     Der Chip 16550A (und kompatible) ist gegen den normalen seriellen
+     Chip 16450 austauschbar. Neuere Multiportkarten haben dagegen oft
+     fest eingeloetete Kombinations-Chips, die nicht getauscht werden
+     koennen. Beim Kauf also sicherheitshalber gleich auf FIFO-Ports
+     bestehen!
+     Richtwerte: Unter DOS alleine wird man keinen brauchen, jeden-
+     falls bis 57600 Baud nicht. Unter Windows gehen bei normalem
+     Bustakt und 386er bis 9600, eventuell noch 19200. Bei aufgedrehtem
+     Bustakt (11 MHz z.B.) kann auch mehr noch ohne FIFO gehen.
+
+</pre>
+<HR>
+<P>Zur&uuml;ck zu meiner <A HREF="/users/kiss/ms/index.html">Homepage</A><BR>
+Zur&uuml;ck zur <A HREF="/index.html">KNF-Homepage</A></P>
+
+<ADDRESS>
+
+Michael Schulte <A HREF="mailto:ms@kiss.franken.de"><I>ms@kiss.franken.de</I></A>
+<BR>
+Copyright &copy; 1995, all rights reserved<BR>
+URL: http://www.franken.de/users/kiss/ms/modemfaq.html
+</ADDRESS>
+</BODY>
+</HTML>

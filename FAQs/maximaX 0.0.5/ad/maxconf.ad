@@ -1,0 +1,185 @@
+!######################################################################
+!                       Anlagentyp
+!######################################################################
+*anltyp_dlg.xmtChildren:	unmanaged XmtLayout anltyp;
+*anltyp_dlg.title:			Anlagentyp
+*anltyp.autoUnmanage:	False
+*anltyp.dialogStyle:	dialog_primary_application_modal
+
+*anltyp.xmtChildren:	\
+		XmtChooser art; \
+		XmtChooser typ; \
+		XmtChooser s0bus; \
+		XmtChooser anschl; \
+		XmtChooser port; \
+		XmtInputField number; \
+		XmPushButton msns_b,zuord_b,okay,help;
+
+*anltyp.art.chooserType: XmtChooserRadioBox
+*anltyp.art.strings: "Einzelanlage","Unteranlage","Vernetzte Anlage"
+
+*anltyp.typ.chooserType: XmtChooserRadioBox
+!*anltyp.typ.orientation: horizontal
+*anltyp.typ.strings: "Maxima IS-1 / Euracom 180", \
+					 "Maxima IS-2 / Euracom 181", \
+					 "Maxima IS-3 / Euracom 182"
+
+*anltyp.port.chooserType: XmtChooserRadioBox
+*anltyp.port.orientation: horizontal
+*anltyp.port.strings: "Port 1","Port 2","Port 3"
+
+*anltyp.s0bus.chooserType: XmtChooserRadioBox
+*anltyp.s0bus.strings: "Unkonfiguriert","Extern","Intern","Vernetzt"
+
+*anltyp.anschl.chooserType: XmtChooserRadioBox
+*anltyp.anschl.strings: "Mehrger‰teanschluﬂ","Anlagenanschluﬂ"
+
+*anltyp.msns_b.labelString:	Rufnummern
+*anltyp.zuord_b.labelString:	Zuordnung
+*anltyp.okay.labelString:	OK
+*anltyp.help.labelString:	Hilfe
+
+*anltyp.anschl.valueChangedCallback:	setPortMode();
+*anltyp.s0bus.valueChangedCallback:		setPortMode();
+*anltyp.typ.valueChangedCallback:		doAnlTyp();
+*anltyp.port.valueChangedCallback:		displayPortMode();
+*anltyp.msns_b.activateCallback:		doMsns();
+*anltyp.zuord_b.activateCallback:		doZuord();
+*anltyp.okay.activateCallback:		XmtDialogOkayCallback();
+
+*anltyp.layout: \
+	Caption tl "Anlagen-Typ" Etched Through 6 2 Col {typ}\
+	Caption tl "Betriebsart" Etched Through 6 2 Col { art }\
+	Row { \
+		Caption tl "Port-Auswahl"   Etched Through 6 2 Col { \
+			port\
+			Row { \
+				Caption tl "Busanschluﬂ" Etched Through 6 2 Fixed Col {s0bus}\
+				Caption tl "Anschluﬂart" Etched Through 6 2 Fixed Col { \
+					anschl \
+					Caption tl "Anlagennummer:" number \
+				}\
+			}\
+			Fixed Equal Row { msns_b zuord_b } \
+		 } \
+	} \
+	Fixed Equal Row { okay help }
+
+!######################################################################
+!                       Rufnummern
+!######################################################################
+
+*msns_dlg.xmtChildren:	unmanaged XmtLayout msns;
+*msns_dlg.title:			Rufnummern
+*msns.autoUnmanage:	False
+*msns.dialogStyle:		dialog_primary_application_modal
+
+*msns.xmtChildren:	\
+		XmtInputField num0=msn0,num1=msn1,num2=msn2,num3=msn3,num4=msn4, \
+					  num5=msn5,num6=msn6,num7=msn7,num8=msn8,num9=msn9; \
+		XmPushButton okay,cancel,help;
+
+*msns.XmtInputField.verifyCallback:	CheckLeadZero();
+*msns.XmtInputField.errorCallback:	\
+	XmtDisplayWarning(msg1, Bitte keine f¸hrende Null eingeben!);
+*msns.XmtInputField.matchAll:	False
+*msns.XmtInputField.pattern:	dddddddd
+
+*msns.okay.labelString:	OK
+*msns.cancel.labelString:	Abbrechen
+*msns.help.labelString:	Hilfe
+
+*msns.okay.activateCallback:		XmtDialogOkayCallback();
+*msns.cancel.activateCallback:	XmtDialogCancelCallback();
+
+*msns.layout: \
+	Etched Row { \
+		Col { \
+		Caption "MSN 0: " num0 \
+		Caption "MSN 1: " num1 \
+		Caption "MSN 2: " num2 \
+		Caption "MSN 3: " num3 \
+		Caption "MSN 4: " num4 \
+		} \
+		Col { \
+		Caption "MSN 5: " num5 \
+		Caption "MSN 6: " num6 \
+		Caption "MSN 7: " num7 \
+		Caption "MSN 8: " num8 \
+		Caption "MSN 9: " num9 \
+		} \
+	} \
+	Fixed Equal Row { okay cancel help }
+
+
+!######################################################################
+!                       MSN-Zuordnung
+!######################################################################
+
+*zuord_dlg.xmtChildren:	unmanaged XmtLayout zuord;
+*zuord_dlg.title:			MSN-Zuordnung
+*zuord.autoUnmanage:	False
+*zuord.dialogStyle:		dialog_primary_application_modal
+
+*zuord.xmtChildren:	\
+		XmtChooser msn; \
+		XmtChooser app0; \
+		XmtChooser app1; \
+		XmtChooser app2; \
+		XmPushButton okay,help;
+
+*zuord.msn.chooserType: XmtChooserRadioBox
+*zuord.msn.strings: "MSN 0","MSN 1","MSN 2","MSN 3","MSN 4","MSN 5","MSN 6","MSN 7","MSN 8","MSN 9"
+
+*zuord.app0.chooserType: CheckBox
+*zuord.app0.strings: \
+		"AB 1", \
+		"AB 2", \
+		"AB 3", \
+		"AB 4", \
+		"AB 5", \
+		"AB 6", \
+		"AB 7", \
+		"AB 8", \
+		"TFE 1", \
+		"TFE 2"
+*zuord.app1.chooserType: CheckBox
+*zuord.app1.strings: \
+		"S0 0", \
+		"S0 1", \
+		"S0 2", \
+		"S0 3", \
+		"S0 4", \
+		"S0 5", \
+		"S0 6", \
+		"S0 7", \
+		"S0 8", \
+		"S0 9",
+*zuord.app2.chooserType: CheckBox
+*zuord.app2.strings: \
+		"S1 0", \
+		"S1 1", \
+		"S1 2", \
+		"S1 3", \
+		"S1 4", \
+		"S1 5", \
+		"S1 6", \
+		"S1 7", \
+		"S1 8", \
+		"S1 9"
+
+*zuord.okay.labelString:	OK
+*zuord.help.labelString:	Hilfe
+
+*zuord.msn.valueChangedCallback:	doMSNZuord();
+*zuord.okay.activateCallback:		XmtDialogOkayCallback();
+
+*zuord.layout: \
+	Row { \
+		Caption tl "MSN-Auswahl"        Etched Through 6 2 Col { msn }\
+		Caption tl "Apparate-Auswahl"   Etched Through 6 2 Col { \
+			Row { app0 app1 app2 }\
+		}\
+	} \
+	Fixed Equal Row { okay help }
+

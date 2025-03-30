@@ -1,0 +1,38 @@
+!######################################################################
+!                     Gebuehrenstand
+!######################################################################
+
+*gebzahl_dlg.xmtChildren:	unmanaged XmtLayout gebzahl;
+*gebzahl_dlg.title:			Gebührenstand
+*gebzahl.autoUnmanage:		False
+*gebzahl.dialogStyle:		dialog_primary_application_modal
+
+*gebzahl.xmtChildren:	\
+		XmScrolledList	zaehler; \
+		XmLabel summe; \
+		XmPushButton clear,getgeb,okay,help;
+
+*gebzahl.summe.labelString: 0,00 DM
+*gebzahl.summe.layoutCaption: Gesamt:
+*gebzahl.summe.layoutCaptionPosition: XmtLayoutLeft
+
+*gebzahl.clear.labelString:	Lõschen
+*gebzahl.getgeb.labelString: Auslesen
+*gebzahl.okay.labelString:	OK
+*gebzahl.help.labelString:	Hilfe
+
+*gebzahl.getgeb.activateCallback:	doGebGet();
+*gebzahl.clear.activateCallback:	doGebDel();
+*gebzahl.okay.activateCallback:		XmtDialogOkayCallback();
+*gebzahl.cancel.activateCallback:	XmtDialogCancelCallback();
+
+*gebzahl.layout: \
+	Etched Bottom Col { \
+		3in High Caption tll " Name        Nr.     Gebühren" zaehler\
+		Row { \
+			<>\
+			30 mm Wide Etched Out summe \
+		} \
+	}\
+	Fixed Equal Row { getgeb clear okay help }
+

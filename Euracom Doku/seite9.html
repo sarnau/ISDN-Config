@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<TITLE>Euracom - </TITLE>
+<!-- Changed by: 0000-Admin(0000),  6-Aug-1996 -->
+<!-- Changed by: Uwe Putlitz, 20-Sep-1996 -->
+</HEAD>
+<BODY bgcolor="#ffffff" link="#00bb55" BACKGROUND="/bilder/hinter.gif">
+<IMG align=right SRC="/bilder/ackeroben.gif">
+<PRE>
+
+
+
+
+</PRE>
+<CENTER><TABLE><TR><TD><A NAME="57">
+<H2>5.7. Deklaration der Einrichtstruktur f&uuml;r die Steuerkontakte</H2>
+
+<PRe>
+typedef struct SteuerKontakt
+{
+  unsigned short StartZeit;
+  unsigned short EndZeit;
+  unsigned short Ask1Zeit;
+  unsigned short Ask2Zeit;
+  unsigned char Kontakt1;
+  unsigned char Kontakt2;
+  unsigned char Autoanwahl;
+  unsigned char Rnr1[ RUF_NR_LEN + 1];
+  unsigned char Rnr2[ RUF_NR_LEN + 1];
+  unsigned char Rnr3[ RUF_NR_LEN + 1];
+  unsigned char UserToUser[ USER_TO_USER_LEN + 1 ];
+} SteuerKontaktType;
+</PRE>
+<P><A NAME="58">
+<H2>5.8. Deklaration der Einrichtstruktur f&uuml;r Anlagen-Globale Daten</H2>
+
+In den Anlagen-Globalen-Daten werden alle Daten eingetragen, die Anlagenweit g&uuml;ltig sind.
+Das Feld <B>"Reserve"</B>, wird zur Zeit nicht ben&ouml;tigt und ist mit NULL aufzuf&uuml;llen.
+<P>
+<PRE>
+#define CODE_NR_LEN           6
+
+typedef struct GlobAnlDaten
+{
+  char UserToUser[ USER_TO_USER_LEN + 1 ];      /* f&uuml;r beide Anlagen gleich     */
+  char CodeNummer[ CODE_NR_LEN + 1 ];
+  char Landeskennung[ CODE_NR_LEN + 1 ];
+  char OrtsKennZif[ NAH_BER_NR_LEN + 1 ];
+  char Hotline[ RUF_NR_LEN + 1 ];
+  unsigned char Moh;
+  unsigned char AmtAmtWeitergabe;
+  unsigned char Reserve[ 0x1f ];
+  unsigned char AktAva;
+} GlobAnlDatenType;
+</PRE>
+<A HREF="/schnittstelle/schnittindex.html">Zur&uuml;ck zum Index</A>
+</TD></TR></TABLE></CENTER>
+<CENTER><TABLE width=500>
+<TR><TD align=left><A HREF="/schnittstelle/seite8.html"><IMG border=0 SRC="/bilder/links.gif"></TD>
+<TD align=center><A HREF="/welcome.html"><IMG border=0 SRC="/bilder/euracom.gif"></TD>
+<TD align=right><A HREF="/schnittstelle/seite10.html"><IMG border=0 SRC="/bilder/rechts.gif"></TD></TR>
+</TABLE></CENTER>

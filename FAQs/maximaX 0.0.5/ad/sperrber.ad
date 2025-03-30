@@ -1,0 +1,55 @@
+!######################################################################
+!                       Sperr
+!######################################################################
+
+*sperrber_dlg.xmtChildren:	unmanaged XmtLayout sperrber;
+*sperrber_dlg.title:		Sperrnummern
+*sperrber.autoUnmanage:		False
+*sperrber.dialogStyle:		dialog_primary_application_modal
+
+*sperrber.xmtChildren:	\
+		XmtInputField num0=num0,num1=num1,num2=num2,num3=num3,num4=num4, \
+					  num5=num5,num6=num6,num7=num7,num8=num8,num9=num9, \
+				      num10=num10,num11=num11,num12=num12,num13=num13, \
+					  num14=num14,num15=num15,num16=num16,num17=num17, \
+					  num18=num18,num19=num19; \
+		XmPushButton okay,cancel,help;
+
+*sperrber.XmtInputField.matchAll:	False
+*sperrber.XmtInputField.pattern:	ddddd
+
+*sperrber.okay.labelString:	OK
+*sperrber.cancel.labelString:	Abbrechen
+*sperrber.help.labelString:	Hilfe
+
+*sperrber.okay.activateCallback:		XmtDialogOkayCallback();
+*sperrber.cancel.activateCallback:	XmtDialogCancelCallback();
+
+*sperrber.layout: \
+	Etched Row { \
+		Col { \
+		Caption "Sperr  #1: " num0 \
+		Caption "Sperr  #2: " num1 \
+		Caption "Sperr  #3: " num2 \
+		Caption "Sperr  #4: " num3 \
+		Caption "Sperr  #5: " num4 \
+		Caption "Sperr  #6: " num5 \
+		Caption "Sperr  #7: " num6 \
+		Caption "Sperr  #8: " num7 \
+		Caption "Sperr  #9: " num8 \
+		Caption "Sperr #10: " num9 \
+		} \
+		Col { \
+		Caption "Sperr #11: " num10 \
+		Caption "Sperr #12: " num11 \
+		Caption "Sperr #13: " num12 \
+		Caption "Sperr #14: " num13 \
+		Caption "Sperr #15: " num14 \
+		Caption "Sperr #16: " num15 \
+		Caption "Sperr #17: " num16 \
+		Caption "Sperr #18: " num17 \
+		Caption "Sperr #19: " num18 \
+		Caption "Sperr #20: " num19 \
+		} \
+	} \
+	Fixed Equal Row { okay cancel help }

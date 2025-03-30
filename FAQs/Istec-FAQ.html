@@ -1,0 +1,894 @@
+
+<HTML>
+<HEAD>
+<TITLE> Istec-FAQ </TITLE>
+</HEAD>
+ 
+<BODY> 
+<H1><CENTER>Istec-FAQ</CENTER></H1>
+<CENTER>Stand: 09.07.1996</CENTER>
+<HR>
+<P>
+<H2><A NAME="Inhalt">Inhalt der FAQ</H2>
+<PRE>
+1.       <A HREF="#1">SoftWare-Ecke</A>
+1.1.     <A HREF="#1.1">BS-Spezifisches</A>
+1.1.1.   <A HREF="#1.1.1">ISTEC.EXE unter OS/2 bei installiertem SIO</A>
+1.2.     <A HREF="#1.2">Programme f&uuml;r die Istec</A>
+1.2.1.   <A HREF="#1.2.1">PMIstec (OS/2 PM Programm)</A>
+1.2.2.   <A HREF="#1.2.2">ESTIC - TextMode Programm f&uuml;r DOS, Linux OS/2...</A>
+1.2.3.   <A HREF="#1.2.3">IstecWin (Windows 3.1,'95 Programm)</A>
+1.2.9.   <A HREF="#1.2.9">Weitere Programme</A>
+1.9.     <A HREF="#1.9">Sonstiges</A>
+1.9.1.   <A HREF="#1.9.1">Diagnose-Feature?</A>
+1.9.2.   <A HREF="#1.9.2>Welches Schnittstellen-Protokoll verwendet die ISTEC 1008?</A>
+1.9.3.   <A HREF="#1.9.3">Geb&uuml;hrenauswertung</A>
+
+2.       <A HREF="#2">HardWare-Ecke</A>
+2.1.     <A HREF="#2.1">Modeme</A>
+2.1.1.   <A HREF="#2.1.1">ZyXEL an ISTEC betreiben</A>
+2.1.1.1. <A HREF="#2.1.1.1">Allgemeine Einstellungen</A>
+2.1.1.2. <A HREF="#2.1.1.2">ZyXEL an der ISTEC erkennt keine eingehenden Anrufe</A>
+2.1.2.   <A HREF="#2.1.2">Aceex1496 an ISTEC betreiben</A>
+2.2.     <A HREF="#2.2">Telefone</A>
+2.2.1.   <A HREF="#2.2.1">Keine R-Taste</A>
+2.2.2.   <A HREF="#2.2.2">Flash-Taste: Welchen Flash braucht die Istec?</A>
+2.3.     <A HREF="#2.3">Anrufbeantworter</A>
+2.3.1.   <A HREF="#2.3.1">Keine Anruf-Aufzeichnung?</A>
+2.3.2.   <A HREF="#2.3.2">Nur Besetzt-Zeichen auf dem Band?</A>
+2.3.3.   <A HREF="#2.3.3">Band voller komischer Ger&auml;usche?</A>
+2.4.     <A HREF="#2.4">andere externe Ger&auml;te</A>
+2.4.1.   <A HREF="#2.4.1">externe Musikeinspeisung ab FW 1.93</A>
+2.9.     <A HREF="#2.9">Sonstiges</A>
+2.9.1.   <A HREF="#2.9.1">Pin-Belegung f&uuml;r die Kabelage</A>
+2.9.2.   <A HREF="#2.9.2">Geb&uuml;hren-Impuls an analoge Endger&auml;te weitergeben</A>
+2.9.3.   <A HREF="#2.9.3">Eprom selber brennen?</A>
+2.9.9.   <A HREF="#2.9.9">Diverses</A>
+
+3.       <A HREF="#3">Sonstiges</A>
+3.1.     <A HREF="#3.1">Konfiguration wird beim speichern zerst&ouml;rt</A>
+3.2.     <A HREF="#3.2">Externe Rufumleitung geht nicht</A>
+3.3.     <A HREF="#3.3">Rauschen bei jedem zweiten Anruf</A>
+3.4.     <A HREF="#3.4">ISTEC pr&auml;sentiert immer die falsche MSN</A>
+3.9.     <A HREF="#3.9">Wie erreiche ich die Firma Emmerich?</A>
+</PRE>
+<P>
+
+<H2><A NAME="1">1. SOFTWARE-ECKE</A></H2>
+
+<H3><A NAME="1.1">1.1. BS_Spezifisches</A></H3>
+
+<H4><A NAME="1.1.1">1.1.1. ISTEC.EXE unter OS/2 bei installiertem SIO</A></H4>
+
+<PRE>
+  SIO_MODE_DTR                NoChange
+           IDSR               Ignore
+           OCTS               Handshake
+           ODSR               Ignore
+           RTS                Handhake
+           XON/XOFF           No
+  SIO_Screen_Sync_Kludge      off
+  SIO_Share_Access_with_OS/2  off
+  SIO_Virtualize_16550        off
+  SIO_Virtualize_COM_Ports    off
+</PRE>
+
+<H3><A NAME="1.2">1.2. Programme f&uuml;r die Istec</A></H3>
+
+<H4><A NAME="1.2.1">1.2.1. PMIstec (OS/2 PM Programm)</A></H4>
+
+  Eine echte Alternative zu der mitgelieferten DOSen-Soft (Lob an Norbert).
+ In den Versionen vor 1.04 kann es zu Problemen kommen, welche Norbert im
+ fehlenden FiFo vermutet. Symptom: beim Versuch, auf die Anlage zuzugreifen,
+ h&auml;ngt sich das Programm komplett auf, wobei die Prozessorauslastung auf
+ 100% steigt.
+ Abhilfe schafft (au&szlig;er dem Besorgen der aktuellen Version :) ein kleiner
+ Patch (einfach "Patch PMIstec.Exe auf der Kommandozeile aufrufen). Folgende
+ &Auml;nderungen m&uuml;ssen vorgenommen werden: an Adresse 157CB die 0D in eine 05,
+ sowie an Adresse 2753F die 33 in eine 34 &auml;ndern. Danach lief es zumindest
+ bei mir. Achso, die PatchInfo stammt vom Autor pers&ouml;nlich.
+ Nochmal langsam zum Mitmei&szlig;eln:
+<PRE>
+ 1. In das entsprechende PMISTEC-Verzeichnis wechseln
+ 2. PATCH PMISTEC.EXE aufrufen
+ 3. Bei der Hex-Adresse "157CB" die "0D" in "05" &auml;ndern
+ 4. Bei der Hex-Adresse "2753F" die "33" in "34" &auml;ndern
+ 5. Patch verlassen
+</PRE><P>
+ Die alternative aktuelle Version ist hier bei mir unter dem Magic PMISTEC
+ requestbar (hier=FAQ-Keeper ;).
+
+<H4><A NAME="1.2.2">1.2.2. ESTIC - TextMode Programm f&uuml;r DOS, Linux, OS/2...</A></H4>
+
+ Auch noch zu erw&auml;hnen w&auml;re eben dieses Programm, gerade weil es auf
+ den meisten Plattformen erh&auml;ltlich ist. Die Original-Archive tragen die
+ Namen: ES???DOS.ZIP, ES???LIN.ZIP, ES???SOL.ZIP, ES???BSD.ZIP, ES???OS2.ZIP
+ und ES???SRC.ZIP, wobei die ??? f&uuml;r die jeweils aktuelle Version stehen
+ (unter diesem Namen sind sie mittlerweile auch in der <A HREF="#qumran">Qumran
+ Cave</A> requestbar), die darauffolgenden drei Buchstaben sind die K&uuml;rzel
+ f&uuml;r das jeweilige unterst&uuml;tzte Betriebssystem: DOS, LINux, SOLaris,
+ BSD, OS/2, SouRCen. Kurzer Auszug aus der Doku:
+<P>
+ ESTIC basiert auf meiner portablen Klassenbibliothek SPUNK, deshalb
+ sind Versionen f&uuml;r DOS, OS/2 und Linux verf&uuml;gbar.
+<P>
+ Zus&auml;tzlich zum interaktiven Programm ESTIC gibt es jetzt den ESTIC-
+ Bonuspack: Mit Hilfe des Kommandozeilen-Programms ICLOAD k&ouml;nnen
+ vorbereitete Konfigurationsdateien in die ISTEC geladen werden,
+ Geb&uuml;hren k&ouml;nnen abgefragt oder gel&ouml;scht werden. ICLOAD ist 
+ selbstverst&auml;ndlich auch f&uuml;r alle unterst&uuml;tzten Plattformen verf&uuml;gbar!
+<PRE>
+  Erh&auml;ltlich via FTP:
+  ftp.seicom.net:         /pub/os/estic
+  ftp.uni-stuttgart.de:   /pub/systems/pc/comm/estic
+</PRE>
+
+<H4><A NAME="1.2.3">1.2.3. IstecWin (Windows 3.1,'95 Programm)</A></H4>
+
+ F&uuml;r Windows Benutzer eine Alternative zum original Istec Proggi.
+ Ersetzt das original komplett, zus&auml;tzlich Ausdruck der Konfiguration,
+ Eigene Bezeichnung der Endger&auml;te (z.B. Telefon bei Omma), Journal-
+ F&uuml;hrung der Kosten f&uuml;r das Finanzamt, Pa&szlig;wort &Auml;nderung. Alle
+ Parameter &uuml;bersichtlich auf einem Schirm. (ben&ouml;tigt mind. 800x600)
+ -> Funktioniert auch mit Fifo-Com's an Pc's , wo das original Probleme
+ hat ! (auch in Compuserve, Forum SWBETA+).
+
+
+<H4><A NAME="1.2.9">1.2.9. Weitere Programme</A></H4>
+
+ Hier noch eine kurze Liste mit weiteren mir bekannten Programmen. Da ich
+ diese mangels des entsprechenden Rechners (oder auch mangels des BS/Emula-
+ tors oder der n&ouml;tigen Zeit/Lust) nicht selber testen konnte, bin ich f&uuml;r
+ kurze "Kritik" bzw. Beschreibung (analog zu obigen), die ich dann hier
+ einsetzen k&ouml;nnte, selbstverst&auml;ndlich dankbar!
+<P>
+ <A NAME="amistec">So, zur Sache: Unter dem Dateinamen AMISTEC1.LHA gibt es</A>
+ bei mir ein Konfig-Prog f&uuml;r den Amiga (kann sein, da&szlig; die Version
+ bei mir nicht immer ganz Up-to-Date ist - auf jeden Fall ist die aktuelle
+ Version zu beziehen bei 2:246/2248 f&uuml;r VFC/V34/ISDNC [07141-200675] und
+ 2:246/2249 f&uuml;r ZyX [07141-200904], Magic AMISTEC). Ab der Version 1.30
+ von AMIstec ist die Verwendung eines Adapters nicht mehr notwendig!
+ Ein weiteres LinuX-Programm ist hier unter dem Namen ISTEC.TGZ erh&auml;ltlich.
+ In der Emmerich-BBS soll weiterhin noch ein Programm f&uuml;r den Atari zu
+ finden sein.
+<P>
+ Wer noch weitere Programme kennt, die hier erw&auml;hnt werden sollen, teile
+ mir dieses bitte mit - am Besten wiederum gleich mit einer Kurzbeschreibung,
+ soda&szlig; ich das hier sofort &uuml;bernehmen kann.
+<P>
+
+<H3><A NAME="1.9">1.9. Sonstiges</A></H3>
+
+<H4><A NAME="1.9.1">1.9.1. Diagnose-Feature</A></H4>
+
+ Mit:<P>
+ ISTEC.EXE -DIAGNOSEFEATURE<P>
+ kommt im Konfigurationsbildschirm ein neuer Men&uuml;punkt TEST zur Ansicht.
+ Pa&szlig;wort ist DiagProfi (Gro&szlig;-/Kleinschreibung beachten).<P>
+ Ab Version 1.6 des mitgelieferten Konfigurations-Programmes ist diese
+ Funktion nicht mehr verf&uuml;gbar... Daf&uuml;r bieten diverse andere Programme
+ (z.B. PMIstec) eine analoge Funktion an.
+<P>
+
+<H4><A NAME="1.9.2">1.9.2. Welches Schnittstellen-Protokoll verwendet die ISTEC 1008?</A></H4>
+
+<PRE>
+                           "ISTEC 1008 INTERN"
+
+    Urspr&uuml;ngliche Version des Textes von Hergen Lehmann.
+    Kleinere Erweiterungen/Korrekturen von Ullrich von Bassewitz.
+    Erweiterungen der Version 1.93 von Paul Barnard (Emmerich), deutsche
+    &Uuml;bersetzung von Ullrich von Bassewitz.
+    Weitere Tips und Hinweise von Norbert Richter (Autor von PMISTEC).
+
+
+    **********************************************************************
+    *                      Schnittstellenprotokoll                       *
+    **********************************************************************
+
+    Schnittstellenparameter:  9600 Baud, 8N1
+
+    Die &Uuml;bertragung geschieht grunds&auml;tzlich in Segmenten zu je 4Byte:
+
+      +-----------+-----------+-----------+-----------+
+      | x000 00xx | xxxx xxxx | xxxx xxxx | xxxx xxxx |
+      +-----------+-----------+-----------+-----------+
+        |       |      \-------------------------/
+      Endemarke |       Datenbytes, ungenutzte Bytes
+            Anzahl der    sind 00 oder FF
+            Datenbytes
+
+    Jeweils eine Anzahl Segmente mit dem Startbyte 0x03 und drei Daten-
+    bytes sowie ein abschlie&szlig;endes Segment mit dem Startbyte 0x81-0x83
+    und entsprechend ein bis drei weiteren Datenbytes bilden zusammen
+    eine Nachricht. Das erste Byte einer solchen Nachricht bestimmt
+    ihre Funktion, der Rest sind Parameter.
+
+    Pr&uuml;fsummen oder &auml;hnliches gibt es nicht.
+
+    Beispiele:
+        03 DD 07 01 83 00 01 00
+             = Opcode 0xDD, Parameter "07 01 00 01 00"
+
+        82 18 01 00
+             = Opcode 0x18, Parameter "01"
+
+    **********************************************************************
+    *                  Nachrichten vom PC an die ISTEC                   *
+    **********************************************************************
+
+    Opcode  Parameter          Funktion
+    ~~~~~~  ~~~~~~~~~~~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     0x02   --                 Bereitschaft pr&uuml;fen
+
+     0x05   128Byte Geb&uuml;h-     Schreiben Geb&uuml;hrenz&auml;hler
+            rendaten            F&uuml;r jedes der 64 m&ouml;glichen Endger&auml;te sind
+                                zwei Bytes reserviert.
+
+     0x06   --                 Abfrage Geb&uuml;hrenz&auml;hler
+
+     0x07   1Byte Endger&auml;te-   Schreiben Endger&auml;tekonfiguration
+            nummer, gefolgt     Endger&auml;tenummer: 0x00=Nebenstelle 21,
+            von 16/20 Byte      0x01=Nebenstelle 22, usw. bis 0x3F
+            Konfigurations-     16 Byte Daten bis Firmware 1.92,
+            daten               20 Bytes ab Version 1.93 (s.u.)
+
+     0x08   --                 Abfrage Endger&auml;tekonfiguration
+                                Die Firmware-Versionen bis Version 1.92 senden
+                                nach dieser Abfrage hintereinanderweg 64
+                                Antwort-Nachrichten des Typs 0x16 (s.u.).
+                                Ab Version 1.93 werden nur noch soviele
+                                Nachrichten verschickt, wie die Anlage End-
+                                ger&auml;te unterst&uuml;tzt, d.h. bei der ISTEC 1008
+                                8 St&uuml;ck.
+
+     0x09   93/106 Byte Kon-   Schreiben Grundkonfiguration
+            figurationsdaten    (wird nicht quittiert!)
+                                Gr&ouml;&szlig;e der Grundkonfiguration sind 93 Bytes
+                                bis Firmware-Version 1.92, 106 Bytes
+                                ab Version 1.93
+
+     0x0a   --                 Abfrage Grundkonfiguration
+
+     0x0c   --                 Abschlu&szlig; Konfiguration (Daten in Permanent-
+                               speicher &uuml;bernehmen!?)
+
+     0xdd   5Byte Parameter,   Diagnoseanweisung
+            siehe unten
+
+    **********************************************************************
+    *               Nachrichten von der ISTEC an den PC                  *
+    **********************************************************************
+
+    Opcode  Parameter          Funktion
+    ~~~~~~  ~~~~~~~~~~~~~~~    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     0x11   --                 Positive Quittung f&uuml;r das Kommando 0x0c
+
+     0x12   --                 Antwort auf 0x02, Bereitschaft pr&uuml;fen
+
+     0x13   1Byte Fehler-      Wird von der ISTEC im Fehlerfall zur&uuml;ck-
+            code               geliefert, 0x01 = type failure, 0x03 =
+                               invalid data (laut Emmerich Doku). Es tritt
+                               au&szlig;erdem noch der undokumentierte Typ
+                               0x02 auf.
+
+     0x15   128 Byte Geb&uuml;h-    Antwort auf 0x06, Abfrage Geb&uuml;hren
+            rendaten            F&uuml;r jedes der 64 m&ouml;glichen Endger&auml;te sind
+                                zwei Bytes reserviert.
+
+     0x16   1Byte Endger&auml;te-   Antwort auf 0x08, Konfiguration abfragen
+            nummer, gefolgt     Endger&auml;tenummer: 0x00=Nebenstelle 21,
+            von 16/20 Byte      0x01=Nebenstelle 22, usw. bis 0x3F
+            Konfigurations-     16 Byte Daten bis Firmware 1.92,
+            daten               20 Bytes ab Version 1.93 (s.u.)
+
+     0x17   93/106 Byte Kon-   Antwort auf 0x0a, Konfiguration abfragen
+            figurationsdaten    Gr&ouml;&szlig;e der Grundkonfiguration sind 93 Bytes
+                                bis Firmware-Version 1.92, 106 Bytes
+                                ab Version 1.93
+
+     0x18   Endger&auml;tenummer    Quittung f&uuml;r 0x07, Schreiben Endger&auml;tekonfig
+
+     0xdd   5Byte Parameter,   Diagnosestatus
+            siehe unten
+
+    **********************************************************************
+    *                        Diagnosenachrichten                         *
+    **********************************************************************
+
+    Richtung  Parameterbytes  Funktion
+    ~~~~~~~~  ~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      --&gt;        00 69 5A 96 A5  Diagnosemodus einschalten
+
+      --&gt;        01 00 00 00 00  Diagnosemodus beenden
+
+     &lt;--&gt;     02 ss gg zz 00  Verbindungsmatrix
+                                ss=Spalte, gg=Endger&auml;t, zz=0:aus,=1:ein
+
+     &lt;--&gt;     03 gg 00 zz 00  Ruf (gg=Endger&auml;t, zz=0:aus,=1:ein)
+
+      &lt;--        04 gg 00 zz 00  Schleifenzustand
+                                gg=Endger&auml;t, zz=0:inaktiv ,=1:aktiv
+
+      &lt;--        05 gg 00 zz 00  Impulswahl erkannt
+                                gg=Endger&auml;t, zz=gew&auml;hle Ziffer
+                                                (0x10=R-Taste)
+
+      &lt;--        06 kk 00 zz 00  Tonwahl erkannt
+                                kk=Kanal (0:IVb1,1:IVb2),
+                                zz=gew&auml;hlte Ziffer
+
+     &lt;--&gt;     07 01 00 zz 00  LED Zustand (zz=0:aus, =1:ein)
+
+      --&gt;        08 ll 00 zz 00  Geb&uuml;hren (ll=Leitung, zz=0:aus,=1:ein)
+
+      --&gt;        09 00 00 zz 00  TFE-Verst&auml;rker (zz=0:aus, 1:ein)
+      &lt;--        09 FF FF zz 00
+
+      --&gt;        0A 00 00 zz 00  T&uuml;r&ouml;ffner (zz=0:aus, =1:ein)
+      &lt;--        0A FF FF zz 00
+
+      --&gt;        0D 00 00 00 00  Schalter abfragen (zz=0:aus, =1:ein)
+      &lt;--        0D 00 00 zz 00
+
+    **********************************************************************
+    *                  Datenstruktur Grundkonfiguration                  *
+    **********************************************************************
+
+    Offset  Bytes  Typ      Funktion
+    ~~~~~~  ~~~~~  ~~~~~    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       0      1    Flag     Anschlu&szlig;art: 0=Mehrger&auml;te-,1=Anlagenanschlu&szlig;
+       1      1    Bin&auml;r         Anzahl der a/b-Schnittstellen
+       2      1    Flag     Protokoll: 0=1TR6, 1=E-DSS1
+       3      2    Bin&auml;r         Software Versionsnummer
+       5      1    Bin&auml;r         TFE-Zuordnung (0x15=21,0x16=22,...), siehe auch
+                            Bytes 96-99 (Firmware >= 1.93)
+
+       6      5    BCD      MSN 0
+      11      5    BCD      MSN 1
+      16      5    BCD      MSN 2
+      21      5    BCD      MSN 3
+      26      5    BCD      MSN 4
+      31      5    BCD      MSN 5
+      36      5    BCD      MSN 6
+      41      5    BCD      MSN 7
+      46      5    BCD      MSN 8
+      51      5    BCD      MSN 9
+
+      56      1    Flag     (Internal) Music on Hold (00=aus,01=ein),
+                            siehe Byte 93 f&uuml;r Firmware >= 1.93
+      57      1    Bin&auml;r         Anzahl der internen S0-Busse
+      58      1    Bin&auml;r         Anzahl der externen S0-Busse
+
+      59      1    Bin&auml;r         Abfragestelle1 (0x15=21,0x16=22,...)
+      60      1    Bin&auml;r         Abfragestelle2 (0x15=21,0x16=22,...)
+      61      1    Bin&auml;r         Anzahl der Ziffern in der 1.Rufnummer
+      62     10    ASCII    1.Rufnummer, mit 0x00 aufgef&uuml;llt
+      72      1    Bin&auml;r         Anzahl der Ziffern in der 2.Rufnummer
+      73     10    ASCII    2.Rufnummer, mit 0x00 aufgef&uuml;llt
+
+      83     10    Bitmaske MSN Gruppenbildung: F&uuml;r jede der 10 MSN's
+                            ein Byte, in dem die einzelnen Bits angeben,
+                            welche der 8 Nebenstellen klingeln sollen.
+                            Auch bei den gr&ouml;&szlig;eren Anlagen bleibt es bei
+                            8Bit pro MSN; keine Ahnung, wie die weiteren
+                            Nebenstellen adressiert werden...
+
+      ------------------- Firmware bis Version 1.92 -------------------
+
+      93     --ENDE--
+
+      ------------------- Firmware ab Version 1.93 --------------------
+
+      93      1    Bin&auml;r         Music on Hold port (0x00=keine,0x01=21,
+                             0x02=22, usw.). Das Flag wird nur ausgewertet,
+                             wenn Byte 56=0x00
+      94      2    Bin&auml;r         Landeskennung (internationale Telefonvorwahl)
+                             0x0031=49=Deutschland, 44=England, 32=Belgien,
+                             33=Frankreich, 34=Spanien. Default ist 49.
+      96      4    Bitmaske TFE location. Wird nur ausgewertet, wenn Byte
+                             5=0x00. Jedes Byte ordnet einem Apparet eine
+                             Klingel zu (offensichtlich hat die neue TFE
+                             von Emmerich 4 entsprechende Schalter). Zu
+                             jedem Schalter k&ouml;nnen beliebige Ger&auml;te zu-
+                             geordnet werden.
+                             Byte 0 - Schalter 0
+                             Byte 1 - Schalter 1
+                             Byte 2 - Schalter 2
+                             Byte 3 - Schalter 3
+                             Bit 0 - Ger&auml;t 21
+                             Bit 1 - Ger&auml;t 22
+                             ....
+
+      100     6    Bin&auml;r         Reserviert f&uuml;r zuk&uuml;nftige Erweiterungen.
+
+      106    --ENDE--
+
+    BCD-Werte sind mit "F" aufgef&uuml;llt, wenn nicht die volle Stellenzahl
+    ben&ouml;tigt wird. Die erste Ziffer steht jeweils im LSB.
+
+    **********************************************************************
+    *              Datenstruktur Endger&auml;tekonfiguration               *
+    **********************************************************************
+
+    Offset  Bytes  Typ      Funktion
+    ~~~~~~  ~~~~~  ~~~~~    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       0      1    Flag     Wahlbewertung: 00=keine,01=Inland,...
+       1      1    Flag     Dienst: 00=Telefonie,01=G3-FAX,...
+       2      1    Bin&auml;r         Rufumleitung: 00=keine,01=extern,
+                            0x15=Nebenstelle 21,0x16=Nebenstelle 22,usw.
+       3      1    Flag     Geb&uuml;hrenimpuls: 00=nein,01=ja
+       4      2    BCD      PIN
+       6     10    BCD      Rufnummer f&uuml;r externe Rufumleitung
+
+      ------------------- Firmware bis Version 1.92 -------------------
+
+      16     --ENDE--
+
+      ------------------- Firmware ab Version 1.93 --------------------
+
+      16      1    Flag     Spontane Amtsholung (0x00=Aus,0x01=An)
+      17      3    Bin&auml;r         Reserviert f&uuml;r zuk&uuml;nftige Erweiterungen
+      20     --ENDE--
+
+    BCD-Werte sind mit "F" aufgef&uuml;llt, wenn nicht die volle Stellenzahl
+    ben&ouml;tigt wird. Die erste Ziffer steht jeweils im LSB.
+
+    **********************************************************************
+    *           Aufbau der Konfigurationsdateien (*.IC)                  *
+    **********************************************************************
+
+    Offset  Bytes  Funktion
+    ~~~~~~  ~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ------------------- Firmware bis Version 1.92 -------------------
+
+       0      93   Daten der Grundkonfiguration
+      93       1   0x00
+      94      16   Konfiguration Endger&auml;t 21
+     110       1   0x01
+     111      16   Konfiguration Endger&auml;t 22
+     127       1   0x02
+     128      16   Konfiguration Endger&auml;t 23
+      :        :
+      :        :   usw., insgesamt 64 Endger&auml;tedatens&auml;tze
+      :        :
+    1181    --ENDE--
+
+      ------------------- Firmware ab Version 1.93 --------------------
+
+       0     106   Daten der Grundkonfiguration
+     106       1   0x00
+     107      20   Konfiguration Endger&auml;t 21
+     127       1   0x01
+     128      20   Konfiguration Endger&auml;t 22
+     148       1   0x02
+     149      20   Konfiguration Endger&auml;t 23
+      :        :
+      :        :   usw., insgesamt 64 Endger&auml;tedatens&auml;tze
+      :        :
+    1450    --ENDE--
+
+    **********************************************************************
+    *              Verarbeitungsgeschwindigkeit der ISTEC                *
+    **********************************************************************
+
+    Die ISTEC verarbeitet die an sie geschickten Nachrichten extrem
+    langsam! Gl&uuml;cklicherweise enthielt die Version 1.7 des Konfigurations-
+    programms von Emmerich einen Gro&szlig;teil der Turbo-Debugger Infos,
+    so da&szlig; es ein leichtes war, die tats&auml;chlich ben&ouml;tigten Wartezeiten
+    durch einen Breakpoint auf der delay() Routine zu erfahren:
+
+     * Nach jedem einzelnen Block von 4 Bytes mu&szlig; 40ms gewartet werden
+
+     * Nach einem kompletten Kommando nochmals zus&auml;tzlich 60ms, d.h.
+       nach dem letzten Block insgesamt 100ms.
+
+    Ein Nichteinhalten dieser Zeiten f&uuml;hrt zu einer Fehlermeldung von
+    der ISTEC, &uuml;blicherweise 0x13 0x02.
+
+    Note from Paul Barnard (Emmerich).  The serial information is buffered in
+    the ISTEC and a byte is transfered to/from the serial UART every time the
+    task is run.  Currently the task time is 10ms.  This is inherent in the
+    software structure of the product.  The internal buffer size of the ISTEC
+    is only 4 bytes (limited by RAM constraints).  Hence the need for the
+    delay.  I've remembered to switch off the DEBUG now but if anyone wants
+    to know anything about either the 1008 software or the configuration
+    software my Compuserve E-Mail is 100673,2522
+
+    **********************************************************************
+    *                           THE END ....                             *
+    **********************************************************************
+
+  (Dirk Heiss / Metin Savignano / Christian Kaben)
+</PRE>
+
+<H4><A NAME="1.9.3">1.9.3. Geb&uuml;hrenauswertung</A></H4>
+
+ Wer nicht erst immer die Istec.Exe starten und dann manuell die Geb&uuml;hren
+ auswerten will, f&uuml;r den gibt es IstecGeb von Sven Paulus. IstecGeb l&auml;&szlig;t
+ sich bequem im Batch-Modus steuern (z.B. zeitgesteuert einmal im Monat, um
+ so eine Art Cost.Log zu f&uuml;hren). Ich wei&szlig; nat&uuml;rlich nicht, was Sven
+ seinem Programm in Zukunft noch alles einverleiben wird (wir warten ganz
+ gespannt), aber das o.g. tut's jedenfalls derzeit. Aktuelle Version (Stand:
+ Oktober '95) ist unter dem Namen ISTECG15.ZIP zumindest bei mir requestbar
+ (25 kB): 2:2426/2160 (ZyX) bzw. 2:2426/2161 (X.75). Dazugeh&ouml;rige <A HREF="#qumran">Telebim-
+ Nummern</A> finden sich am Ende der FAQ.   (Andreas Rehberg).
+
+
+<H2><A NAME="2">2. HARDWARE-ECKE</A></H2>
+
+<H3><A NAME="2.1">2.1. Modeme</A></H3>
+
+<H4><A NAME="2.1.1">2.1.1. ZyXEL an ISTEC betreiben</A></H4>
+
+<H5><A NAME="2.1.1.1">2.1.1.1. Allgemeine Einstellungen</A></H5>
+<PRE>
+  ModemInit:
+     S11=90    (TouchTone Duration)
+     S41=16    \
+     S41.4=1   / wait S6 sec before dialing
+     (S6=3)
+     S42.1=1   enable throughput averaging (not used - just a hint)
+     X7        :-)
+</PRE>
+ Bei einem E+ reichte das trotz vorangegangenen AT&F scheinbar nicht
+ aus; es blieb bei einem NO DIALTONE - w&auml;hrend eingehende Anrufe
+ problemlos m&ouml;glich waren. Sollte das bei noch jemandem auftreten,
+ folgende zus&auml;tzliche Einstellungen verhalfen zum Erfolg:<P>
+ S1=0  S7=100  S10=10  S24=138  S39=32  S43=8  S49=6
+<P>
+ ModemDial:  ATDT0W
+
+
+<H5><A NAME="2.1.1.2">2.1.1.2. ZyXEL an der ISTEC erkennt keine eingehenden Anrufe</A></H5>
+
+ Typisch f&uuml;r ZyXELs mit Firmware 5.01 (5.02 auch?) ist/war, da&szlig; sie an
+ manchen deutschen Nebenstellenanlagen (u.a. ISTEC, Keil) das Klingelsignal
+ nicht erkennen k&ouml;nnen. Jede neuere Firmware behebt das Problem definitiv,
+ zumindest f&uuml;r die U1496-Reihe. (Kolja Waschk)
+
+
+<H4><A NAME="2.1.2">2.1.2. Aceex1496 an ISTEC betreiben</A></H4>
+
+ Ruftonerkennung umschalten an Aceex1496 mit Zulassung (das Modem gab es auch
+ mal ohne Zulassung, da war es baugleich mit TKR, und ob die Einstellungen da
+ auch funktionieren, wei&szlig; ich nicht)
+<P>
+ AT%x050%y004
+<P>
+ (Uwe Sonntag)
+
+
+<H3><A NAME="2.2">2.2. Telefone</A></H3>
+
+<H4><A NAME="2.2.1">2.2.1. Keine R-Taste</A></H4>
+
+ Wenn man ein Tonwahl-Telefon ohne R-Taste hat, mu&szlig; man es nicht gleich
+ wegschmei&szlig;en. Ein R-Flash ist nichts anderes, als ein kurzes Auflegen. Hau
+ also mal kurz auf die Gabel und schon kannst Du vermitteln. Das klappt
+ 100pro, ich mache es teilweise auch so. Ich habe eine ISTEC 1008 mit 8
+ Telefonen, davon 2 ohne R-Taste.   (Dennis Eberhard)
+
+ Mit dem kurzen Auflegen klappt das mit meinem Telefon leider nicht. Da die
+ Leitung nur kurz unterbrochen werden mu&szlig;, ist mir die folgende Idee
+ gekommen. Ich habe das betreffende Telefon wieder auf Impulswahl umgestellt.
+ Will ich nun einen Anruf umleiten, dr&uuml;cke ich einmal die "1" und
+ anschliessend die interne Apparatenummer. Das klappt ganz prima mit diesem
+ Telefon. (Michael Steder)
+
+
+<H4><A NAME="2.2.2">2.2.2. Flash-Taste: Welchen Flash braucht die Istec?</A></H4>
+
+ Die Fa. Emmerich gibt an, da&szlig; die Istec mit einem Flash arbeitet, der
+ 80ms +/- 30ms lang sein soll (Klaus Meyer; mir sagten sie allerdings ein
+ paar Tage darauf, sie arbeiten mit 110ms ohne Probleme. Aber das mu&szlig; ja
+ kein Widerspruch sein, denn: 80 + 30 = 110 :-). Bei verschiedenen Telefonen,
+ welche dieser Definition nicht gerecht werden, wird ein kurzer Schlag
+ auf die Gabel (also ein ganz kurzes Auflegen) empfohlen, da dies der
+ FlasFunktion sehr &auml;hnlich ist. Also, bitte f&uuml;r 80ms auf die Gabel
+ dr&uuml;cken :-)<P>
+ &Auml;hem - wer dies nicht so genau "timen" kann: eine "1" mit ImpulsAntrieb
+ kann seitens der Istc nicht von einem Flash unterschieden werden...
+
+
+<H3><A NAME="2.3">2.3. Anrufbeantworter</A></H3>
+
+<H4><A NAME="2.3.1">2.3.1. Keine Anruf-Aufzeichnung?</A></H4>
+
+ Mein Anrufbeantworter springt nach einem eingegangenen Anruf immer
+ wieder auf Anfang zur&uuml;ck und tut so, als ob kein Anruf eingetroffen
+ sei. Wieso tut er das?
+<P>
+ Die ISTEC scheint eine Schleifenunterbrechung zu senden, bevor
+ sie das &uuml;bliche Besetztzeichen aufschaltet. Damit erkennt der
+ Anrufbeantworter einen Fehler und spult zur&uuml;ck.
+
+<H4><A NAME="2.3.2">2.3.2. Nur Besetzt-Zeichen auf dem Band?</A></H4>
+
+ Mein Anrufbeantworter nimmt das ganze Band voller Besetzt-Zeichen auf.
+ Warum?
+<P>
+ Der Anrufbeantworter arbeitet mit Ruhekennung. Die Istec aber sendet
+ nach dem Anrufende Besetzt-Zeichen (so wie seit neustem die Telekom
+ auch). Damit erkennt der Anrufbeantworter aber das Gespr&auml;chsende
+ nicht und nimmt munter weiter auf.<P>
+ Ausweg: neuer Anrufbeantworter der sowohl auf Ruhe als auch auf
+ Besetzt reagiert. Oder aber: Neue FirmWare-Version. Ab der v1.92
+ sendet die Istec standardm&auml;&szlig;ig ein "Ruhezeichen" anstelle des
+ bisherigen Besetzt-Zeichens; womit dieses Problem als erledigt zu
+ betrachten w&auml;re.
+
+<H4><A NAME="2.3.3">2.3.3. Band voller komischer Ger&auml;usche?</A></H4>
+
+ Mein Anrufbeantworter nimmt so komische Ger&auml;usche auf, bis das Band
+ voll ist. Was ist das?
+<P>
+ Die Istec sendet (bis FirmWare v1.92) Besetzt-Zeichen, wenn das
+ Gespr&auml;ch beendet wurde. Allerdings sendet die Istec mit einem ziemlich
+ hohen Ausgangspegel.<P>
+ Dem Anrufbeantworter ist der Pegel zu hoch und daraufhin schneidet
+ er die Signalspitzen ab. Nun ist aber das Besetzt-Zeichen nicht mehr
+ als solches zu erkennen. Da das Besetzt-Zeichen fehlt, wird wohl
+ weiter gesprochen werden, der Anrufbeantworter nimmt weiter auf.<P>
+ L&ouml;sung: M&ouml;glicherweise helfen Widerst&auml;nde an den Eing&auml;ngen des
+ Anrufbeantworters, die den Signalpegel von vornherein runterregeln.
+ Allerdings: La&szlig; das man lieber dem Fachfach &uuml;brig :-)<P>
+ Besser ist, die gleiche L&ouml;sung wie bei 2.3.2. zu verwenden: FirmWare
+ updaten!
+<P>
+ (Klaus Meyer/Andreas Rehberg)
+
+
+<H3><A NAME="2.4">2.4. andere externe Ger&auml;te</A></H3>
+
+<H4><A NAME="2.4.1">2.4.1. externe Musikeinspeisung ab FW 1.93</A></H4>
+
+<PRE>
+  CD-Player Kopfh&ouml;rer          NF-&Uuml;bertrager           TAE-Stecker
+  Ausgang Regelbar              Trafo 1:1                bzw. A/B Klemmen
+
+                                          _____
+       O--------------------------\ /----I     I-------------------O
+  z.B. 3.5mm                      I I     -----
+                                  I I
+                                  I I
+       O--------------------------/ \------------------------------O
+
+  Polung ist auf beiden seiten wurscht.
+  Fuer den Line-Out ist wahrscheinlich noch ein Verst&auml;rker notwendig,
+  aber die meissten Player haben ja eine Kopfh&ouml;rerausgang.
+  Material in jedem Elektronik-Laden, Wert ca. 15,-
+  Nachbau auf eigene Gefahr, FTZ-Vorschriften beachten.
+  Keine Haftung bei defekten Ger&auml;ten.
+
+  Leider kommt die Musik nur zum Einsatz, wenn intern vermittelt wird,
+  beim Makeln kommt die h&auml;&szlig;liche ansage der TK.
+  (Martin Poth, 2:2464/560.12)
+
+
+<H3><A NAME="2.9">2.9. Sonstiges</A></H3>
+
+<H4><A NAME="2.9.1">2.9.1. Pin-Belegung f&uuml;r die Kabelage</A></H4>
+
+Bis Version 1.92:
+<PRE>
+  Western    SubD       SubD
+  4polig    9polig     25polig
+
+    1         2          3
+    2         3          2
+    3         5          7
+    4         -          -
+
+    (Thorsten Kowalski)
+</PRE>
+
+Ab FirmWare Version 1.93 sind jetzt auch die seriellen Anschl&uuml;sse der neuen 
+CE-Ger&auml;te anders n&auml;mlich &uuml;ber Optokoppler galvanisch getrennt. 
+Die Spannungsversorgung daf&uuml;r braucht zus&auml;tzliche Leitungen, so das die 
+Buchse der ISTEC jetzt 6 polig ist (also wie bei normalen Modems). 
+<P>
+Die Anschl&uuml;sse sind wie folgt:
+<P><PRE>
+Funktion  Western   SubD     SubD
+          6polig   9Polig  25polig
+RxD          1        2       3
+TxD          2        3       2
+Gnd          3        5       7
+V+           4        7       4
+V-           5        4      20
+             6        -       -
+</PRE><P>
+Die Versorgungsspannung wird also von RTS(+) und DTR(-) geklaut. 
+Alle die keinen PC haben, sind erst mal gekniffen.
+<P>
+Bei Mac's kann man sich mit einem Adapter behelfen, der V+ &uuml;ber RTS/DTR 
+liefert und V- &uuml;ber eine Blockbatterie einspeist. Neues Programm f&uuml;r die 1.93 
+liegt seit Freitag in der Maus HH2 zusammen mit einer Beschreibung f&uuml;r so 
+einen Adapter.
+<P>
+Bei Amiga's reicht ein Adapter, der die Versorgungsspannung des Amiga von Pin 9 
+und 10 entsprechend anschlie&szlig;t. Die neue Software l&auml;uft auch schon 
+(nur f&uuml;r TKR-Kunden?). Dieser Absatz er&uuml;brigt sich allerdings bei 
+Verwendung des Programmes <A HREF="#amistec">AMIstec</A> in einer Version ab 
+1.30 (siehe dort; Metin Savignano).
+<P>
+(Carsten Lorenz, 2:240/1006.5)
+
+<H4><A NAME="2.9.2">2.9.2. Geb&uuml;hren-Impuls an analoge Endger&auml;te weitergeben</A></H4>
+
+ Die ISTEC selbst kann auf Wunsch den Geb&uuml;hrenimpuls erzeugen. Dazu mu&szlig;
+ man sich allerdings zun&auml;chst f&uuml;r 3,- DM AOCD aufschalten lassen (1,50
+ pro B-Kanal) - f&uuml;r die Berechnung der Geb&uuml;hren-Impulse ist n&auml;mlich eine
+ "Geb&uuml;hren&uuml;bermittlung w&auml;hrend des Gespr&auml;ches" erforderlich.<P>
+ Seit der FirmWare v1.92 ist es allerdings auch m&ouml;glich, bei Schaltung der
+ "Geb&uuml;hren&uuml;bermittlung am Ende des Gespr&auml;ches" s&auml;mtliche Impulse
+ nachtr&auml;glich an das jeweilige Endger&auml;t nachreichen zu lassen.
+
+
+<H4><A NAME="2.9.3">2.9.3. Eprom selber brennen?</A></H4>
+
+ In MailBoxen finden sich ja die Images dazu (zum Beispiel auch bei mir hier
+ in der <A HREF="#qumran">Qumran Cave</A>). Neben dem Eprom-Brenner braucht Ihr dazu aber auch
+ die Eproms selber. Diese sind 2MBit Chips vom Typ AM27C020, wie mir gerade
+ per NM mitgeteilt wurde (von Thomas Behrens).
+ Kostenpunkt eines solchen soll nach verschiedenen Aussagen zwischen 18 und
+ 25 DM liegen, je nach Anbieter.
+
+
+<H4><A NAME="2.9.9">2.9.9. Diverses</A></H4>
+
+<UL>
+ <LI> falls man das serielle Kabel zum PC verl&auml;ngern sollte, nur
+abgeschirmtes Kabel verwenden, Schirm an Masse.
+ <LI> man sollte sehr auf die richtige Terminierung des S0-Busses achten,
+da ist sonst u.U. zu Pfeifen oder Rauschen auf der Leitung kommen kann
+(Techniker: R&uuml;ckkopplung). Also: Bei langen Leitungen zu weiteren ISDN-
+Ger&auml;ten 100Ohm-Widerst&auml;nde einf&uuml;gen (siehe Installationshandbuch d.
+Istec).
+ <LI> ab und an kommt beim Versuch, die Istec zu konfigurieren, nur die
+Fehlermeldung "ISTEC meldet sich nicht". Hier hilft manchmal ein RESET
+durch Unterbrechung der Stromversorgung.
+</UL>
+
+
+<H2><A NAME="3">3. Sonstiges</A></H2>
+
+<H3><A NAME="3.1">3.1. Konfiguration wird beim Speichern zerst&ouml;rt</A></H3>
+
+ Beim Speichern der Daten in die Istec kommt in selbiger nur M&uuml;ll an - ist
+ das normal?
+<P>
+ Nun, normal ist es sicher nicht. Dieses Problem wird laut Paul Barnard (von
+ Emmerich) durch die Pufferung der Daten in den seriellen Empfangs- und Sende-
+ Puffern der PC Software verursacht (seine komplette technische Erkl&auml;rung er-
+ spare ich Euch hier besser). Das Resultat des vorhandenen technischen Pro-
+ blemes ist jedenfalls, da&szlig; in der Istec nur Schrott ankommt, die Software
+ jedoch eine ordnungsgem&auml;&szlig;e Konfiguration anzeigt.
+<P>
+ Wer dieses Problem hat, sollte sich um eine neue Software-Version k&uuml;mmern,
+ bzw. auf alternative Software (siehe <A HREF="#1">Software-Ecke</A> dieser
+ FAQ) ausweichen, da der Bug in der Istec-Soft von Emmerich steckt. Die dritte
+ Alternative lautet: nach jeder Schreib- bzw. Leseaktion von Daten (von/in
+ Istec) mindestens 30 Sekunden warten, bevor irgendeine neue Funktion
+ angew&auml;hlt wird.
+
+<H3><A NAME="3.2">3.2. Externe Rufumleitung geht nicht</A></H3>
+
+ Da n&uuml;tzen Dir auch 100 Austauschanlagen GAR NICHTS! Das ist noch ein Bug in
+ der Firmware. Der l&auml;&szlig;t sich umgehen wenn man die MSN0 nicht belegt und erst
+ bei MSN1 anf&auml;ngt seine Rufnummern einzutragen! Dann sollte auch die externe
+ Rufumleitung gehen. (Jens Meyer)
+<P>
+ Weiterhin gilt es zu beachten: Du darfst bei der externen Rufumleitung keine
+ zus&auml;tzliche "0" bei der externen Nummer eingeben! Also nicht 0 0951 xxxxx,
+ sondern einfach 0951 xxxxx... (Robert Klarmann)
+
+<H3><A NAME="3.3">3.3. Rauschen bei jedem zweiten Anruf</A></H3>
+
+ Wer mit diesem Problem zu schaffen hat, wende sich bitte an Christian Bolz,
+ 2:2474/411@FidoNet (EMail:christian_bolz@f411.n2474.z2.schiele-ct.de). Sein
+ "vor&uuml;bergehender" Tip: ein Software-Reset wirkt zeitweilig Wunder.
+<P>
+ Bei mir half folgendes wunderbar (so auch bei einigen anderen): Istec-
+ Konfiguration "gebackupped", dann die Istec resetted. Anschliessend die
+ Konfiguration wieder eingespielt. Einziger Unterschied (und hier vermuten
+ wir den Fehler): _Keinen_ Geb&uuml;hrenImpuls auf analogen Endger&auml;ten
+ erzeugen lassen, wenn nicht von der Telekomik das Feature
+ "Geb&uuml;hren&uuml;bermittlung <U>w&auml;hrend</U> des Gespr&auml;ches" aktiviert ist.
+ Zumindest ab der FirmWare-Version 1.92 kann sich dieser Punkt aber auch
+ als hinf&auml;llig erweisen...
+<P>
+ (Andreas Rehberg)
+<P>
+ Der Firma Emmerich sind Probleme bez&uuml;glich schlechter Gespr&auml;chsqualit&auml;t
+ sowie verrauschter Leitungen ebenfalls bekannt, und zwar in Verbindung mit
+ NTBA's der Firma ALCATEL mit der Seriennummer 153 277 013 5 300, wobei es
+ wohl auf die letzten 3 Ziffern ankommt ( also auf die 300 ). Aus anderer
+ Quelle erfuhr ich, das auch Ger&auml;te mit der Endnummer 500 Probleme bereiten
+ k&ouml;nnen. Da ich ein Ger&auml;t mit der Endnummer 300 hatte, rief ich bei der
+ Telekom an und schilderte meine Sorgen. Nach ca. 30 min. rief die Telekom
+ zur&uuml;ck, best&auml;tigte indirekt das Problem ( "..wir hatten schon mal einen
+ &auml;hnlichen Fall" ), und bot das Auswechseln des NTBA's an.
+ Bei dem Servicetechniker, der den Termin kl&auml;rte, konnte ich mir dann
+ sogar die Herstellerfirma des NTBA's aussuchen. Ich habe mich dann f&uuml;r
+ ein Ger&auml;t von Siemens entschieden, weil ich von Emmerich wu&szlig;te, das
+ Siemes und Bosch einwandfrei arbeiten, was ich best&auml;tigen kann. Alle
+ Probleme, bis auf die Hintergrundmusik sind beseitigt. Aber daran arbeite
+ ich auch noch.
+<P>
+ (Thomas Behrens, 2:2426/6040.20@fidonet.org)
+
+
+<H3><A NAME="3.4">3.4. ISTEC pr&auml;sentiert immer die falsche MSN</A></H3>
+
+<B>Problem:</B><P>
+ Die ISTEC 1008 kann die Herausgabe von MSNs nicht selektiv
+ unterdr&uuml;cken. Dadurch kann es passieren, da&szlig; bei Anrufen von Ger&auml;ten, die
+ entweder
+<PRE>        - auf &ouml;ffentliche wie private MSNs oder
+        - nur auf private MSNs
+</PRE> gruppiert sind, genau die ungewollte Nr. herausger&uuml;ckt wird.
+<P>
+<B>L&ouml;sung:</B><P>
+ Problem 1 lie&szlig; sich hier dadurch korrigieren, da&szlig; MSN#0 freigehalten
+ und die (&ouml;ff.) Haupt-MSN als #1 eingetragen wurde (die Haupt-MSN als #0 ergab
+ f&uuml;r jedes so gruppierte Ger&auml;t die Nennung der privaten Folge-MSN !).
+ Anrufe von "rein privat" gruppierten Ger&auml;ten zeigten der Gegenseite
+ daraufhin leider die privaten MSNs. Nach Einschieben einer Dummy-MSN (z.B.
+ 99999999) als #1 und Gruppierung der privaten Apparate mit sowohl der
+ Dummy-MSN *und* ihrer jeweiligen privaten wird auch bei Anrufen von dort
+ immer die Haupt-MSN genannt.
+<P>
+ (Ralf Pradella)
+
+
+<H3><A NAME="3.9">3.9. Wie erreiche ich die Firma Emmerich?</A></H3>
+<PRE>
+  Per SnailMail zum Bleistift so:
+
+   Christoph Emmerich  GmbH  & Co KG
+   Homburger Landstr. 148
+   60435 Frankfurt
+
+  (Dirk Heiss)
+
+  Telefon: 069-548030
+  Telefax: 069-54803210 (Vorsicht! Kein Kontakt mit der Dienstekennung
+                        "Fax Gruppe 3" m&ouml;glich! "DataModem" bzw.
+                        "Fernsprechen analog" hingegen funktionieren.)
+  MailBox: 069-95431322 (analog/14k4) -- 2:244/1230@fidonet
+                 95431361 (ISDN/X.75) -- 2:244/1231@fidonet
+
+  Service-Techniker Durchwahl: 54803-265 bzw. -264 -- oder Fax an -204 und um
+  R&uuml;ckruf bitten (Christian Bolz)
+
+  (Andreas Rehberg / RTFM :-)
+
+  Hotline  = 01805-237245
+  Infoline = 01805-237213
+
+  (Andy Lammerskitten, 2:2449/176.6)
+</PRE>
+<P>
+ <A NAME="qumran">Support</A> f&uuml;r die Istec gibt es auch bei mir in der Box (neueste FAQ,
+ SoftWare f&uuml;r die Konfiguration unter diversen Betriebssystemen, diverse
+ Eprom-Versionen...):
+<PRE>
+  ZyX 19k2:  +49-441-9570436   2:2426/2160@fidonet   36:7332/102@reshet
+  ISDN 64k:  +49-441-9570436   2:2426/2161@fidonet   36:7332/101@reshet
+
+  (Andreas Rehberg, Sysop Qumran Cave)
+</PRE>
+<HR>
+
+Zusammengestellt und betreut wird diese FAQ derzeit von Andreas "Izzy" Rehberg,
+2:2426/2160@FidoNet bzw. 36:7332/102@Reshet, 81:449/2625@OS2Net,
+izzy@qumran.north.de. Anregungen f&uuml;r bzw. Erg&auml;nzungen zur selbigen bitte per 
+NM/EMail an eine dieser Adresse schicken.
+<HR>
+
+ENDE der ISTEC-FAQ                                                      [EOF]
+ 
+</BODY>
+</HTML>

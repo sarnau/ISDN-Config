@@ -1,0 +1,102 @@
+!######################################################################
+!						Teilnehmer-Daten
+!######################################################################
+
+*tndat_dlg.xmtChildren:			unmanaged XmtLayout tndat;
+*tndat_dlg.title:				Teilnehmer-Daten
+*tndat.autoUnmanage:			False
+*tndat.dialogStyle:				dialog_primary_application_modal
+
+*tndat.xmtChildren: \
+			XmtChooser whichone, settings1, settings2; \
+			XmtInputField weckz,nbb,numl,nnz,rufz; \
+			XmPushButton load,save,read,write,okay,help;
+
+*tndat.weckz.sensitive: False
+*tndat.nbb.sensitive: False
+*tndat.numl.sensitive: False
+*tndat.nnz.sensitive: False
+*tndat.rufz.sensitive: False
+
+*tndat.weckz.pattern: dddd
+*tndat.rufz.pattern: ddd
+*tndat.numl.pattern: dddddddddddddddddddddddd
+*tndat.nbb.pattern: dddddddddddddddddddddddd
+*tndat.nnz.pattern: dddddddddddddddddddddddd
+*tndat.XmtInputField.matchAll: False
+*tndat.nnz.verifyCallback:	Check_NNZ();
+*tndat.numl.verifyCallback:	Check_NUML();
+
+*tndat.whichone.visibleItems: 15
+*tndat.whichone.chooserType: XmtChooserRadioList
+*tndat.whichone.strings: "dummy"
+
+*tndat.whichone.sensitive: False
+
+*tndat.settings1.chooserType: XmtChooserCheckBox
+*tndat.settings1.strings: \
+	"Anklopfschutz","Aufschaltschutz","Anrufschutz","Hotline (Babyruf)",\
+	"Raumüberwachung","Rufnr.-Unterdrückung gehend",\
+	"Rufnr.-Unterdrückung kommend","---"
+
+*tndat.settings1.sensitive: False
+*tndat.settings1.item4.sensitive: False
+*tndat.settings1.item7.sensitive: False
+
+*tndat.settings2.chooserType: XmtChooserCheckBox
+*tndat.settings2.strings: \
+	"Zweitwecker 1","Zweitwecker 2",\
+	"---","---","---","---","---","Weckruf aktiv"
+
+*tndat.settings2.sensitive: False
+*tndat.settings2.item2.sensitive: False
+*tndat.settings2.item3.sensitive: False
+*tndat.settings2.item4.sensitive: False
+*tndat.settings2.item5.sensitive: False
+*tndat.settings2.item6.sensitive: False
+
+*tndat.layout: \
+	Etched Bottom Row { \
+		Col { \
+			Caption tl "Teilnehmer" whichone \
+		}\
+		Col { \
+			Caption tl "Weckzeit"  Etched Through 6 2 Row { \
+				Caption "Weckzeit (hhmm): " weckz\
+			} \
+			Caption tl "Rufumleitung"  Etched Through 6 2 Col { \
+				Caption "Besetzt: " nbb \
+				Caption "Ständig: " numl \
+				Caption "n. Zeit: " nnz \
+				Caption "Rufzeit: " rufz \
+			} \
+		} \
+		Col { \
+			Caption tl "Funktionen"  Etched Through 6 2 Row { \
+				settings1 settings2 \
+			} \
+		} \
+	} \
+    Fixed Equal Row { \
+        Col { load save }\
+        Etched Left Col { read write } \
+        Etched Left Col { help okay } \
+    }
+
+*tndat.whichone.valueChangedCallback: selectTDat();
+*tndat*okay.activateCallback: XmtDialogOkayCallback();
+*tndat*load.activateCallback:  loadTlnDat();
+*tndat*save.activateCallback:  saveTlnDat();
+*tndat*read.activateCallback:  readTlnDat();
+*tndat*write.activateCallback: writeTlnDat();
+
+*tndat.save.sensitive: False
+*tndat.write.sensitive: False
+*tndat.load.sensitive: False
+
+*tndat.okay.labelString: OK
+*tndat.load.labelString: Laden
+*tndat.save.labelString: Sichern
+*tndat.read.labelString: Auslesen
+*tndat.write.labelString: Programmieren
+*tndat.help.labelString: Hilfe

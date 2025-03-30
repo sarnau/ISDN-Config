@@ -1,0 +1,44 @@
+!######################################################################
+!                     Teilnehmer-Berechtigungen
+!######################################################################
+
+*teltyp_dlg.xmtChildren:	unmanaged XmtLayout teltyp;
+*teltyp_dlg.title:			Gerätetypen
+*teltyp.autoUnmanage:		False
+*teltyp.dialogStyle:		dialog_primary_application_modal
+
+*teltyp.xmtChildren:	\
+		XmtChooser tln0,tln1,tln2,tln3,tln4,tln5,tln6,tln7; \
+		XmPushButton okay,cancel,help;
+
+*teltyp.XmtChooser.chooserType: XmtChooserOption
+*teltyp.XmtChooser.strings: "Telefon","Anrufbeantworter","Fax",\
+		"Modem","Kombi (Fax/Tel.)"
+*teltyp.tln0.strings: "Telefon","Anrufbeantworter","Fax", \
+		"Modem","Kombi (Fax/Tel.)","Türstation"
+
+*teltyp.okay.labelString:	OK
+*teltyp.cancel.labelString:	Abbrechen
+*teltyp.help.labelString:	Hilfe
+
+*teltyp.funk.valueChangedCallback:	doFunkPerm();
+*teltyp.okay.activateCallback:		XmtDialogOkayCallback();
+*teltyp.cancel.activateCallback:	XmtDialogCancelCallback();
+
+*teltyp.layout: \
+	Caption tl "Gerätetypen" Etched Through 6 2 Row { \
+		Etched Right Col { \
+			Caption "  AB #1:" tln0 \
+			Caption "  AB #2:" tln1 \
+			Caption "  AB #3:" tln2 \
+			Caption "  AB #4:" tln3 \
+		} \
+		Col { \
+			Caption "  AB #5:" tln4 \
+			Caption "  AB #6:" tln5 \
+			Caption "  AB #7:" tln6 \
+			Caption "  AB #8:" tln7 \
+		} \
+	}\
+	Fixed Equal Row { okay cancel help }
+

@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+<TITLE>Euracom - </TITLE>
+<!-- Changed by: 0000-Admin(0000),  6-Aug-1996 -->
+<!-- Changed by: Uwe Putlitz, 20-Sep-1996 -->
+</HEAD>
+<BODY bgcolor="#ffffff" link="#00bb55" BACKGROUND="/bilder/hinter.gif">
+<IMG align=right SRC="/bilder/ackeroben.gif">
+<PRE>
+
+
+
+
+</PRE>
+<CENTER><TABLE><TR><TD>
+Beschreibung der Schnittstelle zwischen der Euracom und dem PC-Konfigurator.<P>
+<A NAME="spezi">
+<H2>1. Schnittstellenspezifikation</H2>
+Die Verbindung zwischen der Euracom und dem PC-Konfigurator erfolgt &uuml;ber eine RS-232-Schnittstelle mit Hardwarehandschake, 4800 Bit/s, 8 Datenbit, 1 Stopbit, No Paritybit.<BR>
+Die Steuerung der Verbindung erfolgt &uuml;ber Hardwarehandschake mit den Signalleitungen RTS/CTS.
+<P><A NAME="komm">
+<H2>2. Kommunikationsablauf</H2>
+F&uuml;r die &Uuml;bertragung von Daten von oder zur Euracom ist ein spezielles Software-Handschake einzuhalten. Es mu&szlig; immer vor einer &Uuml;bertragung eine Startnachricht und nach der &Uuml;bertragung eine Endenachricht gesendet werden. Alle Datens&auml;tze mit Nutzdaten sind mit einer Pr&uuml;fsumme zu versehen, Kommandonachrichten werden mit der Defaultpr&uuml;fsumme NULL gesendet. Jede Nachricht mu&szlig; quittiert werden.<BR>
+Es ist bei der Kommunikation zur Euracom zwingend notwendig bestimmte Datens&auml;tze in einer festgelegten Reihenfolge auszulesen, bzw. zu schreiben.
+Dieses sind:<P>
+<OL>
+<LI>Die Konfigurationsdaten f&uuml;r alle 3 S0-Ports
+<LI>Die Konfigurationsdaten der Rufnummern aller Teilnehmer
+<LI>alle anderen Datens&auml;tze k&ouml;nnen danach in beliebiger Reihenfolge gesendet bzw. empfangen werden.
+</OL>
+<A HREF="/schnittstelle/schnittindex.html">Zur&uuml;ck zum Index</A>
+</TD></TR></TABLE></CENTER>
+<CENTER><TABLE width=500>
+<TR><TD align=left><A HREF="/schnittstelle/schnittindex.html"><IMG border=0 SRC="/bilder/links.gif"></TD>
+<TD align=center><A HREF="/welcome.html"><IMG border=0 SRC="/bilder/euracom.gif"></TD>
+<TD align=right><A HREF="/schnittstelle/seite3.html"><IMG border=0 SRC="/bilder/rechts.gif"></TD></TR>
+</TABLE></CENTER>

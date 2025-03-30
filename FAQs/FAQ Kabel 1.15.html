@@ -1,0 +1,1752 @@
+<HTML>
+<HEAD>
+<TITLE>FAQ Kabel</TITLE>
+</HEAD>
+<body>
+<PRE>
+Archive-name: faqkabel
+Frequency: monthly
+Version: $Id: faqkabel.html,v 1.15 1996/02/14 12:55:17 hifi Exp $</PRE>
+<HR>
+<H1>Die Kabel-FAQ</H1>
+<HR>
+Da immer wieder Fragen zum Thema "Wie muss ich ein Kabel fuer xxx
+loeten?" auftauchen, habe ich hier diverse Steckerbelegungen,
+Kabeldaten, Signalbezeichnungen, -spannungen und -stromstaerken sowie
+spezielle Schaltungen zusammengestellt.<br>
+Soweit moeglich jeweils mit der Bedeutung der Signale, denn es kann
+fuer spezielle Zwecke noetig sein, Bruecken einzubauen oder Pins
+"falsch" zu beschalten, um einen bestimmten Effekt zu erzielen.
+Das Ganze traegt weniger den Charakter eines klassischen FAQ
+mit Frage: Antwort. Das ist aufgrund der Komplexitaet mancher
+Sachverhalte nicht zweckmaessig, es schadet nie, etwas rechts und
+links des eigentlichen Themas zu finden.
+<P>
+Das Ganze wird monatlich am 14. gepostet.<br>
+User, die kein W3 koennen oder wollen, koennen die aktuelle
+Version auch per mail beziehen. Sie schreiben eine mail an:<br>
+faqserv@flatta.in-berlin.de<br>
+Betreff/Subjekt: &lt;egal&gt;<br>
+Text / Body    : send kabelfaq.arj<br>
+oder: send: kabelfaq.zip<br>
+(Oder fuer Neulinge: Dir oder help oder Hilfe)<br>
+
+<P>
+Ergaenzungen und Korrekturen sind willkommen!
+(an <a href="mailto:hifi@scorpio.in-berlin.de">
+hifi@scorpio.in-berlin.de</a> schicken, oder wenn das nicht geht,
+<a href=faqkabel-k.html>HIER</a> klicken).
+<A HREF=#beitrag>(Hinweise dazu!)</A><br>
+Es fehlt noch:
+<UL>
+<LI> Ethernet-Verkabelung
+<LI> TAE-ISDN-Dosenbelegung noch unsicher, weiss es einer genau?
+</UL>
+<P>
+<I>Hinweis: Die FAQ besteht nur aus einer einzigen Datei, alle Links zeigen
+nur auf Stellen innehalb dieser Datei. Wer die Seite speichert, hat
+automatisch alles beisammen.</I>
+<HR>
+<H2>Inhalt:</H2>
+<OL>
+<LI><A HREF=#warnung>Warnung!</A>
+<LI><A HREF=#scart>Video</A>
+<LI><A HREF=#modem>Modem</A>
+<LI><A HREF=#nullmodem>Nullmodem/ser. Drucker</A>
+<LI><A HREF=#parallel>Parallel</A>
+<LI><A HREF=#rechrech>Parallel Rechner-Rechner</A>
+<LI><A HREF=#arcnet>Twisted Pair/Arcnet/Ethernet</A>
+<LI><A HREF=#scsi>SCSI</A>
+<LI><A HREF=#keyboard>PC-Keyboard/Monitor/Maus/Joystick</A>
+<LI><A HREF=#midi>Midi</A>
+<LI><A HREF=#audio1>Audio</A>
+<LI><A HREF=#telefon>Telefon</A>
+<LI><A HREF=#isdn>ISDN</A>
+<LI><A HREF=#laenge>Kabellaengen</A>
+<LI><A HREF=#links>Links zu anderen Seiten</A>
+</OL>
+<HR>
+<H2>Dank geht an folgende Leute:</H2>
+<DL>
+<DT>naddy@mips.pfalz.de (Christian Weisgerber),
+wolfgang@wmsickte.escape.de (Wolfgang Muees),
+oli@schwerin.netsurf.de  (Oliver)
+urlichs@smurf.noris.de (Matthias Urlichs),
+zoc@zocki.toppoint.de (Rainer Zocholl):
+	<DD>fuer anregende Diskussionen und genaue Werte,
+<DT>tom@black.pumuckl.cube.net (Thomas Brandl):
+	<DD>Arcnet/Twisted Pair,
+<DT>rene@flatta.in-berlin.de (Rene Kacza):
+	<DD>Midi-Belegungen, S-Video, CD-ROM-Audio
+<DT>CHARLIE@mobo.gun.de:
+	<DD>Joystick,
+<DT>J.INGWERSEN@CL-HH.comlink.de (Jan Ingwersen):
+	<DD>Modem am MAC und NeXT,
+<DT>turbo@pericont.in-berlin.de (Michael Gaehme):
+	<DD>fuer ueber Jahre von ihm zu mir gesickertes Wissen,
+<DT>Samuel_Keim@credo.lifenet.org
+	<DD>Audio, S-Video
+<DT>Garfield@rudisbox.rb.org (Bruno Leidig)
+	<DD>Netzteile Amiga und PC
+<DT>Rene_Baumann@p15.zap.schiele-ct.de (Rene Baumann)
+	<DD>25pol. SCSI-Belegung
+<DT>und:
+	<DD>diversen Unbekannten, die im Netz Erfahrungen preisgegeben
+haben und geben und<br>
+dem Land Berlin, dass mich als Arbeitgeber offensichtlich so versorgt,
+dass ich mir das Hobby leisten kann (oder das zumindest denke).
+</DL>
+<P>
+<A NAME=beitrag>Wer</A> mir ein laengeres Stueck schickt, moege bitte
+auf Umlaute und sonstige Sonderzeichen verzichten und moeglichst unter
+80 Zeichen/Zeile bleiben. Das hat folgende Gruende:
+<UL>
+<LI>der Inhalt richtet sich nicht nur an PC-User, und besonders
+  an Anfaenger, die vielleicht noch keinen Mime-kompatiblen Mailer/
+  Newsreader haben
+<LI>weil sich das vielleicht einer auf einem 08/15-Drucker ausdrucken will
+</UL>
+Ausserdem empfehle ich, die auf den Steckern/Buchsen aufgedruckten
+Zahlen zu benutzen, das verhindert Verwechslungen.
+<P>
+(c): Ich habe nichts dagegen, dass der Inhalt gepostet, ausgedruckt,
+gemailt oder sonstwie verteilt wird, solange das kostenlos passiert.
+Aenderungen bitte nicht selber vornehmen, sonst entstehen
+verschiedene Versionen mit unterschiedlichem Inhalt (und Wahrheitsgrad).
+Aenderungen also an mich mailen!
+<ADDRESS>
+hifi@scorpio.in-berlin.de (Gernot Zander>
+</ADDRESS>
+<P>
+<HR>
+
+
+
+<H3>
+<A NAME=warnung>1. Warnung!</A></H3>
+
+Um mit den folgenden Informationen etwas anfangen zu koennen, ist
+denn doch ein bisschen Vorwissen noetig. Man sollte z.B. schon mal
+einen Loetkolben in der Hand gehabt haben, wenn man an einen
+Sub-D-Stecker geht.
+<P>
+Ein bisschen Werkzeug ist auch zu empfehlen. Ein Satz
+Feinmechaniker-Schraubenzieher, kleine Flachzange, Abisolierzange
+und ein kleiner Loetkolben sind eigentlich das Mindeste. Wer
+oefter an Rechnern rumschraubt, sollte zusehen, einen
+Steckschluesselsatz fuer die Bolzen von Motherboards/SUB-D-Stecker
+usw. zu haben, es macht auf Dauer keine Freude, mit Rohrzange und
+200-W-Loetkolben zu arbeiten und mit den Zaehnen die Isolierung
+vom Draht zu knabbern. Fuer Telefoninstallation benoetigt man ebenso
+wie fuer Flachkabelverbindungen die passenden Quetschzangen.
+Letzteres laesst sich zwar auch in einem kleinen Schraubstock
+machen, aber einen Westernstecker bekommt man damit nicht auf's
+Kabel. Fuer Audio/Video kann auch ein Oszilloskop noetig sein,
+das man sich aber vielleicht auch ausleihen kann.
+<P>
+Auf einigen der Kabel kann <B>lebensgefaehrliche</B> Spannung sein. Da es
+nicht immer moeglich ist, die Leitungen abzutrennen (Telefon z.B.),
+ist also Vorsicht und isoliertes Werkzeug angebracht. Auch auf
+scheinbar harmlosen Leitungen (SCART-Kabel z.B.) kann durch Differenzen
+in der Erdung von Antenne/Wohnung Spannung sein. Ausserdem: Verursacht
+man beim Arbeiten einen Kurzschluss, kann das das Geraet "das
+Leben" kosten. Wenn irgend moeglich also nur an abgezogenen Leitungen
+arbeiten! Bitte auch bedenken, dass man in der Hitze des Gefechts schon
+mal ins Schwitzen geraet und dann wird ein el. Schlag schnell richtig
+gefaehrlich.
+<P>
+Veraenderungen an Leitungen und Dosen der Telekom unterliegen
+wechselnden Einschraenkungen. So ist derzeit das Parallelschalten
+von mehr als einem Endgeraet unzulaessig, nur die normgerechte
+Beschaltung der TAE-Dosen stellt sicher, dass zwar alle Geraete klingeln,
+aber immer nur eins abgehoben mit der Vermittlungsstelle verbunden
+sein kann. Was erlaubt ist und was nicht, ist den jeweils geltenden
+Gesetzen/Verordnungen/AGB's zu entnehmen. Das ist von Bastler
+selbst zu beachten!
+<P>
+<I>Nur saubere Arbeit ermoeglicht Erfolg.</I> Wer mit Luesterklemmen und
+Isolierband Drahtenden zusammenknotet darf sich nicht beklagen,
+wenn das nicht zuverlaessig geht. Ordentliche Loetstellen bzw.
+anstaendige Verschraubungen (bei Litze mit Adernendhuelsen, wenn es
+nicht spezielle Klemmen sind) oder am besten Quetsch- oder
+Schneid-Klemm-Technik reduzieren Fehlermoeglichkeiten! Draehte
+nur soweit abisolieren wie unbedingt noetig, laengere blanke
+Stellen koennen zu Kurzschluss fuehren (z.B. an den Schrauben
+fuer's Steckergehaeuse, sehr beliebt:-). Auch nicht vergessen:
+ordentliche Zugentlastung. Ist doch schade um die Arbeit, wenn
+der kleine Bruder ueber's neue Kabel stolpert und den Stecker
+gleich wieder abreisst.
+<P>
+Natuerlich kann fuer die Richtigkeit <I>keine Garantie</I> uebernommen
+werden. Das gilt insbesondere deshalb, weil ich nicht alles selber
+nachpruefen kann und mich zum Teil auf Mitteilungen anderer User
+verlassen muss. Ebensowenig werde ich ausprobieren, wieviel Volt
+ein Telefon z.B. aushaelt. Und ich selber kann mich schliesslich
+auch irren.<br>
+Nicht alle Zuarbeiter haben die Nummerierung gemaess den auf den
+Steckern zumeist aufgedruckten/eingepressten Zahlen vorgenommen,
+entsprechende Hinweise also beachten!<r>
+Manch Hersteller kocht ausserdem sein eigenes Sueppchen und belegt
+die Kabel nach seinen eigenen Vorstellungen. Nachmessen und in den
+Schaltplan sehen empfohlen!
+<P>
+Der Fachmann (ich bin keiner) wird meglicherweise die eine oder andere
+Inkorrektheit finden. Wer Datenblaetter oder Unterlagen der
+Standardisierungs-Institutionen hat, kann mir gerne genaue Angaben
+schicken.<br>
+Manches mag trivial sein, in Zeiten aber, wo jeder Rechnerbesitzer
+ueber T-Online und aehnliches in die Netze draeng(el)t, ist das Mass
+der Vorkenntnisse sehr unterschiedlich:-) Alle Informationen sind
+naturgemaess unvollstaendig (alle Details zusammen fuellen
+wahrscheinlich Gigabytes) und nach Murphy auch veraltet...
+<P>
+<HR>
+
+<H3>
+<A NAME=scart>
+2. Video</A></H3>
+
+Belegung SCART-Stecker:<br>
+<pre>
+                  1   3   5   7   9   11  13  15  17  19
+                +-----------------------------------------+
+                | I   I   I   I   I   I   I   I   I   I   |
+                |                                         \ 21
+                |   I   I   I   I   I   I   I   I   I   I   \
+                +--------------------------------------------
+                    2   4   6   8   10  12  14  16  18  20
+
+
+
+ 1 - NF Ausgang rechts/2 1 kOhm, 500 mV         rot
+ 2 - NF Eingang rechts/2                        tuerkis
+ 3 - NF Ausgang links/1				orange
+ 4 - NF Masse					violett
+ 5 - Blau Masse
+ 6 - NF Eingang links/1				blau
+ 7 - Blau
+ 8 - 12 V an 1 kOhm Schaltspannung		braun
+ 9 - Gruen Masse
+10 - Datenleitung 1
+11 - Gruen
+12 - Datenleitung 2
+13 - Rot Masse
+14 - Datenleitung 3
+15 - Rot
+16 - Austastsignal
+17 - Videosignal Masse
+18 - Austastsignal Masse			schwarz
+19 - Video Ausgang 1 V ss 75 Ohm		gelb
+20 - Video Eingang 1 V ss 75 Ohm                weiss
+21 - Steckerschirmumg				blank
+</pre><br>
+Mindestbeschaltung: 1 an 2, 2 an 1, 3 an 6, 4 an 4, 6 an 3,
+8 an 8, 17 an 17, 19 an 20, 20 an 19, 21 an 21
+<p>
+Nicht alle Geraete benutzen alle Kabel, bei normalen Videorekordern
+sind RGB und die Datenleitungen nicht belegt.<br>
+Bei SAT-Decodern ist ev. RGB als Ausgang belegt, schoen, wer's
+nutzen kann.
+<P>
+EIne Scart Buchse ist umschaltbar zwischen VHS und SVHS:<br>
+bei VHS: Pin15 ROT, Pin 19 Video Ausgang<br>
+SVHS:    Pin 15 C-Ausgang, Pin 19 Y-Ausgang<br>
+Wie die Umschaltung erfolgt, ist mir noch unklar.
+<P>
+Kabelfarben koennen abweichen, da keine Festlegung
+<P>
+Das Signal des in Deutschland ueblichen PAL-Systems hat folgende
+Parameter:<br>
+Zeilenfrequenz: 15,625 kHz<br>
+Bildfrequenz: 50 Hz interlaced<br>
+Bandbreite: 0-5 MHz<br>
+Farbhilfstraeger: 4,43 MHz<br>
+Wie man sieht, ist eine Verbindung mit VGA nicht ohne weiteres
+moeglich.
+<p>
+Hosiden (S-Video)<br>
+
+<pre>
+                     Einkerbung nach oben und
+                     Stift nach unten halten !
+
+                                |___|
+   4: Chrominanz-Signal (C)    o     o         3: Luminanz-Signal (Y)
+
+   2: Masse (Chrominanz)      o       o        1: Masse (Luminanz)
+                                 ===
+</pre>
+
+Hosidenanschluesse sind sowohl fuer S-VHS-Geraete, als auch fuer
+Hi-8-Geraete geeignet. Bei beiden Videoformaten sind Helligkeits-
+(=Luminanz-) und Farb- (= Chrominanz-) Signal zur Verbesserung der
+Bildqualitaet voneinander getrennt. Das Luminanzsignal (Y) liegt auf
+Pin 3, das Chrominanzsignal (C) auf Pin 4. Beide Leitung muessen
+voneinander abgeschirmt werden. Die jeweiligen Abschirmungen werden
+als Masse auf Pin 1 bzw. 2 gelegt. Hosidenverbindungen uebertragen nur
+Video-, aber kein Audiosignal.
+<p>
+Camcorder-Anschluss (Mini-DIN)<br>
+<br>
+<pre>
+            Die zwei inneren Spitzkerben (hier: '*')nach oben
+            und den Stift (hier: '-') nach unten halten !
+
+   4: Audio-Masse                o o           5: Aufnahme-PAUSE
+                               *     *
+   3: Schaltspannung          o       o        6: Audio LINKS oder MONO
+
+   2: Video-Masse             o       o        7: Chrominanz (C)
+
+   1: Video (Y bzw. Y/C)         o_o           8: Audio RECHTS
+
+</pre>
+Bei S-VHS-Systemen liegt das Luminanzsignal (Y) auf Pin 1, das
+Chrominanzsignal (C) auf Pin 7.<br>
+Bei VHS-Systemen liegt das gesamte Videosignal auf Pin 1, Pin 7 bleibt
+frei.<br>
+
+Monocamcorder uebertragen ihr Signal ueber Pin 6, Pin 8 bleibt frei.
+Kann der Camcorder ueber ein anderes Geraet fernbedient werden, so
+dient Pin 5 als Steuerleitung.
+
+<P>
+
+<HR>
+<H3>
+<A NAME=modem>
+3. Modem</A></H3>
+<H4>Bezeichnungen:</H4>
+<UL>
+<LI>DTE (Data Terminal Equipment) = DEE (DatenEndEinrichtung) = Computer o.
+  Terminal
+<LI>DCE (Data Carrier Equipment) = DUeE
+(DatenUebertragunsEinrichtung) = Modem o. ISDN-Terminaladapter o. ...
+</UL>
+<P>
+<H4>Logik:</H4>
++12 V - +3 V = low, -12 V - -3 V = high, offener Eingang undefiniert,
+meist low. Geringe Belastbarkeit, wenige mA, gerade
+genug fuer Low-Current-LED.
+<P>
+<H4>Belegungen:</H4>
+Kabel vom Modem zum Rechner sind 1 zu 1 beschaltet. TxD z.B. ist beim
+Rechner der Ausgang und beim Modem ein Eingang. Es wird stets davon
+ausgegangen, dass Daten zum Modem Sende-Daten sind und Daten vom
+Modem Empfangsdaten (auch wenn das Modem diese zum Rechner sendet).
+Womit auch ersichtlich ist, in welcher Richtung die Daten laufen.
+<P>
+Beim PC ist die Buchse am Rechner "maennlich", die am DCE "weiblich".
+<P>
+<pre>
+Mac DIN8 9polig  25polig Bezeichnung u. Bedeutung
+  4         -        1    Schutzerde (Schirm), meist unbelegt
+
+  3         3        2    TxD (Transmit Data - Sendedaten vom DTE ueber DCE
+                               zur Gegenstelle)
+  5         2        3    RxD (Recieve Data - Empfangsdaten von Gegenstelle
+                               ueber DCE zum DTE)
+  1         7        4    RTS (Reqest To Send - Empfangsbereitschaft des DTE)
+
+  2         8        5    CTS (Clear To Send - Sendebereitschaft des DCE)
+
+  -         6        6    DSR (Data Set Ready - DCE ist prinzipiell bereit,
+                               d.h. eingeschaltet)
+  8         5        7    GND (Signalmasse)
+
+  7         1        8    DCD (Data Carrier Detect, man ist verbunden)
+
+  -         4       20    DTR (Data Terminal Ready - DTE ist prinzipiell
+                               bereit, d.h. eingeschaltet + Port aktiviert)
+  -         9       22    RING (DCE hat Ruf erkannt)
+</pre>
+Eigentlich muesste RTS RTR heissen, Ready To Receive, die Bedeutung
+hat es bei Duplexbetrieb, wie heute ueblich.
+<P>
+Fuer Synchronbetrieb sind mehr Signale erforderlich. diese fehlen aber
+auf den 9poligen Steckern und beim PC auch auf den 25poligen. Beim MAC
+wird teilweise kein DTR gesendet. Der Amiga 1000 ignoriert RING. Das
+gilt auch fuer einige Atari-Modelle, teilweise fehlen da auch
+Handshake-Leitungen oder sind auf Dauer-an gesetzt.
+<P>
+<H4>Weitere Belegungen:</H4><br>
+<pre>
+Modem an Mac (Quelle: c't 2/93, 5/93)
+=====================================
+
+*Mac RS-422*               *Modem V.24*
+
+1----HsKo(RTS/DTR-----*---CTS---&gt;-5            HsKo   Handshake Output
+                      |                        HsKi   Handshake Input
+2-&lt;--HsKi(CTS)--------+---RTS---&gt;-4            TxD-   Transmit Data
+                      |                               (invertiert)
+3----(TxD)------------+---RxD---&gt;-3            GND    Signal ground
+                      |                        RxD-   Receive Data
+4----Signalerde---*---+-----------7                   (invertiert)
+                  |   |                        TxD+   Transmit Data
+5-&lt;--(RXD---------+---+---TxD-----2            GPi    General Purpose Unit
+                  |   |                        RxD+   Receive Data
+6    TxD+         |   |
+                  |   |
+7-&lt;--GPi(DCD)-----+---+---DTR-----20
+                  |   |
+8-&lt;--RXD+----------   ----DSR---&gt;-6
+
+(* Knoten, + Kreuzung nicht verbunden!)
+
+NeXT an Modem (Quelle: ZyXEL-Handbuch 1992)
+===========================================
+
+DIN-Mini8   ---#---       nicht doll gezeichnet...
+          /         \
+         / |8  |7 |6 \
+        |             |
+        | =5   =4  =3 |
+        |             |
+         \#  =2  =1 #/
+           \        /
+             ------
+
+Unterscheidung zwischen Modellen mit 68030 und 68040 sowie beim '030
+die Schnittstelle A und B!!!
+
+
+        030             040
+PIN    A      B         A/B    Modem
+
+ 1    DTR    DTR        DTR     20
+ 2    DCD    DCD        DCD      8
+ 3    TXD-   TXD-       TXD-     2
+ 4    GND    GND        GND      7
+ 5    RXD-   RXD-       RXD-     3
+ 6    TXD+   TXD+       RTS      4
+ 7    RTXC   5V/0,5A!!! RTXC
+ 8    RXD+   RXD+       CTS     7/5
+
+030 Port B beachten!!!
+</pre>
+<P>
+Die Telekom und aehnliche deutsche Firmen bennen Modems uebrigens
+maennlich "der Modem", angeblich von MOdulator/DEModulator. Die
+restliche Branche inklusive fast aller DFUe-Freaks sagt aber
+"das Modem".
+<P>
+<HR>
+
+<H3>
+<A NAME=nullmodem>
+4. Rechner-Rechner (Nullmodem)/ser. Drucker</A></H3>
+
+Oft muessen auch Daten zwischen "gleichen" Geraeten transportiert
+werden.<br>
+Mit "gleiche Geraete" ist hierbei deren logische Funktion als
+Daten-End- oder -Uebertragungs-Geraet (DTE oder DCE) gemeint.
+Als DTE verstehen sich in der Regel Terminals, Drucker und
+natuerlich auch der Rechner selbst. Als DCE fungieren z.B. Modems
+und ISDN-TA's. Dies ist ggf. durch einen Blick auf die Belegung der
+Schnittstelle festzustellen, ist TxD (Pinbelegung siehe oben!) ein
+Ausgang, so hat man ein DTE, wenn TxD als Eingang bezeichnet ist,
+fuehlt sich das Geraet als DCE.
+<P>
+Fuer Datenuebertragungen zwischen "gleichen" Geraeten muessen die
+Datenleitungen (RxD und TxD) natuerlich gekreuzt werden. Derartige
+Kabel werden "Nullmodemkabel" genannt, weil sie jeder Seite
+vorspielen, dass am anderen Ende ein DCE sei.
+<P>
+Das einfachste Verbindungskabel benoetigt nur drei Leitungen: RxD,
+TxD und GND. Fuer LapLink z.B. genuegt das.
+<P>
+Braucht man einen Hardware-Handshake, so muessen ausserdem
+mindestens RTS und CTS verbunden werden, ebenfalls gekreuzt.
+<P>
+Werden auch noch die Bereitschaftssignale (Geraet eingeschaltet)
+benoetigt, sind auch DTR und DSR gekreuzt zu verbinden.
+<P>
+Benutzt man Software, die eigentlich fuer eine Modemverbindung gedacht
+ist und ein Carriersignal erwartet, muss man weitere Signale verbinden.
+Da das DTE nur zwei Ausgaenge hat (DTR und RTS), ein DCE aber 4 (CTS,
+DSR, RING und DCD) kann es noetig sein, "Falschverbindungen" einzubauen,
+um so z.B. das eigene DTR als fremdes DCD "vorzuspielen" oder
+auch das eigene DTR dem "Gegner" als DCD _und_ DSR.<br>
+DTR an DSR waere eigentlich richtig, aber wenn die Soft ein
+Carriersignal braucht und (oft) DSR ignoriert...<br>
+(RTS kommt fuer solche Spielchen normalerweise nicht in Frage, weil es
+fuer den Handshake staendig gebraucht wird.)
+<P>
+Zu Testzwecken kann man auch noch einen Schalter einbauen, der den
+DCD-Eingang gezielt belegt, um "Carrier da" oder "Carrier weg" zu
+simulieren. Hier muss man gelegentlich probieren, es gibt auch
+ganz "schraege" Geraete, die die Flusskontrolle mit DTR/DSR machen
+wollen, so dass man dann RTS mit DSR und CTS mit DTR verbinden muss.
+<P>
+Fuer serielle Drucker sollten mindestens GND und TxD/RxD verbunden
+sein, wenn XOn/XOff als Handshake benutzt wird, besser waere aber ein
+vollstaendig belegtes Kabel, um auch den Einschaltzustand ueberpruefen
+zu koennen. Wer sich wundert, warum es bis zum Druck bei seinem
+Laserdrucker so lange dauert, sollte mal nachrechnen, wieviel Zeit
+fuer 1 MB bei 9600 oder 19200 Baud benoetigt wird... Parallel
+geht's wesentlich schneller.
+<P>
+Es folgt die idiotensichere Variante, je nach Bedarf kann man Leitungen
+(oben sind die wichtigen) weglassen:<br>
+<pre>
+  DTE 1                                        DTE 2
+9pol 25pol (female)                          25pol 9pol (female)
+ 5    7  ---GND---------------------GND-------  7   5
+
+ 2    3  ---RxD--------. ,----------RxD-------  3   2
+                        X
+ 3    2  ---TxD--------' `----------TxD-------  2   3
+
+ 7    4  ---RTS--------. ,----------RTS-------  4   7
+                        X
+ 8    5  ---CTS--------' `----------CTS-------  5   8
+
+ 4   20  ---DTR--------. ,----------DTR------- 20   4
+                        X
+ 6    6  ---DSR--o-----' `-------o--DSR-------  6   6
+                 |               |
+ 1    8  ---DCD--'               `--DCD-------  8   1
+</pre>
+<P>
+Kaeufliche Nullmodemkabel bzw. Adapter enthalten angeblich
+nicht diese Schaltung, sondern bruecken die Handshakeleitungen
+zum Teil nur lokal. Ich kann das aber nicht bestaetigen (habe
+noch nie eins fertig gekauft:-)
+<P>
+<HR>
+
+
+<H3>
+<A NAME=parallel>
+5. Parallel</A></H3>
+
+Logik: +5 V = high, 0 V = low (TTL-Pegel)<br>
+Geringe Belastbarkeit, wenige mA. Zuwenig fuer normale LED, wenn
+Normpegel gehalten werden soll.<br>
+"-" vor der Bezeichnung: Signal ist low-aktiv.<br>
+<pre>
+Rechner   Drucker   Bedeutung (Ein-/Ausgang aus Sicht des PC)
+   1         1      -Strobe (Daten uebernehmen)   aus
+   2         2       D0 (Datenbit 0)              aus
+   3         3       D1
+   4         4       D2               .
+   5         5       D3               .
+   6         6       D4               .
+   7         7       D5
+   8         8       D6
+   9         9       D7 (Datenbit 7)              aus
+  10        10      -Acknowledge (Verstanden)     ein
+  11        11       Busy (Besetzt)               ein
+  12        12       PE (kein Papier)             ein
+  13        13       Select (Drucker online)      ein
+  14        14      -autofed                      aus
+  15        32      -Error (Drucker Fehler)       ein
+  16        31      -Init (Drucker zuruecksetzen) aus
+  17        36      -Select                        ?*
+  18        19
+   .         .       Signalmasse, alle verbunden
+   .         .       (auch im Druckerkabel)
+  25        30
+   -        16       GND**
+   -        17       GND**
+   -        18       +5 Volt**
+   -        33       GND**
+   -        34       n.c.**
+   -        35       +5 Volt**
+</pre>
+*? vermutlich Ausgang, wird kaum benutzt, ueblich ist Select auf der 13
+**sicherlich nicht bei allen Druckern
+<P>
+<HR>
+
+<H3>
+<A NAME=rechrech>
+6. Parallel Rechner-Rechner</A></H3>
+
+Kabel fuer Flying Dutchman:
+<pre>
+Client                  Host
+   1 ------------------- 11
+   5 ------------------- 10
+   4 ------------------- 12
+   3 ------------------- 13
+   2 ------------------- 15
+  11 -------------------  1
+  10 -------------------  5
+  12 -------------------  4
+  13 -------------------  3
+  15 -------------------  2
+</pre>
+Kabel fuer Laplink und Interlink
+<pre>
+Client                  Host
+   6 ------------------- 11
+   5 ------------------- 10
+   4 ------------------- 12
+   3 ------------------- 13
+   2 ------------------- 15
+  11 -------------------  6
+  10 -------------------  5
+  12 -------------------  4
+  13 -------------------  3
+  15 -------------------  2
+</pre>
+Kirschbaumlink
+<pre>
+   2 ------------------- 15
+   3 ------------------- 13
+   4 ------------------- 12
+   5 ------------------- 10
+   6 ------------------- 11
+  11 -------------------  6
+  10 -------------------  5
+  12 -------------------  4
+  13 -------------------  3
+  15 -------------------  2
+  18 -o---------------o- 18
+  25 -'               `- 25
+</pre>
+(<I>Eigentlich</I> ist das nicht noetig, da der Software jeweils ein Kabel
+oder zumindest die Beschreibung beiliegt. Wer die aber verschusselt hat...)
+<P>
+<HR>
+
+
+<H3>
+<A NAME=arcnet>
+7. Twisted Pair/Arcnet/Ethernet</A></H3>
+
+<H4>Bemerkungen zur Arcnet-Verkabelung:</H4>
+<DL>
+<DT>Kabel
+	<DD>In beiden Faellen (Twisted Pair und Coax Kabel) empfehlen wir
+       eine minimale Laenge von 2m zwischen je 2 Punkten.
+<DT>Coax
+	<DD>Abschlusswiderstand muss 1/2 Watt, 93 Ohm (5%)-Widerstand
+	sein.<br>
+       Kabel: RG62 oder RG62a/u<br>
+       Unbenutzte Kabelenden muessen terminiert werden.
+<DT>Twisted Pair
+       <DD>Abschlusswiderstand muss 1/2 Watt 100 Ohm (5%)-Widerstand
+	sein.<br>
+       Kabel: BELDEN Kabel Nr: 1227A 24 AWG 2PR oder 1228A 24 AWG 3PR
+              oder aequivalentes Kabel.<br>
+       Unbenutzte Kabelenden muessen terminiert werden.
+</DL>
+<H4>Anforderungen an ein TWISTED PAIR Kabel:</H4>
+<UL>
+<LI>Das Kabel muss 100 Ohm Impedanz haben.
+<LI>Es muss mindestens 6x pro Meter verdrillt sein.
+<LI>Gleichstromwiderstand darf auf 330 m nicht groesser als 28.6 Ohm seim
+<LI>Maximale Abschwaechung darf auf 330 m nicht groesser als 16 db bei
+  5 Mhz sein. (16 db = 1/40 der Ausgangsleistung)
+<LI>Der RJ11 Stecker benutzt ein Kabelpaar in einer gerade durchgehenden
+  Verbindung durch die beiden zentralen Kontakte 3 und 4.
+</UL>
+
+<H4>Bemerkungen zu einem Verkabelung mit Telefonkabeln:</H4>
+<UL>
+<LI>Dieses Kabel hat eine mittlere Frequenz von ca. 10 kHz.
+<LI>Die Impedanz dieses Kabels betraegt ca. 30-45 Ohm.
+<LI>Dieses Kabel ist nicht verdrillt.
+<LI>Die mittleren Kontakte sind VERDREHT (!).
+</UL>
+Somit ist dieses Kabel nicht unterstuetzt fuer Arcnet Netze, denn es
+erfuellt fast keine der Anforderungen an ein Twisted Pair Kabel.
+<P>
+<I>Bemerkungen von tom@black.pumuckl.cube.net (Thomas Brandl):<br>
+Wenn man nur eine sehr kurze Strecke zwischen 2 Rechnern ueberbruecken
+will, dann kann man auch ein Telefonkabel nehmen, bei dem man die
+Kreuzung wieder rueckgaengig macht (Stecker abschneiden, abisolieren,
+neuen Stecker andersherum wieder draufsetzen und Kontakte festdruecken
+(Stecker ist selbstschneidend)).
+Ein solches Kabel funktioniert bei mir mit 2 Arcnetkarten gut.
+Begruendung:
+<UL>
+<LI>Das Verdrillen hilft i.a. gegen Stoereinfluesse;
+     3m Kabellaenge sind aber nicht viel.
+<LI>Die Karten koennen wohl bis zu 28 Ohm als Lastwiderstand verkraften,
+     das sollte mit 3 Metern kaum zu ueberbieten sein.
+<LI>16 db = 10^1.6 =(ca.)= 1/40 der Leistung, ab der die Karten Signale
+     nicht mehr unterscheiden koennen. Solch eine Abschwaechung ist auf
+     3 Metern noch nicht festzustellen.
+</UL>
+</I>
+<P>
+<H4>Ethernet</H4>
+Die Uebertragung wird nach IEEE 802.3 abgewickelt (CSMA/CD). Die sieht
+ungefaehr vor:
+<DL>
+<DT>Carrier Sense
+	<DD>Jede Station im Netz ueberprueft, ob das Netz frei ist, bevor
+	sie sendet.
+<DT>Multiple Access
+	<DD>Ist das Netz frei, kann jeder zugreifen. Alle sind
+	gleichberechtigt.
+<DT>Collision Detection
+	<DD>Beginnen bei freiem Netz mehrer gleichzeitig zu senden,
+	nennt man das Kollision. Diese wird erkannt, alle Beteiligten
+	stoppen und beginnen nach zufaelligen Wartezeiten neu.
+</DL>
+Ethernet arbeitet generell mit 10 MBit/s. Darin sind aber Verwaltungsdaten
+enthalten.<br>
+Bei zu vielen Stationen nehmen Verluste durch Kollisionen zu. Dagegen
+hilft dann, das Netz in Segmente aufzuteilen und diese mit Bridges
+zu verbinden, um mit Traffic innehalb eines Segments nicht das ganze Netz
+zu belasten.
+<p>
+Es gibt zwei Kabelarten:
+<DL>
+<DT>Standard-Ethernet (Thick-Ethernet)
+	<DD>Es wird ca. 1 cm dickes spezielles Ethernetkabel benutzt.
+	Ein Sement darf max. 500 m lang sein, darin max. 100 Stationen,
+	insgesamt max. 5 Segmente. Angeschlossen werden Transciever, die
+	dann mit Transceiverkabel an die 15pol. Buchsen der Karten/Repeater
+	angeschlossen werden. Das Transceiver-Kabel darf 50 m (dick)
+	oder 16 m (duenn) lang sein. Die Transceiver muessen mind. 2,5 m
+	Abstand voneinander haben. Die Enden eines Thick-Ethernet-Segments
+	sind mit Terminatoren zu versehen und einer davon ist zu erden.
+<DT>Cheapernet (Thin-Ethernet)
+	<DD>Es wird normales Coax-Kabel RG58/U benutzt.
+	Als Stecker werden BNC-Stecker eingesetzt. Ein Segment darf
+	max. 180 m lang sein, darin max. 30 Stationen, insgesamt
+	max. 5 Segmente. Auf die Karten kommen T-Stuecke, die dann
+	mit den Kabeln verbunden werden. Das erste und das letzte
+	T-Stueck bekommt einen Terminator-Stecker. Das T-Stueck muss
+	direkt auf die Karte. Es gibt auch Anschlusskabel mit doppelter
+	Leitung und in einem Stecker integriertem T-Stueck (EAD-System).
+	Diese zaehlen in der Laenge doppelt. Soll ein Rechner vom
+	Netz genommen werden, ist das T-Stueck von der Karte zu trennen.
+	Beim EAD-System kann auch der Stecker aus der Wand gezogen
+	werden, die Dose stellt die Verbindung dann intern her.
+	Die Kabel zwischen den Sationen muessen mind. 0,5 m lang sein.
+	Es gibt auch Karten,
+	die auf Arcnetkabel (RG62) arbeiten koennen, in einem Segment
+	darf dann RG62 und RG58 aber nicht gemischt werden.
+</DL>
+Die Segmente (egal ob Thick- oder Thin-Ethernet) werden ueber Bridges,
+Repeater u. ae. zusammengeschaltet. Verzweigungen oder Schleifen sind
+generell nicht moeglich. Bei der Kabelanfertigung und -verlegung muss
+man sehr sorgfaeltig arbeiten, ein defektes Kabel legt in der Regel
+das gesamte Segment lahm.<br>
+<P>
+<HR>
+
+
+<H3>
+<A NAME=scsi>
+8. SCSI</A></H3>
+<pre>
+aus der comp.periphs.scsi-FAQ:
+_____________________________________  _____________________________________
+| SCSI  |         | MINI  |         |  | SCSI  |        | MINI  |          |
+| SIGNAL| DD-50P  | MICRO | DD-50SA |  | SIGNAL| DD-50P | MICRO | DD-50SA  |
+------------------------------------  -------------------------------------
+| -DB(0)|    2    |  26   |   34    |  |  GND  |    1    |   1   |    1    |
+| -DB(1)|    4    |  27   |    2    |  |  GND  |    3    |   2   |   18    |
+| -DB(2)|    6    |  28   |   19    |  |  GND  |    5    |   3   |   35    |
+| -DB(3)|    8    |  29   |   36    |  |  GND  |    7    |   4   |    3    |
+| -DB(4)|   10    |  30   |    4    |  |  GND  |    9    |   5   |   20    |
+| -DB(5)|   12    |  31   |   21    |  |  GND  |   11    |   6   |   37    |
+| -DB(6)|   14    |  32   |   38    |  |  GND  |   13    |   7   |    5    |
+| -DB(7)|   16    |  33   |    6    |  |  GND  |   15    |   8   |   22    |
+| -DB(P)|   18    |  34   |   23    |  |  GND  |   17    |   9   |   39    |
+|  GND  |   20    |  35   |   40    |  |  GND  |   19    |  10   |    7    |
+|  GND  |   22    |  36   |    8    |  |  GND  |   21    |  11   |   24    |
+|  RSR  |   24    |  37   |   25    |  |  RSR  |   23    |  12   |   41    |
+|TERMPWR|   26    |  38   |   42    |  |  OPEN |   25    |  13   |    9    |
+|  RSR  |   28    |  39   |   10    |  |  RSR  |   27    |  14   |   26    |
+|  GND  |   30    |  40   |   27    |  |  GND  |   29    |  15   |   43    |
+| -ATN  |   32    |  41   |   44    |  |  GND  |   31    |  16   |   11    |
+|  GND  |   34    |  42   |   12    |  |  GND  |   33    |  17   |   28    |
+|  BSY  |   36    |  43   |   29    |  |  GND  |   35    |  18   |   45    |
+| -ACK  |   38    |  44   |   46    |  |  GND  |   37    |  19   |   13    |
+| -RST  |   40    |  45   |   14    |  |  GND  |   39    |  20   |   30    |
+| -MSG  |   42    |  46   |   31    |  |  GND  |   41    |  21   |   47    |
+| -SEL  |   44    |  47   |   48    |  |  GND  |   43    |  22   |   15    |
+| -C/D  |   46    |  48   |   16    |  |  GND  |   45    |  23   |   32    |
+| -REQ  |   48    |  49   |   33    |  |  GND  |   47    |  24   |   49    |
+| -I/O  |   50    |  50   |   50    |  |  GND  |   49    |  25   |   17    |
+----------------------------------------------------------------------------
+
+ * NC = NOT CONNECTED
+
+ CONNECTOR TYPES:
+                                  DD-50SA
+                        ________________________            MINI-MICRO
+       DD-50P          |   -------------------  |      _____________________
+    ______________     |17 \o o o o o o o o o/1 |     |  _________________ |
+ 49| o o o o o o |1    | 33 \ o o o o o o o /18 |     |25\ o o o o o o o /1|
+ 50| o o o o o o |2    |  50 \o o o o o o o/ 34 |     | 50\o o o o o o o/26|
+   ---------------     |      -------------     |     |   --------------   |
+                       --------------------------     ----------------------
+
+(VIEWED FROM FACE OF CONNECTOR -  USE VENDOR NUMBERING SYSTEM AS SPECIFIED)
+
+ o Termination: The Single Ended electrical class depends on very tight
+termination tolerances, but the passive 132 ohm termination defined in 1986
+is mismatched with the cable impedance (typically below 100 ohms). Although
+not a problem at low speeds when only a few devices are connected,
+reflections can cause errors when transfer rates increase and/or more
+devices are added. In SCSI-2, an active terminator has been defined which
+lowers termination to 110 ohms and is a major boost to system integrity.
+
+ o Bus Arbitration, Parity and the Identify Message were options of SCSI,
+but are required in SCSI-2. All but the earliest and most primitive SCSI
+implementations had these features anyway, so SCSI-2 only legitimizes the de
+facto market choices. The Identify message has been enhanced to allow the
+target to execute processes, so that commands can be issued to the target
+and not just the LUNs.
+
+ o Connectors: The tab and receptacle microconnectors chosen for SCSI-2 are
+available from several sources. A smaller connector was seen as essential
+for the shrinking form factor of disk drives and other peripherals. This
+selection was one of the most argued over and contentious decisions made
+during SCSI-2 development.
+</pre>
+Von Rene Baumann die Belegung eines 25 SUB-D / 50 Centronics Kabels:
+<pre>
+SubD-25 SCSI50 Desc
+8       2      D0
+21      4      D1
+22      6      D2
+10      8      D3
+23      10     D4
+11      12     D5
+12      14     D6
+13      16     D7
+20      18     DBP Parity
+7       20     GND
+9       22     GND
+14      24     GND
+25      26     Term Power
+16      28     GND
+18      30     GND
+17      32     ATN
+24      34     GND
+6       36     BSY
+5       38     ACK
+4       40     RST
+2       42     MSG
+19      44     SEL
+15      46     C/D
+1       48     REQ
+3       50     I/O
+       1,3..49 GND
+</pre>
+<P>
+<HR>
+
+
+<H3>
+<A NAME=keyboard>
+9. PC-Keyboard/Monitor/Joystick</A></H3>
+
+<pre>
+
+ PC-Tastatur: 5-polig DIN
+
+      /----------\
+     /      2     \     Das soll der RUNDE Stecker der PC-Tastatur sein.
+    /  4        5  \    Ich habe keine anderen ASCII-Zeichen dafuer gefunden.
+   |                |
+   | 1            3 |       1: CLK      4: GND
+   |                |       2: DATA     5: +5 V
+    \      __      /        3: RESET
+     \    |  |    /
+      \----------/
+</pre>
+Zum Verlaengern darf <I>keinesfalls</I> ein handelsuebliches
+Audio-Verlaengerungskabel genommen werden, da bei diesem 2 und Masse
+verbunden sind.
+<P>
+<pre>
+  PS2-Tastatur: 6-polig
+
+     /-----------\
+    /             \
+   /    1     2    \    Auch ein RUNDER Stecker.
+  |                 |
+  |  3           4  |    1: DATA    4: +5 V
+  |       | |       |    2: NC      5: CLK
+  |       | |       |    3: GND     6: NC
+   \    5     6    /
+    \             /
+     \-----o-----/
+
+
+  EGA-Anschluss (Monitor):           9-polig
+
+
+   ------------------     1: GND        Masse
+   \ 5  4  3  2  1  /     2: RotLSB     Rot-Signal niederwertiges Bit
+    \  9  8  7  6  /      3: RotMSB     Rot-Signal hoeherwertiges Bit
+     \------------/       4: GruenMSB   Gruen-Signal hoeherwertiges Bit
+                          5: BlauMSB    Blau-Signal hoeherwertiges Bit
+                          6: GruenLSB   Gruen-Signal niederwertiges Bit
+                          7: BlauLSB    Blau-Signal niederwertiges Bit
+                          8: H-Sync(+)  Horizontal-Synchronisation
+                          9: V-Sync(-)  Vertikal-Synchronisation
+
+
+
+
+   VGA-Anschluss (Monitor):     15-polig
+
+
+   ------------------------    1: Rot        Farbsignal Rot (analog)
+   \    5  4  3  2  1     /    2: Gruen      Farbsignal Gruen (analog)
+    \    10  9  8  7  6  /     3: Blau       Farbsignal Blau (analog)
+     \  15 14 13 12 11  /      4: ID2        Monitor-Identifizierungsbit 2
+      \----------------/       5: NC         Nicht belegt
+                               6: GND-Rot    Masse Rot
+                               7: GND-Gruen  Masse Gruen
+                               8: GND-Blau   Masse Blau
+                               9: Kod.       Kodierung
+                               10: GND-Sync  Masse-Sync-Signal
+                               11: ID0       Monitor-Identifizierungsbit 0
+                               12: ID1       Monitor-Identifizierungsbit 1
+                               13: H-Sync    Horizontalsynchronisation
+                               14: V-Sync    Vertikalsynchronisation
+                               15: NC        Nicht belegt
+
+Hercules/CGA (9pol.)
+
+                             Hercules    CGA     CGA64/16
+   -------------------    1: Masse       Masse    Masse
+   \  5  4  3  2  1  /    2: n.c.        n.c.     RotMSB
+    \   9  8  7  6  /     3: n.c.        Rot      RotLSB
+     \-------------/      4: n.c.        Gruen    GruenLSB
+                          5: n.c.        Blau     BlauLSB
+                          6: hell        hell     GruenMSB
+                          7: Video       n.c.     BlauMSB
+                          8: H-Sync      H-Sync   H-Sync
+                          9: V-Sync neg. V-Sync   V-Sync neg.
+</pre>
+<P>
+Belegungen von Workstations hat Harald Milz <hm@ix.de>, das Eintippen
+waere zu muehsam und wuerde auch den Rahmen sprengen.
+Er kann's gegen Gebuehr kopieren. Als G3-Faxdatei kann ich
+es auch als Mail verschicken:-)
+<P>
+Maus:<br>
+
+  PS2-an RS 232: 9-polig
+<pre>
+
+vom Logitech Mouseman ausgemessen:
+     /-----O-----\
+    /      _      \
+   /   6  | |  5   \    Runde Buchse. Von vorn gesehen, Num-
+  |       |_|       |   mern stehen bei mir keine dran. 
+  |  4           3  |   PS/2 (s. Skizze)       RS 232 (nach Nummern)
+  |                 |         6                     3
+  |_               _|         5                     7
+    |   2     1   |           4                     8
+    \             /           3                     5
+     \-----------/            2                     2
+                              1                     4
+                            und Schirm         an Schirm
+
+Dann ein Adapter andersrum fuer eine Qtronix:
+PS/2 (Stecker, s. Skizze, nur seitenverkehrt, Nummern also gleich)
+an 9pol RS 232 (Stecker, Nummern nach Aufdruck)
+    PS/2        RS 232
+     1            1     Daten
+     X            2
+     3           3,5    Masse
+     4           4,7,9  +5 V
+     5            6     Takt
+     X            8
+
+</pre>
+Joystic:
+<pre>
+Hier die Belegung des Game Ports :
+
+Pin                     Anschluss
+------------------------------------------------------------------------
+(Diese werden fuer Joystick 1 benoetigt )
+1                       Betriebsspannung +5V
+4                       Masse
+2                       Feuer 1
+3                       Eingang 0 Poti 100K (das Poti sitzt im Joystick)
+6                       Eingang 1 Poti 100K (das Poti sitzt im Joystick)
+7                       Feuer 2
+
+-------------------------------------------------------------------------
+(Diese werden fuer Joystick 2 benoetigt )
+9                       Betriebsspannung +5V
+5                       Masse
+10                      Feuer 3
+11                      Eingang 3 Poti 100K (das Poti sitzt im Joystick)
+13                      Eingang 4 Poti 100K (das Poti sitzt im Joystick)
+14                      Feuer 4
+</pre>
+Das gilt nur wenn der Game-Port voll verdrahtet ist. Auf einigen
+Soundkarten ist dies aber nicht der Fall. Hier kann nur 1 Joystick
+betrieben werden ( d.h auch bei einem Game-Pad mit 4 Feuertastern
+funktionieren nur 2).<br>
+Bei Karten mit Midi (Soundblaster) liegt Midi-In auf 15 und Midi-Out
+auf 12. Joystickstecker sollten also nie eine Verbindung zu diesen Pins
+haben, die 5V bzw. Masse also ausschliesslich von 1/9 bzw. 4/5 holen.
+Ueber Pin 8 gibt's unterschiedliche Ansichten. Angeblich war bei der
+Skizze in der Anleitung zum Original-SB da ein Zeichenfehler. Nach
+Aussagen mehrere User ist Pin 8 mit 5V verbunden.
+<P>
+Netzteile:
+<pre>
+Hier die Belegung des PC- und des A1200-Steckers:
+
+PC-Power:
+=========
+
+                  1 1 1
+1 2 3 4 5 6 7 8 9 0 1 2
+
+===========|===========
+* * * * * *|* * * * * *
+           |
+
+1, 2, 3, 11 = rot     = +5V
+4           = weiss    = -5V
+5, 6, 7, 8  = schwarz = Masse
+9           = blau    = -12V
+10          = gelb    = +12V
+12          = orange  = PowerGood
+
+A500/A600/A1200
+===============
+
+  +--#--+    Netzteilstecker von hinten
+4 |*   *| 3  (Anloetseite) gesehen
+5 |  *  |
+1 | * * | 2
+  +-----+
+
+1 = +5V
+2 = Schirm (Masse)
+3 = +12V
+4 = Masse
+5 = -12V
+
+
+  (Erlaeuterung zu  PowerGood am PC-Netzteil                       )
+  (Diese Leitung geht auf High wenn alle Spannungen stabil auf dem )
+  (richtigen Wert stehen. Diese Leitung geht beim PC auf den       )
+  (Power-On-Reset.                                                 )
+</pre>
+<HR>
+
+
+<H3>
+<A NAME=midi>
+10. MIDI (Music Instrument Digital Interface)</A></H3>
+
+MIDI-Verbindungen gehoeren zum heutigen Standard in der PC-Technik,  wenn  man
+im Bereich Musik und Sound taetig ist.
+<P>
+Da Anfaenger in diesem Bereich meist sehr wenige Kenntnisse haben,  wie  diese
+Verbindungen ausgefuehrt werden und Kabelsaetze einen, IMHO, weit 
+ueberteuerten Preis haben, hier einige interessante Ansaetze.
+<P>
+Die Buchse an der Soundkarte ist als 15polige-Sub-D ausgefuehrt. Der Port wird
+auch zum Ansteuern des Joysticks benutzt. So musste eine Loesung gefunden
+werden, die sich gegeneinander nicht beeinflusst. MIDI-Geraete werden  mit
+einer 5-poligen DIN-Buchse (180grad) ausgefuehrt.
+<P>
+Die Anschlussbelegung ist hier von der Steckerseite gesehen aufgezeichnet. Beim
+selber Loeten ist also spiegelverkehrt zu arbeiten...:-)
+<P>
+<pre>
+  15pol-SUB-D                5pol-DIN
+1             8                 2
+o o o o o o o o                 o
+ o o o o o o o              5 o   o 4
+ 9           15            3 o     o 1
+</pre>
+Die Verbindungen sind folgendermassen auszufuehren: (Ausgemessen)
+<pre>
+          SUB-D       DIN
+MIDI-In     4          2
+            10         4
+            12         5
+
+MIDI-Out:   14         5
+            15         4
+</pre>
+Dabei stellen die PIN's folgende Signale zur Verfuegung: (DIN-Buchse)<br>
+5-Signal  4-Masse
+<P>
+Daraus folgert, das die Uebertragung seriell erfolgt.
+<P>
+Bei MIDI-Verbindungen gilt das bisher gesagte ueber Serielle Verbindungen. Die
+Uebertragung kann durch ein langes MIDI-Kabel schon sehr komische Effekte
+erzeugen, daher sollte die Laenge eines MIDI-Kabels 10mtr (max:15mtr) nicht
+ueberschreiten. Im Gegensatz zur einfachen seriellen Uebertragung gibt  es
+fuer die Empfaenger der MIDI-Daten keine Moeglichkeit, die Richtigkeit der
+Daten zu ueberpruefen. Das bedeutet, wenn ein Signal auf dem Weg verfaelscht
+wird, kann es nicht mehr richtig interpretiert werden. Die Uebertragung erfolgt
+8-bitweise und bereits ein falsches Bit kann das ganze System zum 'stehen'
+bringen.
+<P>
+MIDI-Geraete koennen auch untereinander verbunden  werden. Dabei  benutzt  man
+im allgemeinen einen sogenannten MIDI-Thru-Ausgang. An dem Port wird das
+Eingangssignal auf den Port durchgeschleift. Das waere dann eine
+kettenfoermige Verbindung. Bei langen Leitungswegen, kann es hier aber bereits
+schon  nach  3 Geraeten zu einer merklichen Verzoegerung des Signals
+kommen.<br>
+Um diesen Effekt zu vermeiden, benutzt man eine sogenannte MIDI-Thru Box.
+Die Box uebernimmt dann die zeitgleiche (sternfoermige) Verteilung des
+Signals.
+<P>
+Im Gegensatz zur kettenfoermigen Verkabelung - die auch nicht  immer
+funktioniert, da MIDI-Thru an den Geraeten keiner Spezifikation
+unterliegt - ist  bei der sternfoermigen Verkabelung nicht mit
+Verzoegerungen zu rechnen und das Ergebnis ist auch bei vielen Geraeten
+beachtlich.
+<P>
+Wer meint, anstelle der  MIDI-Thru-Schaltung  den  MIDI-Out-Port  benutzen zu
+koennen, um Signale durchzuschleifen, beisst leider auf Granit.  Am  Out-Port
+ist nur das Output-Signal des jeweiligen Geraetes  vorhanden.<br>
+Das merkt man aber erst, wenn man Expander benutzt, da diese keine eigene
+Klaviatur besitzen und somit auh keinen MIDI-Out-Port..:-)
+<P>
+Wichtig: Auch wenn MIDI DIN-Buchsen verwendet, so ist von einem Anschluss  des
+Kabels an eine etwa vorhandene Stereoanlage abzuraten! Es  funktioniert nicht.
+<P>
+<HR>
+
+
+<H3>
+<A NAME=audio1>
+11. Audio</A></H3>
+<pre>
+      ____   _____
+     /    |__|    \
+    /              \               Stecker beweglich
+   |                |              130-9 IEC-01
+   | 1            3 |
+   |                |              Buchse fest:
+    \              /               130-9 IEC-02
+     \      2     /
+      \__________/
+
+Kontaktnummern gesehen beim Blick auf die Steckerstifte.
+
+
+------------------------+---------+----------+----------+---------+---------+
+Anwendung               |    1    |    2     |    3     |    4    |    5    |
+------------------------+---------+----------+----------+---------+---------+
+Mikrofon, Mono-System   |  Signal |Schirmung |Rueck-    |--       |--       |
+(symetrisch)            |         |          |leitung   |         |         |
+------------------------+---------+----------+----------+---------+---------+
+Mikrofon, Mono-System   | Signal  |Schirmung |Rueck-    |--       |--       |
+(symetrisch),           |  und    |          |leitung   |         |         |
+tonadergespeist         |  + Pol  |          |und - Pol |         |         |
+------------------------+---------+----------+----------+---------+---------+
+Mikrofon, Mono-System   | Signal  |Schirmung |Rueck-    |--       |--       |
+(symetrisch, phantom-   |  und    |  und     |leitung   |         |         |
+gespeist)               |  + Pol  |  - Pol   |und + Pol |         |         |
+------------------------+---------+----------+----------+---------+---------+
+Mikrofon, Mono-System   | Signal  |Schirmung |--        |--       |--       |
+(unsymetrisch)          |         |und Rueck-|          |         |         |
+                        |         |leitung   |          |         |         |
+------------------------+---------+----------+----------+---------+---------+
+
+      ____   _____
+     /    |__|    \
+    /              \              Stecker beweglich:
+   |                |             130-0 IEC-03
+   | 1            3 |
+   |                |             Buchse fest:
+    \   4       5  /              130-9 IEC-04
+     \      2     /
+      \__________/
+
+Kontaktnummer gesehen beim Blick auf die Steckerstifte.
+
+
+------------------------+---------+----------+----------+---------+---------+
+Mikrofon, Mono-System   | Signal  |Schirmung |Rueck-    |verbunden|verbunden|
+(symetrisch)            |         |          |leitung   |mit 1    |mit 3    |
+------------------------+---------+----------+----------+---------+---------+
+Mikrofon, Mono-System   | Signal  |Schirmung |--        |verbunden|--       |
+(unsymetrisch)          |         |und Rueck-|          |mit 1    |         |
+                        |         |leitung   |          |         |         |
+------------------------+---------+----------+----------+---------+---------+
+Mikrofon, Stereo-System | Signal  |Schirmung |Ruecklei- |Signal   |Rueck-    |
+(symetrisch)            | linker  |          |tung lin- |rechter  |leitung  |
+                        | Kanal   |          |ker Kanal |Kanal    |rechter  |
+                        |         |          |          |         |Kanal    |
+------------------------+---------+----------+----------+---------+---------+
+Mikrofon, Stereo-System | Signal  |Schirmung |--        |Signal   |         |
+(unsymetrisch)          | linker  |und Rueck-|          |rechter  |         |
+                        | Kanal   |leitung   |          |Kanal    |         |
+------------------------+---------+----------+----------+---------+---------+
+Schallplatten-Abspiel-  | --      |Schirmung |Signal    |--       |verbunden|
+geraet und Tuner,       |         |und Rueck-|          |         |mit 3    |
+Mono-System             |         |leitung   |          |         |         |
+------------------------+---------+----------+----------+---------+---------+
+Schallplatten-Abspiel-  | --      |Schirmung |Signal    |--       |Signal   |
+geraet und Tuner,       |         |und Rueck-|linker    |         |rechter  |
+Stereo-System           |         |leitung   |Kanal     |         |Kanal    |
+------------------------+---------+----------+----------+---------+---------+
+Komb.Aufnahme-und Wieder|Ausgang  |Schirmung |Eingang   |verbunden|verbunden|
+gabe-Verbindungen an    |(Auf-    |und Rueck-|(Wieder-  |mit 1    |mit 3    |
+Rundfunkempf. und Ver-  | nahme)  |leitung   |gabe)     |         |         |
+staerker, Mono-System   |         |          |          |         |         |
+------------------------+---------+----------+----------+---------+---------+
+Komb.Aufnahme-und Wieder|Ausgang  |Schirmung |Eingang   |Ausgang  |Eingang  |
+gabe-Verbindungen am    |li. Kanal|und Rueck-|li. Kanal |re. Kanal|re. Kanal|
+Rundfunkempf. und Ver-  |(Auf-    |leitung   |(Wieder-  |(Auf-    |(Wieder- |
+staerker, Mono-System   |  nahme) |          | gabe)    | nahme)  | gabe)   |
+------------------------+---------+----------+----------+---------+---------+
+Komb.Aufnahme-und Wieder|Eingang  |Schirmung |Ausgang   |verbunden|verb. mit|
+gabe-Verbindungen am    |(Auf-    |und Rueck-|(Wieder-  |mit 1    |3 nur bei|
+Magnetbandsystem,       | nahme)  |leitung   |gabe)     |         |Wieder-  |
+Mono-System             |         |          |          |         | gabe    |
+------------------------+---------+----------+----------+---------+---------+
+Komb.Aufnahme-und Wieder|Eingang  |Schirmung |Ausgang   |Eingang  |Ausgang  |
+gabe-Verbindungen am    |li. Kanal|und Rueck-|li. Kanal |re. Kanal|re. Kanal|
+Magnetbandsystem,       |(Auf-    |leitung   |(Wieder-  |(Auf-    |(Wieder- |
+Stereo-System           |  nahme) |          |  gabe)   | nahme)  |  gabe)  |
+------------------------+---------+----------+----------+---------+---------+
+Hoer-/Sprechgarnitur    |Signal   |Schirmung |Signal    |Rueck-   |Signal   |
+Mono-System             |Mikrofon |und Rueck-|li. Kopf- |leitung  |re. Kopf-|
+                        |         |leitung   |hoerer    |beide    |hoerer   |
+                        |         |Mikrofon  |          |Kopfh.   |verb mit3|
+------------------------+---------+----------+----------+---------+---------+
+Hoer-/Sprechgarnitur    |Signal   |Schirmung |Signal    |Rueck-   |Signal   |
+Stereo-System           |Mikrofon |und Rueck-|li. Kopf- |leitung  |re. Kopf-|
+(nur Kopfhoerer)        |         |leitung   |hoerer    |beide    |hoerer   |
+                        |         |Mikrofon  |          |Kopfh.   |         |
+------------------------+---------+----------+----------+---------+---------+
+
+
+          __ ____-------
+         (__|____|     |
+                 -------
+          1   2
+
+-------------------------+------------+-----------+
+Anwendung                | 1 (Spitze) | 2 (Huelse)|
+-------------------------+------------+-----------+
+Mikrofon                 | Signal     |Abschirmung|
+                         |            |und Rueck- |
+                         |            |leitung    |
+-------------------------+------------+-----------+
+Lautsprecher             | Signal     |Abschirmung|
+-------------------------+------------+-----------+
+Kopfhoerer, Mono         | Signal     |Abschirmung|
+                         |            |und Rueck- |
+                         |            |leitung    |
+-------------------------+------------+-----------+
+Fernbedinungseingang     | Schalter   | Schalter  |
+(fuer Mikrofone mit Fern-|            |           |
+bedinungsschalter        |            |           |
+-------------------------+------------+-----------+
+
+          __  ____-------
+         (__||____|     |
+                  -------
+          1  3   2
+
+-------------------------+------------+-----------+----------+
+Anwendung                | 1 (Spitze) | 2 (Huelse)| 3 (Ring) |
+-------------------------+------------+-----------+----------+
+Kopfhoerer, Mono         | Signal     |Abschirmung|verbunden |
+                         |            |und Rueck- | mit 1    |
+                         |            |leitung    |          |
+-------------------------+------------+-----------+----------+
+Kopfhoerer, Stereo       | Signal     |Abschirmung| Signal   |
+                         | linker     |und Rueck- | rechter  |
+                         | Kanal      |leitung    | Kanal    |
+-------------------------+------------+-----------+----------+
+
+
+              __,-----,
+           ,-|  |     |___
+           `-|__|     |
+                `-----'
+
+-------------------------+------------+-----------+
+Anwendung                | 1 (Spitze) | 2 (Huelse)|
+-------------------------+------------+-----------+
+Schallplatten-Abspiel-   | Signal     |Abschirmung|
+geraet, Magnetbandgeraet,|            |und Rueck- |
+Empfangsteil, Verstaerker|            |leitung    |
+(usw)                    |            |           |
+-------------------------+------------+-----------+
+
+
+      ____   _____           +-------------+--------+-------------+
+     /    |__|    \          |Anwendung    |   1    |             |
+    /              \         +-------------+--------+-------------+
+   |       __       |        |Lautsprecher | Signal | Rueckleitung|
+   |  1   |2 |      |        |niederohmig  |        |             |
+   |  °   |__|      |        +-------------+--------+-------------+
+    \              /
+     \            /
+      \__________/
+
+
+Kabelverbindungen am CD-Rom Laufwerk
+
+Pin   CD-In          NEC 4xi   FX300     FX001D   XM3401
+      Sound-Blaster  DRU104X   FX001DE   FX001S   XM3501
+                     4Plex     CDU55E    LU005S   XM3601
+                     CDS525S   XM5302             CDU33A
+
+1     Masse           Links    rechts    rechts   masse
+2     Links           masse    masse     masse    rechts
+3     Masse           masse    masse     links    links
+4     Rechts          rechts   links     masse    ------
+
+
+</pre>
+
+
+<P>
+<HR>
+<H3>
+<A NAME=telefon>                         
+12. Telefon</A></H3>
+
+<H4>Spannungen/Stroeme:</H4>
+Die Speisespannung (b ist plus, aber alle Geraete sind bzw. sollen
+polugsunabhaengig arbeiten) ist je nach Entfernung zur
+Vermittlungsstelle und je nach deren Art unterschiedlich und reicht von
+40 bis ca. 60 Volt. Nach dem Abheben geht sie auf 10-12 Volt zurueck,
+dabei fliesst ein Strom von gut 20 mA. Das Rufsignal hat
+Wechselspannung, theoretisch 60 Volt 25 Hz, Spitzen darueber.<br>
+Kleine Nebenstellenanlagen usw. erzeugen meist nur 30 V/50 Hz (das ist
+technisch einfacher). Es gibt Geraete, die dann nicht richtig klingeln,
+wobei das eher an den 50 Hz liegt als an der kleineren Spannung.
+Mechanische Wecker haben da teilweise Probleme, im Netz war aber auch
+schon von Modems (!) zu lesen, die den Ruf nicht erkennen.<br>
+Da die Kabellaengen zum Teilnehmer sehr unterschiedlich sein koennen,
+werden sehr grosse Toleranzen hingenommen. (Ein 5 km langes Kabel kann
+schon mal 500 Ohm haben!)<br>
+Es sind Faelle beschrieben, wo einer an der Rufspannung gestorben ist,
+also nicht anfassen, wenn ein Ruf kommt! (Hm, woher weiss man das
+vorher?)<br>
+Die Gespraechs-Wechselspannung ueberlagert die Gleichspannung.
+Man kann da messen, was man will:-) Ich habe mit
+kraeftig-in-den-Hoerer-Pfeifen 1 Volt hinbekommen. Die keifende
+Schwiegermutter wird's auf 0,5 V bringen (auch wenn sie auf 180 ist:-).
+Normale Lautstaerke bringt so etwa 50-100 mV.
+Klein-Erna, die sich nicht traut, vielleicht nur 10 mV.
+Das Ganze darf uebrigens nicht mit Erde verbunden werden, zwar hat
+b in etwa Erdpotential, aber 1. ist das die Erde in der
+Vermittlungsstelle und 2. liegt da wohl auch noch eine Spule zwischen.
+Die Gespraechsspannung ist symmetrisch, dadurch ist keine Abschirmung
+noetig, denn alle Stoerungen betreffen a <I>und</I> b und heben sich
+damit auf, richtige Verdrillung im Kabel vorausgesetzt. Bei den
+runden Kabeln gibt's daher Adern-Paerchen, bei den neuerdings
+verwendeten roten Draehten mit schwarzen Ringen sind die Paerchen
+0-1 und 2-3 (wenn man die Ringe zaehlt). Hoert man den CB-funkenden
+Nachbarn im Telefon, sollte man also erstmal pruefen, ob nicht
+irgendwo eine Erdverbindung besteht (die hoert man auch an verstaerktem
+Brummen), bevor man zu exzessiven Abschirmmassnahmen schreitet.
+<P>
+Signale: ueber a und b wird telefoniert. W ist fuer den Zweitwecker, ist
+theoretisch mit a verbunden und wird beim Abheben abgetrennt oder
+sonstwie totgemacht, damit der Wecker beim Waehlen (Pulswahl) nicht
+mitscheppert. Neuere Apparate haben keinen W-Anschluss mehr. Fuer die
+alte AWaDo ist die W-Ader noetig, die neueren AWS kommen ohne sie aus.
+E ist fuer die Erdtaste und schaltet auch auf a. Wird in aelteren
+Nebenstellenanlagen zur Amtsholung oder zum Verbinden benutzt, neuere
+benutzen meistens Flash, das entspricht einer kurzen Unterbrechung. Dabei
+gibt es zwei Arten, Flash und Hook-Flash. Letzterer dauert 0,4 s und ist
+normalerweise nicht zur Amtsholung geeignet, vielmehr machen die Amis
+damit das, was bei uns ANIS bzw. BUTLER tun soll, z.B. Parken in der
+Vermittlungsstelle usw.<br>
+ANIS wird aber derzeit nicht vermarktet (rechtliche Gruende).<br>
+Die Telekom will ab Januar '96 einige der ANIS-Merkmale unter dem Namen
+"Komfortleistungen im T-Netz" kostenlos anbieten, andere kosten
+Gebuehren. Infomaterial ist allen Kunden zugegangen.<P>
+<H4>Schaltungslogik:</H4>
+TAE-Dose/Stecker (Blick auf die DOSE):
+<pre>
+                  .---.        .---.
+                  |   |        |   |
+                W  | |  E    W  | |  E
+                  &lt;   &gt;        |   |
+ Amt............b  | |  b2...b  | |  frei
+                  |   |        |   |
+    ............a  | |  a2...a  | |  frei
+                  |___|        &lt;___&gt;
+
+                    N            F
+</pre>
+F fuer Fernsprecher, N fuer Nicht-Fernsprecher.<br>
+Grundsaetzlich kann man mit dem Taschenmesser einen Universalstecker
+produzieren und damit z.B. einen N-Stecker in eine Dose fuer's Telefon
+stecken. Wird ein F-Stecker in eine N-Dose gerammt, trennt er dabei aber
+das Telefon in der zugehoerigen F-Dose ab. Deshalb geht es nicht ohne
+Tricks, zwei Telefone gleichzeitig anzuschliessen.<br>
+Die Logik beim TAE-System ist folgende:<br>
+Ein Telefon darf eine Datenuebertragung nicht unterbrechen koennen.
+Daher sind die N-Dosen bevorrechtigt. Steckt kein Geraet in der N-Dose,
+so verbinden die gegenueberliegenden Kontakte die Amtsleitung weiter
+(sie beruehren sich einfach, natuerlich nicht W und E).<br>
+Die Puenktchen in der Skizze deuten den Verlauf der Amtsleitung an.
+Steckt ein Geraet drin und drueckt die Kontakte auseinander, so muss es
+selbst die Verbindung wiederherstellen, indem es - ueblicherweise per
+6poligem Kabel - per Relais a und a2 sowie b und b2 verbindet, wenn es
+nicht aktiv ist. Postzugelassene Modems und Faxe tun das auch.
+<P>
+Allerdings nur bei 6poligen Kabeln. Laengere Modemkabel (TAE-WM), die
+man bei *-* kaufen kann, sind meistens nur 4polig. Damit trennen sie das
+Telefon ganz ab, oder - wenn sich im Stecker eine Bruecke befindet -
+stellen eine permanente Verbindung her, damit koennen dann unvorsichtige
+Familienangehoerige die Modems stoeren... Wer kein 6poliges Kabel
+bekommt, kann die Bruecke auch selbst einbauen, wenn er Variante 2 in
+Kauf nimmt. (b zu b2 und a zu a2)
+<P>
+<H4>Uebergang zu Western Modular:</H4>
+<DL>
+<DT>postzugelassenes Modem oder Fax
+   <DD>hat eine 6polig beschaltete WM-Buchse. Von innen nach aussen:
+   a und b, W und E (meist nicht belegt), und aussen a2 und b2.
+   Dabei a2 und b2 gelegentlich vertauscht. Nach Aussage von
+   Christian_Vogel@n.maus.de (Christian Vogel) gibt's auch den
+   Fall wie bei b), Variante 2.
+<DT>Anrufbeantworter
+   <DD>Wenn nicht mit festem Kabel ausgeruestet, habe ich bisher alle
+   moeglichen Varianten gesehen (4pol. Kabel):
+	<UL>
+   <LI>a, b, W und E, Bruecken im Stecker wie oben beschrieben oder
+   <LI>a, b, a2, b2 mit korrekter Weiterschaltung, allerdings auf den
+   falschen Kontakten des WM-Steckers.
+        </UL>
+<DT>nichtzugelassene Modems/Faxe mit zwei WM-Buchsen ("Line" und "Phone")
+   <DD>
+   <UL>
+   <LI>man braucht ein Y-Kabel mit einem TAE und zwei WM-Steckern. Der
+   fuer "Line" wird mit (von innen nach aussen) a, b, W und E beschaltet,
+   der fuer "Phone" innen mit a2 und b2 verbunden. Die meisten Modems
+   stellen korrekt die Verbindung her, wenn sie aufliegen.
+   <LI>man baut die Bruecken a zu a2 und b zu b2 im TAE-Stecker ein (siehe
+   oben) oder muss den Stecker jedesmal rausziehen, wenn man
+   Telefonieren will. Natuerlich kann man auch das Telefon hinten ins
+   Modem stecken.
+   </UL>
+<DT>Siemens-Belegung
+   <DD>a/b ist mit W/E vertauscht. W/E liegt also innen, a/b aussen.
+</DL>
+<P>
+Zweckmaessigerweise sollte man sich fuer ein System entscheiden.<br>
+TAE mit zugelassenen Geraeten hat den Vorteil, dass man die vorhandenen
+Dosen nicht umbauen/oeffnen muss und eventuelle Zweit-Dosen weiter wie
+gehabt funktionieren. Man muss allerdings fuer das richtige Kabel zum
+Modem sorgen, moeglichst 6polig, notfalls mit Bruecken.
+<P>
+WM ist fuer totales Parallelschalten geeignet (nicht zulaessig, aber
+einfach). Kaum einer wird das Kabel tatsaechlich durch das Modem
+schleifen, bestenfalls schliesst der Sysop an die "Phone"-Buchse vom
+Modem ein Not-Telefon an.
+<P>
+Richtige Posttelefone schleifen uebrigens auch durch, naemlich W auf a,
+das kann man nutzen: b zu b2 bruecken, und W mit a2 bruecken.
+Leider sind in letzter Zeit viele Telefone <I>trotz</I> Zulassung ohne diese
+Funktion ausgestattet. Diese kann man also nur parallelschalten
+(Bruecken im TAE-Stecker).
+<P>
+Hier die Tabelle fuer die verschiedenen Steckersysteme (die Nummern sind
+die aufgedruckten, nicht unbedingt, wie man zaehlt):
+<pre>
+Leitung TAE WM8 ADO4 ADO8 Farben
+a        1   3   1    1   gn ws (ws) br rt
+b        2   4   3    4   rt br (br) gn sw
+W        3   2   7    7   ws gn (ge) ge
+E        4   5   5    2   ge ge (gn) ws
+b2       5   1   -    5
+a2       6   6   -    8
+                             xx
+</pre>
+Je nach Kabel gibt's unterschiedliche Farbvarianten. xx ist die
+theoretische (sagt Michael).
+<P>
+<HR>
+
+<H3>
+<A NAME=isdn>
+13. ISDN</A></H3>
+
+<H4>Spannungen:</H4>
+Der NT wird von der Vermittlungsstelle mit der gleichen Spannung wie
+analoge Anschluesse versorgt, falls aber das Kabel lang oder
+Regenerierer drin sind, soll mit 97 V gespeist werden (ist bei mir
+auch so). Auf dem S.0 liegen 40V.
+<P>
+<H4>Die Verkabelung:</H4>
+Von der Vermittlungsstelle kommen zwei Leitungen, die der Techniker
+an den NT anklemmt. An diesen hat man nichs zu suchen. <I>Nein, wirklich
+nicht,</I> denn wenn da was nicht stimmt (z.B. wenn ein Ruf kommt und der
+NT ist gerade nicht angeklemmt) wird der Anschluss automatisch gesperrt
+und muss angeblich von Hand (Knopfdruck in der Vermittlungsstelle)
+wieder aktiviert werden.<br>
+Der S.0-Bus hat je zwei Adern fuer den Sender (vom NT zum Endgeraet)
+und den Epfaenger (zum NT zurueck). Da das Monopol der Telekom am NT
+endet, kann eine zugelassene Firma den Rest machen... Raeusper...<br>
+Zum Anschluss an den NT kann man entweder die
+Western-Modular-Buchsen (8p8c, RJ 45) oder 4 Klemmen benutzen.<br>
+Es gab NT's mit vertauschten Klemmen (jeweils a und b), aber das
+stoert nicht, siehe unten.<br>
+Ich habe auch von Beipackzetteln gehoert, die falsch beschriftet
+waren, entscheidend ist die Beschriftung am NT!
+<P>
+<H4>Verbindung:</H4>
+<pre>
+                       NT   Kabel   RJ 45
+            Sender     a1 - rot     - 4
+            Sender     b1 - schwarz - 5
+            Empfaenger a2 - weiss   - 3
+            Empfaenger b2 - gelb    - 6
+</pre>
+(Sender/Empfaenger aus Sicht/Beschriftung des NT.
+<P>
+Die Farben je nach Kabel, Zahlen fuer RJ45. Nicht verrwirren lassen
+von RJ-45-Dosen mit wilder Verteilung der Nummern, die aufgedruckten
+Nummern stimmen, sie muessen nicht in der Reihe liegen wie die Kontakte,
+denn unter den eigentlichen Dosen liegt eine Leiterplatte, deren
+Layout unterschiedlich sein kann. Bei Kabeln mit roten Draehten und
+schwarzen Ringen sollte man 0/1 fuer a1/b1 und 2/3 fuer a2/b2 nehmen,
+der Verdrillung wegen, die Ziffern meinen die Anzahl der schwarzen
+Ringe)
+<P>
+ISDN-TAE-Dosen (sind wohl selten, ueblich ist RJ 45) 8polig:
+(Blick auf die DOSE):
+<pre>
+                   .---.
+                   |   |
+              frei  | |  frei
+                   |   |
+                a2  | |  b2
+                   &lt;   &gt;
+                a1  | |  b1
+                   |   |
+              frei  | |  frei
+                   |___|
+</pre>
+a/b sind jeweils gleichspannungsfrei. Zwischen Sender und
+Empfaenger liegen 40 Volt, Empfaenger an Plus. Beim Notbetrieb
+(NT nicht in der Steckdose) wird diese Polung umgekehrt (siehe
+<A HREF=#notspeisung>Notspeisung</A> weiter unten).
+<P>
+Kontrollmessung nach dem Verkabeln (NT an 230 V angeschlossen):<br>
+4-5 0 Volt<br>
+3-6 0 Volt<br>
+3-4 40 Volt (Plus an 3)<br>
+6-5 40 Volt (Plus an 6)<br>
+Die Messung kann nicht die Vertauschung von a un b feststellen. Sie stellt
+nur sicher, dass die 40V nicht zwischen a und b liegen und dass Sender und
+Empfaenger richtigherum sind. Geht die Verbindung nicht, dann ein a/b-Paar
+(z.B. 4-5) vertauschen. 40 V koennen bei empfindlichen Personen bereits
+lebensgefaehrlich sein, besonders, wenn man vor Aufregung feuchte Haende
+hat.
+<P>
+Theoretisch muessen an die letzte Dose Terminatoren, also 100-Ohm-
+Widerstaende. Diese muessen zwischen a1-b1 und a2-b2.<br>
+Die Widerstaende duerfen nicht zwischen Sender und Empfaenger, 40 V
+an 100 Ohm sind 0,4 A, da geht nix mehr auf dem S.0 (es waeren 16 Watt,
+aber die bringt der NT gar nicht auf).<br>
+Sie muessen jeweils zwischen a und b, also als Wechselspannungs-Abschluss!
+Handelsuebliche Typen genuegen, induktionsarme waeren schoen.
+<P>
+Ob man sie tatsaechlich braucht, haengt von der Kabellaenge ab und
+ob in der Dose was drinsteckt oder nicht.<br>
+Wer 20 m hat und da drei Dosen drauf und die letzte ist noch frei, sollte
+sie reintun. Ich brauche sie bei 10 m und belegter Doppeldose am Ende nicht.
+<P>
+Ihr koennt a und b vertauschen, aber dann bei <I>allen</I> Geraeten, sonst
+loeschen sich die Signale aus! Sender/Empfaenger duerfen natuerlich
+nicht vertauscht werden.
+<P>
+Die Leitung von der Vermittlungsstelle hat rund 60/100 V, Plus an b.
+<P>
+<H4><A NAME=notspeisung>Notspeisung/NT-Netzstecker</A></H4>
+Wer nur Geraete am S.0 hat, die selbst mit Strom versorgt werden, also
+ueber ein Netzteil oder die Rechnerspannung, braucht den Netzstecker
+vom NT nicht in die Dose stecken. Das empfiehlt sogar die Telekom, weil
+es die Lebensdauer der NTs erhoeht (weniger Waermeentwicklung).<br>
+Geraete ohne Netzteil (Telefone) bekommen ihre Energie aus den 40 V
+vom NT.<br>
+Dieser wird fuer Notfaelle auch von der Vermittlungstelle versorgt,
+kann dann aber nur eine begrenzte Leistung aufbringen. Damit ein Telefon
+dann funktioniert, muss es <I>notspeisungsberechtigt</I> sein, das geht
+ueber einen Jumper oder aehnliches. Dabei werden die Funktionen eventuell
+eingeschraenkt, z.B. kein Freisprechen und kein Display waehrend des
+Gespraechs. Es darf sich nur ein notspeisungsberechtigtes Geraet am
+Bus befinden.<br>
+Nicht jedes Telefon ist notspeisefaehig, verfuegt also ueber den
+erwaehnten Jumper.<br>
+<B>Derzeit sind bei Euro-ISDN nur das Eurit und die Tectras
+notspeisefaehig.</B><br>
+Wer unbedingt auch bei Stromausfall telefonieren muss, sollte sich
+also entweder eines der genannten Telefone zulegen oder eine USV
+(unterbrechungsfreie Stromversorgung, also ein Akku-gepuffertes
+Netzaggregat), wie sie fuer Computer verwendet wird, und daran
+eine TK-Anlage oder einen a/b-Wandler mit analogem Telefon betreiben.
+<P>
+Die Leitung darf folgende Laengen haben:<br>
+150 Meter bei Busbetrieb.<br>
+1000 Meter bei Punkt zu Punkt (fuer TK-Anlagen).<br>
+500 Meter bei erweitertem Busbetrieb, die Endgeraete muessen sich auf den
+letzten 30 Metern des Busses befinden.<br>
+Der NT kann beim Busbetrieb auch in der Mitte des Busses sein, dann ist
+natuerlich jedes Ende mit 100 Ohm abzuschliessen.<br>
+Voreinstellung ist Busbetrieb, fuer Punkt-zu-Punkt und
+erweiterter Bus muss im NT was umgeschaltet werden (Techniker holen!).
+<P>
+<HR>
+
+<H3>
+<A NAME=laenge>
+14. Kabellaengen</A></H3>
+<DL>
+<DT>Video
+<DD>Da HF bis 5 MHz druebergeht, sollten die Kabel angepasst sein (75 Ohm)
+und nicht laenger als 3 Meter. S-Video ist natuerlich noch empfindlicher.
+
+<DT>RS232
+<DD>Ist sehr stoersicher und kann ohne Not bis 100 m gehen, wobei dann
+eventuell nicht mehr die maximale Geschwindigkeit funktioniert (115200
+Baud).<br>
+Nach Spezifikation V.28 max. 30 Meter mit geschirmtem Kabel und 19200 Baud,
+aber meistens geht mehr. Fuer lange Leitungen sollte man dann aber
+besser eine Stromschnittstelle nehmen (RS423 / v.11 / ss97 / 
+und andere) bzw. symetrische Signale (RS422).
+
+<DT>Parallelkabel
+<DD>sollten nicht laenger als 5 m sein. Manchmal gehen auch 20 m, aber das
+haengt dann vom Geraet ab und natuerlich auch vom Ausgang am Rechner,
+der die Kabelkapazitaeten ueberwinden muss.
+
+<DT>Ethernet
+<DD>Thin Ethernet (Cheapernet) max. 180 m pro Segment (mehr kann gehen).
+Thick Ethernet max. 500 m pro Segment. Max. 5 Segmente.
+
+<DT>SCSI
+<DD>Differential SCSI kann bei richtiger Terminierung 30 m lang werden.
+Single-ended SCSI maximal 6m.<br>
+High-speed (FAST) SCSI-Verbindungen sollten nicht laenger als 3m sein,
+je kuerzer desto schneller. Auch die Kabellaengen im Geraet zaehlen mit.
+
+<DT>Monitor
+<DD>Da ein VGA-Signal je nach Aufloesung bis auf 100 MHz kommen kann,
+sollte das Kabel so kurz wie moeglich sein. Ein normaler VGA-Umschalter
+erzeugt schon sichtbare Stoerungen.
+
+<DT>MIDI-Kabel
+<DD>sollten wie serielle Kabel nicht laenger als 10 mtr. sein. Als max.
+Wert sollten 15 Meter angesehen werden. Es sind unbedingt  abgeschirmte  Kabel
+zu verwenden. Auf Grund der geringen Spannung reicht ein duennes
+Computerkabel.
+
+<DT>Audio
+<DD>Bei Audio-Kabeln gibt es drei Probleme, die mit der Kabellaenge
+zusammenhaengen:
+<UL>
+<LI>Hoehenverluste entstehen durch die Kapazitaet/Induktivitaet der
+Kabel. Der Ausgang arbeitet gegen die Kapazitaet, somit sind
+niederohmige Ausgaenge (Kopfhoere, Lautsprecher, auch Cinch) nicht
+so gefaehrdet wie hochohmige (DIN, Keramik-Plattenspieler, Keramik-
+Mikrofon). Ein durch Induktivitaet zunehmender Kabelwiderstand
+betrifft dagegen bevorzugt niederohmige Leitungen.
+<LI>Lautstaerkeverluste entstehen durch den Kabelwiderstand. Sie
+spielen praktisch nur bei Lautsprecherleitungen eine Rolle, und da
+besonders bei Boxen mit 4 oder gar 2 Ohm (Auto). Es empfehlen sich
+dann dickere Kupferleitungen. (10 Meter koennen bei 0,5 mm^2 Kupfer
+0,7 Ohm erreichen, plus Steckerverluste 1 Ohm. Aus 100 W am Verstaerker
+werden dann (8-Ohm-Box) noch 79 Watt an der Box! Kabellaenge doppelt,
+ist ja zweiadrig.)
+<LI>Einstrahlung von Sendern/Brummen wird durch lange Kabel ebenfalls
+gefoerdert. Die Stoerung tritt bei schwachen Signalen (magn.
+Plattenspieler, Mikrofon) besonders in Erscheinung. Letztlich hilft nur
+symmetrischer Anschluss, wie in der Profitechnik ueblich, aber das
+koennen auch nur Profi-Mikros mit XLR-Stecker. Hierbei nutzt man
+dann wie beim Telefon den Effekt, dass sich die Stoerung auf beiden
+Signalleitungen aufhebt.
+</UL>
+Richtwerte:<br>
+<UL>
+<LI>magn. Plattenspieler/Mikrofon ohne Verstaerker 3m
+<LI>DIN-Ausgaenge, Mikrofon mit Verstaerker 10m
+<LI>Cinch-Ausgaenge 20m
+<LI>Lautsprecher 10m
+<LI>Symmetrische Geraete 1000 m
+</UL>
+Wer HiFi-Ansprueche hat, sollte das nicht ausnutzen.
+
+<DT><A NAME=tell>Telefon</A>
+<DD>Von der Vermittlungsstelle zum Kunden sind mehrere Kilometer keine
+Seltenheit. Das gilt theoretisch auch fuer Apparate an
+Nebenstellenanlagen, da diese aber oft mit <40 V speisen, sollte man
+unter 500 m bleiben. Wenn man die nicht ausnutzt, kann man auch anderes/
+duenneres Kabel nehmen, der Gesamtwiderstand (zweimal rechnen, weil
+Hin- und Rueckweg) sollte 500 Ohm nicht ueberschreiten. Den Widerstand
+kann man ausrechnen: 2 * Kabellaenge * 0,017 / Querschnitt (bei Kupfer).
+
+<DT>ISDN
+<DD>
+	<UL>
+	<LI>S.0-Bus:<br>
+	Die Leitung darf folgende Laengen haben:<br>
+	150 Meter bei Busbetrieb.<br>
+	1000 Meter bei Punkt zu Punkt (fuer TK-Anlagen).<br>
+	500 Meter bei erweitertem Busbetrieb, die Endgeraete muessen sich auf
+        den letzten 30 Metern des Busses befinden.<br>
+        Fuer die Laenge ist nicht der Widerstand massgeblich, sondern
+        die Laufzeiten der Signale.
+
+	<LI>Uk0 (2-Draht Amt -> NT):
+	siehe <A HREF=#tell>Telefon</A>
+
+	<LI>Up0 (2-Draht Nst.Anl. -> Nst.App.):
+	siehe <A HREF=#tell>Telefon/Nebenstellen</A>
+	</UL>
+</DL>
+<P>
+<HR>
+
+<H3>
+<A NAME=links>
+15. Links zu anderen Seiten mit aehnlichen Themen</A></H3>
+Zum Thema MAC hat mir Kai@krampi.shnet.org (Kai Kramp) geschrieben
+und gibt an: <A HREF=http://www.jura2.uni-hamburg.de/~kai>http://www.jura2.uni-hamburg.de/~kai</A>
+<P>
+Das Kabel fuer die ISDN-Anlagen von Emmerich findet man hier:
+06995409033-0014@t-online.de (Michael Brandmueller): "Diese
+arbeitet mit der PC-SW V1.8 und der FW 1.93 zusammen. Die Belegung ist als
+Grafik in der CE-BBS.
+069 / 954313-22  14.400 BpS
+069 / 954313-61  64.000 BpS X.75"
+<P>
+Grundsaetzlich kann man - wenn man was sucht, was hier fehlt -
+folgendes unternehmen:<br>
+<UL>
+<LI>RTFM (Read the fine manual...), also erstmal die eigenen Datenbestaende
+sichten, in Onlinehilfe oder Handbuch ist so manches erklaert (z.B. auch
+Parallellinkkabel in der Hilfe vom DOS, wer's hat, oder Nullmodemkabel
+in den entsprechenden Howtos beim Linux usw.). Manchmal auch in Form
+eigener Dateien ausserhalb der Onlinehilfe.
+<LI>Einschlaegige Computerzeitschriften, wobei der gesuchte Artikel
+meist in einer Zeitschrift ist, die man nicht hat (Murphy) oder findet.
+Buecher natuerlich ebenso.
+<LI>Artikel in den Newsgroups absuchen. ftp-Archive nach FAQs absuchen.
+<LI>In einer passenden Newsgroup anfragen. Bis jetzt habe ich da immer
+sinnvolle Antworten bekommen.
+</UL>
+
+<HR>
+<ADDRESS>
+Michael Schulte <A HREF="mailto:ms@carpus.m.isar.de"><I>ms@carpus.m.isar.de</I></A>
+<BR>
+Copyright &copy; 1996, all rights reserved<BR>
+</ADDRESS>
+</BODY>
+</HTML>

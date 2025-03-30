@@ -1,0 +1,71 @@
+!######################################################################
+!                       Amts-Berechtigung
+!######################################################################
+
+*amtsperm_dlg.xmtChildren:	unmanaged XmtLayout amtsperm;
+*amtsperm_dlg.title:		Amtsberechtigungen
+*amtsperm.autoUnmanage:		False
+*amtsperm.dialogStyle:		dialog_primary_application_modal
+
+*amtsperm.xmtChildren:	\
+		XmtChooser   tele0,tele1,tele2,tele3,tele4,tele5,\
+					 tele6,tele7,tele8,tele9, \
+					 tele10,tele11,tele12,tele13,tele14, \
+					 tele15,tele16,tele17,tele18,tele19, \
+					 tele20,tele21,tele22,tele23,tele24, \
+					 tele25,tele26,tele27,tele28,tele29; \
+		XmPushButton okay,cancel,help;
+
+*amtsperm.XmtChooser.layoutMarginHeight: 0
+*amtsperm.XmtChooser.chooserType: XmtChooserOption
+*amtsperm.XmtChooser.strings: \
+		"Nur intern","Kommend","Ort","Nahbereich", "Inland","Unbeschränkt"
+
+*amtsperm.okay.labelString:	OK
+*amtsperm.cancel.labelString:	Abbrechen
+*amtsperm.help.labelString:	Hilfe
+
+*amtsperm.okay.activateCallback:		XmtDialogOkayCallback();
+*amtsperm.cancel.activateCallback:	XmtDialogCancelCallback();
+
+*amtsperm.layout: \
+	Caption tl "Amtsberechtigungen" Etched Through 6 2 Row { \
+		Etched Right Col { \
+		Caption "AB  #1: " tele0 \
+		Caption "AB  #2: " tele1 \
+		Caption "AB  #3: " tele2 \
+		Caption "AB  #4: " tele3 \
+		Caption "AB  #5: " tele4 \
+		Caption "AB  #6: " tele5 \
+		Caption "AB  #7: " tele6 \
+		Caption "AB  #8: " tele7 \
+		Caption "TFE #1: " tele8 \
+		Caption "TFE #2: " tele9 \
+		} \
+		Etched Right Col { \
+		Caption "S0 #0: " tele10 \
+		Caption "S0 #1: " tele11 \
+		Caption "S0 #2: " tele12 \
+		Caption "S0 #3: " tele13 \
+		Caption "S0 #4: " tele14 \
+		Caption "S0 #5: " tele15 \
+		Caption "S0 #6: " tele16 \
+		Caption "S0 #7: " tele17 \
+		Caption "S0 #8: " tele18 \
+		Caption "S0 #9: " tele19 \
+		} \
+		Col { \
+		Caption "S1 #0: " tele20 \
+		Caption "S1 #1: " tele21 \
+		Caption "S1 #2: " tele22 \
+		Caption "S1 #3: " tele23 \
+		Caption "S1 #4: " tele24 \
+		Caption "S1 #5: " tele25 \
+		Caption "S1 #6: " tele26 \
+		Caption "S1 #7: " tele27 \
+		Caption "S1 #8: " tele28 \
+		Caption "S1 #9: " tele29 \
+		} \
+	} \
+	Fixed Equal Row { okay cancel help }
+

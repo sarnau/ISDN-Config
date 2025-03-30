@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<TITLE>Euracom - </TITLE>
+<!-- Changed by: 0000-Admin(0000),  1-Aug-1996 -->
+<!-- Changed by: Uwe Putlitz, 20-Sep-1996 -->
+</HEAD>
+<BODY bgcolor="#ffffff" link="#00bb55" BACKGROUND="/bilder/hinter.gif">
+<IMG align=right SRC="/bilder/ackeroben.gif">
+<PRE>
+
+
+
+
+</PRE>
+<CENTER><TABLE><TR><TD>
+<H2>3. Checksummenermittlung</H2>
+F&uuml;r die Berechnung der Datenchecksumme wird ein einfacher Algorithmus verwendet.<BR> Die Erzeugung der Datenchecksumme ist aus dem folgenden Funktionsmodul zu entnehmen.
+<P>
+<PRE>
+/**************************************************************************************/
+/* Funktionsname   : C h e c k s u m                                                  */
+/*------------------------------------------------------------------------------------*/
+/* Aufgabe         : Berechnet die CRC-Summe f&uuml;r ein Feld vorgegebener L&auml;nge          */
+/*                                                                                    */
+/* Eingabe-Param.  : Zeiger auf den Feldanfang                                        */
+/*                              L&auml;nge des Feldes                                      */
+/*                                                                                    */
+/* Return-Wert       : 16 Bit-CRC-Summe                                               */
+/**************************************************************************************/
+
+
+unsigned short  MkChecksum ( unsigned char __far *Buffer, unsigned short Len )
+{
+  register unsigned short Checks = 0;
+
+  for ( ; Len ; Len-- )
+  {
+    if ( Checks &amp; 01 )
+      Checks = (unsigned short)(( Checks &gt;&gt; 1 ) + 0x8000 );
+    else
+      Checks &gt;&gt;= 1;
+
+    Checks = (unsigned short)( Checks + (unsigned short)*Buffer );
+    Buffer++;
+  }
+  return Checks;
+}
+</PRE>
+<A HREF="/schnittstelle/schnittindex.html">Zur&uuml;ck zum Index</A>
+</TD></TR></TABLE></CENTER>
+<CENTER><TABLE width=500>
+<TR><TD align=left><A HREF="/schnittstelle/seite2.html"><IMG border=0 SRC="/bilder/links.gif"></TD>
+<TD align=center><A HREF="/welcome.html"><IMG border=0 SRC="/bilder/euracom.gif"></TD>
+<TD align=right><A HREF="/schnittstelle/seite4.html"><IMG border=0 SRC="/bilder/rechts.gif"></TD></TR>
+</TABLE></CENTER>

@@ -1,0 +1,151 @@
+<HTML>
+<HEAD>
+<TITLE>Euracom - </TITLE>
+<!-- Changed by: 0000-Admin(0000),  6-Aug-1996 -->
+<!-- Changed by: Uwe Putlitz, 20-Sep-1996 -->
+</HEAD>
+<BODY bgcolor="#ffffff" link="#00bb55" BACKGROUND="/bilder/hinter.gif">
+<IMG align=right SRC="/bilder/ackeroben.gif">
+<PRE>
+
+
+
+
+</PRE>
+<CENTER><TABLE><TR><TD><A NAME="515">
+<FONT SIZE=+1>5.1.5. Fehlercodes vom und zum PC-Konfigurator</FONT><P>
+<PRE>
+#define K_WR_OK (unsigned char)( K_STATUS_CMD_OFFSET + 0x00 )
+#define K_V24_WR_EINRICHT_START (unsigned char)( K_STATUS_CMD_OFFSET + 0x01 )
+#define K_V24_RD_EINRICHT_START (unsigned char)( K_STATUS_CMD_OFFSET + 0x02 )
+#define K_V24_EINRICHT_ENDE     (unsigned char)( K_STATUS_CMD_OFFSET + 0x03 )
+#define K_V24_SERVICE_KZ        (unsigned char)( K_STATUS_CMD_OFFSET + 0x04 )
+
+#define K_CRC_ERR       (unsigned char)( K_STATUS_CMD_OFFSET + 0x09 )
+#define K_CMD_ERR       (unsigned char)( K_STATUS_CMD_OFFSET + 0x0A )
+#define K_CMD_PRIO_CHANGED      (unsigned char)( K_STATUS_CMD_OFFSET + 0x0B )
+#define K_V24_ERR       (unsigned char)( K_STATUS_CMD_OFFSET + 0x0C )
+#define K_B_ANL_DATEN   (unsigned char)( K_STATUS_CMD_OFFSET + 0x0D )
+
+#define K_V24_EINRICHT_START_REPEAT     (unsigned char)( K_STATUS_CMD_OFFSET + 0x0E )
+#define K_V24_EINRICHT_ENDE_REPEAT      (unsigned char)( K_STATUS_CMD_OFFSET + 0x0F )
+
+typedef struct
+ {
+    unsigned char InfoLen;      /* L&auml;nge des Buffers inclusive des  L&auml;ngeneintrages.  */
+    unsigned char  MsgType;     /* Type der Message                                                     */
+    unsigned short Checksumm;   /* Checksumme der Daten                                            */
+    unsigned char Data[ 1 ];    /* Daten (1 ist Dummy f&uuml;r Struct)                                */
+  } Hdr;
+</PRE>
+<P><A NAME="port">
+<H2>5.2. S<FONT SIZE=-1>0</FONT> - Portkonfiguration</H2>
+
+Die Struktur Portkonfiguration ist f&uuml;r jeden Port einzeln zu &uuml;bertragen, auch f&uuml;r nicht konfigurierte Ports.
+
+<P>
+Die Struktur zur Konfiguration der S0-Schnittstellen setzt sich aus 3 Strukturen zusammen.
+
+<P>
+Die 1. Struktur beschreibt f&uuml;r externe S0-Ports vom Typ Mehrger&auml;teanschlu&szlig;, welche Teilnehmer der MSN zugeordnet sind.<BR>
+Dabei werden die einzelnen Teilnehmer jeweils durch ein Bit in einem long gekennzeichnet..<BR>
+Die Bits 20 bis 27 stellen die Analogen Teilnehmer 1-7 dar.<BR>
+Die Bits 28 und 29 stellen beiden optionalen TFE-Schnittstellen dar.<BR>
+Die Bits 210 bis 219 stellen die internen S0 Teilnehmer Port 2 dar.<BR>
+Die Bits 220 bis 229 stellen die internen S0 Teilnehmer Port 3 dar.<BR>
+Die Bits 230 und 231 werden nicht genutzt.<BR>
+
+<PRE>
+typedef struct IsdnS0TlnZuord
+{
+  unsigned long ATlnZuordnung;                            /* Zuordnungsfeld der Eigenen-Anlage  */
+  unsigned long BTlnZuordnung;                            /* Zuordnungsfeld der Benachbarten-Anlage     */
+} IsdnS0TlnZuordType;
+</PRE>
+
+<P>
+Defines f&uuml;r die Portkonfiguration
+
+<PRE>
+#define PORT_NICHT_KONFIGURIERT 0x00
+
+#define PORT_DIRECTION_FILTER   0xc0
+#define PORT_DIRECTION_INTERN   0x40
+#define PORT_DIRECTION_EXTERN   0x80
+#define PORT_DIRECTION_QUER     0xc0
+
+#define PORT_MODE_FILTER        0x30
+#define PORT_MODE_PTP   0x00
+#define PORT_MODE_PTMP  0x10
+
+#define TLN_PROTOKOLL_FILTER    0x0e
+#define TLN_PROTOKOLL_EDSS1     0x02
+</PRE>
+
+
+<P>
+Die 2. Struktur beschreibt die Konfiguration eines S<FONT Size=-1>0</FONT>-Ports
+
+<P>
+Die Portkonfiguration setzt sich aus der Direction, dem Mode und dem Protokoll zusammen.<BR>
+Die Anlagenrufnummer ist nur bei einer Anlagenanschlu&szlig;-Konfiguration einzutragen.<BR>
+Der MsnBlock ist nur bei einer Mehrger&auml;teanschlu&szlig;-Konfiguration einzutragen.<BR>
+Die Zuordnung der Teilnehmer zu den MSN´s ist nur bei einer Mehrger&auml;teanschlu&szlig;-Konfiguration einzutragen.
+<P>
+<PRE>
+typedef struct IsdnPort
+{
+  unsigned char                   PortTyp;
+  unsigned char                   Anlagenrufnummer[ RUF_NR_LEN ];
+  unsigned char                   MsnBlock[ MSN_MAX_ANZ ][ MSN_MAX_LEN + 1];
+  IsdnS0TlnZuordType       Tln[ MSN_MAX_ANZ ];
+} IsdnPortType;
+</PRE>
+<P>
+Die 3. Struktur beschreibt die Konfiguration aller drei Ports.
+
+<P>
+In AnzPort ist die Anzahl der Konfigurierten Ports einzutragen.
+<P>
+<PRE>
+typedef struct IsdnKonf
+{
+  unsigned char   AnzPort;
+  struct IsdnPort Port[ 3 ];
+} IsdnKonfType;
+
+<P>
+<B>Deklaration der Einrichtstruktur, der Rufnummerzuordnung</B>
+
+<P>
+Die Struktur der Rufnummerzuordnung beinhaltet:<BR>
+<OL>
+<LI>Die Hauptanlagenrufnummer, wenn die Anlage als Unteranlage konfiguriert ist.
+<LI>Die Rufnummern aller Teilnehmer, wobei die ersten acht Eintr&auml;ge die Rufnummern <BR>der Analogen Teilnehmer, der Eintrag 9 und 10 die Rufnummern der Optionalen TFE´s <BR>und die Eintr&auml;ge 11-20 die Rufnummern des 2. S<FONT Size=-1>0</FONT>-Ports und die <BR>Eintr&auml;ge 21-30 die Rufnummern des 3. S<FONT Size=-1>0</FONT>-Ports sind.
+</OL>
+Achtung alle Rufnummern sind als String einzutragen und nicht genutzte Rufnummern durch <BR>einen Leerstring einzutragen.
+
+<P>
+Der Eintrag HauptAnlNahFern beinhaltet den Anlagentyp und wird &uuml;ber die folgenden <BR>Konstanten definiert:
+
+<PRE>
+#define ANL_TYP_ANL             1       Standardanlage
+#define ANL_TYP_UNT_NAH         2       Unteranlage direkt an Hauptanlage
+#define ANL_TYP_UNT_FERN        3       Unteranlage &uuml;ber Amt an Hauptanlage
+#define ANL_TYP_A_VERN          4       Vernetzte Anlage "Master"
+#define ANL_TYP_B_VERN          5       Vernetzte Anlage "Slave"
+
+typedef struct RufNrZuord
+{
+  char HauptAnl[ HAUPT_ANL_RNR_LEN + 1 ];
+  unsigned char Rufnummer[ MAX_RUF_VAR_LEN ][3];
+  unsigned char HauptAnlNahFern;
+} RufNrZuordType;
+</PRE>
+<A HREF="/schnittstelle/schnittindex.html">Zur&uuml;ck zum Index</A>
+</TD></TR></TABLE></CENTER>
+<CENTER><TABLE width=500>
+<TR><TD align=left><A HREF="/schnittstelle/seite5.html"><IMG border=0 SRC="/bilder/links.gif"></TD>
+<TD align=center><A HREF="/welcome.html"><IMG border=0 SRC="/bilder/euracom.gif"></TD>
+<TD align=right><A HREF="/schnittstelle/seite7.html"><IMG border=0 SRC="/bilder/rechts.gif"></TD></TR>
+</TABLE></CENTER>

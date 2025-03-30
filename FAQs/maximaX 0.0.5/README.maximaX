@@ -1,0 +1,181 @@
+Erstmal vielen Dank an (alphabetisch): 
+
+	Carsten Arnold fuer seine OS/2-Beispiele und weitere Hilfe
+
+	Die Benndorfs (Anja, Lion und Alina), die mich seit Wochen nur
+	vom "Moin, wo is' der Kaffe?" her kennen.
+
+	Arndt Brenschede fuer sein Beispiel-Programm, Testing und hilf-
+	reichen Kritiken!
+
+	Dirk Melchers fuer diverse Tips und sein hartnaeckiges Bestehen
+	auf die Beseitigung einiger Fehler
+
+	Oliver Niekrenz fuer seine WWW-Seite
+
+	Holm Tiffe fuer seine Anpassung an FreeBSD
+
+	Gernot Zander fuer sein mdial (Ich hab' vieles `klauen' koennen)
+
+And last not least:
+	Firma Ackermann, die mit _unvollstaendiger_ Doku zu diesem Programm
+	beigetragen hat!
+
+#######################################################################
+WARNUNG WARNUNG WARNUNG WARNUNG WARNUNG WARNUNG WARNUNG WARNUNG WARNUNG 
+#######################################################################
+
+Zur Zeit sollte gelten:
+"Anfaenger" und technisch Unversierte, FINGER WEG!
+
+Denn:
+Diverse Pruefungen, ob voneinander abhaengige Daten zueinander passen,
+sind noch nicht fertig implementiert. Saemtliche Funktionen fuer Anlagen
+mit mehreren S0-Ports sind ungetestet, da ich nur eine Quante IS-1 be-
+sitze! Alles was mit Vernetzung, Unteranlage usw. zu tun hat, ist un-
+getestet und/oder nicht implementiert! Also bitte VORSICHT bei allen
+Eingaben! Sollte jemand sich in der Lage befinden, solche Konfigurationen
+zu besitzen, so kann er/sie helfen dieses Programm weiterzubringen,
+indem er/sie sich mit mir in Verbindung setzt (E-Mail siehe unten,
+Spenden in Form von S0-Ports usw. werden auch gern angenommen :).
+
+Da ich leider nicht im Besitz _aller_ ROM-Versionen bin, weiss ich nicht,
+ob maximaX mit allen ROM-Versionen kompatibel ist. Einige Funktionen
+koennten fuer aeltere/neuere Versionen falsch implementiert sein! In
+solchen Faellen hilft vielleicht ein Mail an mich, mit einer moegl.
+konkreten Beschreibung des Fehlers. Dann kann ich diesen Fehler beheben!
+
+Haltet immer eine Sicherung mit den Originaldaten und das mitgelieferte
+DOS-Programm parat, solange sich dass Programm noch im Test befindet!
+
+Je mehr Informationen ich ueber Fehler, Fehlverhalten usw. bekomme,
+desto schneller/besser kann ich die Bugs ausbuegeln! Als Programmierer
+sieht man manche Fehler einfach nicht, weil man sein eigenes Programm
+nie anders bedient als man sich die Handhabung gedacht hat :-)
+
+Daher:
+DIE BENUTZUNG DIESES PROGRAMMES GESCHIEHT AUF EIGENE GEFAHR! DER AUTOR
+UEBERNIMMT KEINERLEI HAFTUNG FUER SCHAEDEN, DIE AUS DER NUTZUNG ENTSTEHEN,
+EGAL WELCHER NATUR DIESE SIND.
+DIE NUTZUNG DIESES PROGRAMMS KOENNTE ZU FEHLVERHALTEN DER TELEFONANLAGE
+FUEHREN, WODURCH U. A. UNKONTROLLIERTE TELEFONGEBUEHREN ENSTEHEN KOENNEN.
+
+#######################################################################
+WARNUNG WARNUNG WARNUNG WARNUNG WARNUNG WARNUNG WARNUNG WARNUNG WARNUNG 
+#######################################################################
+
+So, Ihr seit gewarnt! (Ich benutze es trotzdem :-)
+
+                        LIZENZFRAGEN
+                        ============
+Dieses Programm unterliegt der GPL (GNU PUBLIC LICENCE) mit dem
+Zusatz, dass die Firmen Ackermann und Quante, ohne mein schrift-
+liches Einverstaendniss, nicht mit diesem Programm oder seiner
+Verfuegbarkeit werben duerfen. Eine kostenlose Weitergabe des
+Programms ist beiden Firmen ausdruecklich erlaubt.
+
+                    SOURCEN & COMPILIERUNG
+                    ======================
+Die Sourcen und die fertig compilierten Binaries (statisch/dynamisch)
+sind zu finden unter:
+
+ftp://ftp.franken.de/pub/Linux/isdn4linux/euracom/maximaX...
+
+Zum Compilieren wird die Enwickler-Lizenz von Motif 2.0 und libXmt
+benoetigt. `libXmt' wird mit dem Buch "Motif Tools" von David Flanagan
+( erschienen bei O'Reilly & Associates, ISBN-Nr: 1-56592-044-9 )
+ausgeliefert. Updates (inkl. aller Sourcen) sind zu finden unter
+ftp://ftp.ora.com/pub/examples/xbook/Xmt
+`libXmt' ist IMHO ShareWare, im Buch ist eine Lizenz enthalten.
+
+                    INSTALLATION & BENUTZUNG
+                    ========================
+
+Wer sich die fertig compilierte Version von maximaX geladen hat, der
+muss die Datei "MaximaX" in /usr/X11/lib/X11/app-defaults legen! Es
+kann sonst vorkommen, dass maximaX als leeres Fenster erscheint. Bei
+Aenderungen an dieser Datei bitte Vorsicht walten lassen!
+
+`maximaX' liesst und schreibt die Dateien des original Konfigurations-
+programms. Diese Dateien werden im Verzeichnis "/usr/local/maximaX/etc"
+gesucht (default der FileBox). Sollte dieses Verzeichnis nicht existieren,
+so kann man es mit folgendem Befehl anlegen:
+
+mkdir -p /usr/local/maximaX/etc
+
+Jetzt kann man das Programm wie folgt starten:
+
+maximaX /dev/cuaN
+
+Wobei N durch die Nummer der zu benutzenden Schnittstelle ersetzt werden
+muss.
+
+Sollte mir jemand bei einer Fehlersuche behilflich sein wollen, so kann
+sie/er maximaX auch mit
+
+maximaX -D <1|2|3> /dev/cuaN
+
+aufrufen. Dabei wird die Datei /tmp/maximaX.debug angelegt. Diese enthaelt
+die gesamte Kommunikation mit der Anlage und demnach auch alle Einstellungen.
+Sollte mir jemand diese zuschicken, werde ich sie entsprechend vertraulich
+behandeln, da hier auch z. B. die Codenummer drinsteht!
+
+Sollte jemand das Aussehen von maximaX aendern wollen, so sollte sie/er
+dies in ~/.Xdefaults oder ~/.Xresources machen.
+
+Ansonsten z. B.: um die Schrift aller Knoepfe einzufaerben und zu setzen:
+
+maximaX*XmPushButton.foreground: dark blue
+maximaX*XmPushButton.fontList: -*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
+
+Oder, um die Dateikennung-Vorgabe auf "Ackermann" zu setzen:
+
+maximaX.main.aqsel.state: 1
+
+
+                       ZUGRIFFSSCHUTZ
+                       ==============
+Es gibt in maximaX keine Moeglichkeit, den Zugriff auf die Anlage durch ein
+Passwort zu schuetzen, da dies unter Linux in der Form nicht noetig ist.
+
+Arndt Brenschede  schrieb hierzu:
+>Ich hab mir ueberlegt, wie man es sinnvoll installieren kann, so dass
+>es mehrere Leute benutzen koennen, aber die Unix-Passwort Kontrolle greift:
+>
+>- ich hab einen eigenen Account gemacht, User 'euracom', gruppe 'acker'
+>  Das homedirecory ist /usr/local/maximaX. Das exectubable
+>  (bei mir maximaX.static) gehoert 'euracom' und ist read-execute(suid) fuer
+>  Owner und Group, aber nicht fuer World. Jetzt koennen die Default-Files
+>  in /usr/local/maximax/etc von allen Benutzern veraendert werden,
+>  die das Programm starten duerfen, und das sind die, die in /etc/group
+>  bei der gruppe 'acker' stehen. Wenn man eine Schnittstelle exclusiv
+>  fuer diesen Zweck hat, kann man auch diese Schnittstelle mit den
+>  entsprechenden Permissions versehen und so auch verhindern, dass jemand
+>  mit irgendeiner anderen Software an der Anlage rumfummelt.
+
+
+               AN DIE FIRMEN ACKERMANN UND QUANTE
+               ==================================
+Die Firmen Ackermann und Quante duerfen sich gerne auch mit jeglicher
+Hilfe und Informationsmaterial beteiligen!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Dies wuerde dem angeschlagenen Ansehen beider Firmen bestimmt nicht
+schlecht bekommen und zu einer Lockerung der Lizenzrechte fuehren!
+Es waere z. B. sehr interessant neue ROM-Versionen zu bekommen um evtl.
+neue Funktionen zu testen und zu implementieren. Oder wie waere es
+mit einer Zertifizierung durch (eine der) beide(n) Firmen, damit die
+Anwender kein `schlechtes Gewissen' haben muessen?
+
+Rufen Sie mich bei Interesse ruhig an, meine Telefonnummer steht im Footer!
+
+
+                         SONSTIGES
+                         =========
+Fuer Vorschlaege, Fehlerhinweise, Erweiterungswuensche und frischen
+Kaffee bin ich jederzeit dankbar. Ich wuerde mich auch freuen, falls
+mir jemand mal ein Mail schreibt, dass er/sie dieses Programm benutzt
+(und ob zufrieden oder nicht)... 
+
+--
+Chris Benndorf
+EMail:	chrisb@ganzfix.duew.eunet.de
+Tel:	+49 6356 91067
